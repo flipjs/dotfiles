@@ -1,0 +1,25 @@
+{
+  "asi": true,
+  "laxcomma": true,
+  "laxbreak": true,
+  "quotmark": "single",
+  "plusplus": true,
+  "nonew": true,
+  "undef": true,
+  "browser": true,
+  "node": true,
+  "unused": true,
+  "predef": [ "MY_GLOBAL" ],
+  "camelcase": false,
+  "eqeqeq": true,
+  "forin": true,
+  "immed": true,
+  "latedef": true,
+  "undef": true,
+  "trailing": true,
+  "latedef": "nofunc",
+  "globals": {
+    "angular": false,
+    "$": false
+    }
+}
