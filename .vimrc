@@ -2,7 +2,8 @@
 
 set nocompatible
 filetype off
-" call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
+call pathogen#helptags()
 filetype plugin indent on
 set modelines=0                                            " learn more on this
 
@@ -67,7 +68,7 @@ vnoremap <tab> %
 
 set wrap
 set linebreak
-set showbreak=»\ 
+set showbreak=»»\ 
 set textwidth=79
 set formatoptions=qrn1
 " set colorcolumn=85
@@ -163,13 +164,14 @@ nnoremap <leader>v V`]
 
 " =============================================================================
 
-" open up ~/.vimrc file in a vertically split window
-nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<CR>
+" open .vimrc in a new tab
+nnoremap <silent> <leader>ev :tabedit $MYVIMRC<CR>
+nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " =============================================================================
 
 " go back to normal mode
-inoremap gg <C-c>
+inoremap fg <C-c>
 " go to above or below, start or end of line in insert mode
 inoremap hh <C-c>A
 inoremap jj <C-c>o
@@ -184,7 +186,6 @@ nnoremap <leader>w <C-w>v<C-w>l
 " =============================================================================
 
 " commands needed to move around your splits
-inoremap jj <C-c>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -234,4 +235,67 @@ nnoremap <leader>dw :call DoWindowSwap()<CR>
 set t_Co=256
 set guifont=Source\ Code\ Pro\ for\ PowerLine:h16
 set background=dark
+color distinguished
+
+" =============================================================================
+
+" vim-airline statusline
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+
+" =============================================================================
+
+" CtrlP mappings
+nnoremap <silent> <leader>ff :CtrlP<CR>
+nnoremap <silent> <leader>fb :CtrlPBuffer<CR>
+nnoremap <silent> <leader>fr :CtrlPMRU<CR>
+nnoremap <silent> <leader>fm :CtrlPMixed<CR>
+
+" =============================================================================
+
+" Syntastic settings
+let g:syntastic_javascript_checkers = ['jshint']
+
+" =============================================================================
+
+nnoremap <silent> <leader>bt :TagbarToggle<CR>
+
+" =============================================================================
+
+augroup JavaScript
+  autocmd!
+  autocmd FileType javascript nnoremap <buffer> <leader>rr :!node %<CR>
+augroup END
+
+" =============================================================================
+
+function! InsertTabWrapper()
+  " MULTIPURPOSE TAB KEY
+  " Indent if we're at the beginning of a line. Else, do completion.
+  " via https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
+endfunction
+
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>
+
+" =============================================================================
+
+function! OpenUrlUnderCursor()
+  let url=matchstr(getline("."), '[a-z]*:\/\/[^ >,;]*')
+  if url != ""
+    silent exec "!open '".url."'" | redraw! 
+  endif
+endfunction
+
+map <leader>o :call OpenUrlUnderCursor()<CR>
+
+" =============================================================================
 
