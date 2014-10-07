@@ -25,12 +25,12 @@ set expandtab
 set encoding=utf-8
 set scrolloff=1
 set autoindent
-"set smartindent
+" set smartindent
 set showmode
 set showcmd
 set hidden
 set wildmenu
-set wildmode=full
+" set wildmode=full
 " set wildmode=list:longest
 set visualbell
 set cursorline
@@ -63,10 +63,10 @@ set smartcase
 set gdefault
 set incsearch
 set showmatch
-"set hlsearch
+" set hlsearch
 " toggles search highlighting
 nnoremap <leader><space> :set hls!<CR>
-"match bracket pairs instead of typing %
+" match bracket pairs instead of typing %
 nnoremap <tab> %
 vnoremap <tab> %
 
@@ -129,6 +129,12 @@ vnoremap <F1> <ESC>
 " =============================================================================
 
 nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
+
+" =============================================================================
+
+" ctrl-f for snipmate completion
+imap <C-f> <Plug>snipMateNextOrTrigger
+smap <C-f> <Plug>snipMateNextOrTrigger
 
 " =============================================================================
 
@@ -267,11 +273,6 @@ color distinguished
 
 " =============================================================================
 
-" vim-css-color settings
-"let g:cssColorVimDoNotMessMyUpdatetime = 1
-
-" =============================================================================
-
 " vim-airline statusline
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
@@ -335,3 +336,9 @@ map <leader>o :call OpenUrlUnderCursor()<CR>
 
 " =============================================================================
 
+" YCM configuration
+set complete=.,b,u,]
+set wildmode=longest,list:longest
+set completeopt=menu,preview
+
+" =============================================================================

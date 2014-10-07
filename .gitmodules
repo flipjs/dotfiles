@@ -58,3 +58,6 @@
 [submodule ".vim/bundle/coloresque"]
 	path = .vim/bundle/coloresque
 	url = https://github.com/gorodinskiy/vim-coloresque.git
+[submodule ".vim/bundle/YouCompleteMe"]
+	path = .vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
