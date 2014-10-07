@@ -1,0 +1,16 @@
+EasyMotion
+
+command: cs'"
+try it: 'put cursor anywhere on this whole line'
+
+command: ds"
+try it: "put cursor anywhere on this whole line"
+
+command: ysiw<em>
+try it: put <em>cursor</em> in any word
+
+command: yss<div>
+try it: this is the day
+
+command: ySS<div>
+try it: this is the day

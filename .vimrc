@@ -9,6 +9,11 @@ set modelines=0                                            " learn more on this
 
 " =============================================================================
 
+" set snippets location for SnipMate
+let g:snippets_dir = "~/.vim/snippets"
+
+" =============================================================================
+
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -18,8 +23,9 @@ set expandtab
 " =============================================================================
 
 set encoding=utf-8
-set scrolloff=3
+set scrolloff=1
 set autoindent
+"set smartindent
 set showmode
 set showcmd
 set hidden
@@ -57,9 +63,9 @@ set smartcase
 set gdefault
 set incsearch
 set showmatch
-set hlsearch
-" gets rid of highlighting when done with search
-nnoremap <leader><space> :noh<cr>
+"set hlsearch
+" toggles search highlighting
+nnoremap <leader><space> :set hls!<CR>
 "match bracket pairs instead of typing %
 nnoremap <tab> %
 vnoremap <tab> %
@@ -68,13 +74,13 @@ vnoremap <tab> %
 
 set wrap
 set linebreak
-set showbreak=»»\ 
+set showbreak=↪\ 
 set textwidth=79
 set formatoptions=qrn1
 " set colorcolumn=85
 " match ErrorMsg '\%>79v.\+'
-nnoremap <silent> <leader><leader>9 :match ErrorMsg '\%>80v.\+'<CR>
-nnoremap <silent> <leader><leader>0 :match none<CR>
+nnoremap <silent> <leader>99 :match ErrorMsg '\%>80v.\+'<CR>
+nnoremap <silent> <leader>00 :match none<CR>
 syntax on
 
 " =============================================================================
@@ -108,6 +114,10 @@ inoremap <right> <nop>
 " makes j and k the way you expected and not jumping on long lines
 nnoremap j gj
 nnoremap k gk
+" makes K split lines (the opposite of J)
+nnoremap K i<cr><esc>k$
+" makes Q quit
+nnoremap Q :q<CR>
 
 " =============================================================================
 
@@ -118,7 +128,11 @@ vnoremap <F1> <ESC>
 
 " =============================================================================
 
-" Navigate buffers
+nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
+
+" =============================================================================
+
+" Switching buffers
 nnoremap <silent> <leader>bn :bn<CR>
 nnoremap <silent> <leader>bm :bp<CR>
 nnoremap <silent> <leader>bb :b#<CR>
@@ -126,7 +140,12 @@ nnoremap <silent> <leader>bd :bd<CR>
 
 " =============================================================================
 
-nnoremap ; :
+" command line history
+nnoremap <leader>hi q:
+
+" =============================================================================
+
+"nnoremap ; :
 
 " =============================================================================
 
@@ -140,7 +159,7 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " =============================================================================
 
-nnoremap <leader>a :Ack
+nnoremap <leader>A :Ack
 
 " =============================================================================
 
@@ -168,15 +187,24 @@ nnoremap <leader>v V`]
 nnoremap <silent> <leader>ev :tabedit $MYVIMRC<CR>
 nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 
+nnoremap <silent> <leader>eh :tabedit .vim.tips<CR>
+
 " =============================================================================
 
 " go back to normal mode
 inoremap fg <C-c>
-" go to above or below, start or end of line in insert mode
+" go to above or below, start or end of line on insert mode
 inoremap hh <C-c>A
 inoremap jj <C-c>o
 inoremap kk <C-c>O
 inoremap ii <C-c>I
+" delete to end of line on insert mode
+inoremap <C-d> <C-c>lc$
+
+" =============================================================================
+
+" Work around to indent and tab when pressing return after the open curly brace
+inoremap {<CR> {<CR>}<C-o>O<TAB>
 
 " =============================================================================
 
@@ -271,6 +299,8 @@ augroup END
 
 " =============================================================================
 
+" does NOT work with SnipMate, so switched it off for now
+
 function! InsertTabWrapper()
   " MULTIPURPOSE TAB KEY
   " Indent if we're at the beginning of a line. Else, do completion.
@@ -283,8 +313,9 @@ function! InsertTabWrapper()
   endif
 endfunction
 
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <c-n>
+" do NOT uncomment, might break SnipMate auto-completion
+"inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+"inoremap <s-tab> <c-n>
 
 " =============================================================================
 
