@@ -267,6 +267,11 @@ color distinguished
 
 " =============================================================================
 
+" vim-css-color settings
+"let g:cssColorVimDoNotMessMyUpdatetime = 1
+
+" =============================================================================
+
 " vim-airline statusline
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''

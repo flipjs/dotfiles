@@ -114,5 +114,9 @@ function gtjs() {
 cd $HOME/dev/javascript
 }
 
+function gtdot() {
+cd $HOME/.dotfiles
+}
+
 function ff() { find . -iname "*$1*" ${@:2} }
 function gg() { grep "$1" ${@:2} -R . }
