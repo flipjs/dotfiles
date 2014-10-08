@@ -25,6 +25,7 @@ set expandtab
 set encoding=utf-8
 set scrolloff=1
 set autoindent
+" do NOT uncomment smartindent, otherwise weird behavior for indenting braces
 " set smartindent
 set showmode
 set showcmd
