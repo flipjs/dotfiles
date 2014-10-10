@@ -136,7 +136,7 @@ vnoremap <F1> <ESC>
 
 " Gundo settings
 set undodir=~/.vim/tmp/undo
-set undofile
+"set undofile
 set history=100
 set undolevels=100
 let g:gundo_width = 30
@@ -329,7 +329,14 @@ nnoremap <silent> <leader>fm :CtrlPMixed<CR>
 
 " Syntastic settings
 let g:syntastic_javascript_checkers = ['jshint']
-
+let g:syntastic_html_tidy_ignore_errors = [" proprietary attribute \"ng-"]
+let g:syntastic_html_tidy_ignore_errors = [
+    \"trimming empty <i>",
+    \"trimming empty <span>",
+    \"<input> proprietary attribute \"autocomplete\"",
+    \"proprietary attribute \"role\"",
+    \"proprietary attribute \"hidden\"",
+\]
 " =============================================================================
 
 nnoremap <silent> <leader>bt :TagbarToggle<CR>
@@ -385,9 +392,13 @@ endif
 set complete=.,b,u,]
 set wildmode=longest,list:longest
 set completeopt=menu,preview
+" set popup background to match airline tomorrow theme
+"highlight Pmenu ctermfg=2 ctermbg=3 guifg=#ffffff guibg=#ae8762
 
 " =============================================================================
 
-" mapping delay
-set timeoutlen=300
+" mapping delay, my sweetspot (ymmv)
+set timeoutlen=400
+
+" =============================================================================
 
