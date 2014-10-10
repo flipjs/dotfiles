@@ -232,30 +232,6 @@ inoremap {<CR> {<CR>}<C-o>O<TAB>
 
 " =============================================================================
 
-" open a new vertical split and switch over to it
-nnoremap <leader>w <C-w>v<C-w>l
-
-" =============================================================================
-
-" commands needed to move around your splits
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
-" =============================================================================
-
-" Remap new tab
-nnoremap <leader>t <ESC>:tabnew<CR>
-
-" =============================================================================
-
-" new split window go to bottom and right
-set splitbelow
-set splitright
-
-" =============================================================================
-
 " For swapping files between split windows
 
 function! MarkWindowSwap()
@@ -279,8 +255,28 @@ endfunction
 
 " =============================================================================
 
-nnoremap <leader>mw :call MarkWindowSwap()<CR>
-nnoremap <leader>sw :call DoWindowSwap()<CR>
+nnoremap <leader>wm :call MarkWindowSwap()<CR>
+nnoremap <leader>ws :call DoWindowSwap()<CR>
+
+" =============================================================================
+
+" commands needed to move around your splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" =============================================================================
+
+" new split window go to bottom and right
+set splitbelow
+set splitright
+
+" =============================================================================
+
+nnoremap <leader>wr <C-w>v                        " new split window right
+nnoremap <leader>wb <C-w>s                        " new split window below
+nnoremap <leader>wt <ESC>:tabnew<CR>              " new tab window
 
 " =============================================================================
 
