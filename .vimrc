@@ -41,7 +41,6 @@ set backspace=indent,eol,start
 set laststatus=2
 set number
 set relativenumber
-" set undofile
 set nobackup
 set nowritebackup
 set noswapfile
@@ -115,10 +114,16 @@ inoremap <right> <nop>
 " makes j and k the way you expected and not jumping on long lines
 nnoremap j gj
 nnoremap k gk
+" commented out in favor of Dash
 " makes K split lines (the opposite of J)
-nnoremap K i<cr><esc>k$
+" nnoremap K i<cr><esc>k$
 " makes Q quit
 nnoremap Q :q<CR>
+
+" =============================================================================
+
+" Dash shortcut
+nnoremap K :Dash<CR>
 
 " =============================================================================
 
@@ -129,13 +134,25 @@ vnoremap <F1> <ESC>
 
 " =============================================================================
 
+" Gundo settings
+set undodir=~/.vim/tmp/undo
+set undofile
+set history=100
+set undolevels=100
+let g:gundo_width = 30
+nnoremap <silent> <leader>un :GundoToggle<CR>
+
+" =============================================================================
+
 nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
 
 " =============================================================================
 
 " ctrl-f for snipmate completion
-imap <C-f> <Plug>snipMateNextOrTrigger
-smap <C-f> <Plug>snipMateNextOrTrigger
+"imap <C-f> <Plug>snipMateNextOrTrigger
+"smap <C-f> <Plug>snipMateNextOrTrigger
+imap vv <ESC>a<Plug>snipMateNextOrTrigger
+smap vv <Plug>snipMateNextOrTrigger
 
 " =============================================================================
 
@@ -334,6 +351,13 @@ function! OpenUrlUnderCursor()
 endfunction
 
 map <leader>o :call OpenUrlUnderCursor()<CR>
+
+" =============================================================================
+
+" jump to the last position when reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 
 " =============================================================================
 

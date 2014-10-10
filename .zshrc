@@ -58,6 +58,7 @@ export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/loca
 # export MANPATH="/usr/local/man:$MANPATH"
 
 export MYVIMRC=~/.vimrc
+export EDITOR='/usr/local/bin/vim'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
