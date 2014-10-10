@@ -148,19 +148,11 @@ nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
 
 " =============================================================================
 
-" ctrl-f for snipmate completion
+" ctrl-f for snipmate completion, use vv instead
 "imap <C-f> <Plug>snipMateNextOrTrigger
 "smap <C-f> <Plug>snipMateNextOrTrigger
 imap vv <ESC>a<Plug>snipMateNextOrTrigger
 smap vv <Plug>snipMateNextOrTrigger
-
-" =============================================================================
-
-" Switching buffers
-nnoremap <silent> <leader>bn :bn<CR>
-nnoremap <silent> <leader>bm :bp<CR>
-nnoremap <silent> <leader>bb :b#<CR>
-nnoremap <silent> <leader>bd :bd<CR>
 
 " =============================================================================
 
@@ -208,10 +200,10 @@ nnoremap <leader>v V`]
 " =============================================================================
 
 " open .vimrc in a new tab
-nnoremap <silent> <leader>ev :tabedit $MYVIMRC<CR>
+nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
 nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 
-nnoremap <silent> <leader>eh :tabedit .vim.tips<CR>
+nnoremap <silent> <leader>eh :e .vim.tips<CR>
 
 " =============================================================================
 
@@ -274,9 +266,35 @@ set splitright
 
 " =============================================================================
 
-nnoremap <leader>wr <C-w>v                        " new split window right
-nnoremap <leader>wb <C-w>s                        " new split window below
-nnoremap <leader>wt <ESC>:tabnew<CR>              " new tab window
+nnoremap <silent> <leader>wb <ESC>:new<CR>                 " new split bottom
+nnoremap <silent> <leader>wv <ESC>:vnew<CR>                " new split right
+nnoremap <silent> <leader>wn <ESC>:enew<CR>                " new buffer
+
+" =============================================================================
+
+function! DeleteEmptyBuffers()
+    let [i, n; empty] = [1, bufnr('$')]
+    while i <= n
+        if bufexists(i) && bufname(i) == ''
+            call add(empty, i)
+        endif
+        let i += 1
+    endwhile
+    if len(empty) > 0
+        exe 'bdelete' join(empty)
+    endif
+endfunction
+
+" =============================================================================
+
+" buffer related functions
+nnoremap <silent> <leader>bn :bn<CR>
+nnoremap <silent> <leader>bp :bp<CR>
+nnoremap <silent> <leader>bb :b#<CR>
+nnoremap <silent> <leader>bd :bd<CR>
+nnoremap <silent> <leader>bl :ls<CR>
+" delete empty buffers
+nnoremap <silent> <leader>be :call DeleteEmptyBuffers()<CR>
 
 " =============================================================================
 
@@ -287,11 +305,17 @@ color distinguished
 
 " =============================================================================
 
-" vim-airline statusline
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
+" vim-airline settings
+" dont show vim default status
+set noshowmode
+" enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+" populate symbols
+let g:airline_powerline_fonts = 1
+" set theme
+let g:airline_theme='tomorrow'
 
 " =============================================================================
 
@@ -363,3 +387,7 @@ set wildmode=longest,list:longest
 set completeopt=menu,preview
 
 " =============================================================================
+
+" mapping delay
+set timeoutlen=300
+
