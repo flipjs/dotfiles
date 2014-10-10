@@ -114,7 +114,7 @@ inoremap <right> <nop>
 " makes j and k the way you expected and not jumping on long lines
 nnoremap j gj
 nnoremap k gk
-" commented out in favor of Dash
+" uncomment if you split lines a lot but check first if K is not being used
 " makes K split lines (the opposite of J)
 " nnoremap K i<cr><esc>k$
 " makes Q quit
@@ -123,7 +123,7 @@ nnoremap Q :q<CR>
 " =============================================================================
 
 " Dash shortcut
-nnoremap K :Dash<CR>
+nmap <silent> <leader>d <Plug>DashSearch
 
 " =============================================================================
 
@@ -280,7 +280,7 @@ endfunction
 " =============================================================================
 
 nnoremap <leader>mw :call MarkWindowSwap()<CR>
-nnoremap <leader>dw :call DoWindowSwap()<CR>
+nnoremap <leader>sw :call DoWindowSwap()<CR>
 
 " =============================================================================
 
