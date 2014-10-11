@@ -46,9 +46,6 @@
 [submodule ".vim/bundle/JavaScript-Indent"]
 	path = .vim/bundle/JavaScript-Indent
 	url = https://github.com/vim-scripts/JavaScript-Indent.git
-[submodule ".vim/bundle/AutoClose"]
-	path = .vim/bundle/AutoClose
-	url = https://github.com/vim-scripts/AutoClose.git
 [submodule ".vim/bundle/sparkup"]
 	path = .vim/bundle/sparkup
 	url = https://github.com/tristen/vim-sparkup.git
@@ -67,3 +64,12 @@
 [submodule ".vim/bundle/dash"]
 	path = .vim/bundle/dash
 	url = https://github.com/rizzatti/dash.vim.git
+[submodule ".vim/bundle/javascript-libraries-syntax.vim"]
+	path = .vim/bundle/javascript-libraries-syntax.vim
+	url = https://github.com/othree/javascript-libraries-syntax.vim.git
+[submodule ".vim/bundle/tern_for_vim"]
+	path = .vim/bundle/tern_for_vim
+	url = https://github.com/marijnh/tern_for_vim.git
+[submodule ".vim/bundle/auto-pairs"]
+	path = .vim/bundle/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git

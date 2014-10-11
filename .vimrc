@@ -398,7 +398,10 @@ set completeopt=menu,preview
 " =============================================================================
 
 " mapping delay, my sweetspot (ymmv)
-set timeoutlen=400
+set timeoutlen=500
 
 " =============================================================================
 
+" Tern settings
+let g:tern_map_keys=1
+let g:tern_show_argument_hints='on_hold'
