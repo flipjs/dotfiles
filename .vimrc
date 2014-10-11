@@ -4,8 +4,9 @@ set nocompatible
 filetype off
 call pathogen#infect()
 call pathogen#helptags()
+" do not use smartindent or cindent, use below instead
 filetype plugin indent on
-set modelines=0                                            " learn more on this
+set nomodeline
 
 " =============================================================================
 
@@ -17,22 +18,17 @@ let g:snippets_dir = "~/.vim/snippets"
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-" expand tabs into spaces
-set expandtab
+set expandtab                                                 " tabs to spaces
 
 " =============================================================================
 
 set encoding=utf-8
 set scrolloff=1
+" do not use smartindent or cindent, use filetype plugin indent on
 set autoindent
-" do NOT uncomment smartindent, otherwise weird behavior for indenting braces
-" set smartindent
-set showmode
 set showcmd
 set hidden
 set wildmenu
-" set wildmode=full
-" set wildmode=list:longest
 set visualbell
 set cursorline
 set ttyfast
@@ -51,12 +47,6 @@ let mapleader = ","
 
 " =============================================================================
 
-" use normal regex when searching
-nnoremap / /\v
-vnoremap / /\v
-
-" =============================================================================
-
 set ignorecase
 set smartcase
 " applies substitutions globally on lines
@@ -66,9 +56,6 @@ set showmatch
 " set hlsearch
 " toggles search highlighting
 nnoremap <leader><space> :set hls!<CR>
-" match bracket pairs instead of typing %
-nnoremap <tab> %
-vnoremap <tab> %
 
 " =============================================================================
 
@@ -77,7 +64,6 @@ set linebreak
 set showbreak=↪\ 
 set textwidth=79
 set formatoptions=qrn1
-" set colorcolumn=85
 " match ErrorMsg '\%>79v.\+'
 nnoremap <silent> <leader>99 :match ErrorMsg '\%>80v.\+'<CR>
 nnoremap <silent> <leader>00 :match none<CR>
@@ -96,27 +82,9 @@ cnoreabbrev nowr set nowrap
 
 " =============================================================================
 
-" show invisible characters
-" set list
-" set listchars=tab:▸\ ,eol:¬
-
-" =============================================================================
-
-" disable arrow keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
 " makes j and k the way you expected and not jumping on long lines
 nnoremap j gj
 nnoremap k gk
-" uncomment if you split lines a lot but check first if K is not being used
-" makes K split lines (the opposite of J)
-" nnoremap K i<cr><esc>k$
 " makes Q quit
 nnoremap Q :q<CR>
 
@@ -124,13 +92,6 @@ nnoremap Q :q<CR>
 
 " Dash shortcut
 nmap <silent> <leader>d <Plug>DashSearch
-
-" =============================================================================
-
-" you may hit F1 when pressing ESC, so make it ESC as well
-inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
-vnoremap <F1> <ESC>
 
 " =============================================================================
 
@@ -149,19 +110,19 @@ nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
 " =============================================================================
 
 " ctrl-f for snipmate completion, use vv instead
-"imap <C-f> <Plug>snipMateNextOrTrigger
-"smap <C-f> <Plug>snipMateNextOrTrigger
+" imap <C-f> <Plug>snipMateNextOrTrigger
+" smap <C-f> <Plug>snipMateNextOrTrigger
 imap vv <ESC>a<Plug>snipMateNextOrTrigger
 smap vv <Plug>snipMateNextOrTrigger
 
 " =============================================================================
 
+" use when pasting from clipboard, same as set paste/nopaste
+set pastetoggle=<leader>VV
 " command line history
-nnoremap <leader>hi q:
-
-" =============================================================================
-
-"nnoremap ; :
+nnoremap <leader>cl q:
+" reselect the text that was just pasted
+nnoremap <leader>v V`]
 
 " =============================================================================
 
@@ -170,52 +131,24 @@ au FocusLost * :wa
 
 " =============================================================================
 
-" strip all trailing whitespace in the current file
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-
-" =============================================================================
-
 nnoremap <leader>A :Ack
-
-" =============================================================================
-
-" fold tag
-nnoremap <leader>ft Vatzf
-
-" =============================================================================
-
-" for sorting css properties
-nnoremap <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
-
-" =============================================================================
-
-" re-hardwrap paragraphs of text
-nnoremap <leader>q gqip
-
-" =============================================================================
-
-" reselect the text that was just pasted
-nnoremap <leader>v V`]
 
 " =============================================================================
 
 " open .vimrc in a new tab
 nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
 nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
-
 nnoremap <silent> <leader>eh :e .vim.tips<CR>
 
 " =============================================================================
 
+" fixes slow O inserts (all three)
+set timeout
+set timeoutlen=1000
+set ttimeoutlen=100
+
 " go back to normal mode
-inoremap fg <C-c>
-" go to above or below, start or end of line on insert mode
-inoremap hh <C-c>A
-inoremap jj <C-c>o
-inoremap kk <C-c>O
-inoremap ii <C-c>I
-" delete to end of line on insert mode
-inoremap <C-d> <C-c>lc$
+inoremap jj <ESC>
 
 " =============================================================================
 
@@ -339,7 +272,7 @@ let g:syntastic_html_tidy_ignore_errors = [
 \]
 " =============================================================================
 
-nnoremap <silent> <leader>bt :TagbarToggle<CR>
+nnoremap <silent> <leader>tb :TagbarToggle<CR>
 
 " =============================================================================
 
@@ -347,37 +280,6 @@ augroup JavaScript
   autocmd!
   autocmd FileType javascript nnoremap <buffer> <leader>rr :!node %<CR>
 augroup END
-
-" =============================================================================
-
-" does NOT work with SnipMate, so switched it off for now
-
-function! InsertTabWrapper()
-  " MULTIPURPOSE TAB KEY
-  " Indent if we're at the beginning of a line. Else, do completion.
-  " via https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
-  let col = col('.') - 1
-  if !col || getline('.')[col - 1] !~ '\k'
-    return "\<tab>"
-  else
-    return "\<c-p>"
-  endif
-endfunction
-
-" do NOT uncomment, might break SnipMate auto-completion
-"inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-"inoremap <s-tab> <c-n>
-
-" =============================================================================
-
-function! OpenUrlUnderCursor()
-  let url=matchstr(getline("."), '[a-z]*:\/\/[^ >,;]*')
-  if url != ""
-    silent exec "!open '".url."'" | redraw! 
-  endif
-endfunction
-
-map <leader>o :call OpenUrlUnderCursor()<CR>
 
 " =============================================================================
 
@@ -392,16 +294,11 @@ endif
 set complete=.,b,u,]
 set wildmode=longest,list:longest
 set completeopt=menu,preview
-" set popup background to match airline tomorrow theme
-"highlight Pmenu ctermfg=2 ctermbg=3 guifg=#ffffff guibg=#ae8762
-
-" =============================================================================
-
-" mapping delay, my sweetspot (ymmv)
-set timeoutlen=500
 
 " =============================================================================
 
 " Tern settings
 let g:tern_map_keys=1
 let g:tern_show_argument_hints='on_hold'
+
+" =============================================================================
