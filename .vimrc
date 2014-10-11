@@ -117,8 +117,10 @@ smap vv <Plug>snipMateNextOrTrigger
 
 " =============================================================================
 
-" use when pasting from clipboard, same as set paste/nopaste
-set pastetoggle=<leader>VV
+" set wrap toggle
+nnoremap <leader>WW :set wrap!<CR>
+" set paste toggle
+nnoremap <leader>VV :set paste!<CR>
 " command line history
 nnoremap <leader>cl q:
 " reselect the text that was just pasted
