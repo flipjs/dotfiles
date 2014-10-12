@@ -7,7 +7,7 @@ call pathogen#helptags()
 " do not use smartindent or cindent, use below instead
 filetype plugin indent on
 set nomodeline
-
+set mouse=a
 " =============================================================================
 
 " set snippets location for SnipMate
@@ -87,11 +87,14 @@ nnoremap j gj
 nnoremap k gk
 " makes Q quit
 nnoremap Q :q<CR>
+" close current buffer
+nnoremap CC :bd<CR>
+nnoremap WW :w<CR>
 
 " =============================================================================
 
 " Dash shortcut
-nmap <silent> <leader>d <Plug>DashSearch
+nmap <silent> <leader>hh <Plug>DashSearch
 
 " =============================================================================
 
@@ -118,9 +121,11 @@ smap vv <Plug>snipMateNextOrTrigger
 " =============================================================================
 
 " set wrap toggle
-nnoremap <leader>WW :set wrap!<CR>
+nnoremap <leader>WR :set wrap!<CR>
 " set paste toggle
-nnoremap <leader>VV :set paste!<CR>
+nnoremap <leader>PT :set paste!<CR>
+" set relativenumber toggle
+nnoremap <leader>RN :set relativenumber!<CR>
 " command line history
 nnoremap <leader>cl q:
 " reselect the text that was just pasted
@@ -229,7 +234,7 @@ nnoremap <silent> <leader>bb :b#<CR>
 nnoremap <silent> <leader>bd :bd<CR>
 nnoremap <silent> <leader>bl :ls<CR>
 " delete empty buffers
-nnoremap <silent> <leader>be :call DeleteEmptyBuffers()<CR>
+nnoremap EE :call DeleteEmptyBuffers()<CR>
 
 " =============================================================================
 
@@ -281,6 +286,7 @@ nnoremap <silent> <leader>tb :TagbarToggle<CR>
 augroup JavaScript
   autocmd!
   autocmd FileType javascript nnoremap <buffer> <leader>rr :!node %<CR>
+  autocmd FileType javascript nnoremap <buffer> <leader>jh :!jshint %<CR>
 augroup END
 
 " =============================================================================
@@ -304,3 +310,12 @@ let g:tern_map_keys=1
 let g:tern_show_argument_hints='on_hold'
 
 " =============================================================================
+
+" tabular settings
+if exists(":Tabularize")
+  nmap <silent> <leader>ae :Tabularize /=<CR>
+  vmap <silent> <leader>ae :Tabularize /=<CR>
+  nmap <silent> <leader>ac :Tabularize /:<CR>
+  vmap <silent> <leader>ac :Tabularize /:<CR>
+endif
+
