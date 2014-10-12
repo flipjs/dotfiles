@@ -46,6 +46,7 @@
 [submodule ".vim/bundle/JavaScript-Indent"]
 	path = .vim/bundle/JavaScript-Indent
 	url = https://github.com/vim-scripts/JavaScript-Indent.git
+  ignore = dirty
 [submodule ".vim/bundle/sparkup"]
 	path = .vim/bundle/sparkup
 	url = https://github.com/tristen/vim-sparkup.git
