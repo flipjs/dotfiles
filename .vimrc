@@ -319,3 +319,7 @@ if exists(":Tabularize")
   vmap <silent> <leader>ac :Tabularize /:<CR>
 endif
 
+" =============================================================================
+
+" disable concealing quotes in json file
+let g:vim_json_syntax_conceal = 0
