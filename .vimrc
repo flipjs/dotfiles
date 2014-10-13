@@ -149,7 +149,7 @@ nnoremap <leader>A :Ack
 " =============================================================================
 
 " open .vimrc in a new tab
-nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
+nnoremap <silent> <leader>er :e $MYVIMRC<CR>
 nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 nnoremap <silent> <leader>eh :e .vim.tips<CR>
 
@@ -212,9 +212,19 @@ set splitright
 
 " =============================================================================
 
+" open new buffer or tab
+nnoremap <silent> <leader>wn <ESC>:enew<CR>                " new buffer
 nnoremap <silent> <leader>wb <ESC>:new<CR>                 " new split bottom
 nnoremap <silent> <leader>wv <ESC>:vnew<CR>                " new split right
-nnoremap <silent> <leader>wn <ESC>:enew<CR>                " new buffer
+nnoremap <silent> <leader>wt <ESC>:tabe<CR>                " new tab
+
+" =============================================================================
+
+" edit file showing path
+map <leader>en :e <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>eb :sp <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 " =============================================================================
 
