@@ -71,6 +71,12 @@ syntax on
 
 " =============================================================================
 
+" save folds and reload automatically
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
+" =============================================================================
+
 cnoreabbrev Wq wq
 cnoreabbrev WQ wq
 cnoreabbrev W w
@@ -267,6 +273,13 @@ nnoremap <silent> <leader>fm :CtrlPMixed<CR>
 
 " =============================================================================
 
+" switch filetype
+nnoremap <leader>fth :set ft=html<CR>
+nnoremap <leader>ftj :set ft=javascript<CR>
+nnoremap <leader>ftc :set ft=css<CR>
+
+" =============================================================================
+
 " Syntastic settings
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_html_tidy_ignore_errors = [" proprietary attribute \"ng-"]
@@ -312,12 +325,10 @@ let g:tern_show_argument_hints='on_hold'
 " =============================================================================
 
 " tabular settings
-if exists(":Tabularize")
-  nmap <silent> <leader>ae :Tabularize /=<CR>
-  vmap <silent> <leader>ae :Tabularize /=<CR>
-  nmap <silent> <leader>ac :Tabularize /:<CR>
-  vmap <silent> <leader>ac :Tabularize /:<CR>
-endif
+nmap <silent> <leader>ae :Tabularize /=<CR>
+vmap <silent> <leader>ae :Tabularize /=<CR>
+nmap <silent> <leader>ac :Tabularize /:<CR>
+vmap <silent> <leader>ac :Tabularize /:<CR>
 
 " =============================================================================
 
