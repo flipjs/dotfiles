@@ -1,4 +1,5 @@
 .DS_Store
 .vim/tmp/undo/
+.vim/view/
 .oh-my-zsh/
 .vim.old/
