@@ -94,8 +94,8 @@ nnoremap k gk
 " makes Q quit
 nnoremap Q :q<CR>
 " close current buffer
-nnoremap CC :bd<CR>
-nnoremap WW :w<CR>
+nnoremap <leader>dd :bd<CR>
+nnoremap <leader>ww :w<CR>
 
 " =============================================================================
 
@@ -107,8 +107,8 @@ nmap <silent> <leader>hh <Plug>DashSearch
 " Gundo settings
 set undodir=~/.vim/tmp/undo
 "set undofile
-set history=100
-set undolevels=100
+set history=1000
+set undolevels=1000
 let g:gundo_width = 30
 nnoremap <silent> <leader>un :GundoToggle<CR>
 
@@ -133,7 +133,7 @@ nnoremap <leader>PT :set paste!<CR>
 " set relativenumber toggle
 nnoremap <leader>RN :set relativenumber!<CR>
 " command line history
-nnoremap <leader>cl q:
+nnoremap <leader>ch q:
 " reselect the text that was just pasted
 nnoremap <leader>v V`]
 
@@ -330,7 +330,7 @@ set completeopt=menu,preview
 
 " Tern settings
 let g:tern_map_keys=1
-let g:tern_show_argument_hints='on_hold'
+"let g:tern_show_argument_hints='on_hold'
 
 " =============================================================================
 
@@ -344,3 +344,14 @@ vmap <silent> <leader>ac :Tabularize /:<CR>
 
 " disable concealing quotes in json file
 let g:vim_json_syntax_conceal = 0
+
+" =============================================================================
+
+" hit v to select 1 char, hit again to expand and so on. ctrl-v to reverse
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
+" =============================================================================
+
+" close tag
+inoremap ,/ </<C-X><C-O>
