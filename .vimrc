@@ -221,10 +221,10 @@ nnoremap <silent> <leader>wt <ESC>:tabe<CR>                " new tab
 " =============================================================================
 
 " edit file showing path
-map <leader>en :e <C-R>=expand("%:p:h") . "/" <CR>
-map <leader>eb :sp <C-R>=expand("%:p:h") . "/" <CR>
-map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
-map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
+nnoremap <leader>en :e <C-R>=expand("%:p:h") . "/" <CR>
+nnoremap <leader>eb :sp <C-R>=expand("%:p:h") . "/" <CR>
+nnoremap <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
+nnoremap <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 " =============================================================================
 
