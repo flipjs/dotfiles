@@ -88,16 +88,20 @@ alias ls='ls -GpFh'
 alias ll='ls -lGpFh'
 alias la='ls -aGpFh'
 alias lla='ls -laGpFh'
-alias p="open '/Users/philip/Library/Application Support/Sublime Text 3/Packages'"
+alias stp="open '/Users/philip/Library/Application Support/Sublime Text 3/Packages'"
 alias ga='git add'
 alias gs='git status'
 alias gc='git commit'
 alias gp='git push'
+alias v='vim'
+alias vv='mvim'
+alias vz='vim ~/.zshrc'
+alias vrc='vim ~/.vimrc'
+alias ak='ack --smart-case'
 
 function gtnode() {
 cd $HOME/dev/node
 }
-
 
 function gtns() {
 cd $HOME/dev/nodeschool
