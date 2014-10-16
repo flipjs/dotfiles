@@ -2,6 +2,7 @@
 #
 # agnoster's Theme - https://gist.github.com/3712874
 # A Powerline-inspired theme for ZSH
+# Modified to match vim-airline tomorrow theme - flipjs.io
 #
 # # README
 #
@@ -65,7 +66,8 @@ prompt_context() {
   if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
     # prompt_segment red white "%(!.%{%F{yellow}%}.)$user@%m"
     # prompt_segment red white "%(!.%{%F{yellow}%}.)$user☿%m"
-    prompt_segment red white "%(!.%{%F{yellow}%}.)flipjs.io"
+    # prompt_segment red white "%(!.%{%F{yellow}%}.)flipjs.io"
+    prompt_segment 243 white "%(!.%{%F{yellow}%}.)$user@%m"
   fi
 }
 
@@ -77,9 +79,9 @@ prompt_git() {
     dirty=$(parse_git_dirty)
     ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git show-ref --head -s --abbrev |head -n1 2> /dev/null)"
     if [[ -n $dirty ]]; then
-      prompt_segment yellow black
+      prompt_segment 208 black
     else
-      prompt_segment green black
+      prompt_segment 185 black
     fi
     echo -n "${ref/refs\/heads\//⭠ }$dirty"
   fi
@@ -87,12 +89,12 @@ prompt_git() {
 
 # Dir: current working directory
 prompt_time() {
-  prompt_segment cyan white '%D{%H:%M}'
+  prompt_segment 185 black '%D{%H:%M}'
 }
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment blue white '%~'
+  prompt_segment 237 white '%~'
 }
 
 # Status:
@@ -106,7 +108,7 @@ prompt_status() {
   [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}⚡"
   [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}⚙"
 
-  [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
+  [[ -n "$symbols" ]] && prompt_segment 214 default "$symbols"
 }
 
 ## Main prompt

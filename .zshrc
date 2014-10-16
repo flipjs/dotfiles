@@ -11,7 +11,9 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="flipjs.io"
 
 # Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
+# CASE_SENSITIVE="true"
+
+export HISTSIZE=100000 SAVEHIST=100000
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
