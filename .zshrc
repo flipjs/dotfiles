@@ -8,7 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster2-time"
+ZSH_THEME="flipjs.io"
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -48,7 +48,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(giti, zsh-syntax-highlighting)
+plugins=(bower brew git heroku node npm vi-mode zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,10 +89,6 @@ alias ll='ls -lGpFh'
 alias la='ls -aGpFh'
 alias lla='ls -laGpFh'
 alias stp="open '/Users/philip/Library/Application Support/Sublime Text 3/Packages'"
-alias ga='git add'
-alias gs='git status'
-alias gc='git commit'
-alias gp='git push'
 alias v='vim'
 alias vv='mvim'
 alias vz='vim ~/.zshrc'
@@ -125,3 +121,4 @@ cd $HOME/.dotfiles
 
 function ff() { find . -iname "*$1*" ${@:2} }
 function gg() { grep "$1" ${@:2} -R . }
+

@@ -65,8 +65,8 @@ set showbreak=↪\
 set textwidth=79
 set formatoptions=qrn1
 " match ErrorMsg '\%>79v.\+'
-nnoremap <silent> <leader>99 :match ErrorMsg '\%>80v.\+'<CR>
-nnoremap <silent> <leader>00 :match none<CR>
+nnoremap <leader>99 :match ErrorMsg '\%>80v.\+'<CR>
+nnoremap <leader>00 :match none<CR>
 syntax on
 
 " =============================================================================
@@ -100,7 +100,7 @@ nnoremap <leader>ww :w<CR>
 " =============================================================================
 
 " Dash shortcut
-nmap <silent> <leader>hh <Plug>DashSearch
+nmap <leader>hh <Plug>DashSearch
 
 " =============================================================================
 
@@ -110,11 +110,11 @@ set undodir=~/.vim/tmp/undo
 set history=1000
 set undolevels=1000
 let g:gundo_width = 30
-nnoremap <silent> <leader>un :GundoToggle<CR>
+nnoremap <leader>un :GundoToggle<CR>
 
 " =============================================================================
 
-nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
+nnoremap <leader>nt :NERDTreeToggle<CR>
 
 " =============================================================================
 
@@ -149,9 +149,9 @@ nnoremap <leader>A :Ack
 " =============================================================================
 
 " open .vimrc in a new tab
-nnoremap <silent> <leader>er :e $MYVIMRC<CR>
-nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
-nnoremap <silent> <leader>eh :e .vim.tips<CR>
+nnoremap <leader>er :e $MYVIMRC<CR>
+nnoremap <leader>sv :so $MYVIMRC<CR>
+nnoremap <leader>eh :e .vim.tips<CR>
 
 " =============================================================================
 
@@ -213,10 +213,10 @@ set splitright
 " =============================================================================
 
 " open new buffer or tab
-nnoremap <silent> <leader>wn <ESC>:enew<CR>                " new buffer
-nnoremap <silent> <leader>wb <ESC>:new<CR>                 " new split bottom
-nnoremap <silent> <leader>wv <ESC>:vnew<CR>                " new split right
-nnoremap <silent> <leader>wt <ESC>:tabe<CR>                " new tab
+nnoremap <leader>wn <ESC>:enew<CR>                " new buffer
+nnoremap <leader>wb <ESC>:new<CR>                 " new split bottom
+nnoremap <leader>wv <ESC>:vnew<CR>                " new split right
+nnoremap <leader>wt <ESC>:tabe<CR>                " new tab
 
 " =============================================================================
 
@@ -244,11 +244,11 @@ endfunction
 " =============================================================================
 
 " buffer related functions
-nnoremap <silent> <leader>bn :bn<CR>
-nnoremap <silent> <leader>bp :bp<CR>
-nnoremap <silent> <leader>bb :b#<CR>
-nnoremap <silent> <leader>bd :bd<CR>
-nnoremap <silent> <leader>bl :ls<CR>
+nnoremap <leader>bn :bn<CR>
+nnoremap <leader>bp :bp<CR>
+nnoremap <leader>bb :b#<CR>
+nnoremap <leader>bd :bd<CR>
+nnoremap <leader>bl :ls<CR>
 " delete empty buffers
 nnoremap EE :call DeleteEmptyBuffers()<CR>
 
@@ -276,10 +276,10 @@ let g:airline_theme='tomorrow'
 " =============================================================================
 
 " CtrlP mappings
-nnoremap <silent> <leader>ff :CtrlP<CR>
-nnoremap <silent> <leader>fb :CtrlPBuffer<CR>
-nnoremap <silent> <leader>fr :CtrlPMRU<CR>
-nnoremap <silent> <leader>fm :CtrlPMixed<CR>
+nnoremap <leader>ff :CtrlP<CR>
+nnoremap <leader>fb :CtrlPBuffer<CR>
+nnoremap <leader>fr :CtrlPMRU<CR>
+nnoremap <leader>fm :CtrlPMixed<CR>
 
 " =============================================================================
 
@@ -302,7 +302,7 @@ let g:syntastic_html_tidy_ignore_errors = [
 \]
 " =============================================================================
 
-nnoremap <silent> <leader>tb :TagbarToggle<CR>
+nnoremap <leader>tb :TagbarToggle<CR>
 
 " =============================================================================
 
@@ -335,10 +335,10 @@ let g:tern_map_keys=1
 " =============================================================================
 
 " tabular settings
-nmap <silent> <leader>ae :Tabularize /=<CR>
-vmap <silent> <leader>ae :Tabularize /=<CR>
-nmap <silent> <leader>ac :Tabularize /:<CR>
-vmap <silent> <leader>ac :Tabularize /:<CR>
+nmap <leader>ae :Tabularize /=<CR>
+vmap <leader>ae :Tabularize /=<CR>
+nmap <leader>ac :Tabularize /:<CR>
+vmap <leader>ac :Tabularize /:<CR>
 
 " =============================================================================
 
