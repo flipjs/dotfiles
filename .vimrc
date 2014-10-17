@@ -150,7 +150,7 @@ nnoremap <leader>A :Ack
 
 " open .vimrc in a new tab
 nnoremap <leader>er :e $MYVIMRC<CR>
-nnoremap <leader>sv :so $MYVIMRC<CR>
+nnoremap <leader>sr :so $MYVIMRC<CR>
 nnoremap <leader>eh :e .vim.tips<CR>
 
 " =============================================================================
