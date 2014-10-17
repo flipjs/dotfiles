@@ -97,3 +97,9 @@
 	path = .oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
   ignore = dirty
+[submodule ".vim/bundle/vim-session"]
+	path = .vim/bundle/vim-session
+	url = https://github.com/xolox/vim-session.git
+[submodule ".vim/bundle/vim-misc"]
+	path = .vim/bundle/vim-misc
+	url = https://github.com/xolox/vim-misc.git

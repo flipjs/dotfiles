@@ -8,6 +8,8 @@ call pathogen#helptags()
 filetype plugin indent on
 set nomodeline
 set mouse=a
+set clipboard=unnamed
+
 " =============================================================================
 
 " set snippets location for SnipMate
@@ -131,7 +133,7 @@ nnoremap <leader>WR :set wrap!<CR>
 " set paste toggle
 nnoremap <leader>PT :set paste!<CR>
 " set relativenumber toggle
-nnoremap <leader>RN :set relativenumber!<CR>
+nnoremap <leader>rn :set relativenumber!<CR>
 " command line history
 nnoremap <leader>ch q:
 " reselect the text that was just pasted
@@ -149,8 +151,8 @@ nnoremap <leader>A :Ack
 " =============================================================================
 
 " open .vimrc in a new tab
-nnoremap <leader>er :e $MYVIMRC<CR>
-nnoremap <leader>sr :so $MYVIMRC<CR>
+nnoremap <leader>ov :e $MYVIMRC<CR>
+nnoremap <leader>sv :so $MYVIMRC<CR>
 nnoremap <leader>eh :e .vim.tips<CR>
 
 " =============================================================================
@@ -244,6 +246,8 @@ endfunction
 " =============================================================================
 
 " buffer related functions
+nnoremap <C-c> :bnext<CR>
+nnoremap <C-d> :bprevious<CR>
 nnoremap <leader>bn :bn<CR>
 nnoremap <leader>bp :bp<CR>
 nnoremap <leader>bb :b#<CR>
@@ -331,6 +335,8 @@ set completeopt=menu,preview
 " Tern settings
 let g:tern_map_keys=1
 "let g:tern_show_argument_hints='on_hold'
+" disable preview window
+autocmd BufEnter * set completeopt-=preview
 
 " =============================================================================
 
@@ -358,3 +364,8 @@ inoremap ,/ </<C-X><C-O>
 
 " =============================================================================
 
+" vim-session plugin
+let g:session_autoload = 'no'
+let g:session_autosave = 'no'
+
+" =============================================================================
