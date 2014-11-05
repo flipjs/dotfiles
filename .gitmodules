@@ -7,6 +7,7 @@
 [submodule ".vim/bundle/distinguished"]
 	path = .vim/bundle/distinguished
 	url = https://github.com/Lokaltog/vim-distinguished.git
+  ignore = dirty
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
