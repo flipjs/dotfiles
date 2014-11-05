@@ -37,8 +37,10 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
+" ensure set number is set for numbers.vim plugin when using vim 7.4.x
 set number
-set relativenumber
+" set relativenumber
+" with numbers.vim plugin, no need to set relativenumber
 set nobackup
 set nowritebackup
 set noswapfile
@@ -160,7 +162,7 @@ nnoremap <leader>WR :set wrap!<CR>
 " set paste toggle
 nnoremap <leader>PT :set paste!<CR>
 " set relativenumber toggle
-nnoremap <leader>rn :set relativenumber!<CR>
+" nnoremap <leader>rn :set relativenumber!<CR>
 " command line history
 nnoremap <leader>ch q:
 " reselect the text that was just pasted
@@ -347,6 +349,12 @@ nnoremap <leader>ftc :set ft=css<CR>
 " =============================================================================
 
 " Syntastic settings
+let g:syntastic_check_on_open=1
+let g:syntastic_error_symbol='X'
+let g:syntastic_warning_symbol='!'
+let g:syntastic_auto_loc_list=2
+let g:syntastic_loc_list_height=5
+
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_html_tidy_ignore_errors = [" proprietary attribute \"ng-"]
 let g:syntastic_html_tidy_ignore_errors = [
