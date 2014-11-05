@@ -67,7 +67,7 @@ prompt_context() {
     # prompt_segment red white "%(!.%{%F{yellow}%}.)$user@%m"
     # prompt_segment red white "%(!.%{%F{yellow}%}.)$user☿%m"
     # prompt_segment red white "%(!.%{%F{yellow}%}.)flipjs.io"
-    prompt_segment 243 white "%(!.%{%F{yellow}%}.)$user@%m"
+    prompt_segment 143 black "%(!.%{%F{yellow}%}.)$user@%m"
   fi
 }
 
@@ -89,7 +89,7 @@ prompt_git() {
 
 # Dir: current working directory
 prompt_time() {
-  prompt_segment 185 black '%D{%H:%M}'
+  prompt_segment 243 white '%D{%H:%M}'
 }
 
 # Dir: current working directory
@@ -115,8 +115,8 @@ prompt_status() {
 build_prompt() {
   RETVAL=$?
   prompt_status
-  prompt_time
   prompt_context
+  prompt_time
   prompt_dir
   prompt_git
   prompt_end

@@ -63,6 +63,9 @@ nnoremap <leader><space> :set hls!<CR>
 
 set wrap
 set linebreak
+if v:version > 704 || v:version == 704 && has("patch338")
+  set breakindent
+endif
 set showbreak=↪\ 
 set textwidth=79
 set formatoptions=qrn1
@@ -73,9 +76,10 @@ syntax on
 
 " =============================================================================
 
+" this breaks the macvim with the breakindent command. commented out for now
 " save folds and reload automatically
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
+" autocmd BufWinLeave *.* mkview
+" autocmd BufWinEnter *.* silent loadview
 
 " =============================================================================
 
@@ -93,30 +97,53 @@ cnoreabbrev nowr set nowrap
 " makes j and k the way you expected and not jumping on long lines
 nnoremap j gj
 nnoremap k gk
-" makes Q quit
-nnoremap Q :q<CR>
 " close current buffer
 nnoremap <leader>dd :bd<CR>
 nnoremap <leader>ww :w<CR>
 
 " =============================================================================
 
+" Copy to end of line, not all of line
+nnoremap Y y$
+
+" Save file that requires root permission
+cmap w!! %!sudo tee > /dev/null %
+
+" Select all text in buffer
+nnoremap <leader>aa ggvG
+
+" Toggle case
+nnoremap <leader>uu g~iw
+
+" Better home/end keys - synonymous to normal movement
+nnoremap H ^
+nnoremap L $
+vnoremap L g_
+
+" rebind original H and L
+nnoremap <leader>H H
+nnoremap <leader>L L
+
+" Emacs-like Home/End in insert and command mode
+" " inoremap <c-a> <esc>I
+" " inoremap <c-e> <esc>A
+cnoremap <c-a> <home>
+cnoremap <c-e> <end>
+
+" =============================================================================
+
 " Dash shortcut
-nmap <leader>hh <Plug>DashSearch
+nmap <C-h> <Plug>DashSearch
 
 " =============================================================================
 
 " Gundo settings
 set undodir=~/.vim/tmp/undo
-"set undofile
+" set undofile
 set history=1000
 set undolevels=1000
 let g:gundo_width = 30
 nnoremap <leader>un :GundoToggle<CR>
-
-" =============================================================================
-
-nnoremap <leader>nt :NERDTreeToggle<CR>
 
 " =============================================================================
 
@@ -154,6 +181,21 @@ nnoremap <leader>A :Ack
 nnoremap <leader>ov :e $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
 nnoremap <leader>eh :e .vim.tips<CR>
+
+" =============================================================================
+
+" vim-session plugin
+let g:session_autoload = 'no'
+let g:session_autosave = 'no'
+nnoremap <leader>os :OpenSession<CR>
+nnoremap <leader>ss :SaveSession<CR>
+
+" =============================================================================
+
+" CDC = Change to Directory of Current file
+command CDC cd %:p:h
+" Use %% on the command line to expand to the path of the current file
+cabbr <expr> %% expand('%:p:h')
 
 " =============================================================================
 
@@ -200,11 +242,18 @@ nnoremap <leader>ws :call DoWindowSwap()<CR>
 
 " =============================================================================
 
-" commands needed to move around your splits
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+" Better looking splits
+set fillchars+=vert:│
+if has("gui_running")
+  highlight vertsplit guibg=bg guifg=#999999 ctermbg=bg ctermfg=white
+endif
+
+" =============================================================================
+
+" Move between splits with q + hjkl, new splits with qs or qv
+nnoremap q <c-w>
+" rebind q (macro recording) to Q
+nnoremap Q q
 
 " =============================================================================
 
@@ -247,14 +296,13 @@ endfunction
 
 " buffer related functions
 nnoremap <C-c> :bnext<CR>
-nnoremap <C-d> :bprevious<CR>
 nnoremap <leader>bn :bn<CR>
 nnoremap <leader>bp :bp<CR>
 nnoremap <leader>bb :b#<CR>
 nnoremap <leader>bd :bd<CR>
 nnoremap <leader>bl :ls<CR>
 " delete empty buffers
-nnoremap EE :call DeleteEmptyBuffers()<CR>
+nnoremap <leader>ee :call DeleteEmptyBuffers()<CR>
 
 " =============================================================================
 
@@ -276,14 +324,18 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_powerline_fonts = 1
 " set theme
 let g:airline_theme='tomorrow'
+let g:airline_section_b = "%{strftime('%H:%M')}"
 
 " =============================================================================
 
 " CtrlP mappings
+" let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_match_window_reversed = 0
 nnoremap <leader>ff :CtrlP<CR>
 nnoremap <leader>fb :CtrlPBuffer<CR>
 nnoremap <leader>fr :CtrlPMRU<CR>
 nnoremap <leader>fm :CtrlPMixed<CR>
+nnoremap <leader>fc :CtrlPCurWD<CR>
 
 " =============================================================================
 
@@ -334,7 +386,7 @@ set completeopt=menu,preview
 
 " Tern settings
 let g:tern_map_keys=1
-"let g:tern_show_argument_hints='on_hold'
+" let g:tern_show_argument_hints='on_hold'
 " disable preview window
 autocmd BufEnter * set completeopt-=preview
 
@@ -364,8 +416,19 @@ inoremap ,/ </<C-X><C-O>
 
 " =============================================================================
 
+" tcomment_vim plugin - remap to leader-cc
+map <leader>cc <C-_><C-_>
+
+" =============================================================================
+
 " vim-session plugin
 let g:session_autoload = 'no'
 let g:session_autosave = 'no'
+
+" =============================================================================
+
+" Soure current line / selection
+vnoremap <leader>sr y:execute @@<cr>:echo 'Sourced selection.'<cr>
+nnoremap <leader>sr ^vg_y:execute @@<cr>:echo 'Sourced line.'<cr>
 
 " =============================================================================

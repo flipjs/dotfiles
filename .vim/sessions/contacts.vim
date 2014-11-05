@@ -1,10 +1,8 @@
 " ~/.dotfiles/.vim/sessions/contacts.vim:
 " Vim session script.
-" Created by session.vim 2.7 on 17 October 2014 at 20:28:38.
+" Created by session.vim 2.7 on 05 November 2014 at 18:30:15.
 " Open this file in Vim and run :source % to restore your session.
 
-set guioptions=egmrL
-silent! set guifont=Source\ Code\ Pro\ for\ PowerLine:h16
 if exists('g:syntax_on') != 1 | syntax on | endif
 if exists('g:did_load_filetypes') != 1 | filetype on | endif
 if exists('g:did_load_ftplugin') != 1 | filetype plugin on | endif
@@ -24,14 +22,25 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 ~/dev/angular/contacts/public/views/form-field.html
-badd +1 ~/dev/angular/contacts/public/views/new-field.html
-badd +1 ~/dev/angular/contacts/public/views/new.html
-badd +15 ~/dev/angular/contacts/public/src/filter.js
-badd +48 ~/dev/angular/contacts/public/src/directives.js
+badd +15 public/views/form-field.html
+badd +10 public/views/new-field.html
+badd +12 public/views/new.html
+badd +11 public/src/filter.js
+badd +84 public/src/directives.js
+badd +2 public/src/controllers.js
+badd +20 public/src/factories.js
+badd +8 api.js
+badd +28 public/src/app.js
+badd +15 public/views/single.html
+badd +1 public/main.html
+badd +11 public/views/nav.html
+badd +74 accounts.js
+badd +15 server.js
+badd +33 ~/dev/angular/contacts/public/login.html
+badd +8 ~/dev/angular/contacts/public/views/settings.html
 argglobal
 silent! argdel *
-edit ~/dev/angular/contacts/public/src/directives.js
+edit public/views/nav.html
 set splitbelow splitright
 wincmd t
 set winheight=1 winwidth=1
@@ -45,12 +54,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 48 - ((1 * winheight(0) + 15) / 30)
+let s:l = 12 - ((11 * winheight(0) + 16) / 33)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-48
-normal! 0
+12
+normal! 06|
 tabnext 1
 if exists('s:wipebuf')
 "   silent exe 'bwipe ' . s:wipebuf

@@ -1,0 +1,117 @@
+set wildignore =*.o,*.pyc,.DS_Store,*.git/* " Ignore these filetypes
+
+set noerrorbells           " remove any annoying sounds / flashes (1)
+set novisualbell           "                                      (2)
+set t_vb=                  "                                      (3)
+
+" Show trailing whitespace in normal mode
+augroup trailing
+    au!
+    au InsertEnter * :set listchars-=trail:·
+    au InsertLeave * :set listchars+=trail:·
+augroup END
+
+" Show time in airline
+let g:airline_section_b = "%{strftime('%b %d %Y %X')}"
+
+" Better home/end keys - synonymous to normal movement
+nnoremap H ^
+nnoremap L $
+vnoremap L g_
+
+" Emacs-like Home/End in insert and command mode
+" inoremap <c-a> <esc>I
+" inoremap <c-e> <esc>A
+cnoremap <c-a> <home>
+cnoremap <c-e> <end>
+
+" Use common regex
+" nnoremap / /\v
+" vnoremap / /\v
+
+" Move between splits with w + hjkl, new splits with ws or wv
+nnoremap w <c-w>
+
+" Copy to end of line, not all of line
+nnoremap Y y$
+
+" Save file that requires root permission
+cmap w!! %!sudo tee > /dev/null %
+
+" Select all text in buffer
+nnoremap <leader>a ggvG
+
+" Toggle case
+nnoremap <c-u> g~iw
+
+" Run shell commands; print output in seperate buffer
+command! -complete=shellcmd -nargs=* R belowright 15new | r ! <args>
+
+" Inline calculator
+inoremap <c-b> <c-o>yiW<end>=<c-r>=<c-r>0<cr>
+
+" Sublime-esque indentation ([un]indent; reselect)
+vnoremap <tab> >gv
+vnoremap <s-tab> <gv
+
+" Better looking splits
+set fillchars+=vert:│
+if has("gui_running")
+  highlight vertsplit guibg=bg guifg=#999999 ctermbg=bg ctermfg=white
+endif
+
+" More stand-out cursor (should probably just put this in banana.vim)
+highlight Cursor guibg=#FEC52E
+
+" Soure current line / selection
+vnoremap <leader>S y:execute @@<cr>:echo 'Sourced selection.'<cr>
+nnoremap <leader>S ^vg_y:execute @@<cr>:echo 'Sourced line.'<cr>
+
+" Use italics for certain words
+highlight Comment gui=italic
+highlight Identifier gui=italic,bold
+highlight Constant gui=italic
+
+" Minimalise gvim/macvim interface
+set guioptions+=c " Use console dialogs instead of popups for choices
+set guioptions-=m " Hide menu bar
+set guioptions-=r " Never show vertical scrollbar
+set guioptions-=b " Never show horizontal scrollbar
+set guioptions-=T " Hide ugliest toolbar ever
+set guioptions-=R " Don't show right scrollbar with vsplits
+set guioptions-=L " Don't show left scrollbar with vsplits
+
+" Cursorline only in current window, only in normal mode (Steve Losh)
+if has("gui_running")
+  augroup cline
+  au!
+  au WinLeave,InsertEnter * set nocursorline
+  au WinEnter,InsertLeave * set cursorline
+  augroup END
+end
+
+" }}}
+" Text and file formatting and folds                     {{{
+
+" Use foldmarker folding method (three braces to open and close)
+set foldmethod=marker
+
+" Remove trailing whitespace on save
+function! TrimWhiteSpace()
+  %s/\s\+$//e
+endfunction
+autocmd FileWritePre    * :call TrimWhiteSpace()
+autocmd FileAppendPre   * :call TrimWhiteSpace()
+autocmd FilterWritePre  * :call TrimWhiteSpace()
+autocmd BufWritePre     * :call TrimWhiteSpace()
+
+" Usually .txt or .md is for documentation / info, in which
+" case I will want spellchecking on.
+au WinEnter *.{md,txt} set spell
+au WinLeave *.{md,txt} set nospell
+
+" I don't use modula2, but I do use markdown.
+au BufNewFile,BufRead,BufWrite *.md set filetype=markdown
+
+nnoremap <leader>ep :cd $PROJECTS/
+

@@ -117,6 +117,10 @@ function gtjs() {
 cd $HOME/dev/javascript
 }
 
+function gtjv() {
+cd $HOME/dev/java
+}
+
 function gtdot() {
 cd $HOME/.dotfiles
 }
@@ -124,3 +128,4 @@ cd $HOME/.dotfiles
 function ff() { find . -iname "*$1*" ${@:2} }
 function gg() { grep "$1" ${@:2} -R . }
 
+function mcd() { mkdir -p "$1" && cd "$1";  }

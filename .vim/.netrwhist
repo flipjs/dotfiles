@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/philip'
+let g:netrw_dirhist_2='/Users/philip/dev'
+let g:netrw_dirhist_3='/Users/philip/dev/thinkster'
+let g:netrw_dirhist_4='/Users/philip/dev/thinkster/ang-news'
+let g:netrw_dirhist_5='/Users/philip/dev/thinkster/ang-news/app'
+let g:netrw_dirhist_6='/Users/philip'
