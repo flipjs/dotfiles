@@ -160,7 +160,7 @@ smap vv <Plug>snipMateNextOrTrigger
 " set wrap toggle
 nnoremap <leader>WR :set wrap!<CR>
 " set paste toggle
-nnoremap <leader>PT :set paste!<CR>
+nnoremap <leader>pt :set paste!<CR>
 " set relativenumber toggle
 " nnoremap <leader>rn :set relativenumber!<CR>
 " command line history
