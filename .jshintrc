@@ -14,12 +14,18 @@
   "eqeqeq": true,
   "forin": true,
   "immed": true,
-  "latedef": true,
   "undef": true,
   "trailing": true,
   "latedef": "nofunc",
   "globals": {
     "angular": false,
-    "$": false
+    "$": false,
+    "describe": false,
+    "it": false,
+    "before": false,
+    "beforeEach": false,
+    "after": false,
+    "afterEach": false,
+    "expect": false
     }
 }

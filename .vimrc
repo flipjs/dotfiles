@@ -17,10 +17,10 @@ let g:snippets_dir = "~/.vim/snippets"
 
 " =============================================================================
 
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab                                                 " tabs to spaces
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+" set expandtab                                                 " tabs to spaces
 
 " =============================================================================
 
@@ -281,6 +281,10 @@ nnoremap <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 " =============================================================================
 
+nnoremap <leader>ex <ESC>:Explore<CR>             " explore files
+
+" =============================================================================
+
 function! DeleteEmptyBuffers()
     let [i, n; empty] = [1, bufnr('$')]
     while i <= n
@@ -357,13 +361,7 @@ let g:syntastic_loc_list_height=5
 
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_html_tidy_ignore_errors = [" proprietary attribute \"ng-"]
-let g:syntastic_html_tidy_ignore_errors = [
-    \"trimming empty <i>",
-    \"trimming empty <span>",
-    \"<input> proprietary attribute \"autocomplete\"",
-    \"proprietary attribute \"role\"",
-    \"proprietary attribute \"hidden\"",
-\]
+let g:syntastic_html_tidy_ignore_errors = [ '<form> lacks "action" attribute', 'trimming empty <i>', 'trimming empty <li>', 'unescaped & which should be written as &amp;', '<form> proprietary attribute "novalidate"', '<input> proprietary attribute "required"', '<tags-input> is not recognized!', 'trimming empty <tags-input>', 'discarding unexpected <tags-input>', 'discarding unexpected </tags-input>', '<fb:login-button> is not recognized!', 'discarding unexpected <fb:login-button>', 'discarding unexpected </fb:login-button>', '<div> attribute "id" has invalid value ', '<a> escaping malformed URI reference', '<textarea> proprietary attribute "placeholder"', 'trimming empty <span>', '<img> escaping malformed URI reference', '<img> lacks "src" attribute' ]
 " =============================================================================
 
 nnoremap <leader>tb :TagbarToggle<CR>
@@ -435,8 +433,14 @@ let g:session_autosave = 'no'
 
 " =============================================================================
 
+" sparkup config
+let g:sparkupDoubleQuote = 1
+
+" =============================================================================
+
 " Soure current line / selection
 vnoremap <leader>sr y:execute @@<cr>:echo 'Sourced selection.'<cr>
 nnoremap <leader>sr ^vg_y:execute @@<cr>:echo 'Sourced line.'<cr>
 
 " =============================================================================
+

@@ -50,7 +50,7 @@ export HISTSIZE=100000 SAVEHIST=100000
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bower brew git heroku node npm vi-mode zsh-syntax-highlighting)
+plugins=(bower brew git heroku node npm zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -92,10 +92,13 @@ alias la='ls -aGpFh'
 alias lla='ls -laGpFh'
 alias stp="open '/Users/philip/Library/Application Support/Sublime Text 3/Packages'"
 alias v='vim'
-alias vv='mvim'
+alias vv='vim'
+alias vi='vim'
 alias vz='vim ~/.zshrc'
+alias vzh='vim ~/.zshrc'
 alias vrc='vim ~/.vimrc'
 alias ak='ack --smart-case'
+
 
 function gtnode() {
 cd $HOME/dev/node
@@ -126,6 +129,8 @@ cd $HOME/.dotfiles
 }
 
 function ff() { find . -iname "*$1*" ${@:2} }
-function gg() { grep "$1" ${@:2} -R . }
+function ggr() { grep "$1" ${@:2} -R . }
 
 function mcd() { mkdir -p "$1" && cd "$1";  }
+
+bindkey -M vicmd '?' history-incremental-search-backward
