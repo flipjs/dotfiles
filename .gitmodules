@@ -107,3 +107,6 @@
 [submodule ".vim/bundle/jasmine"]
 	path = .vim/bundle/jasmine
 	url = https://github.com/claco/jasmine.vim.git
+[submodule ".vim/bundle/go"]
+	path = .vim/bundle/go
+	url = https://github.com/fatih/vim-go.git

@@ -59,6 +59,12 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# Go configuration
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+# vim
 export MYVIMRC=~/.vimrc
 export EDITOR='/usr/local/bin/vim'
 
