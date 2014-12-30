@@ -17,10 +17,10 @@ let g:snippets_dir = "~/.vim/snippets"
 
 " =============================================================================
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-" set expandtab                                                 " tabs to spaces
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab                                                 " tabs to spaces
 
 " =============================================================================
 
@@ -212,7 +212,7 @@ inoremap jj <ESC>
 " =============================================================================
 
 " Work around to indent and tab when pressing return after the open curly brace
-inoremap {<CR> {<CR>}<C-o>O<TAB>
+" inoremap {<CR> {<CR>}<C-o>O<TAB>
 
 " =============================================================================
 
@@ -372,6 +372,8 @@ augroup JavaScript
   autocmd!
   autocmd FileType javascript nnoremap <buffer> <leader>rr :!node %<CR>
   autocmd FileType javascript nnoremap <buffer> <leader>jh :!jshint %<CR>
+  " Work around to indent and tab when pressing return after the open curly brace
+  autocmd FileType javascript inoremap {<CR> {<CR>}<C-o>O<TAB>
 augroup END
 
 " =============================================================================
@@ -456,3 +458,16 @@ au FileType go nmap <leader>gb <Plug>(go-build)
 au FileType go nmap <leader>gt <Plug>(go-test)
 au FileType go nmap <leader>gc <Plug>(go-coverage)
 au FileType go nmap <Leader>ge <Plug>(go-rename)
+
+" =============================================================================
+
+" dont use this, code after this, is better, imo.
+" set exrc
+" set secure
+
+" load custom vimrc per project/folder
+let b:thisdir=expand("%:p:h")
+let b:vim=b:thisdir."/.vim"
+if (filereadable(b:vim))
+    execute "source ".b:vim
+endif
