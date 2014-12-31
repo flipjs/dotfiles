@@ -17,10 +17,11 @@ let g:snippets_dir = "~/.vim/snippets"
 
 " =============================================================================
 
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab                                                 " tabs to spaces
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set noexpandtab                                                 " tab is tab
+" set expandtab                                                 " tabs to spaces
 
 " =============================================================================
 
@@ -102,6 +103,16 @@ nnoremap k gk
 " close current buffer
 nnoremap <leader>dd :bd<CR>
 nnoremap <leader>ww :w<CR>
+
+" =============================================================================
+
+" insert newline without entering insert mode (using Enter key)
+nnoremap <CR> O<ESC>j
+
+" =============================================================================
+
+" split line (opposite of shift-j)
+nnoremap <C-J> i<CR><ESC>k$
 
 " =============================================================================
 
