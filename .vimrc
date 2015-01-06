@@ -17,11 +17,12 @@ let g:snippets_dir = "~/.vim/snippets"
 
 " =============================================================================
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set noexpandtab                                                 " tab is tab
-" set expandtab                                                 " tabs to spaces
+" indent size = 2
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+" tab is space
+set expandtab
 
 " =============================================================================
 
@@ -106,8 +107,9 @@ nnoremap <leader>ww :w<CR>
 
 " =============================================================================
 
-" insert newline without entering insert mode (using Enter key)
+" insert newline without entering insert mode (using return and spacebar keys)
 nnoremap <CR> O<ESC>j
+" nnoremap <SPACE> o<ESC>k
 
 " =============================================================================
 
@@ -312,9 +314,10 @@ endfunction
 " =============================================================================
 
 " buffer related functions
-nnoremap <C-c> :bnext<CR>
+" nnoremap <C-c> :bnext<CR>
 nnoremap <leader>bn :bn<CR>
 nnoremap <leader>bp :bp<CR>
+nnoremap <leader>bm :bp<CR>
 nnoremap <leader>bb :b#<CR>
 nnoremap <leader>bd :bd<CR>
 nnoremap <leader>bl :ls<CR>
@@ -345,9 +348,15 @@ let g:airline_section_b = "%{strftime('%H:%M')}"
 
 " =============================================================================
 
-" CtrlP mappings
-" let g:ctrlp_match_window_bottom = 0
+" CtrlP settings
+
+" ignore some files and dirs
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_user_command = 'find %s -type f'
+
 let g:ctrlp_match_window_reversed = 0
+" let g:ctrlp_match_window_bottom = 0
 nnoremap <leader>ff :CtrlP<CR>
 nnoremap <leader>fb :CtrlPBuffer<CR>
 nnoremap <leader>fr :CtrlPMRU<CR>
