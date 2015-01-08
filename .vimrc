@@ -17,12 +17,14 @@ let g:snippets_dir = "~/.vim/snippets"
 
 " =============================================================================
 
-" indent size = 2
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+" indent size = 4
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 " tab is space
-set expandtab
+" set expandtab
+" tab is tab
+set noexpandtab
 
 " =============================================================================
 
@@ -353,7 +355,8 @@ let g:airline_section_b = "%{strftime('%H:%M')}"
 " ignore some files and dirs
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
-let g:ctrlp_user_command = 'find %s -type f'
+" DO NOT USE CODE BELOW, otherwise wildignore and custom_ignore will not work!
+" let g:ctrlp_user_command = 'find %s -type f'
 
 let g:ctrlp_match_window_reversed = 0
 " let g:ctrlp_match_window_bottom = 0
@@ -481,13 +484,14 @@ au FileType go nmap <Leader>ge <Plug>(go-rename)
 
 " =============================================================================
 
-" dont use this, code after this, is better, imo.
+" dont use this, use editorconfig plugin
 " set exrc
 " set secure
 
+" dont use this, use editorconfig plugin
 " load custom vimrc per project/folder
-let b:thisdir=expand("%:p:h")
-let b:vim=b:thisdir."/.vim"
-if (filereadable(b:vim))
-    execute "source ".b:vim
-endif
+" let b:thisdir=expand("%:p:h")
+" let b:vim=b:thisdir."/.vim"
+" if (filereadable(b:vim))
+"     execute "source ".b:vim
+" endif

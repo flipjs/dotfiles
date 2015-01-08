@@ -126,17 +126,23 @@ function gtjs() {
 cd $HOME/dev/javascript
 }
 
-function gtjv() {
-cd $HOME/dev/java
+function gtme() {
+cd $HOME/dev/mean
 }
 
 function gtdot() {
 cd $HOME/.dotfiles
 }
 
+function win2unix() {
+  find . -type f | xargs perl -pi -e 's/\r\n|\n|\r/\n/g'
+}
+
+
+
 function ff() { find . -iname "*$1*" ${@:2} }
 function ggr() { grep "$1" ${@:2} -R . }
 
 function mcd() { mkdir -p "$1" && cd "$1";  }
 
-bindkey -M vicmd '?' history-incremental-search-backward
+# bindkey -M vicmd '?' history-incremental-search-backward

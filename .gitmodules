@@ -110,3 +110,6 @@
 [submodule ".vim/bundle/go"]
 	path = .vim/bundle/go
 	url = https://github.com/fatih/vim-go.git
+[submodule ".vim/bundle/editorconfig-vim"]
+	path = .vim/bundle/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
