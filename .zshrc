@@ -64,6 +64,11 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
+# DOCKER configuration
+export DOCKER_CERT_PATH=/Users/philip/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+export DOCKER_HOST=tcp://192.168.59.103:2376
+
 # vim
 export MYVIMRC=~/.vimrc
 export EDITOR='/usr/local/bin/vim'
@@ -92,6 +97,11 @@ export EDITOR='/usr/local/bin/vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+DIRSTACKSIZE=8
+setopt autopushd pushdminus pushdsilent pushdtohome
+alias dh='dirs -v'
+
 alias ls='ls -GpFh'
 alias ll='ls -lGpFh'
 alias la='ls -aGpFh'
@@ -132,6 +142,22 @@ cd $HOME/dev/mean
 
 function gtdot() {
 cd $HOME/.dotfiles
+}
+
+function gtp() {
+cd $HOME/dev/projects
+}
+
+function aacc() {
+cd $HOME/dev/projects/aacc
+}
+
+function gtmp() {
+cd $HOME/dev/tmp
+}
+
+function sshdo() {
+ssh philip@178.62.80.73
 }
 
 function win2unix() {

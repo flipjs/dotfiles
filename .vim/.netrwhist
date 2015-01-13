@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/philip/dev/ngpoly/flip/gulp'
-let g:netrw_dirhist_2='/Users/philip/dev/mean/meanjs/app/routes'
-let g:netrw_dirhist_3='/Users/philip/dev/mean/meanjs/app/controllers'
-let g:netrw_dirhist_4='/Users/philip/dev/mean/meanjs/config'
-let g:netrw_dirhist_5='/Users/philip/INSTALL'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/philip/dev/mean/FilmTrackr'
+let g:netrw_dirhist_2='/Users/philip/dev/mean/FilmTrackr/app'
+let g:netrw_dirhist_3='/Users/philip/dev/mean/FilmTrackr'
+let g:netrw_dirhist_4='/Users/philip/dev/mean/FilmTrackr/config'
+let g:netrw_dirhist_5='/Users/philip/dev/mean/FilmTrackr/config/env'
+let g:netrw_dirhist_6='/Users/philip/dev/mean/meanjs4test/modules/posts/client/views'
