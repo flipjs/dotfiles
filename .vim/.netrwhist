@@ -1,8 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/philip/dev/mean/FilmTrackr'
-let g:netrw_dirhist_2='/Users/philip/dev/mean/FilmTrackr/app'
-let g:netrw_dirhist_3='/Users/philip/dev/mean/FilmTrackr'
-let g:netrw_dirhist_4='/Users/philip/dev/mean/FilmTrackr/config'
-let g:netrw_dirhist_5='/Users/philip/dev/mean/FilmTrackr/config/env'
-let g:netrw_dirhist_6='/Users/philip/dev/mean/meanjs4test/modules/posts/client/views'
+let g:netrw_dirhist_cnt =0
