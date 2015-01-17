@@ -148,12 +148,17 @@ function gtp() {
 cd $HOME/dev/projects
 }
 
+function gtmp() {
+cd $HOME/dev/tmp
+}
+
 function aacc() {
 cd $HOME/dev/projects/aacc
 }
 
-function gtmp() {
-cd $HOME/dev/tmp
+function vp() {
+cd $HOME/dev/projects/aacc
+vim
 }
 
 function sshdo() {

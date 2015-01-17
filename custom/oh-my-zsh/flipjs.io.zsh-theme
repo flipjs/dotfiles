@@ -52,7 +52,7 @@ prompt_end() {
   else
     echo -n "%{%k%}"
   fi
-  echo -n "%{%f%}"
+  echo -n "%{%f%}\n%F{208}λ %"
   CURRENT_BG=''
 }
 
@@ -122,4 +122,4 @@ build_prompt() {
   prompt_end
 }
 
-PROMPT='%{%f%b%k%}$(build_prompt) '
+PROMPT='%{%f%b%k%}$(build_prompt)'

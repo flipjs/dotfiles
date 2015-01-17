@@ -72,9 +72,10 @@ set linebreak
 if v:version > 704 || v:version == 704 && has("patch338")
   set breakindent
 endif
-set showbreak=↪\ 
+set showbreak=»\
 set textwidth=79
-set formatoptions=qrn1
+set formatoptions+=t
+" set formatoptions=qrn1
 " match ErrorMsg '\%>79v.\+'
 nnoremap <leader>99 :match ErrorMsg '\%>80v.\+'<CR>
 nnoremap <leader>00 :match none<CR>
@@ -93,7 +94,7 @@ syntax on
 nmap <leader>ll :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
-"Invisible character colors 
+"Invisible character colors
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
@@ -126,7 +127,7 @@ nnoremap <CR> O<ESC>j
 " =============================================================================
 
 " split line (opposite of shift-j)
-nnoremap <C-J> i<CR><ESC>k$
+nnoremap <C-J> a<CR><ESC>k$
 
 " =============================================================================
 
@@ -259,7 +260,7 @@ function! DoWindowSwap()
   "Switch to dest and shuffle source->dest
   exe curNum . "wincmd w"
   "Hide and open so that we aren't prompted and keep history
-  exe 'hide buf' markedBuf 
+  exe 'hide buf' markedBuf
 endfunction
 
 " =============================================================================
@@ -271,9 +272,10 @@ nnoremap <leader>ws :call DoWindowSwap()<CR>
 
 " Better looking splits
 set fillchars+=vert:│
-if has("gui_running")
-  highlight vertsplit guibg=bg guifg=#999999 ctermbg=bg ctermfg=white
-endif
+" for some reasons, i get this error: E420: BG color unknown. commented for now
+" if has("gui_running")
+"   highlight vertsplit guibg=bg guifg=#999999 ctermbg=bg ctermfg=#FFFFFF
+" endif
 
 " =============================================================================
 
@@ -326,7 +328,8 @@ endfunction
 " =============================================================================
 
 " buffer related functions
-" nnoremap <C-c> :bnext<CR>
+nnoremap <C-C> :bnext<CR>
+nnoremap <C-X> :bprev<CR>
 nnoremap <leader>bn :bn<CR>
 nnoremap <leader>bp :bp<CR>
 nnoremap <leader>bm :bp<CR>
@@ -392,9 +395,9 @@ let g:syntastic_warning_symbol='!'
 let g:syntastic_auto_loc_list=2
 let g:syntastic_loc_list_height=5
 
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_html_tidy_ignore_errors = [" proprietary attribute \"ng-"]
-let g:syntastic_html_tidy_ignore_errors = [ '<form> lacks "action" attribute', 'trimming empty <i>', 'trimming empty <li>', 'unescaped & which should be written as &amp;', '<form> proprietary attribute "novalidate"', '<input> proprietary attribute "required"', '<tags-input> is not recognized!', 'trimming empty <tags-input>', 'discarding unexpected <tags-input>', 'discarding unexpected </tags-input>', '<fb:login-button> is not recognized!', 'discarding unexpected <fb:login-button>', 'discarding unexpected </fb:login-button>', '<div> attribute "id" has invalid value ', '<a> escaping malformed URI reference', '<textarea> proprietary attribute "placeholder"', 'trimming empty <span>', '<img> escaping malformed URI reference', '<img> lacks "src" attribute' ]
+let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_html_tidy_ignore_errors=["proprietary attribute" ,"trimming empty", "unescaped &" , "is not recognized!", "discarding unexpected", "inserting implicit", "missing", "lacks"]
+
 " =============================================================================
 
 nnoremap <leader>tb :TagbarToggle<CR>

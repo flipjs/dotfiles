@@ -25,30 +25,6 @@
    "sshUserPassword" : "",
    "sslEnabled" : false,
    "sslPemKeyFile" : ""
-  },
-  {
-   "connectionName" : "kudarat@digitalocean",
-   "credentials" : [
-    {
-     "databaseName" : "admin",
-     "enabled" : false,
-     "userName" : "",
-     "userPassword" : ""
-    }
-   ],
-   "defaultDatabase" : "",
-   "serverHost" : "178.62.80.73",
-   "serverPort" : 27017,
-   "sshAuthMethod" : 0,
-   "sshHost" : "",
-   "sshPassphrase" : "",
-   "sshPort" : 22,
-   "sshPrivateKey" : "",
-   "sshPublicKey" : "",
-   "sshUserName" : "",
-   "sshUserPassword" : "",
-   "sslEnabled" : false,
-   "sslPemKeyFile" : ""
   }
  ],
  "disableConnectionShortcuts" : false,
