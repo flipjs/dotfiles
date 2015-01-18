@@ -74,8 +74,8 @@ if v:version > 704 || v:version == 704 && has("patch338")
 endif
 set showbreak=»\
 set textwidth=79
-set formatoptions+=t
-" set formatoptions=qrn1
+" set formatoptions+=t
+set formatoptions=qrn1
 " match ErrorMsg '\%>79v.\+'
 nnoremap <leader>99 :match ErrorMsg '\%>80v.\+'<CR>
 nnoremap <leader>00 :match none<CR>
