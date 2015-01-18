@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/philip/dev/projects/laughing-shopper'
-let g:netrw_dirhist_2='/Users/philip/dev/projects/laughing-shopper/app'
-let g:netrw_dirhist_3='/Users/philip/dev/projects/laughing-shopper/app/views'
-let g:netrw_dirhist_4='/Users/philip/dev/projects/laughing-shopper/app/views/users'
-let g:netrw_dirhist_5='/Users/philip/dev/projects/aacc/modules/users/client/views/settings'

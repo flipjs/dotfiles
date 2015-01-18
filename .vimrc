@@ -120,9 +120,8 @@ nnoremap <leader>ww :w<CR>
 
 " =============================================================================
 
-" insert newline without entering insert mode (using return and spacebar keys)
-nnoremap <CR> O<ESC>j
-" nnoremap <SPACE> o<ESC>k
+" insert newline without entering insert mode using Enter key
+" nnoremap <CR> O<ESC>j
 
 " =============================================================================
 
@@ -138,7 +137,7 @@ nnoremap Y y$
 cmap w!! %!sudo tee > /dev/null %
 
 " Select all text in buffer
-nnoremap <leader>aa ggvG
+nnoremap <leader>aa ggVG
 
 " Toggle case
 nnoremap <leader>uu g~iw
@@ -160,6 +159,16 @@ cnoremap <c-e> <end>
 
 " =============================================================================
 
+" code folding plugins
+nnoremap <SPACE> za
+vnoremap <SPACE> za
+
+" save folds
+autocmd BufWrite * mkview
+autocmd BufRead * silent loadview
+
+" =============================================================================
+
 " Dash shortcut
 nmap <C-h> <Plug>DashSearch
 
@@ -175,11 +184,9 @@ nnoremap <leader>un :GundoToggle<CR>
 
 " =============================================================================
 
-" ctrl-f for snipmate completion, use vv instead
-" imap <C-f> <Plug>snipMateNextOrTrigger
-" smap <C-f> <Plug>snipMateNextOrTrigger
-imap vv <ESC>a<Plug>snipMateNextOrTrigger
-smap vv <Plug>snipMateNextOrTrigger
+" vv - snipmate completion
+imap <C-E> <Plug>snipMateNextOrTrigger
+smap <C-E> <Plug>snipMateNextOrTrigger
 
 " =============================================================================
 
