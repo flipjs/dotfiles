@@ -83,10 +83,14 @@ syntax on
 
 " =============================================================================
 
+" code folding setup
+nnoremap <SPACE> za
+vnoremap <SPACE> za
+
 " this breaks the macvim with the breakindent command. commented out for now
 " save folds and reload automatically
-" autocmd BufWinLeave *.* mkview
-" autocmd BufWinEnter *.* silent loadview
+" autocmd BufWinLeave * mkview
+" autocmd BufWinEnter * silent loadview
 
 " =============================================================================
 
@@ -156,16 +160,6 @@ nnoremap <leader>L L
 " " inoremap <c-e> <esc>A
 cnoremap <c-a> <home>
 cnoremap <c-e> <end>
-
-" =============================================================================
-
-" code folding plugins
-nnoremap <SPACE> za
-vnoremap <SPACE> za
-
-" save folds
-autocmd BufWrite * mkview
-autocmd BufRead * silent loadview
 
 " =============================================================================
 
@@ -377,6 +371,8 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 " DO NOT USE CODE BELOW, otherwise wildignore and custom_ignore will not work!
 " let g:ctrlp_user_command = 'find %s -type f'
+let g:ctrlp_match_window = 'min:4,max:28' "results imposed by max height
+" let g:ctrlp_match_window = 'results:80' " overcome limit imposed by max height"
 
 let g:ctrlp_match_window_reversed = 0
 " let g:ctrlp_match_window_bottom = 0
@@ -403,7 +399,7 @@ let g:syntastic_auto_loc_list=2
 let g:syntastic_loc_list_height=5
 
 let g:syntastic_javascript_checkers=['jshint']
-let g:syntastic_html_tidy_ignore_errors=["proprietary attribute" ,"trimming empty", "unescaped &" , "is not recognized!", "discarding unexpected", "inserting implicit", "missing", "lacks"]
+let g:syntastic_html_tidy_ignore_errors=["proprietary attribute" ,"trimming empty", "unescaped &" , "is not recognized!", "discarding unexpected", "inserting implicit", "missing", "lacks", "element not empty"]
 
 " =============================================================================
 
@@ -501,6 +497,45 @@ au FileType go nmap <leader>gb <Plug>(go-build)
 au FileType go nmap <leader>gt <Plug>(go-test)
 au FileType go nmap <leader>gc <Plug>(go-coverage)
 au FileType go nmap <Leader>ge <Plug>(go-rename)
+
+" =============================================================================
+
+" rainbow config
+autocmd FileType javascript syntax clear jsFuncBlock " hack to work with js
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+"
+" ctermfgs: [ 'DodgerBlue3', 'DarkOrange3', 'SeaGreen3', 'Red3' ]
+" rainbow cant detect these color names, so put actual value instead
+let g:rainbow_conf = {
+\   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+\   'ctermfgs': [26, 130, 78, 124],
+\   'operators': '_,_',
+\   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+\   'separately': {
+\       '*': {},
+\       'tex': {
+\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+\       },
+\       'lisp': {
+\           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+\       },
+\       'vim': {
+\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+\       },
+\       'css': 0,
+\       'html': 0
+\   }
+\}
+
+" =============================================================================
+
+" Setting specific to MacVim
+if has("gui_macvim")
+    " use option key as meta
+    set macmeta
+    " MacVIM shift+arrow-keys behavior (required in .vimrc)
+    let macvim_hig_shift_movement = 1
+endif
 
 " =============================================================================
 
