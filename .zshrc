@@ -18,6 +18,9 @@ ZSH_THEME="flipjs.io"
 
 export HISTSIZE=100000 SAVEHIST=100000
 
+# My Notes directory
+export NOTES_DIR=$HOME/Dropbox/NOTES
+
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 

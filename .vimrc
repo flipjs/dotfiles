@@ -132,6 +132,12 @@ nnoremap <C-A> :Ack!
 
 " =============================================================================
 
+" Note-taking
+command! -nargs=1 Ngrep vimgrep "<args>" $NOTES_DIR/**/*.txt
+nnoremap <leader>ng :Ngrep
+
+" =============================================================================
+
 " makes j and k the way you expected and not jumping on long lines
 nnoremap j gj
 nnoremap k gk
@@ -372,6 +378,10 @@ let g:airline_powerline_fonts = 1
 " set theme
 let g:airline_theme='tomorrow'
 let g:airline_section_b = "%{strftime('%H:%M')}"
+
+" =============================================================================
+
+nnoremap <leader>nt :NERDTreeToggle<CR>
 
 " =============================================================================
 
