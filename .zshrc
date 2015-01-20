@@ -1,6 +1,9 @@
 # set to show 256 colors
 TERM=xterm-256color
 
+# disable Ctrl-D so not to close terminal by accident
+setopt ignoreeof
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -115,42 +118,44 @@ alias vi='vim'
 alias vz='vim ~/.zshrc'
 alias vzh='vim ~/.zshrc'
 alias vrc='vim ~/.vimrc'
-alias ak='ack --smart-case'
 
+# function h() {
+# 	~/bin/h.sh
+# }
 
-function gtnode() {
-cd $HOME/dev/node
+function webs() {
+	~/bin/webs.sh
 }
 
-function gtns() {
-cd $HOME/dev/nodeschool
+function mgd() {
+	~/bin/mgd.sh
 }
 
-function gtblog() {
+function blog() {
 cd $HOME/dev/flipjs.io
 }
 
-function gtng() {
+function ng() {
 cd $HOME/dev/angular
 }
 
-function gtjs() {
+function js() {
 cd $HOME/dev/javascript
 }
 
-function gtme() {
+function me() {
 cd $HOME/dev/mean
 }
 
-function gtdot() {
+function dot() {
 cd $HOME/.dotfiles
 }
 
-function gtp() {
+function proj() {
 cd $HOME/dev/projects
 }
 
-function gtmp() {
+function tmp() {
 cd $HOME/dev/tmp
 }
 
@@ -167,7 +172,7 @@ cd $HOME/dev/projects/aacc
 vim
 }
 
-function sshdo() {
+function dos() {
 ssh philip@178.62.80.73
 }
 
@@ -182,4 +187,66 @@ function ggr() { grep "$1" ${@:2} -R . }
 
 function mcd() { mkdir -p "$1" && cd "$1";  }
 
-# bindkey -M vicmd '?' history-incremental-search-backward
+h() {
+
+	_usage() {
+		echo "usage: YOUR_COMMAND | h [-idn] args...
+	-i : ignore case
+	-d : disable regexp
+	-n : invert colors"
+	}
+
+	local _OPTS
+
+	# detect pipe or tty
+	if test -t 0; then
+		_usage
+		return
+	fi
+
+	# manage flags
+	while getopts ":idnQ" opt; do
+	    case $opt in
+	       i) _OPTS+=" -i " ;;
+		   d)  _OPTS+=" -Q " ;;
+	       n) n_flag=true ;;
+	       Q)  _OPTS+=" -Q " ;;
+	           # let's keep hidden compatibility with -Q for original ack users
+	       \?) _usage
+				return ;;
+	    esac
+	done
+
+	shift $(($OPTIND - 1))
+
+	# check maximum allowed input
+	if (( ${#@} > 12)); then
+		echo "Too many terms. h supports a maximum of 12 groups. Consider relying on regular expression supported patterns like \"word1\\|word2\""
+		exit -1
+	fi;
+
+	# set zsh compatibility
+	[[ -n $ZSH_VERSION ]] && setopt localoptions && setopt ksharrays && setopt ignorebraces
+
+	local _i=0
+
+	if [ -z $n_flag ]; then
+		#inverted-colors-last scheme
+		_COLORS=( "underline bold red" "underline bold green" "underline bold yellow"  "underline bold blue"  "underline bold magenta"  "underline bold cyan" "bold on_red" "bold on_green" "bold black on_yellow" "bold on_blue"  "bold on_cyan" "bold on_magenta"  )
+	else
+		#inverted-colors-first scheme
+		_COLORS=( "bold on_red" "bold on_green" "bold black on_yellow" "bold on_blue" "bold on_magenta" "bold on_cyan" "bold black on_white"  "underline bold red" "underline bold green" "underline bold yellow"  "underline bold blue"  "underline bold magenta" 	)
+    fi
+
+	# build the filtering command
+	for keyword in "$@"
+	do
+		local _COMMAND=$_COMMAND"ack $_OPTS --noenv --flush --passthru --color --color-match=\"${_COLORS[$_i]}\" '$keyword' |"
+	    _i=$_i+1
+	done
+	#trim ending pipe
+	_COMMAND=${_COMMAND%?}
+	#echo "$_COMMAND"
+	cat - | eval $_COMMAND
+}
+

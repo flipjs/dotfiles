@@ -115,6 +115,23 @@ cnoreabbrev nowr set nowrap
 
 " =============================================================================
 
+" QuickFix setup
+nnoremap <leader>qc :cclose<CR>
+nnoremap <leader>qo :copen<CR>
+nnoremap [q :cprevious<CR>
+nnoremap ]q :cnext<CR>
+nnoremap [Q :cfirst<CR>
+nnoremap ]Q :clast<CR>
+
+" =============================================================================
+
+" Ack hotkey
+nnoremap <C-A> :Ack!
+" uncomment to use AG instead
+" let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" =============================================================================
+
 " makes j and k the way you expected and not jumping on long lines
 nnoremap j gj
 nnoremap k gk
@@ -130,7 +147,7 @@ nnoremap <leader>ww :w<CR>
 " =============================================================================
 
 " split line (opposite of shift-j)
-nnoremap <C-J> a<CR><ESC>k$
+" nnoremap <C-J> a<CR><ESC>k$
 
 " =============================================================================
 
@@ -164,7 +181,7 @@ cnoremap <c-e> <end>
 " =============================================================================
 
 " Dash shortcut
-nmap <C-h> <Plug>DashSearch
+nmap <leader>h <Plug>DashSearch
 
 " =============================================================================
 
@@ -175,12 +192,6 @@ set history=1000
 set undolevels=1000
 let g:gundo_width = 30
 nnoremap <leader>un :GundoToggle<CR>
-
-" =============================================================================
-
-" vv - snipmate completion
-imap <C-E> <Plug>snipMateNextOrTrigger
-smap <C-E> <Plug>snipMateNextOrTrigger
 
 " =============================================================================
 
@@ -424,10 +435,26 @@ endif
 
 " =============================================================================
 
+" JSBeautify config
+autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
+autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
+autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+autocmd FileType less vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+autocmd FileType scss vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+
+" =============================================================================
+
+" vv - snipmate completion
+imap <C-E> <ESC>a<Plug>snipMateNextOrTrigger
+smap <C-E> <Plug>snipMateNextOrTrigger
+
+" =============================================================================
+
 " YCM configuration
 set complete=.,b,u,]
 set wildmode=longest,list:longest
 set completeopt=menu,preview
+let g:ycm_key_list_select_completion = ['<TAB>', '<Down>', '<ENTER>']
 
 " =============================================================================
 

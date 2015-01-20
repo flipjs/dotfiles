@@ -1,0 +1,16 @@
+--type-add=css=.sass,.less,.scss
+--type-add=ruby=.rake,.rsel,.builder,.thor
+--type-add=html=.haml,.html.erb,.html.haml
+--type-add=js=.js.erb,.coffee
+--type-set=cucumber=.feature
+--type-set=c=.c,.cpp,.ino,.pde,.h
+--ignore-dir=vendor
+--ignore-dir=log
+--ignore-dir=tmp
+--ignore-dir=doc
+--ignore-dir=node_modules
+--smart-case
+--sort-files
+--color
+--follow
+--group
