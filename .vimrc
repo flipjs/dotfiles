@@ -209,8 +209,8 @@ nnoremap <leader>pt :set paste!<CR>
 " nnoremap <leader>rn :set relativenumber!<CR>
 " command line history
 nnoremap <leader>ch q:
-" reselect the text that was just pasted
-nnoremap <leader>v V`]
+" reselect the text that was just pasted and reindent
+nnoremap <leader>v V`]=
 
 " =============================================================================
 
@@ -428,10 +428,18 @@ nnoremap <leader>tb :TagbarToggle<CR>
 
 " =============================================================================
 
+augroup CoffeeScript
+  autocmd!
+  autocmd FileType coffee nnoremap <buffer> <leader>rr :CoffeeRun<CR>
+  autocmd FileType coffee nnoremap <buffer> <leader>jc :CoffeeCompile vert<CR>
+  autocmd FileType coffee nnoremap <buffer> <leader>jw :CoffeeWatch vert<CR>
+  autocmd FileType coffee nnoremap <buffer> <leader>jl :!coffeelint %<CR>
+augroup END
+
 augroup JavaScript
   autocmd!
   autocmd FileType javascript nnoremap <buffer> <leader>rr :!node %<CR>
-  autocmd FileType javascript nnoremap <buffer> <leader>jh :!jshint %<CR>
+  autocmd FileType javascript nnoremap <buffer> <leader>jl :!jshint %<CR>
   " Work around to indent and tab when pressing return after the open curly brace
   autocmd FileType javascript inoremap {<CR> {<CR>}<C-o>O<TAB>
 augroup END

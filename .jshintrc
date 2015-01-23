@@ -2,8 +2,8 @@
   "asi": true,
   "laxcomma": true,
   "laxbreak": true,
-  "quotmark": "single",
-  "plusplus": true,
+  /* "quotmark": "single", */
+  "plusplus": false,
   "nonew": true,
   "undef": true,
   "browser": true,

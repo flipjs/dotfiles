@@ -21,6 +21,10 @@ export HISTSIZE=100000 SAVEHIST=100000
 # My Notes directory
 export NOTES_DIR=$HOME/Dropbox/NOTES
 
+# AACC App settings
+export FACEBOOK_ID=391524571029957
+export FACEBOOK_SECRET=4a3eaf2f499658913ad0de32e311c68e
+
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
@@ -80,6 +84,8 @@ export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 # vim
 export MYVIMRC=~/.vimrc
 export EDITOR='/usr/local/bin/vim'
+export VISUAL='/usr/local/bin/vim'
+export GIT_EDITOR='/usr/local/bin/vim'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -108,8 +114,8 @@ export EDITOR='/usr/local/bin/vim'
 
 DIRSTACKSIZE=8
 setopt autopushd pushdminus pushdsilent pushdtohome
-alias dh='dirs -v'
 
+alias dh='dirs -v'
 alias ls='ls -GpFh'
 alias ll='ls -lGpFh'
 alias la='ls -aGpFh'
@@ -121,73 +127,26 @@ alias vi='vim'
 alias vz='vim ~/.zshrc'
 alias vzh='vim ~/.zshrc'
 alias vrc='vim ~/.vimrc'
-
-# function h() {
-# 	~/bin/h.sh
-# }
-
-function webs() {
-	~/bin/webs.sh
-}
-
-function mgd() {
-	~/bin/mgd.sh
-}
-
-function blog() {
-cd $HOME/dev/flipjs.io
-}
-
-function ng() {
-cd $HOME/dev/angular
-}
-
-function js() {
-cd $HOME/dev/javascript
-}
-
-function me() {
-cd $HOME/dev/mean
-}
-
-function dot() {
-cd $HOME/.dotfiles
-}
-
-function proj() {
-cd $HOME/dev/projects
-}
-
-function tmp() {
-cd $HOME/dev/tmp
-}
-
-function dev() {
-cd $HOME/dev
-}
-
-function aacc() {
-cd $HOME/dev/projects/aacc
-}
-
-function vp() {
-cd $HOME/dev/projects/aacc
-vim
-}
-
-function dos() {
-ssh philip@178.62.80.73
-}
-
-function win2unix() {
-  find . -type f | xargs perl -pi -e 's/\r\n|\n|\r/\n/g'
-}
-
-
+alias cls='clear'
+alias www='~/bin/webs.sh'
+alias webs='~/bin/webs.sh'
+alias mgd='~/bin/mgd.sh'
+alias blog='cd $HOME/dev/flipjs.io'
+alias ng='cd $HOME/dev/angular'
+alias js='cd $HOME/dev/javascript'
+alias cof='cd $HOME/dev/coffee'
+alias me='cd $HOME/dev/mean'
+alias dot='cd $HOME/.dotfiles'
+alias proj='cd $HOME/dev/projects'
+alias tmp='cd $HOME/dev/tmp'
+alias dev='cd $HOME/dev'
+alias aacc='cd $HOME/dev/projects/aacc'
+alias pv='cd $HOME/dev/projects/aacc && vim'
+alias dos='ssh philip@178.62.80.73'
+alias win2unix="find . -type f | xargs perl -pi -e 's/\r\n|\n|\r/\n/g'"
 
 function ff() { find . -iname "*$1*" ${@:2} }
 function ggr() { grep "$1" ${@:2} -R . }
-
 function mcd() { mkdir -p "$1" && cd "$1";  }
 
 h() {
