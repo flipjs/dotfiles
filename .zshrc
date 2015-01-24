@@ -120,7 +120,7 @@ alias ls='ls -GpFh'
 alias ll='ls -lGpFh'
 alias la='ls -aGpFh'
 alias lla='ls -laGpFh'
-alias stp="open '/Users/philip/Library/Application Support/Sublime Text 3/Packages'"
+alias stp="open '$HOME/Library/Application Support/Sublime Text 3/Packages'"
 alias v='vim'
 alias vv='vim'
 alias vi='vim'
@@ -144,6 +144,7 @@ alias aacc='cd $HOME/dev/projects/aacc'
 alias pv='cd $HOME/dev/projects/aacc && vim'
 alias dos='ssh philip@178.62.80.73'
 alias win2unix="find . -type f | xargs perl -pi -e 's/\r\n|\n|\r/\n/g'"
+alias kar="cd '$HOME/Library/Application Support/Karabiner'"
 
 function ff() { find . -iname "*$1*" ${@:2} }
 function ggr() { grep "$1" ${@:2} -R . }

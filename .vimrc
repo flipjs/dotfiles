@@ -253,6 +253,9 @@ set ttimeoutlen=100
 " go back to normal mode
 inoremap jj <ESC>
 
+inoremap <C-X> <DEL>
+inoremap <C-D> <ESC>ldwi
+
 " =============================================================================
 
 " Work around to indent and tab when pressing return after the open curly brace
