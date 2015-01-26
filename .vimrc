@@ -1,4 +1,8 @@
 " =============================================================================
+" EXPERIMENTAL
+" put experimental code here
+
+" =============================================================================
 
 set nocompatible
 filetype off
@@ -51,7 +55,8 @@ set noswapfile
 
 " =============================================================================
 
-let mapleader = ","
+" let mapleader = ","
+let mapleader = "\<Space>"
 
 " =============================================================================
 
@@ -83,9 +88,9 @@ syntax on
 
 " =============================================================================
 
-" code folding setup
-nnoremap <SPACE> za
-vnoremap <SPACE> za
+" code folding setup, not using it and <space> is now my mapleader.
+" nnoremap <SPACE> za
+" vnoremap <SPACE> za
 
 " this breaks the macvim with the breakindent command. commented out for now
 " save folds and reload automatically
@@ -112,6 +117,43 @@ cnoreabbrev wrap set wrap
 cnoreabbrev warp set wrap
 cnoreabbrev nowrap set nowrap
 cnoreabbrev nowr set nowrap
+
+" =============================================================================
+
+" Emacs-style movement keys
+" strange codes ∫ ƒ ∂ are alt-mappings for mac only
+cnoremap <C-a>  <Home>
+cnoremap <C-e>  <End>
+cnoremap <C-b>  <Left>
+cnoremap <C-f>  <Right>
+cnoremap <C-d>  <Delete>
+" <ALT-B>
+cnoremap ∫      <S-Left>
+" <ALT-F>
+cnoremap ƒ      <S-Right>
+" <ALT-D>
+cnoremap ∂      <S-right><Delete>
+cnoremap <Esc>b <S-Left>
+cnoremap <Esc>f <S-Right>
+cnoremap <Esc>d <S-right><Delete>
+cnoremap <C-g>  <C-c>
+
+" =============================================================================
+
+" Copy & paste to system clipboard
+vnoremap <C-C> "+y
+vnoremap <C-X> "+d
+nnoremap <C-B> "+P
+
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
+" =============================================================================
+
+" Beginning and End of file
+nnoremap <CR> G
+nnoremap <BS> gg
 
 " =============================================================================
 
@@ -178,12 +220,6 @@ vnoremap L g_
 nnoremap <leader>H H
 nnoremap <leader>L L
 
-" Emacs-like Home/End in insert and command mode
-" " inoremap <c-a> <esc>I
-" " inoremap <c-e> <esc>A
-cnoremap <c-a> <home>
-cnoremap <c-e> <end>
-
 " =============================================================================
 
 " Dash shortcut
@@ -210,7 +246,8 @@ nnoremap <leader>pt :set paste!<CR>
 " command line history
 nnoremap <leader>ch q:
 " reselect the text that was just pasted and reindent
-nnoremap <leader>v V`]=
+nnoremap <leader>v V`]
+nnoremap gV `[v`]
 
 " =============================================================================
 
@@ -253,13 +290,22 @@ set ttimeoutlen=100
 " go back to normal mode
 inoremap jj <ESC>
 
-inoremap <C-X> <DEL>
-inoremap <C-D> <ESC>ldwi
+" forward delete single character
+inoremap <C-D> <DEL>
 
 " =============================================================================
 
 " Work around to indent and tab when pressing return after the open curly brace
+" Transferred this in JS group as JS is the one affected by not indenting
+" properly. Other filetypes seems to be ok.
 " inoremap {<CR> {<CR>}<C-o>O<TAB>
+
+" =============================================================================
+
+" Ctrl-S to save
+noremap <silent> <C-S>          :update<CR>
+vnoremap <silent> <C-S>         <C-C>:update<CR>
+inoremap <silent> <C-S>         <C-O>:update<CR>
 
 " =============================================================================
 
@@ -349,8 +395,8 @@ endfunction
 " =============================================================================
 
 " buffer related functions
-nnoremap <C-C> :bnext<CR>
-nnoremap <C-X> :bprev<CR>
+nnoremap <C-K> :bnext<CR>
+nnoremap <C-J> :bprev<CR>
 nnoremap <leader>bn :bn<CR>
 nnoremap <leader>bp :bp<CR>
 nnoremap <leader>bm :bp<CR>
@@ -389,6 +435,10 @@ nnoremap <leader>nt :NERDTreeToggle<CR>
 " =============================================================================
 
 " CtrlP settings
+
+" change default mapping
+let g:ctrlp_map = '<c-\>'
+let g:ctrlp_cmd = 'CtrlP'
 
 " ignore some files and dirs
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip

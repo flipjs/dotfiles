@@ -7,6 +7,9 @@ setopt ignoreeof
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+# TO BE ABLE TO CTRL-S in VIM!
+stty -ixon
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -150,6 +153,9 @@ function ff() { find . -iname "*$1*" ${@:2} }
 function ggr() { grep "$1" ${@:2} -R . }
 function mcd() { mkdir -p "$1" && cd "$1";  }
 
+
+# pipe to h to highlight text in terminal
+
 h() {
 
 	_usage() {
@@ -213,3 +219,16 @@ h() {
 	cat - | eval $_COMMAND
 }
 
+# CTRL-Z to go back to suspended Vim
+
+fancy-ctrl-z () {
+  if [[ $#BUFFER -eq 0 ]]; then
+    BUFFER="fg"
+    zle accept-line
+  else
+    zle push-input
+    zle clear-screen
+  fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
