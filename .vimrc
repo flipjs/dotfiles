@@ -151,9 +151,9 @@ nnoremap <silent> p p`]
 
 " =============================================================================
 
-" Beginning and End of file
+" enter key to jump to very last line / backspace to toggle to previous loc.
 nnoremap <CR> G
-nnoremap <BS> gg
+nnoremap <BS> ''
 
 " =============================================================================
 
@@ -290,8 +290,8 @@ set ttimeoutlen=100
 " go back to normal mode
 inoremap jj <ESC>
 
-" forward delete single character
-inoremap <C-D> <DEL>
+" forward search
+nnoremap <C-F> /
 
 " =============================================================================
 
@@ -302,10 +302,12 @@ inoremap <C-D> <DEL>
 
 " =============================================================================
 
-" Ctrl-S to save
+" Ctrl-S to save or ESC then s
 noremap <silent> <C-S>          :update<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
+nnoremap <ESC>s :w<CR>
+inoremap <ESC>s <ESC>:w<CR>
 
 " =============================================================================
 
@@ -493,8 +495,10 @@ augroup JavaScript
   autocmd!
   autocmd FileType javascript nnoremap <buffer> <leader>rr :!node %<CR>
   autocmd FileType javascript nnoremap <buffer> <leader>jl :!jshint %<CR>
-  " Work around to indent and tab when pressing return after the open curly brace
+  " Work around to indent and tab when pressing return after the open brace
   autocmd FileType javascript inoremap {<CR> {<CR>}<C-o>O<TAB>
+  autocmd FileType javascript inoremap [<CR> [<CR>]<C-o>O<TAB>
+  autocmd FileType javascript inoremap (<CR> (<CR>)<C-o>O<TAB>
 augroup END
 
 " =============================================================================
@@ -516,8 +520,8 @@ autocmd FileType scss vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
 " =============================================================================
 
 " vv - snipmate completion
-imap <C-E> <ESC>a<Plug>snipMateNextOrTrigger
-smap <C-E> <Plug>snipMateNextOrTrigger
+imap vv <ESC>a<Plug>snipMateNextOrTrigger
+smap vv <Plug>snipMateNextOrTrigger
 
 " =============================================================================
 
@@ -525,7 +529,7 @@ smap <C-E> <Plug>snipMateNextOrTrigger
 set complete=.,b,u,]
 set wildmode=longest,list:longest
 set completeopt=menu,preview
-let g:ycm_key_list_select_completion = ['<TAB>', '<Down>', '<ENTER>']
+let g:ycm_key_list_select_completion = ['<TAB>', '<Down>']
 
 " =============================================================================
 
@@ -635,16 +639,20 @@ if has("gui_macvim")
     let macvim_hig_shift_movement = 1
 endif
 
+" map meta to alt keys when using terminal vim (mac only?)
+" map ∑ <m-w>
+
 " =============================================================================
 
-" dont use this, use editorconfig plugin
-" set exrc
-" set secure
+" call Whitespace()
+function! Whitespace()
+    if !exists('b:ws')
+        highlight Conceal ctermbg=NONE ctermfg=240 cterm=NONE guibg=NONE guifg=#585858 gui=NONE
+        highlight link Whitespace Conceal
+        let b:ws = 1
+    endif
 
-" dont use this, use editorconfig plugin
-" load custom vimrc per project/folder
-" let b:thisdir=expand("%:p:h")
-" let b:vim=b:thisdir."/.vim"
-" if (filereadable(b:vim))
-"     execute "source ".b:vim
-" endif
+    syntax clear Whitespace
+    syntax match Whitespace / / containedin=ALL conceal cchar=·
+    setlocal conceallevel=2 concealcursor=c
+endfunction
