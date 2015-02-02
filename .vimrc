@@ -1,8 +1,4 @@
 " =============================================================================
-" EXPERIMENTAL
-" put experimental code here
-
-" =============================================================================
 
 set nocompatible
 filetype off
@@ -15,13 +11,17 @@ set mouse=a
 set clipboard=unnamed
 
 " =============================================================================
+" EXPERIMENTAL
+" put experimental/test code here
+
+" =============================================================================
 
 " set snippets location for SnipMate
 let g:snippets_dir = "~/.vim/snippets"
 
 " =============================================================================
 
-" indent size = 4
+" my default indent size is 4, but editorconfig will override these
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -56,7 +56,9 @@ set noswapfile
 " =============================================================================
 
 " let mapleader = ","
-let mapleader = "\<Space>"
+" use default which is \
+" let mapleader = ","
+" let mapleader = "\<Space>"
 
 " =============================================================================
 
@@ -92,10 +94,9 @@ syntax on
 " nnoremap <SPACE> za
 " vnoremap <SPACE> za
 
-" this breaks the macvim with the breakindent command. commented out for now
-" save folds and reload automatically
-" autocmd BufWinLeave * mkview
-" autocmd BufWinEnter * silent loadview
+" save folds
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
 
 " =============================================================================
 
@@ -152,18 +153,34 @@ nnoremap <silent> p p`]
 " =============================================================================
 
 " enter key to jump to very last line / backspace to toggle to previous loc.
-nnoremap <CR> G
-nnoremap <BS> ''
+" nnoremap <CR> G
+" nnoremap <BS> ''
 
 " =============================================================================
 
-" QuickFix setup
-nnoremap <leader>qc :cclose<CR>
-nnoremap <leader>qo :copen<CR>
-nnoremap [q :cprevious<CR>
-nnoremap ]q :cnext<CR>
-nnoremap [Q :cfirst<CR>
-nnoremap ]Q :clast<CR>
+" habit breaking, habit making
+nnoremap h <nop>
+nnoremap j <nop>
+nnoremap k <nop>
+nnoremap l <nop>
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
+" makes j and k the way you expected and not jumping on long lines
+" i have no need for this now
+" nnoremap j gj
+" nnoremap k gk
+
+" =============================================================================
+
+" " QuickFix setup
+" nnoremap <leader>qc :cclose<CR>
+" nnoremap <leader>qo :copen<CR>
+" nnoremap [q :cprevious<CR>
+" nnoremap ]q :cnext<CR>
+" nnoremap [Q :cfirst<CR>
+" nnoremap ]Q :clast<CR>
 
 " =============================================================================
 
@@ -180,9 +197,6 @@ nnoremap <leader>ng :Ngrep
 
 " =============================================================================
 
-" makes j and k the way you expected and not jumping on long lines
-nnoremap j gj
-nnoremap k gk
 " close current buffer
 nnoremap <leader>dd :bd<CR>
 nnoremap <leader>ww :w<CR>
@@ -285,7 +299,7 @@ cabbr <expr> %% expand('%:p:h')
 " fixes slow O inserts (all three)
 set timeout
 set timeoutlen=1000
-set ttimeoutlen=100
+set ttimeoutlen=10
 
 " go back to normal mode
 inoremap jj <ESC>
@@ -348,10 +362,10 @@ set fillchars+=vert:│
 
 " =============================================================================
 
-" Move between splits with q + hjkl, new splits with qs or qv
-nnoremap q <c-w>
+" Move between splits with s + hjkl, new splits with ss or sv
+" nnoremap s <c-w>
 " rebind q (macro recording) to Q
-nnoremap Q q
+" nnoremap Q q
 
 " =============================================================================
 
@@ -441,6 +455,7 @@ nnoremap <leader>nt :NERDTreeToggle<CR>
 " change default mapping
 let g:ctrlp_map = '<c-\>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
 
 " ignore some files and dirs
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
@@ -473,6 +488,9 @@ let g:syntastic_error_symbol='X'
 let g:syntastic_warning_symbol='!'
 let g:syntastic_auto_loc_list=2
 let g:syntastic_loc_list_height=5
+
+" set ES6 syntax same with javascript
+autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
 let g:syntastic_javascript_checkers=['jshint']
 let g:syntastic_html_tidy_ignore_errors=["proprietary attribute" ,"trimming empty", "unescaped &" , "is not recognized!", "discarding unexpected", "inserting implicit", "missing", "lacks", "element not empty"]
