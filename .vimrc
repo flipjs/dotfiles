@@ -153,20 +153,20 @@ nnoremap <silent> p p`]
 " =============================================================================
 
 " enter key to jump to very last line / backspace to toggle to previous loc.
-" nnoremap <CR> G
+nnoremap <CR> <nop>
 " nnoremap <BS> ''
 
 " =============================================================================
 
 " habit breaking, habit making
-nnoremap h <nop>
-nnoremap j <nop>
-nnoremap k <nop>
-nnoremap l <nop>
-noremap <up> <nop>
-noremap <down> <nop>
-noremap <left> <nop>
-noremap <right> <nop>
+" nnoremap h <nop>
+" nnoremap j <nop>
+" nnoremap k <nop>
+" nnoremap l <nop>
+" noremap <up> <nop>
+" noremap <down> <nop>
+" noremap <left> <nop>
+" noremap <right> <nop>
 " makes j and k the way you expected and not jumping on long lines
 " i have no need for this now
 " nnoremap j gj
@@ -512,6 +512,7 @@ augroup END
 augroup JavaScript
   autocmd!
   autocmd FileType javascript nnoremap <buffer> <leader>rr :!node %<CR>
+  autocmd FileType javascript nnoremap <buffer> <leader>er :!traceur %<CR>
   autocmd FileType javascript nnoremap <buffer> <leader>jl :!jshint %<CR>
   " Work around to indent and tab when pressing return after the open brace
   autocmd FileType javascript inoremap {<CR> {<CR>}<C-o>O<TAB>

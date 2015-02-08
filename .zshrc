@@ -148,12 +148,15 @@ alias proj='cd $HOME/dev/projects'
 alias tmp='cd $HOME/dev/temp'
 alias temp='cd $HOME/dev/temp'
 alias dev='cd $HOME/dev'
+alias es='cd $HOME/dev/es6'
 alias aacc='cd $HOME/dev/projects/aacc'
 alias pv='cd $HOME/dev/projects/aacc && vim'
 alias dos='ssh philip@178.62.80.73'
 alias win2unix="find . -type f | xargs perl -pi -e 's/\r\n|\n|\r/\n/g'"
 alias kar="cd '$HOME/Library/Application Support/Karabiner'"
 
+alias seraph="diskutil mount `diskutil list | grep "SERAPH" | sed -n -e 's/^.* //p'`"
+alias sati="diskutil mount `diskutil list | grep "SATI" | sed -n -e 's/^.* //p'`"
 function ff() { find . -iname "*$1*" ${@:2} }
 function ggr() { grep "$1" ${@:2} -R . }
 function mcd() { mkdir -p "$1" && cd "$1";  }
