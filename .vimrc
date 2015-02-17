@@ -41,7 +41,13 @@ set hidden
 set wildmenu
 set visualbell
 set cursorline
-set ttyfast
+" neovim has no ttyfast
+if has("vim")
+	set ttyfast
+endif
+if has("gui_running")
+	set ttyfast
+endif
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
@@ -167,20 +173,17 @@ nnoremap <CR> <nop>
 " noremap <down> <nop>
 " noremap <left> <nop>
 " noremap <right> <nop>
+
 " makes j and k the way you expected and not jumping on long lines
 " i have no need for this now
-" nnoremap j gj
-" nnoremap k gk
+nnoremap j gj
+nnoremap k gk
 
 " =============================================================================
 
 " " QuickFix setup
-" nnoremap <leader>qc :cclose<CR>
-" nnoremap <leader>qo :copen<CR>
-" nnoremap [q :cprevious<CR>
-" nnoremap ]q :cnext<CR>
-" nnoremap [Q :cfirst<CR>
-" nnoremap ]Q :clast<CR>
+nnoremap <leader>qc :cclose<CR>
+nnoremap <leader>qo :copen<CR>
 
 " =============================================================================
 
@@ -188,6 +191,11 @@ nnoremap <CR> <nop>
 nnoremap <C-A> :Ack!
 " uncomment to use AG instead
 " let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" =============================================================================
+
+" auto-pairs backinsert
+imap <ESC>b <m-b>
 
 " =============================================================================
 
@@ -581,6 +589,7 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 " close tag
 inoremap ,/ </<C-X><C-O>
+inoremap ./ </<C-X><C-O>
 
 " =============================================================================
 
@@ -660,7 +669,6 @@ endif
 
 " map meta to alt keys when using terminal vim (mac only?)
 " map ∑ <m-w>
-
 " =============================================================================
 
 " call Whitespace()
