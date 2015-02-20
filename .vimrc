@@ -58,13 +58,12 @@ set number
 set nobackup
 set nowritebackup
 set noswapfile
+set nocursorline
 
 " =============================================================================
 
 " let mapleader = ","
 " use default which is \
-" let mapleader = ","
-" let mapleader = "\<Space>"
 
 " =============================================================================
 
@@ -74,9 +73,6 @@ set smartcase
 set gdefault
 set incsearch
 set showmatch
-" set hlsearch
-" toggles search highlighting
-nnoremap <leader><space> :set hls!<CR>
 
 " =============================================================================
 
@@ -94,15 +90,9 @@ nnoremap <leader>99 :match ErrorMsg '\%>80v.\+'<CR>
 nnoremap <leader>00 :match none<CR>
 syntax on
 
-" =============================================================================
-
-" code folding setup, not using it and <space> is now my mapleader.
-" nnoremap <SPACE> za
-" vnoremap <SPACE> za
-
 " save folds
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
+" autocmd BufWinLeave *.* mkview
+" autocmd BufWinEnter *.* silent loadview
 
 " =============================================================================
 
@@ -158,9 +148,8 @@ nnoremap <silent> p p`]
 
 " =============================================================================
 
-" enter key to jump to very last line / backspace to toggle to previous loc.
+" Return key does nothing
 nnoremap <CR> <nop>
-" nnoremap <BS> ''
 
 " =============================================================================
 
@@ -268,7 +257,6 @@ nnoremap <leader>pt :set paste!<CR>
 " command line history
 nnoremap <leader>ch q:
 " reselect the text that was just pasted and reindent
-nnoremap <leader>v V`]
 nnoremap gV `[v`]
 
 " =============================================================================
@@ -324,12 +312,13 @@ nnoremap <C-F> /
 
 " =============================================================================
 
-" Ctrl-S to save or ESC then s
+" Ctrl-S to save
 noremap <silent> <C-S>          :update<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
-nnoremap <ESC>s :w<CR>
-inoremap <ESC>s <ESC>:w<CR>
+
+" Ctrl-Q to quit
+nnoremap <silent> <C-Q> :q<CR>
 
 " =============================================================================
 
@@ -370,10 +359,8 @@ set fillchars+=vert:│
 
 " =============================================================================
 
-" Move between splits with s + hjkl, new splits with ss or sv
-" nnoremap s <c-w>
-" rebind q (macro recording) to Q
-" nnoremap Q q
+" Move between splits with Q + hjkl, new splits with Qs or Qv
+nnoremap Q <C-W>
 
 " =============================================================================
 
@@ -419,8 +406,6 @@ endfunction
 " =============================================================================
 
 " buffer related functions
-nnoremap <C-K> :bnext<CR>
-nnoremap <C-J> :bprev<CR>
 nnoremap <leader>bn :bn<CR>
 nnoremap <leader>bp :bp<CR>
 nnoremap <leader>bm :bp<CR>
@@ -589,7 +574,6 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 " close tag
 inoremap ,/ </<C-X><C-O>
-inoremap ./ </<C-X><C-O>
 
 " =============================================================================
 

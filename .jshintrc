@@ -3,7 +3,7 @@
   "esnext": true,
   "laxcomma": true,
   "laxbreak": true,
-  "quotmark": "single",
+  "quotmark": true,
   "plusplus": false,
   "nonew": true,
   "undef": true,

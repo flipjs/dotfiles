@@ -152,3 +152,6 @@
 [submodule ".vim/bundle/targets.vim"]
 	path = .vim/bundle/targets.vim
 	url = https://github.com/wellle/targets.vim.git
+[submodule ".vim/bundle/vim-space"]
+	path = .vim/bundle/vim-space
+	url = https://github.com/spiiph/vim-space.git
