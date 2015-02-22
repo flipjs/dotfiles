@@ -200,16 +200,6 @@ nnoremap <leader>ww :w<CR>
 
 " =============================================================================
 
-" insert newline without entering insert mode using Enter key
-" nnoremap <CR> O<ESC>j
-
-" =============================================================================
-
-" split line (opposite of shift-j)
-" nnoremap <C-J> a<CR><ESC>k$
-
-" =============================================================================
-
 " Copy to end of line, not all of line
 nnoremap Y y$
 
