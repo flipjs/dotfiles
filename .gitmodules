@@ -155,3 +155,6 @@
 [submodule ".vim/bundle/vim-space"]
 	path = .vim/bundle/vim-space
 	url = https://github.com/spiiph/vim-space.git
+[submodule ".vim/bundle/vim-vinegar"]
+	path = .vim/bundle/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar.git
