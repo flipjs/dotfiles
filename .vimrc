@@ -643,6 +643,7 @@ endif
 
 " map meta to alt keys when using terminal vim (mac only?)
 " map ∑ <m-w>
+
 " =============================================================================
 
 " call Whitespace()
@@ -657,3 +658,6 @@ function! Whitespace()
     syntax match Whitespace / / containedin=ALL conceal cchar=·
     setlocal conceallevel=2 concealcursor=c
 endfunction
+
+" =============================================================================
+

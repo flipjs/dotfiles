@@ -158,3 +158,6 @@
 [submodule ".vim/bundle/vim-vinegar"]
 	path = .vim/bundle/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar.git
+[submodule ".vim/bundle/clever-f.vim"]
+	path = .vim/bundle/clever-f.vim
+	url = https://github.com/rhysd/clever-f.vim.git
