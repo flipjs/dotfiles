@@ -62,8 +62,8 @@ set nocursorline
 
 " =============================================================================
 
-" let mapleader = ","
-" use default which is \
+" comment below to use default which is \
+let mapleader = ","
 
 " =============================================================================
 
