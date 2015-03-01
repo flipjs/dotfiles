@@ -11,10 +11,6 @@ set mouse=a
 set clipboard=unnamed
 
 " =============================================================================
-" EXPERIMENTAL
-" put experimental/test code here
-
-" =============================================================================
 
 " set snippets location for SnipMate
 let g:snippets_dir = "~/.vim/snippets"
@@ -152,16 +148,6 @@ nnoremap <silent> p p`]
 nnoremap <CR> <nop>
 
 " =============================================================================
-
-" habit breaking, habit making
-" nnoremap h <nop>
-" nnoremap j <nop>
-" nnoremap k <nop>
-" nnoremap l <nop>
-" noremap <up> <nop>
-" noremap <down> <nop>
-" noremap <left> <nop>
-" noremap <right> <nop>
 
 " makes j and k the way you expected and not jumping on long lines
 " i have no need for this now
