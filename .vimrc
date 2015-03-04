@@ -11,10 +11,6 @@ set mouse=a
 set clipboard=unnamed
 
 " =============================================================================
-" EXPERIMENTAL
-" put experimental/test code here
-
-" =============================================================================
 
 " set snippets location for SnipMate
 let g:snippets_dir = "~/.vim/snippets"
@@ -152,16 +148,6 @@ nnoremap <silent> p p`]
 nnoremap <CR> <nop>
 
 " =============================================================================
-
-" habit breaking, habit making
-" nnoremap h <nop>
-" nnoremap j <nop>
-" nnoremap k <nop>
-" nnoremap l <nop>
-" noremap <up> <nop>
-" noremap <down> <nop>
-" noremap <left> <nop>
-" noremap <right> <nop>
 
 " makes j and k the way you expected and not jumping on long lines
 " i have no need for this now
@@ -407,10 +393,19 @@ nnoremap <leader>ee :call DeleteEmptyBuffers()<CR>
 
 " =============================================================================
 
+" vim color theme
 set t_Co=256
 set guifont=Source\ Code\ Pro\ for\ PowerLine:h16
-set background=dark
-color distinguished
+syntax enable
+colorscheme solarized
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+" change cursor shape in different modes
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " =============================================================================
 
@@ -424,7 +419,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " populate symbols
 let g:airline_powerline_fonts = 1
 " set theme
-let g:airline_theme='tomorrow'
+let g:airline_theme='solarized'
 let g:airline_section_b = "%{strftime('%H:%M')}"
 
 " =============================================================================
@@ -601,35 +596,6 @@ au FileType go nmap <leader>gb <Plug>(go-build)
 au FileType go nmap <leader>gt <Plug>(go-test)
 au FileType go nmap <leader>gc <Plug>(go-coverage)
 au FileType go nmap <Leader>ge <Plug>(go-rename)
-
-" =============================================================================
-
-" rainbow config
-autocmd FileType javascript syntax clear jsFuncBlock " hack to work with js
-let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
-"
-" ctermfgs: [ 'DodgerBlue3', 'DarkOrange3', 'SeaGreen3', 'Red3' ]
-" rainbow cant detect these color names, so put actual value instead
-let g:rainbow_conf = {
-\   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-\   'ctermfgs': [26, 130, 78, 124],
-\   'operators': '_,_',
-\   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
-\   'separately': {
-\       '*': {},
-\       'tex': {
-\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
-\       },
-\       'lisp': {
-\           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
-\       },
-\       'vim': {
-\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
-\       },
-\       'css': 0,
-\       'html': 0
-\   }
-\}
 
 " =============================================================================
 

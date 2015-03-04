@@ -122,9 +122,6 @@
 [submodule ".vim/bundle/vim-jade"]
 	path = .vim/bundle/vim-jade
 	url = https://github.com/digitaltoad/vim-jade.git
-[submodule ".vim/bundle/rainbow"]
-	path = .vim/bundle/rainbow
-	url = https://github.com/luochen1990/rainbow.git
 [submodule ".vim/bundle/jsbeautify"]
 	path = .vim/bundle/jsbeautify
 	url = https://github.com/maksimr/vim-jsbeautify.git
@@ -155,3 +152,6 @@
 [submodule ".vim/bundle/vim-vinegar"]
 	path = .vim/bundle/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar.git
+[submodule ".vim/bundle/vim-colors-solarized"]
+	path = .vim/bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
