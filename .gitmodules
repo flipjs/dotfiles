@@ -158,3 +158,6 @@
 [submodule ".vim/bundle/vim-niji"]
 	path = .vim/bundle/vim-niji
 	url = https://github.com/amdt/vim-niji.git
+[submodule ".vim/bundle/cosco.vim"]
+	path = .vim/bundle/cosco.vim
+	url = https://github.com/lfilho/cosco.vim.git

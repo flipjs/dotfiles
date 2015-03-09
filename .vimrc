@@ -578,6 +578,12 @@ let g:sparkupDoubleQuote = 1
 
 " =============================================================================
 
+" cosco config
+autocmd FileType javascript,css,php nnoremap <silent> <C-c> :call cosco#commaOrSemiColon()<CR>
+autocmd FileType javascript,css,php inoremap <silent> <C-c> <c-o>:call cosco#commaOrSemiColon()<CR>
+
+" =============================================================================
+
 " Soure current line / selection
 vnoremap <leader>sr y:execute @@<cr>:echo 'Sourced selection.'<cr>
 nnoremap <leader>sr ^vg_y:execute @@<cr>:echo 'Sourced line.'<cr>
@@ -656,3 +662,4 @@ let g:rainbow_conf = {
 " =============================================================================
 
 let g:niji_matching_filetypes = ['javascript', 'coffee', 'python', 'sass', 'less']
+
