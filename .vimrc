@@ -397,12 +397,14 @@ nnoremap <leader>ee :call DeleteEmptyBuffers()<CR>
 set t_Co=256
 set guifont=Source\ Code\ Pro\ for\ PowerLine:h16
 syntax enable
-colorscheme solarized
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
+" colorscheme solarized
+" if has('gui_running')
+"     set background=light
+" else
+"     set background=dark
+" endif
+color distinguished
+
 " change cursor shape in different modes
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
@@ -419,7 +421,8 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " populate symbols
 let g:airline_powerline_fonts = 1
 " set theme
-let g:airline_theme='solarized'
+let g:airline_theme='tomorrow'
+" let g:airline_theme='solarized'
 let g:airline_section_b = "%{strftime('%H:%M')}"
 
 " =============================================================================
@@ -639,7 +642,7 @@ let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 "
 let g:rainbow_conf = {
 \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-\   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+\   'ctermfgs': [26, 130, 78, 124],
 \   'operators': '_,_',
 \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
 \   'separately': {
@@ -656,10 +659,13 @@ let g:rainbow_conf = {
 \       'html': {
 \           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
 \       },
+\       'xml': {
+\           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+\       },
 \       'css': 0,
 \   }
 \}
 " =============================================================================
 
-let g:niji_matching_filetypes = ['javascript', 'coffee', 'python', 'sass', 'less']
+" let g:niji_matching_filetypes = ['javascript', 'coffee', 'python', 'sass', 'less']
 

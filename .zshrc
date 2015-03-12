@@ -15,9 +15,9 @@ stty -ixon
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="agnoster"
-ZSH_THEME="pygmalion"
+ZSH_THEME="flipjs.io"
 # DEFAULT_USER for agnoster theme only
-DEFAULT_USER="philip"
+# DEFAULT_USER="philip"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"

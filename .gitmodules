@@ -140,9 +140,11 @@
 [submodule ".vim/bundle/vim-textobj-between"]
 	path = .vim/bundle/vim-textobj-between
 	url = https://github.com/thinca/vim-textobj-between.git
+	ignore = dirty
 [submodule ".vim/bundle/vim-textobj-user"]
 	path = .vim/bundle/vim-textobj-user
 	url = https://github.com/kana/vim-textobj-user.git
+	ignore = dirty
 [submodule ".vim/bundle/targets.vim"]
 	path = .vim/bundle/targets.vim
 	url = https://github.com/wellle/targets.vim.git
@@ -155,9 +157,9 @@
 [submodule ".vim/bundle/vim-colors-solarized"]
 	path = .vim/bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule ".vim/bundle/vim-niji"]
-	path = .vim/bundle/vim-niji
-	url = https://github.com/amdt/vim-niji.git
 [submodule ".vim/bundle/cosco.vim"]
 	path = .vim/bundle/cosco.vim
 	url = https://github.com/lfilho/cosco.vim.git
+[submodule ".vim/bundle/rainbow"]
+	path = .vim/bundle/rainbow
+	url = https://github.com/luochen1990/rainbow.git
