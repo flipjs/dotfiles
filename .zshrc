@@ -132,7 +132,7 @@ alias nv='nvim'
 alias v='vim'
 alias vv='vim'
 alias vi='vim'
-alias vn='vim -u NONE'
+alias vn='vim -u ~/.vimbare'
 alias vm='mvim'
 alias vz='vim ~/.zshrc'
 alias vzh='vim ~/.zshrc'
@@ -155,6 +155,7 @@ alias tmp='cd $HOME/dev/temp'
 alias temp='cd $HOME/dev/temp'
 alias dev='cd $HOME/dev'
 alias es='cd $HOME/dev/es6'
+alias react='cd $HOME/dev/react'
 alias aacc='cd $HOME/dev/projects/aacc'
 alias pv='cd $HOME/dev/projects/aacc && vim'
 alias dos='ssh philip@178.62.80.73'
@@ -163,6 +164,7 @@ alias kar="cd '$HOME/Library/Application Support/Karabiner'"
 
 alias seraph="diskutil mount `diskutil list | grep "SERAPH" | sed -n -e 's/^.* //p'`"
 alias sati="diskutil mount `diskutil list | grep "SATI" | sed -n -e 's/^.* //p'`"
+alias bane="diskutil mount `diskutil list | grep "BANE" | sed -n -e 's/^.* //p'`"
 function ff() { find . -iname "*$1*" ${@:2} }
 function ggr() { grep "$1" ${@:2} -R . }
 function mcd() { mkdir -p "$1" && cd "$1";  }

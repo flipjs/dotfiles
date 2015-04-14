@@ -474,7 +474,8 @@ let g:syntastic_loc_list_height=5
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
 let g:syntastic_javascript_checkers=['jshint']
-let g:syntastic_html_tidy_ignore_errors=["proprietary attribute" ,"trimming empty", "unescaped &" , "is not recognized!", "discarding unexpected", "inserting implicit", "missing", "lacks", "element not empty"]
+let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
+let g:syntastic_html_tidy_ignore_errors=["proprietary attribute" ,"trimming empty", "unescaped &" , "is not recognized!", "discarding unexpected", "inserting implicit", "missing", "lacks", "element not empty", "letter not allowed here"]
 
 " =============================================================================
 
@@ -667,5 +668,8 @@ let g:rainbow_conf = {
 \}
 " =============================================================================
 
-" let g:niji_matching_filetypes = ['javascript', 'coffee', 'python', 'sass', 'less']
+" vim-jsx settings
+let g:jsx_pragma_required = 1
+
+" =============================================================================
 

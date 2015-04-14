@@ -1,6 +1,6 @@
-" ~/.dotfiles/.vim/sessions/default.vim:
+" ~/.dotfiles/.vim/sessions/require.vim:
 " Vim session script.
-" Created by session.vim 2.7 on 28 March 2015 at 10:55:30.
+" Created by session.vim 2.7 on 30 March 2015 at 17:38:41.
 " Open this file in Vim and run :source % to restore your session.
 
 if exists('g:syntax_on') != 1 | syntax on | endif
@@ -17,22 +17,29 @@ if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/dev/react/getting-started/topicsApp/app
+cd ~/dev/requirejs/todo
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +31 index.html
-badd +11 src/js/main.js
-badd +19 ~/dev/react/getting-started/topicsApp/app/src/js/components/TopicAdd.js
-badd +42 ~/dev/react/getting-started/topicsApp/app/src/js/components/TopicsApp.js
-badd +19 ~/dev/react/getting-started/topicsApp/app/src/js/components/TopicForm.js
-badd +16 ~/dev/react/getting-started/topicsApp/app/src/js/components/Topics.js
-badd +16 ~/dev/react/getting-started/topicsApp/app/src/js/components/Topic.js
+badd +8 index.html
+badd +6 src/main.js
+badd +8 src/list_manager.js
+badd +15 src/storage.js
+badd +19 src/config.js
+badd +2 src/view_models/app.js
+badd +3 src/view_models/list.js
+badd +4 src/view_models/task.js
+badd +7 views/app.html
+badd +7 views/list.html
+badd +7 views/task.html
+badd +13 src/renderer.js
+badd +1 src/nls/root/ui_strings.js
+badd +2 src/nls/ui_strings.js
 argglobal
 silent! argdel *
 argadd index.html
-edit ~/dev/react/getting-started/topicsApp/app/src/js/components/Topic.js
+edit src/nls/ui_strings.js
 set splitbelow splitright
 wincmd t
 set winheight=1 winwidth=1
@@ -46,12 +53,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 16 - ((15 * winheight(0) + 15) / 30)
+let s:l = 3 - ((2 * winheight(0) + 15) / 30)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-16
-normal! 0
+3
+normal! 017|
 tabnext 1
 if exists('s:wipebuf')
 "   silent exe 'bwipe ' . s:wipebuf
