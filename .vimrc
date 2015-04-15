@@ -577,8 +577,8 @@ let g:session_autosave = 'no'
 
 " =============================================================================
 
-" sparkup config
-let g:sparkupDoubleQuote = 1
+" emmet config
+let g:user_emmet_leader_key='<c-e>'
 
 " =============================================================================
 
