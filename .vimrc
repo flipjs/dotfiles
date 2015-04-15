@@ -276,9 +276,6 @@ set ttimeoutlen=10
 " go back to normal mode
 inoremap jj <ESC>
 
-" forward search
-nnoremap <C-F> /
-
 " =============================================================================
 
 " Work around to indent and tab when pressing return after the open curly brace
@@ -523,6 +520,11 @@ autocmd FileType scss vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
 " vv - snipmate completion
 imap vv <ESC>a<Plug>snipMateNextOrTrigger
 smap vv <Plug>snipMateNextOrTrigger
+
+" ultisnips config
+let g:UltiSnipsExpandTrigger="<c-d>"
+let g:UltiSnipsJumpForwardTrigger="<c-f>"
+let g:UltiSnipsJumpBackwardTrigger="<c-u>"
 
 " =============================================================================
 
