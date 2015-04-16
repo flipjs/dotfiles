@@ -517,10 +517,6 @@ autocmd FileType scss vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
 
 " =============================================================================
 
-" vv - snipmate completion
-imap vv <ESC>a<Plug>snipMateNextOrTrigger
-smap vv <Plug>snipMateNextOrTrigger
-
 " ultisnips config
 let g:UltiSnipsExpandTrigger="<c-d>"
 let g:UltiSnipsJumpForwardTrigger="<c-f>"
@@ -580,7 +576,8 @@ let g:session_autosave = 'no'
 " =============================================================================
 
 " emmet config
-let g:user_emmet_leader_key='<c-e>'
+" let g:user_emmet_leader_key='<c-e>'
+imap <c-e> <c-y>,
 
 " =============================================================================
 
