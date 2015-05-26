@@ -85,13 +85,16 @@ export DOCKER_CERT_PATH=/Users/philip/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 export DOCKER_HOST=tcp://192.168.59.103:2376
 
-export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
+export NODE_PATH=/usr/local/lib/node_modules
+export NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags
 
 # vim
 export MYVIMRC=~/.vimrc
 export EDITOR='/usr/local/bin/vim'
 export VISUAL='/usr/local/bin/vim'
 export GIT_EDITOR='/usr/local/bin/vim'
+
+export PORT=3000
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -138,9 +141,9 @@ alias vz='vim ~/.zshrc'
 alias vzh='vim ~/.zshrc'
 alias vrc='vim ~/.vimrc'
 alias cls='clear'
-alias live='live-server'
-alias www='live-server'
-alias webs='live-server'
+alias live='http-server -p 3000'
+alias www='http-server -p 3000'
+alias webs='http-server -p 3000'
 alias mgd='~/bin/mgd.sh'
 alias vb='cd $HOME/.dotfiles/.vim/bundle'
 alias blog='cd $HOME/dev/flipjs.io'

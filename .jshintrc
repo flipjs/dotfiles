@@ -1,9 +1,7 @@
 {
-  "asi": true,
+  "asi": false,
   "esnext": true,
-  "laxcomma": true,
-  "laxbreak": true,
-  "plusplus": false,
+  "plusplus": true,
   "nonew": true,
   "undef": true,
   "browser": true,

@@ -1,4 +1,9 @@
 " =============================================================================
+"
+" TIPS / REMINDERS
+" paste toggle - *yo* *yO*
+"
+" =============================================================================
 
 set nocompatible
 filetype off
@@ -58,8 +63,10 @@ set nocursorline
 
 " =============================================================================
 
-" comment below to use default which is \
+" set mapleader to ,
 let mapleader = ","
+" and also to \
+nmap \ ,
 
 " =============================================================================
 
@@ -110,6 +117,7 @@ cnoreabbrev wrap set wrap
 cnoreabbrev warp set wrap
 cnoreabbrev nowrap set nowrap
 cnoreabbrev nowr set nowrap
+inoreabbrev funciton function
 
 " =============================================================================
 
@@ -207,10 +215,16 @@ vnoremap L g_
 nnoremap <leader>H H
 nnoremap <leader>L L
 
+" jump between tags
+" jump inside tag and go insert mode
+nnoremap <leader>ti vito<esc>i
+" jump at the end of opening tag just before '>' (to add attributes)
+nnoremap <leader>te vito<esc>hi
+
 " =============================================================================
 
 " Dash shortcut
-nmap <leader>h <Plug>DashSearch
+nmap <leader>hh <Plug>DashSearch
 
 " =============================================================================
 
@@ -289,6 +303,9 @@ inoremap jj <ESC>
 noremap <silent> <C-S>          :update<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
+
+nnoremap <silent> <C-N> :bn<CR>
+nnoremap <silent> <C-P> :bp<CR>
 
 " Ctrl-Q to quit
 nnoremap <silent> <C-Q> :q<CR>
@@ -490,7 +507,7 @@ augroup END
 
 augroup JavaScript
   autocmd!
-  autocmd FileType javascript nnoremap <buffer> <leader>rr :!node %<CR>
+  autocmd FileType javascript nnoremap <buffer> <leader>rr :!clear && node %<CR>
   autocmd FileType javascript nnoremap <buffer> <leader>er :!traceur %<CR>
   autocmd FileType javascript nnoremap <buffer> <leader>jl :!jshint %<CR>
   " Work around to indent and tab when pressing return after the open brace
@@ -518,9 +535,9 @@ autocmd FileType scss vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
 " =============================================================================
 
 " ultisnips config
-let g:UltiSnipsExpandTrigger="<c-d>"
-let g:UltiSnipsJumpForwardTrigger="<c-f>"
-let g:UltiSnipsJumpBackwardTrigger="<c-u>"
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " =============================================================================
 
