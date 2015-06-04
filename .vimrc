@@ -52,10 +52,7 @@ endif
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
-" ensure set number is set for numbers.vim plugin when using vim 7.4.x
 set number
-" set relativenumber
-" with numbers.vim plugin, no need to set relativenumber
 set nobackup
 set nowritebackup
 set noswapfile
@@ -243,7 +240,7 @@ nnoremap <leader>WR :set wrap!<CR>
 " set paste toggle
 nnoremap <leader>pt :set paste!<CR>
 " set relativenumber toggle
-" nnoremap <leader>rn :set relativenumber!<CR>
+nnoremap <leader>rn :set relativenumber!<CR>
 " command line history
 nnoremap <leader>ch q:
 " reselect the text that was just pasted and reindent
