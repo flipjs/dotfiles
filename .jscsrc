@@ -2,6 +2,6 @@
 	"preset": "google",
 	"esprima": "esprima-fb",
 	"fileExtensions": [".js", ".jsx"],
-	"validateIndentation": "\t",
+	"validateIndentation": 4,
 	"excludeFiles": ["node_modules/**"]
 }

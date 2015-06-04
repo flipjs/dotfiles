@@ -1,5 +1,5 @@
 {
-  "asi": false,
+  "asi": true,
   "esnext": true,
   "plusplus": true,
   "nonew": true,

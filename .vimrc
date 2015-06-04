@@ -487,7 +487,7 @@ let g:syntastic_loc_list_height=5
 " set ES6 syntax same with javascript
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
-let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_javascript_checkers=['jshint', 'jscs']
 let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
 let g:syntastic_html_tidy_ignore_errors=["proprietary attribute" ,"trimming empty", "unescaped &" , "is not recognized!", "discarding unexpected", "inserting implicit", "missing", "lacks", "element not empty", "letter not allowed here"]
 
