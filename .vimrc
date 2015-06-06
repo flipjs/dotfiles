@@ -241,6 +241,8 @@ nnoremap <leader>WR :set wrap!<CR>
 nnoremap <leader>pt :set paste!<CR>
 " set relativenumber toggle
 nnoremap <leader>rn :set relativenumber!<CR>
+" retab hotkey
+nnoremap <leader>rt :%retab!<CR>
 " command line history
 nnoremap <leader>ch q:
 " reselect the text that was just pasted and reindent
