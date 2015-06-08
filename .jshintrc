@@ -1,5 +1,6 @@
 {
-  "asi": false,
+  "sub": true,
+  "asi": true,
   "esnext": true,
   "plusplus": true,
   "nonew": true,

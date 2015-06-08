@@ -12,7 +12,7 @@ call pathogen#helptags()
 " do not use smartindent or cindent, use below instead
 filetype plugin indent on
 set nomodeline
-set mouse=a
+" set mouse=a
 set clipboard=unnamed
 
 " =============================================================================
@@ -27,9 +27,9 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 " tab is space
-" set expandtab
+set expandtab
 " tab is tab
-set noexpandtab
+" set noexpandtab
 
 " =============================================================================
 
@@ -40,7 +40,7 @@ set autoindent
 set showcmd
 set hidden
 set wildmenu
-set visualbell
+set novisualbell
 set cursorline
 " neovim has no ttyfast
 if has("vim")
@@ -60,6 +60,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 set nocursorline
+syntax enable
 
 " =============================================================================
 
@@ -102,7 +103,7 @@ syntax on
 " Shortcut to rapidly toggle `set list`
 nmap <leader>ll :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:»\ ,eol:¬
 "Invisible character colors
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
@@ -407,16 +408,24 @@ nnoremap <leader>ee :call DeleteEmptyBuffers()<CR>
 
 " =============================================================================
 
-" vim color theme
 set t_Co=256
-set guifont=Source\ Code\ Pro\ for\ PowerLine:h16
-syntax enable
+
+" Setting the font to Consolas, 11 pt
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Consolas\ 12
+  else
+    set guifont=Consolas:h12
+  endif
+endif
+
 " colorscheme solarized
 " if has('gui_running')
 "     set background=light
 " else
 "     set background=dark
 " endif
+
 color distinguished
 
 " change cursor shape in different modes
@@ -438,6 +447,19 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='tomorrow'
 " let g:airline_theme='solarized'
 let g:airline_section_b = "%{strftime('%H:%M')}"
+
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+  endif
+
+  " unicode symbols
+  let g:airline_left_sep = '»'
+  let g:airline_left_sep = '|'
+  let g:airline_right_sep = '«'
+  let g:airline_right_sep = '|'
 
 " =============================================================================
 
@@ -487,7 +509,7 @@ let g:syntastic_loc_list_height=5
 " set ES6 syntax same with javascript
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
-let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_javascript_checkers=['jshint', 'jscs']
 let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
 let g:syntastic_html_tidy_ignore_errors=["proprietary attribute" ,"trimming empty", "unescaped &" , "is not recognized!", "discarding unexpected", "inserting implicit", "missing", "lacks", "element not empty", "letter not allowed here"]
 
@@ -688,4 +710,3 @@ let g:rainbow_conf = {
 let g:jsx_pragma_required = 1
 
 " =============================================================================
-
