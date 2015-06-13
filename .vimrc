@@ -299,9 +299,9 @@ inoremap jj <ESC>
 " =============================================================================
 
 " Ctrl-S to save
-noremap <silent> <C-S>          :update<CR>
-vnoremap <silent> <C-S>         <C-C>:update<CR>
-inoremap <silent> <C-S>         <C-O>:update<CR>
+noremap <silent> <C-S>          :update<CR><ESC>
+vnoremap <silent> <C-S>         <C-C>:update<CR><ESC>
+inoremap <silent> <C-S>         <C-O>:update<CR><ESC>
 
 nnoremap <silent> <C-N> :bn<CR>
 nnoremap <silent> <C-P> :bp<CR>
@@ -526,6 +526,7 @@ endif
 
 " JSBeautify config
 autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
+autocmd FileType javascript nnoremap <buffer>  <c-g> :Autoformat<cr>
 autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
 autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
 autocmd FileType less vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>

@@ -172,3 +172,6 @@
 [submodule ".vim/bundle/PHP-Indenting-for-VIm"]
 	path = .vim/bundle/PHP-Indenting-for-VIm
 	url = https://github.com/2072/PHP-Indenting-for-VIm.git
+[submodule ".vim/bundle/vim-autoformat"]
+	path = .vim/bundle/vim-autoformat
+	url = https://github.com/Chiel92/vim-autoformat.git
