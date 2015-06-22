@@ -1,7 +1,8 @@
 {
-    "preset": "google",
-    "esprima": "esprima-fb",
-    "fileExtensions": [".js", ".jsx"],
-    "validateIndentation": 2,
-    "excludeFiles": ["node_modules/**"]
+  "preset": "google",
+  "esnext": true,
+  "esprima": "esprima-fb",
+  "fileExtensions": [".js", ".jsx"],
+  "maximumLineLength": 120,
+  "excludeFiles": ["node_modules/**"]
 }

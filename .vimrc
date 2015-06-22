@@ -12,7 +12,7 @@ call pathogen#helptags()
 " do not use smartindent or cindent, use below instead
 filetype plugin indent on
 set nomodeline
-" set mouse=a
+set mouse=a
 set clipboard=unnamed
 
 " =============================================================================
@@ -30,6 +30,7 @@ set softtabstop=4
 set expandtab
 " tab is tab
 " set noexpandtab
+set nohlsearch
 
 " =============================================================================
 
@@ -242,7 +243,7 @@ nnoremap <leader>WR :set wrap!<CR>
 nnoremap <leader>pt :set paste!<CR>
 " set relativenumber toggle
 nnoremap <leader>rn :set relativenumber!<CR>
-" retab hotkey
+" set retab
 nnoremap <leader>rt :%retab!<CR>
 " command line history
 nnoremap <leader>ch q:
@@ -495,6 +496,8 @@ nnoremap <leader>fc :CtrlPCurWD<CR>
 nnoremap <leader>fth :set ft=html<CR>
 nnoremap <leader>ftj :set ft=javascript<CR>
 nnoremap <leader>ftc :set ft=css<CR>
+nnoremap <leader>ftp :set ft=php<CR>
+nnoremap <leader>fts :set ft=smarty<CR>
 
 " =============================================================================
 
@@ -510,7 +513,7 @@ autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
 let g:syntastic_javascript_checkers=['jshint', 'jscs']
 let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
-let g:syntastic_html_tidy_ignore_errors=["proprietary attribute" ,"trimming empty", "unescaped &" , "is not recognized!", "discarding unexpected", "inserting implicit", "missing", "lacks", "element not empty", "letter not allowed here"]
+let g:syntastic_html_tidy_ignore_errors=["proprietary attribute" ,"trimming empty", "unescaped &" , "is not hecognized!", "discarding unexpected", "inserting implicit", "missing", "lacks", "element not empty", "letter not allowed here"]
 
 " =============================================================================
 
@@ -548,11 +551,17 @@ endif
 
 " JSBeautify config
 autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
-autocmd FileType javascript nnoremap <buffer>  <c-g> :Autoformat<cr>
+autocmd FileType javascript noremap <c-g> :Autoformat<cr>
 autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
+autocmd FileType html noremap <c-g> :Autoformat<cr>
 autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+autocmd FileType css noremap <c-g> :Autoformat<cr>
 autocmd FileType less vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+autocmd FileType less noremap <c-g> :Autoformat<cr>
 autocmd FileType scss vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+autocmd FileType scss noremap <c-g> :Autoformat<cr>
+autocmd FileType stylus vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+autocmd FileType stylus noremap <c-g> :Autoformat<cr>
 
 " =============================================================================
 
@@ -708,5 +717,10 @@ let g:rainbow_conf = {
 
 " vim-jsx settings
 let g:jsx_pragma_required = 1
+
+" =============================================================================
+
+" temp fix for vim becoming slow when opening files with long lines of code
+" set synmaxcol=120
 
 " =============================================================================
