@@ -52,10 +52,7 @@ endif
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
-" ensure set number is set for numbers.vim plugin when using vim 7.4.x
 set number
-" set relativenumber
-" with numbers.vim plugin, no need to set relativenumber
 set nobackup
 set nowritebackup
 set noswapfile
@@ -244,7 +241,9 @@ nnoremap <leader>WR :set wrap!<CR>
 " set paste toggle
 nnoremap <leader>pt :set paste!<CR>
 " set relativenumber toggle
-" nnoremap <leader>rn :set relativenumber!<CR>
+nnoremap <leader>rn :set relativenumber!<CR>
+" retab hotkey
+nnoremap <leader>rt :%retab!<CR>
 " command line history
 nnoremap <leader>ch q:
 " reselect the text that was just pasted and reindent
@@ -301,9 +300,9 @@ inoremap jj <ESC>
 " =============================================================================
 
 " Ctrl-S to save
-noremap <silent> <C-S>          :update<CR>
-vnoremap <silent> <C-S>         <C-C>:update<CR>
-inoremap <silent> <C-S>         <C-O>:update<CR>
+noremap <silent> <C-S>          :update<CR><ESC>
+vnoremap <silent> <C-S>         <C-C>:update<CR><ESC>
+inoremap <silent> <C-S>         <C-O>:update<CR><ESC>
 
 nnoremap <silent> <C-N> :bn<CR>
 nnoremap <silent> <C-P> :bp<CR>
@@ -549,6 +548,7 @@ endif
 
 " JSBeautify config
 autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
+autocmd FileType javascript nnoremap <buffer>  <c-g> :Autoformat<cr>
 autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
 autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
 autocmd FileType less vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
