@@ -34,6 +34,11 @@ set nohlsearch
 
 " =============================================================================
 
+" Disable beeping and screen flashing
+set noeb vb t_vb=
+
+" =============================================================================
+
 set encoding=utf-8
 set scrolloff=1
 " do not use smartindent or cindent, use filetype plugin indent on
