@@ -146,6 +146,7 @@ alias www='http-server -p 3000'
 alias webs='http-server -p 3000'
 alias mgd='~/bin/mgd.sh'
 alias vb='cd $HOME/.dotfiles/.vim/bundle'
+alias dev='cd $HOME/dev'
 alias blog='cd $HOME/dev/flipjs.io'
 alias ng='cd $HOME/dev/angular'
 alias bb='cd $HOME/dev/backbone'
@@ -156,7 +157,7 @@ alias dot='cd $HOME/.dotfiles'
 alias proj='cd $HOME/dev/projects'
 alias tmp='cd $HOME/dev/temp'
 alias temp='cd $HOME/dev/temp'
-alias dev='cd $HOME/dev'
+alias kb='cd $HOME/dev/keyboard'
 alias es='cd $HOME/dev/es6'
 alias react='cd $HOME/dev/react'
 alias aacc='cd $HOME/dev/projects/aacc'
@@ -164,6 +165,7 @@ alias pv='cd $HOME/dev/projects/aacc && vim'
 alias dos='ssh philip@178.62.80.73'
 alias win2unix="find . -type f | xargs perl -pi -e 's/\r\n|\n|\r/\n/g'"
 alias kar="cd '$HOME/Library/Application Support/Karabiner'"
+alias zrel=". ~/.zshrc"
 
 alias seraph="diskutil mount `diskutil list | grep "SERAPH" | sed -n -e 's/^.* //p'`"
 alias sati="diskutil mount `diskutil list | grep "SATI" | sed -n -e 's/^.* //p'`"
@@ -251,3 +253,6 @@ fancy-ctrl-z () {
 }
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
+
+# work around bug in npm install, reporting EMFILE or glob error
+ulimit -n 2560

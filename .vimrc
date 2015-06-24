@@ -63,7 +63,9 @@ set nocursorline
 " set mapleader to ,
 let mapleader = ","
 " and also to \
+" and also to `
 nmap \ ,
+nmap ` ,
 
 " =============================================================================
 
