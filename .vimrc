@@ -196,6 +196,9 @@ nnoremap <leader>ww :w<CR>
 " Copy to end of line, not all of line
 nnoremap Y y$
 
+" highlight from cursor current position to end of line; must be in visual mode
+vnoremap % $h
+
 " Save file that requires root permission
 cmap w!! %!sudo tee > /dev/null %
 
