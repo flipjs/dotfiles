@@ -73,15 +73,22 @@ snippet get
 snippet gett
 	document.getElementBy${1:Id}('${2}')${3}
 # console.log
+snippet log
+	console.log(${1:params})
+# console.log
 snippet cl
 	console.log(${1:params})
 # IIFE
 snippet iife
 	(function() {
+		'use strict'
+
 		${1}
 	})();
 #void IIFE
 snippet vfe
 	void (function() {
+		'use strict'
+
 		${1}
 	})()

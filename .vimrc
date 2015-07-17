@@ -170,7 +170,7 @@ nnoremap <leader>qo :copen<CR>
 " =============================================================================
 
 " Ack hotkey
-nnoremap <C-A> :Ack!
+nnoremap <leader>A :Ack!
 " uncomment to use AG instead
 " let g:ackprg = 'ag --nogroup --nocolor --column'
 
@@ -189,7 +189,10 @@ nnoremap <leader>ng :Ngrep
 
 " close current buffer
 nnoremap <leader>dd :bd<CR>
+" save current buffer
 nnoremap <leader>ww :w<CR>
+" close vim
+nnoremap <leader>qq :q<CR>
 
 " =============================================================================
 
@@ -257,10 +260,6 @@ nnoremap gV `[v`]
 
 " save on losing focus
 au FocusLost * :wa
-
-" =============================================================================
-
-nnoremap <leader>A :Ack
 
 " =============================================================================
 
@@ -681,6 +680,9 @@ let g:rainbow_conf = {
 \       'html': {
 \           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
 \       },
+\       'xhtml': {
+\           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+\       },
 \       'xml': {
 \           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
 \       },
@@ -694,3 +696,5 @@ let g:jsx_pragma_required = 1
 
 " =============================================================================
 
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cnoremap w!! w !sudo tee > /dev/null %

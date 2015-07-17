@@ -1,6 +1,6 @@
 " ~/.dotfiles/.vim/sessions/default.vim:
 " Vim session script.
-" Created by session.vim 2.7 on 28 March 2015 at 10:55:30.
+" Created by session.vim 2.7 on 04 July 2015 at 00:00:05.
 " Open this file in Vim and run :source % to restore your session.
 
 if exists('g:syntax_on') != 1 | syntax on | endif
@@ -17,22 +17,16 @@ if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/dev/react/getting-started/topicsApp/app
+cd ~/dev/javascript
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +31 index.html
-badd +11 src/js/main.js
-badd +19 ~/dev/react/getting-started/topicsApp/app/src/js/components/TopicAdd.js
-badd +42 ~/dev/react/getting-started/topicsApp/app/src/js/components/TopicsApp.js
-badd +19 ~/dev/react/getting-started/topicsApp/app/src/js/components/TopicForm.js
-badd +16 ~/dev/react/getting-started/topicsApp/app/src/js/components/Topics.js
-badd +16 ~/dev/react/getting-started/topicsApp/app/src/js/components/Topic.js
+badd +0 test.js
 argglobal
 silent! argdel *
-argadd index.html
-edit ~/dev/react/getting-started/topicsApp/app/src/js/components/Topic.js
+argadd test.js
+edit test.js
 set splitbelow splitright
 wincmd t
 set winheight=1 winwidth=1
@@ -46,11 +40,11 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 16 - ((15 * winheight(0) + 15) / 30)
+let s:l = 1 - ((0 * winheight(0) + 15) / 31)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-16
+1
 normal! 0
 tabnext 1
 if exists('s:wipebuf')
