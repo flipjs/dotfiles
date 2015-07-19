@@ -143,7 +143,7 @@ cnoremap <C-g>  <C-c>
 " Copy & paste to system clipboard
 vnoremap <C-C> "+y
 vnoremap <C-X> "+d
-nnoremap <C-B> "+P
+nnoremap <C-P> "+P
 
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]
@@ -306,9 +306,6 @@ inoremap jj <ESC>
 noremap <silent> <C-S>          :update<CR><ESC>
 vnoremap <silent> <C-S>         <C-C>:update<CR><ESC>
 inoremap <silent> <C-S>         <C-O>:update<CR><ESC>
-
-nnoremap <silent> <C-N> :bn<CR>
-nnoremap <silent> <C-P> :bp<CR>
 
 " Ctrl-Q to quit
 nnoremap <silent> <C-Q> :q<CR>
@@ -598,6 +595,7 @@ let g:session_autosave = 'no'
 
 " emmet config
 " let g:user_emmet_leader_key='<c-e>'
+" inoremap doesnt work for some reasons, use imap instead
 imap <c-e> <c-y>,
 
 " =============================================================================
