@@ -161,6 +161,8 @@ nnoremap <CR> <nop>
 nnoremap j gj
 nnoremap k gk
 
+inoremap <c-x> <c-o>x
+
 " =============================================================================
 
 " " QuickFix setup
