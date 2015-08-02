@@ -99,8 +99,6 @@ syntax on
 
 " =============================================================================
 
-" Shortcut to rapidly toggle `set list`
-nmap <leader>ll :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 "Invisible character colors
