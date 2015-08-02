@@ -1,6 +1,6 @@
 " ~/.dotfiles/.vim/sessions/default.vim:
 " Vim session script.
-" Created by session.vim 2.7 on 04 July 2015 at 00:00:05.
+" Created by session.vim 2.7 on 30 July 2015 at 20:22:39.
 " Open this file in Vim and run :source % to restore your session.
 
 if exists('g:syntax_on') != 1 | syntax on | endif
@@ -40,12 +40,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 15) / 31)
+let s:l = 6 - ((5 * winheight(0) + 15) / 30)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+6
+normal! 03|
 tabnext 1
 if exists('s:wipebuf')
 "   silent exe 'bwipe ' . s:wipebuf
