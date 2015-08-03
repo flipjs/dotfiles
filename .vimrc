@@ -46,7 +46,7 @@ set autoindent
 set showcmd
 set hidden
 set wildmenu
-set novisualbell
+" set novisualbell
 set cursorline
 " neovim has no ttyfast
 if has("vim")
@@ -71,6 +71,7 @@ syntax enable
 let mapleader = ","
 " and also to \
 nmap \ ,
+nmap <space> ,
 
 " =============================================================================
 
@@ -89,7 +90,7 @@ if v:version > 704 || v:version == 704 && has("patch338")
   set breakindent
 endif
 set showbreak=»\
-set textwidth=79
+" set textwidth=79
 " set formatoptions+=t
 set formatoptions=qrn1
 " match ErrorMsg '\%>79v.\+'
@@ -103,8 +104,6 @@ syntax on
 
 " =============================================================================
 
-" Shortcut to rapidly toggle `set list`
-nmap <leader>ll :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:»\ ,eol:¬
 "Invisible character colors
@@ -148,7 +147,7 @@ cnoremap <C-g>  <C-c>
 " Copy & paste to system clipboard
 vnoremap <C-C> "+y
 vnoremap <C-X> "+d
-nnoremap <C-B> "+P
+nnoremap <C-P> "+P
 
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]
@@ -165,6 +164,8 @@ nnoremap <CR> <nop>
 " i have no need for this now
 nnoremap j gj
 nnoremap k gk
+
+inoremap <c-x> <c-o>x
 
 " =============================================================================
 
@@ -195,6 +196,7 @@ nnoremap <leader>ng :Ngrep
 " close current buffer
 nnoremap <leader>dd :bd<CR>
 nnoremap <leader>ww :w<CR>
+nnoremap <leader>qq :q<CR>
 
 " =============================================================================
 
@@ -309,9 +311,6 @@ inoremap jj <ESC>
 noremap <silent> <C-S>          :update<CR><ESC>
 vnoremap <silent> <C-S>         <C-C>:update<CR><ESC>
 inoremap <silent> <C-S>         <C-O>:update<CR><ESC>
-
-nnoremap <silent> <C-N> :bn<CR>
-nnoremap <silent> <C-P> :bp<CR>
 
 " Ctrl-Q to quit
 nnoremap <silent> <C-Q> :q<CR>
@@ -689,6 +688,25 @@ endfunction
 
 " =============================================================================
 
+" insert header block
+function Header(width, word)
+    let a:inserted_word = ' ' . a:word . ' '
+    let a:word_width = strlen(a:inserted_word)
+    let a:length_before = (a:width - a:word_width) / 2
+    let a:hashes_before = repeat('-', a:length_before)
+    let a:hashes_after = repeat('-', a:width - (a:word_width + a:length_before))
+    let a:hash_line = repeat('-', a:width)
+    let a:word_line = a:hashes_before . a:inserted_word . a:hashes_after
+
+    " :put =a:hash_line
+    :put =a:word_line
+    " :put =a:hash_line
+endfunction
+
+nnoremap <leader>hd :call Header(70, '
+
+" =============================================================================
+
 " rainbow config
 autocmd FileType javascript syntax clear jsFuncBlock " hack to work with js
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
@@ -712,6 +730,15 @@ let g:rainbow_conf = {
 \       'html': {
 \           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
 \       },
+\       'php': {
+\           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+\       },
+\       'tpl': {
+\           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+\       },
+\       'xhtml': {
+\           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+\       },
 \       'xml': {
 \           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
 \       },
@@ -729,3 +756,11 @@ let g:jsx_pragma_required = 1
 " set synmaxcol=120
 
 " =============================================================================
+
+" strip whole file off semicolons
+nnoremap <leader>ds :%s/;//<cr>
+
+" =============================================================================
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cnoremap w!! w !sudo tee % >/dev/null
