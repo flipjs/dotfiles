@@ -170,6 +170,8 @@ alias pv='cd $HOME/dev/projects/aacc && vim'
 alias dos='ssh philip@178.62.80.73'
 alias win2unix="find . -type f | xargs perl -pi -e 's/\r\n|\n|\r/\n/g'"
 alias kar="cd '$HOME/Library/Application Support/Karabiner'"
+alias ec="cd '$HOME/.editorconfigs/ngpoly'"
+alias snip="cd '$HOME/.vim/snippets'"
 alias zrel=". ~/.zshrc"
 
 alias seraph="diskutil mount `diskutil list | grep "SERAPH" | sed -n -e 's/^.* //p'`"
