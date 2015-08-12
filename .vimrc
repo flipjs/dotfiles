@@ -716,7 +716,7 @@ function Header(width, word)
     " :put =a:hash_line
 endfunction
 
-nnoremap <leader>hd :call Header(70, '
+nnoremap <leader>hd :call Header(67, '
 
 " =============================================================================
 
