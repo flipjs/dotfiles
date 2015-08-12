@@ -1,8 +1,0 @@
-{
-  "preset": "google",
-  "esnext": true,
-  "esprima": "esprima-fb",
-  "fileExtensions": [".js", ".jsx"],
-  "maximumLineLength": 120,
-  "excludeFiles": ["node_modules/**"]
-}

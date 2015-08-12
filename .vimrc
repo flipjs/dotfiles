@@ -578,7 +578,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " YCM configuration
 set complete=.,b,u,]
-set wildmode=longest,list:longest
+set wildmode=longest,list,full
+" set wildmode=longest,list:longest
 set completeopt=menu,preview
 let g:ycm_key_list_select_completion = ['<TAB>', '<Down>']
 
@@ -687,6 +688,18 @@ function! Whitespace()
 endfunction
 
 " =============================================================================
+
+function FileHeading()
+  let s:line=line(".")
+  call setline(s:line,  "/********************************************************************")
+  call append(s:line,   " * Description - ")
+  call append(s:line+1, " * Author - Felipe Apostol")
+  call append(s:line+2, " * Date - ".strftime("%d %b %Y"))
+  call append(s:line+3, " ********************************************************************/")
+  unlet s:line
+endfunction
+
+imap <F4> mz:execute FileHeading()`zjA
 
 " insert header block
 function Header(width, word)

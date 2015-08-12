@@ -1,7 +1,0 @@
-{
-  "ecmaFeatures": {
-    "arrowFunctions": true
-  },
-  "rules": {
-  }
-}
