@@ -583,8 +583,13 @@ inoremap ,/ </<C-X><C-O>
 
 " =============================================================================
 
-" tcomment_vim plugin - remap to leader-cc
+" tcomment_vim plugin
+" line comment
 map <leader>cc <C-_><C-_>
+" block comment
+map <leader>cb <C-_>b
+" comment as <filetype>
+map <leader>ca <C-_>a
 
 " =============================================================================
 
@@ -656,6 +661,18 @@ endfunction
 
 " =============================================================================
 
+function FileHeading()
+let s:line=line(".")
+call setline(s:line,  "/***********************************************************************")
+call append(s:line,   " * Description - ")
+call append(s:line+1, " * Author - Felipe Apostol")
+call append(s:line+2, " * Date - ".strftime("%d %b %Y"))
+call append(s:line+3, " ***********************************************************************/")
+unlet s:line
+endfunction
+
+imap <F4> mz:execute FileHeading()`zjA
+
 " insert header block
 function Header(width, word)
     let a:inserted_word = ' ' . a:word . ' '
@@ -664,14 +681,14 @@ function Header(width, word)
     let a:hashes_before = repeat('-', a:length_before)
     let a:hashes_after = repeat('-', a:width - (a:word_width + a:length_before))
     let a:hash_line = repeat('-', a:width)
-    let a:word_line = a:hashes_before . a:inserted_word . a:hashes_after
+    let a:word_line = a:hashes_before . a:inserted_word . a:hashes_after . ' //'
 
     " :put =a:hash_line
     :put =a:word_line
     " :put =a:hash_line
 endfunction
 
-nnoremap <leader>hd :call Header(70, '
+nnoremap <leader>hd :call Header(67, '
 
 " =============================================================================
 
