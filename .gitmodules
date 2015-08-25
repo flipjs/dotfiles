@@ -175,3 +175,6 @@
 [submodule ".vim/bundle/quick-scope"]
 	path = .vim/bundle/quick-scope
 	url = https://github.com/unblevable/quick-scope.git
+[submodule ".vim/bundle/vim-peekaboo"]
+	path = .vim/bundle/vim-peekaboo
+	url = https://github.com/junegunn/vim-peekaboo.git
