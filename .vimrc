@@ -691,11 +691,11 @@ endfunction
 
 function FileHeading()
   let s:line=line(".")
-  call setline(s:line,  "/********************************************************************")
+  call setline(s:line,  "/***********************************************************************")
   call append(s:line,   " * Description - ")
   call append(s:line+1, " * Author - Felipe Apostol")
   call append(s:line+2, " * Date - ".strftime("%d %b %Y"))
-  call append(s:line+3, " ********************************************************************/")
+  call append(s:line+3, " ***********************************************************************/")
   unlet s:line
 endfunction
 
@@ -709,7 +709,7 @@ function Header(width, word)
     let a:hashes_before = repeat('-', a:length_before)
     let a:hashes_after = repeat('-', a:width - (a:word_width + a:length_before))
     let a:hash_line = repeat('-', a:width)
-    let a:word_line = a:hashes_before . a:inserted_word . a:hashes_after
+    let a:word_line = a:hashes_before . a:inserted_word . a:hashes_after . ' //'
 
     " :put =a:hash_line
     :put =a:word_line
