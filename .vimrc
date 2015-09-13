@@ -498,6 +498,11 @@ nnoremap <leader>tb :TagbarToggle<CR>
 
 " =============================================================================
 
+augroup Elixir
+  autocmd!
+  autocmd FileType elixir nnoremap <buffer> <leader>rr :!clear && mix test<CR>
+augroup END
+
 augroup CoffeeScript
   autocmd!
   autocmd FileType coffee nnoremap <buffer> <leader>rr :CoffeeRun<CR>
