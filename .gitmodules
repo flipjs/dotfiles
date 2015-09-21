@@ -184,3 +184,4 @@
 [submodule ".vim/bundle/choosewin"]
 	path = .vim/bundle/choosewin
 	url = https://github.com/t9md/vim-choosewin.git
+  ignore = dirty
