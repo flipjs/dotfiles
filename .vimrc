@@ -350,8 +350,12 @@ set fillchars+=vert:│
 
 " =============================================================================
 
-" Move between splits with Q + hjkl, new splits with Qs or Qv
+" Create new splits with Qs or Qv, or Qq to close split
 nnoremap Q <C-W>
+
+" Move splits with ctrl-w + ABCDE
+nmap <C-w> <Plug>(choosewin)
+let g:choosewin_overlay_enable = 1
 
 " =============================================================================
 
