@@ -504,7 +504,8 @@ nnoremap <leader>tb :TagbarToggle<CR>
 
 augroup Elixir
   autocmd!
-  autocmd FileType elixir nnoremap <buffer> <leader>rr :!clear && mix test<CR>
+  autocmd FileType elixir nnoremap <buffer> <leader>rr :!clear && elixir %<CR>
+  autocmd FileType elixir nnoremap <buffer> <leader>mm :!clear && mix test<CR>
 augroup END
 
 augroup CoffeeScript
@@ -554,7 +555,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " YCM configuration
 set complete=.,b,u,]
-set wildmode=longest,list:longest
+set wildmode=longest,list,full
 set completeopt=menu,preview
 let g:ycm_key_list_select_completion = ['<TAB>', '<Down>']
 
