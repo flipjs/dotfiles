@@ -519,8 +519,8 @@ augroup END
 augroup JavaScript
   autocmd!
   autocmd FileType javascript nnoremap <buffer> <leader>rr :!clear && node %<CR>
-  autocmd FileType javascript nnoremap <buffer> <leader>er :!traceur %<CR>
-  autocmd FileType javascript nnoremap <buffer> <leader>jl :!jshint %<CR>
+  autocmd FileType javascript nnoremap <buffer> <leader>er :!clear && babel-node %<CR>
+  autocmd FileType javascript nnoremap <buffer> <leader>jl :!clear && jshint %<CR>
   " Work around to indent and tab when pressing return after the open brace
   autocmd FileType javascript inoremap {<CR> {<CR>}<C-o>O<TAB>
   autocmd FileType javascript inoremap [<CR> [<CR>]<C-o>O<TAB>
