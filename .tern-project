@@ -1,0 +1,9 @@
+{
+  "loadEagerly": [
+    "./bower_components/lodash/dist/lodash.min.js"
+  ],
+  "plugins": {
+    "angular": "./"
+  }
+}
+
