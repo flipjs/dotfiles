@@ -90,8 +90,8 @@ if v:version > 704 || v:version == 704 && has("patch338")
   set breakindent
 endif
 set showbreak=»\
-" set textwidth=79
-" set formatoptions+=t
+set textwidth=99
+set formatoptions+=t
 set formatoptions=qrn1
 " match ErrorMsg '\%>79v.\+'
 nnoremap <leader>99 :match ErrorMsg '\%>80v.\+'<CR>
@@ -354,8 +354,12 @@ set fillchars+=vert:│
 
 " =============================================================================
 
-" Move between splits with Q + hjkl, new splits with Qs or Qv
+" New splits with Qs or Qv, Qq to close split window
 nnoremap Q <C-W>
+
+" Move between splits with ctrl-w + ABCDE...
+nmap <C-w> <Plug>(choosewin)
+let g:choosewin_overlay_enable = 1
 
 " =============================================================================
 
@@ -480,7 +484,7 @@ let g:ctrlp_working_path_mode = 'ra'
 
 " ignore some files and dirs
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|build|bower_components)|(\.(swp|ico|git|svn))|report$'
 " DO NOT USE CODE BELOW, otherwise wildignore and custom_ignore will not work!
 " let g:ctrlp_user_command = 'find %s -type f'
 let g:ctrlp_match_window = 'min:4,max:28' "results imposed by max height
