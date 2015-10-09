@@ -1,11 +1,10 @@
 {
-    "libs": [
-      "browser",
-      "jquery",
-      "ecma5",
-      "underscore"
-    ],
-    "plugins": {
-      "angular": "./"
-    }
+  "loadEagerly": [
+    "./bower_components/lodash/dist/lodash.min.js"
+  ],
+  "plugins": {
+    "angular": "./"
   }
+}
+
+
