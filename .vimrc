@@ -33,6 +33,19 @@ set noexpandtab
 
 " =============================================================================
 
+" vim color theme
+set t_Co=256
+set guifont=Source\ Code\ Pro\ for\ PowerLine:h16
+syntax on
+set background=dark
+color distinguished
+
+" change cursor shape in different modes
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+" =============================================================================
+
 set encoding=utf-8
 set scrolloff=1
 " do not use smartindent or cindent, use filetype plugin indent on
@@ -91,7 +104,6 @@ set formatoptions=qrn1
 " match ErrorMsg '\%>79v.\+'
 nnoremap <leader>99 :match ErrorMsg '\%>80v.\+'<CR>
 nnoremap <leader>00 :match none<CR>
-syntax on
 
 " save folds
 " autocmd BufWinLeave *.* mkview
@@ -409,24 +421,6 @@ nnoremap <leader>bd :bd<CR>
 nnoremap <leader>bl :ls<CR>
 " delete empty buffers
 nnoremap <leader>ee :call DeleteEmptyBuffers()<CR>
-
-" =============================================================================
-
-" vim color theme
-set t_Co=256
-set guifont=Source\ Code\ Pro\ for\ PowerLine:h16
-syntax enable
-" colorscheme solarized
-" if has('gui_running')
-"     set background=light
-" else
-"     set background=dark
-" endif
-color distinguished
-
-" change cursor shape in different modes
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " =============================================================================
 
