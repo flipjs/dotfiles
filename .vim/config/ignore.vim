@@ -1,1 +1,0 @@
-/Users/philip/.dotfiles/custom/vim-config/ignore.vim
