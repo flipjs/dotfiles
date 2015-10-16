@@ -15,7 +15,7 @@ stty -ixon
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="agnoster"
-ZSH_THEME="flipjs.io"
+ZSH_THEME="ys"
 # DEFAULT_USER for agnoster theme only
 # DEFAULT_USER="philip"
 
@@ -26,10 +26,6 @@ export HISTSIZE=100000 SAVEHIST=100000
 
 # My Notes directory
 export NOTES_DIR=$HOME/Dropbox/NOTES
-
-# AACC App settings
-export FACEBOOK_ID=391524571029957
-export FACEBOOK_SECRET=4a3eaf2f499658913ad0de32e311c68e
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -66,7 +62,7 @@ export FACEBOOK_SECRET=4a3eaf2f499658913ad0de32e311c68e
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bower brew git heroku node npm zsh-syntax-highlighting)
+plugins=(bower brew git heroku node npm)
 
 source $ZSH/oh-my-zsh.sh
 
