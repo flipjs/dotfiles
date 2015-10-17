@@ -15,7 +15,7 @@ stty -ixon
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="agnoster"
-ZSH_THEME="ys"
+ZSH_THEME="jonathan"
 # DEFAULT_USER for agnoster theme only
 # DEFAULT_USER="philip"
 
