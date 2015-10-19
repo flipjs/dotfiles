@@ -138,6 +138,7 @@ alias vt='vim ~/.tmux.conf'
 alias tt='tmux'
 alias ta='tmux attach'
 alias td='tmux detach'
+alias tls='tmux ls'
 alias cls='clear'
 alias live='live-server -p 3000'
 alias www='http-server -p 3000'
@@ -172,10 +173,11 @@ alias win2unix="find . -type f | xargs perl -pi -e 's/\r\n|\n|\r/\n/g'"
 alias kar="cd '$HOME/Library/Application Support/Karabiner'"
 alias db="cd '$HOME/Dropbox'"
 alias ec="cd '$HOME/.editorconfigs/ngpoly'"
-alias snip="cd '$HOME/.vim/snippets'"
-alias zwds="mux start zwds"
-alias z2="mux start zepko"
 alias zrel=". ~/.zshrc"
+alias fsh="mux start shell"
+alias zwds="mux start zwds"
+alias zgtin="mux start zgtin"
+alias z2="mux start zepko"
 
 case `uname` in
   Darwin)
