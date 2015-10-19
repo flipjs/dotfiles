@@ -14,7 +14,7 @@ stty -ixon
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="sonicradish"
+ZSH_THEME="mortalscumbag"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -59,7 +59,7 @@ export NOTES_DIR=$HOME/Dropbox/NOTES
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bower brew git heroku node npm)
+plugins=(bower brew git heroku node npm tmux tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.bin/tmuxinator.zsh
@@ -173,18 +173,25 @@ alias kar="cd '$HOME/Library/Application Support/Karabiner'"
 alias db="cd '$HOME/Dropbox'"
 alias ec="cd '$HOME/.editorconfigs/ngpoly'"
 alias snip="cd '$HOME/.vim/snippets'"
+alias zwds="mux start zwds"
+alias z2="mux start zepko"
 alias zrel=". ~/.zshrc"
 
-alias seraph="diskutil mount `diskutil list | grep "SERAPH" | sed -n -e 's/^.* //p'`"
-alias sati="diskutil mount `diskutil list | grep "SATI" | sed -n -e 's/^.* //p'`"
-alias bane="diskutil mount `diskutil list | grep "BANE" | sed -n -e 's/^.* //p'`"
+case `uname` in
+  Darwin)
+    alias seraph="diskutil mount `diskutil list | grep "SERAPH" | sed -n -e 's/^.* //p'`"
+    alias sati="diskutil mount `diskutil list | grep "SATI" | sed -n -e 's/^.* //p'`"
+    alias bane="diskutil mount `diskutil list | grep "BANE" | sed -n -e 's/^.* //p'`"
+    ;;
+  Linux)
+    ;;
+esac
+
 function ff() { find . -iname "*$1*" ${@:2} }
 function ggr() { grep "$1" ${@:2} -R . }
 function mcd() { mkdir -p "$1" && cd "$1";  }
 
-
 # pipe to h to highlight text in terminal
-
 h() {
 
 	_usage() {
