@@ -1,7 +1,7 @@
 # ~/.tmuxinator/zepko.yml
 
 name: zepko
-root: ~/dev/zepko/zepkocom-v2
+root: ~/dev/zepko/zepkocom
 
   # Optional. tmux socket
   # socket_name: foo
