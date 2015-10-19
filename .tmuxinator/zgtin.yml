@@ -2,10 +2,6 @@ name: zgtin
 root: ~/dev/zepko/zgtin
 
 windows:
-  - editor:
-      layout: 5433,211x52,0,0{85x52,0,0,31,125x52,86,0,34}
-      panes:
-        - figlet zgtin
-        - vim
   - shell: figlet zgtin
-  - git: figlet zgtin
+  - editor: vim
+  - gulp: figlet zgtin
