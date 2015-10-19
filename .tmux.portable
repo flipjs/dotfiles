@@ -45,7 +45,7 @@ set -g history-limit 12000
 
 # bells and monitoring
 set -g visual-activity on
-set -g visual-content on
+# set -g visual-content on
 set -g visual-silence on
 set -g visual-bell on
 set -g bell-action any
@@ -72,9 +72,12 @@ set -g set-titles on
 # wm window title string (uses statusbar variables)
 # set -g set-titles-string "#I:#W"
 
-# Zero-based indexing for windows and panes isn't terribly sensible.
+# zero-based indexing for windows and panes isn't terribly sensible.
 set-option -g base-index 1
 set-window-option -g pane-base-index 1
+
+# renumber windows when needed
+set -g renumber-windows on
 
 # the panes display and status messages don't show very long by default
 set -g display-panes-time 2000
