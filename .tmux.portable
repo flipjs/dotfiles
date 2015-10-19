@@ -1,0 +1,178 @@
+# flipjs.io tmux configuration
+# original version by Ches Martin (http://chesmart.in/)
+# ~/.tmux.conf - tmux terminal multiplexer config
+
+###########################################################################
+#                             Global Settings                             #
+###########################################################################
+
+# Use the OS X pasteboard hack if available
+if 'command -v reattach-to-user-namespace >/dev/null' \
+    'set -gq @osx-pasteboard true'
+
+if 'tmux show -gv @osx-pasteboard' \
+    'set -g default-command "reattach-to-user-namespace -l $SHELL"'
+
+# tmux is supposed to figure out 256-color support from terminfo and set this,
+# but it seems to fail anyway. Kind of sucks for when I run Terminal.app...
+# TODO: we can use shell here to be smart-ish
+set -g default-terminal "screen-256color"
+
+# use UTF8
+set -g utf8
+set-window-option -g utf8 on
+
+# set prefix key to match screen's
+set -g prefix C-a
+unbind-key C-b
+
+# send the prefix to client inside window (ala nested sessions)
+bind-key a send-prefix
+
+# disable wait after escape, so vim is usable
+set-option -sg escape-time 0
+
+# in copy mode, use vi bindings and make the mouse work
+setw -g mode-keys vi
+setw -g mode-mouse on
+
+# Ctrl-p/n for tmux command history -- the vi mode is more like shell vi mode
+# than vi command mode
+set-option -g status-keys emacs
+
+# scrollback buffer n lines
+set -g history-limit 12000
+
+# bells and monitoring
+set -g visual-activity on
+set -g visual-content on
+set -g visual-silence on
+set -g visual-bell on
+set -g bell-action any
+
+# purdy status bar
+set -g status-bg colour236
+set -g status-fg white
+set -g status-left "#[fg=green][#[fg=cyan]#S#[fg=green]]#[fg=colour250] %a %m/%d %H:%M#[default]"
+set -g status-left-length 35
+set -g status-justify centre
+setw -g window-status-current-bg colour98
+setw -g window-status-current-format '#[fg=black,bg=yellow] #I #[fg=white,bg=colour98] #W #F '
+setw -g window-status-current-attr bold
+set -g status-right "#H #[fg=cyan][#(uptime|cut -d ' ' -f 12-)]#[default]"
+
+# set -g message-attr bold
+# set -g message-fg black
+# set -g message-bg yellow
+
+# try to set wm window titles with xterm codes
+set -g set-titles on
+
+# wm window title string (uses statusbar variables)
+# set -g set-titles-string "#I:#W"
+
+# Zero-based indexing for windows and panes isn't terribly sensible.
+set-option -g base-index 1
+set-window-option -g pane-base-index 1
+
+# the panes display and status messages don't show very long by default
+set -g display-panes-time 2000
+set -g display-time 2000
+
+# If we want Vim to be told about focus: http://git.io/2UqSgQ
+# set -g focus-events on
+
+# I don't mouse much, but you'd just expect this stuff to work
+set -g mouse-resize-pane on
+set -g mouse-select-pane on
+set -g mouse-select-window on
+
+###########################################################################
+#                    Key Bindings - Screen and Vim-ish                    #
+###########################################################################
+
+# I'm leaving some unbinds for defaults commented out, as I attempt to
+# train myself on some tmux defaults that I like better than screen's
+
+# reload settings
+# TODO: bind key to load sessions?
+bind r source-file ~/.tmux.conf \; display "Tmux config reloaded..."
+
+# toggle previous window like screen, although prefix-l will
+# be easy to get used to
+bind-key C-a last-window
+
+# map Vi movement keys as pane movement keys
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+# Smart pane switching with awareness of vim splits
+is_vim='echo "#{pane_current_command}" | grep -iqE "(^|\/)g?(view|n?vim?)(diff)?$"'
+bind -n C-h if-shell "$is_vim" "send-keys C-h" "select-pane -L"
+bind -n C-j if-shell "$is_vim" "send-keys C-j" "select-pane -D"
+bind -n C-k if-shell "$is_vim" "send-keys C-k" "select-pane -U"
+bind -n C-l if-shell "$is_vim" "send-keys C-l" "select-pane -R"
+bind -n C-g if-shell "$is_vim" "send-keys C-g" "select-pane -l"
+
+# resize panes using PREFIX H, J, K, L
+bind H resize-pane -L 20
+bind J resize-pane -D 10
+bind K resize-pane -U 10
+bind L resize-pane -R 20
+
+# TODO: Of COURSE the keycodes aren't working properly...
+bind-key -r S-Left swap-window -t -1
+bind-key -r S-Right swap-window -t +1
+
+# remap kill window, add confirm map before killing server
+unbind &
+bind-key Q confirm kill-window
+bind-key X confirm kill-server
+
+bind-key m setw monitor-activity
+bind-key M command-prompt -p "monitor silence: interval (s)" "setw monitor-silence %%"
+
+# name window
+unbind ,
+bind-key A command-prompt -I "#W" "rename-window %%"
+
+# Session switching. "H" for "home", comma will accept a prefix string
+bind-key , command-prompt -p "switch to session:" "switch-client -t '%%'"
+bind-key C command-prompt -p "create session named:" "new-session -s %%"
+
+# Make copy mode more vim-like.
+bind -t vi-copy v begin-selection
+bind -t vi-copy y copy-selection
+bind -t vi-copy C-v rectangle-toggle
+
+# Copy top of tmux paste buffer stack to OS clipboard.
+# Alternatively, this will always immediately copy to system pasteboard:
+# bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
+if 'tmux show -gv @osx-pasteboard' \
+    'bind y run "tmux save-buffer - | reattach-to-user-namespace pbcopy"'
+
+# I'll give these mnemonic split bindings a try
+# unbind %
+# unbind '"'
+bind v split-window -h
+bind b split-window -v
+
+# I like to quickly pop open a short shell from fullscreen apps like vim, IRC
+# TODO: make this check for an existing one and un-zoom+focus it if present
+bind _ split-window -l 10
+
+# whizbang custom keybindings
+bind-key F1 command-prompt -p "Man:" "split-window -h 'exec man %%'"
+bind-key @ command-prompt -p "SSH:" "new-window -n %1 'ssh %1'"
+bind-key / copy-mode \; send-keys ?
+
+# Toggle piping output from a pane to file
+bind-key C-p pipe-pane -o 'cat >> ~/.tmux/logs/#S-#W-#T.out'
+
+# present a menu of URLs to open from the visible pane. sweet.
+bind-key U capture-pane \;\
+    save-buffer /tmp/tmux-buffer \;\
+    split-window -l 10 "urlview /tmp/tmux-buffer"
+
