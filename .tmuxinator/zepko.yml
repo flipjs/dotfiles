@@ -1,4 +1,3 @@
-
 # ~/.tmuxinator/zepko.yml
 
 name: zepko
@@ -23,7 +22,7 @@ root: ~/dev/zepko/zepkocom-v2
   # startup_window: logs
 
 windows:
-  - vim:
+  - editor:
       layout: 5433,211x52,0,0{85x52,0,0,31,125x52,86,0,34}
       panes:
         - gulp js-lint
