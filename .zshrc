@@ -1,119 +1,37 @@
-# set to show 256 colors
+export ZSH=$HOME/.oh-my-zsh
+
 TERM=xterm-256color
 
 # disable Ctrl-D so not to close terminal by accident
 setopt ignoreeof
 
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-
-# TO BE ABLE TO CTRL-S in VIM!
+# to be able to ctrl-s in vim!
 stty -ixon
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+# or set to 'random' to see other themes
 ZSH_THEME="mortalscumbag"
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
 
 export HISTSIZE=100000 SAVEHIST=100000
 
-# My Notes directory
-export NOTES_DIR=$HOME/Dropbox/NOTES
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(bower brew git heroku node npm tmux tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.bin/tmuxinator.zsh
 
-# User configuration
-
+# TODO
 export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
 
-# Go configuration
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$PATH
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
-# DOCKER configuration
-export DOCKER_CERT_PATH=/Users/philip/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-export DOCKER_HOST=tcp://192.168.59.103:2376
-
+# TODO
 export NODE_PATH=/usr/local/lib/node_modules
 export NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags
 
-# vim
+# TODO
 export MYVIMRC=~/.vimrc
 export EDITOR='/usr/local/bin/vim'
 export VISUAL='/usr/local/bin/vim'
 export GIT_EDITOR='/usr/local/bin/vim'
 
 export PORT=3000
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 DIRSTACKSIZE=8
 setopt autopushd pushdminus pushdsilent pushdtohome
@@ -123,7 +41,6 @@ alias ls='ls -GpFh'
 alias ll='ls -lGpFh'
 alias la='ls -aGpFh'
 alias lla='ls -laGpFh'
-alias stp="open '$HOME/Library/Application Support/Sublime Text 3/Packages'"
 alias neo='nvim'
 alias nv='nvim'
 alias v='vim'
@@ -169,25 +86,15 @@ alias dj='cd $HOME/dev/django'
 alias aacc='cd $HOME/dev/projects/aacc'
 alias pv='cd $HOME/dev/projects/aacc && vim'
 alias dos='ssh philip@178.62.80.73'
-alias win2unix="find . -type f | xargs perl -pi -e 's/\r\n|\n|\r/\n/g'"
+alias stp="open '$HOME/Library/Application Support/Sublime Text 3/Packages'"
 alias kar="cd '$HOME/Library/Application Support/Karabiner'"
 alias db="cd '$HOME/Dropbox'"
-alias ec="cd '$HOME/.editorconfigs/ngpoly'"
 alias zrel=". ~/.zshrc"
 alias fsh="mux start shell"
 alias zwds="mux start zwds"
 alias zgtin="mux start zgtin"
 alias z2="mux start zepko"
-
-case `uname` in
-  Darwin)
-    alias seraph="diskutil mount `diskutil list | grep "SERAPH" | sed -n -e 's/^.* //p'`"
-    alias sati="diskutil mount `diskutil list | grep "SATI" | sed -n -e 's/^.* //p'`"
-    alias bane="diskutil mount `diskutil list | grep "BANE" | sed -n -e 's/^.* //p'`"
-    ;;
-  Linux)
-    ;;
-esac
+alias win2unix="find . -type f | xargs perl -pi -e 's/\r\n|\n|\r/\n/g'"
 
 function ff() { find . -iname "*$1*" ${@:2} }
 function ggr() { grep "$1" ${@:2} -R . }
@@ -257,8 +164,7 @@ h() {
 	cat - | eval $_COMMAND
 }
 
-# CTRL-Z to go back to suspended Vim
-
+# ctrl-z to go back to suspended Vim
 fancy-ctrl-z () {
   if [[ $#BUFFER -eq 0 ]]; then
     BUFFER="fg"
@@ -271,7 +177,7 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
-# work around bug in npm install, reporting EMFILE or glob error
+# work-around to fix bug in npm install, where it reports EMFILE or glob error
 ulimit -n 2560
 
 cdf() {
@@ -282,3 +188,27 @@ cdf() {
         echo 'No Finder window found' >&2
     fi
 }
+
+
+# ---------------------------- OSX only ----------------------------- #
+
+case `uname` in
+  Darwin)
+    alias seraph="diskutil mount `diskutil list | grep "SERAPH" | sed -n -e 's/^.* //p'`"
+    alias sati="diskutil mount `diskutil list | grep "SATI" | sed -n -e 's/^.* //p'`"
+    alias bane="diskutil mount `diskutil list | grep "BANE" | sed -n -e 's/^.* //p'`"
+
+    export NOTES_DIR=$HOME/Dropbox/NOTES
+
+    export GOPATH=$HOME/go
+    export PATH=$GOPATH/bin:$PATH
+    export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+    export DOCKER_CERT_PATH=/Users/philip/.boot2docker/certs/boot2docker-vm
+    export DOCKER_TLS_VERIFY=1
+    export DOCKER_HOST=tcp://192.168.59.103:2376
+    ;;
+  Linux)
+    ;;
+esac
+
