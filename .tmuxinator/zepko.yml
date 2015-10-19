@@ -24,10 +24,9 @@ root: ~/dev/zepko/zepkocom-v2
 
 windows:
   - vim:
-      layout: even-horizontal
+      layout: 5433,211x52,0,0{85x52,0,0,31,125x52,86,0,34}
       panes:
-        - figlet zepko.com
+        - gulp js-lint
         - vim
-  - gulp: gulp js-lint
+  - shell: figlet zepko.com
   - git: git status
-  - shell: ls -l
