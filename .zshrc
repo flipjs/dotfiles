@@ -22,10 +22,6 @@ source ~/.bin/tmuxinator.zsh
 export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$PATH
 
 # TODO
-export NODE_PATH=/usr/local/lib/node_modules
-export NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags
-
-# TODO
 export MYVIMRC=~/.vimrc
 export EDITOR='/usr/local/bin/vim'
 export VISUAL='/usr/local/bin/vim'
@@ -200,6 +196,9 @@ case `uname` in
 
     export NOTES_DIR=$HOME/Dropbox/NOTES
 
+    export NODE_PATH=/usr/local/lib/node_modules
+    export NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags
+
     export GOPATH=$HOME/go
     export PATH=$GOPATH/bin:$PATH
     export PATH=$PATH:/usr/local/opt/go/libexec/bin
@@ -209,6 +208,7 @@ case `uname` in
     export DOCKER_HOST=tcp://192.168.59.103:2376
     ;;
   Linux)
+    export NODE_PATH=/usr/lib/node_modules
     ;;
 esac
 
