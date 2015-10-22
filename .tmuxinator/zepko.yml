@@ -2,6 +2,10 @@ name: zepko
 root: ~/dev/zepko/zepkocom
 
 windows:
-  - shell: figlet zepko.com
-  - editor: vim
-  - gulp: gulp js-lint
+  - zepko:
+      layout: ab5a,190x49,0,0[190x39,0,0{75x39,0,0,31,114x39,76,0,38},190x9,0,40{95x9,0,40,35,94x9,96,40,37}]
+      panes:
+        - gulp js-lint
+        - vim
+        - figlet zepko.com
+        - htop
