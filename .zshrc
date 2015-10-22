@@ -75,7 +75,6 @@ alias kb='cd $HOME/dev/keyboard'
 alias es='cd $HOME/dev/es6'
 alias elix='cd $HOME/dev/elixir'
 alias hsk='cd $HOME/dev/haskell'
-alias zep='cd $HOME/dev/zepko'
 alias react='cd $HOME/dev/react'
 alias py='cd $HOME/dev/python'
 alias dj='cd $HOME/dev/django'
@@ -86,10 +85,14 @@ alias stp="open '$HOME/Library/Application Support/Sublime Text 3/Packages'"
 alias kar="cd '$HOME/Library/Application Support/Karabiner'"
 alias db="cd '$HOME/Dropbox'"
 alias zrel=". ~/.zshrc"
-alias fsh="mux start shell"
-alias zwds="mux start zwds"
-alias zgtin="mux start zgtin"
-alias z2="mux start zepko"
+alias zep='cd $HOME/dev/zepko'
+alias zz='cd $HOME/dev/zepko/zepkocom'
+alias zw='cd $HOME/dev/zepko/zwds'
+alias zg='cd $HOME/dev/zepko/zgtin'
+alias msh="mux start shell"
+alias mzw="mux start zwds"
+alias mzg="mux start zgtin"
+alias mzz="mux start zepko"
 alias win2unix="find . -type f | xargs perl -pi -e 's/\r\n|\n|\r/\n/g'"
 
 function ff() { find . -iname "*$1*" ${@:2} }
