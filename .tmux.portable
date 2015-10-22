@@ -122,8 +122,8 @@ bind -n C-g if-shell "$is_vim" "send-keys C-g" "select-pane -l"
 
 # resize panes using PREFIX H, J, K, L
 bind H resize-pane -L 20
-bind J resize-pane -D 10
-bind K resize-pane -U 10
+bind J resize-pane -D 5
+bind K resize-pane -U 5
 bind L resize-pane -R 20
 
 # TODO: Of COURSE the keycodes aren't working properly...
