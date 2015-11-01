@@ -1,6 +1,6 @@
 {
   "esnext": true,
-  "disallowDanglingUnderscores": true,
+  "disallowDanglingUnderscores": false,
   "disallowEmptyBlocks": true,
   "disallowKeywords": [
     "with"
