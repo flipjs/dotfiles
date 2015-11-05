@@ -1,0 +1,17 @@
+/bower_components/
+/images/
+/img/
+/node_modules/
+/tmp/
+/vendor/
+*.csv
+*.gemtags*
+*.log
+*.old
+*.pdf
+*.plist
+*.sql
+*.swp
+*.tags*
+*.tmp*
+*.tsv
