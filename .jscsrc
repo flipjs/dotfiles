@@ -1,6 +1,5 @@
 {
   "esnext": true,
-  "disallowDanglingUnderscores": false,
   "disallowEmptyBlocks": true,
   "disallowKeywords": [
     "with"
@@ -80,17 +79,16 @@
     "|", "^", "&&", "||", "===", "==", ">=",
     "<=", "<", ">", "!=", "!=="
   ],
-  "requireSpaceBeforeBlockStatements": true,
-  "requireSpacesInAnonymousFunctionExpression": {
-    "beforeOpeningCurlyBrace": true
-  },
+  "requireSpaceBeforeBlockStatements": 1,
   "requireSpacesInConditionalExpression": true,
-  "requireSpacesInFunctionExpression": {
-    "beforeOpeningCurlyBrace": true
+  "requireSpacesInForStatement": true,
+  "requireSpacesInFunction": {
+      "beforeOpeningRoundBrace": true,
+      "beforeOpeningCurlyBrace": true
   },
-  "requireSpacesInNamedFunctionExpression": {
-    "beforeOpeningCurlyBrace": true
+  "validateIndentation": {
+    "value": 2,
+    "allExcept": ["comments"]
   },
-  "validateIndentation": 2,
   "validateQuoteMarks": "'"
 }
