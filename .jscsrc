@@ -17,9 +17,6 @@
     ","
   ],
   "disallowSpaceBeforePostfixUnaryOperators": true,
-  "disallowSpacesInsideArrayBrackets": "all",
-  "disallowSpacesInsideObjectBrackets": "all",
-  "disallowSpacesInsideParentheses": true,
   "disallowTrailingComma": true,
   "disallowTrailingWhitespace": true,
   "disallowYodaConditions": true,
@@ -41,7 +38,6 @@
   "requireDotNotation": true,
   "requireLineFeedAtFileEnd": true,
   "requireOperatorBeforeLineBreak": [
-    "?",
     "=",
     "+",
     "-",
