@@ -19,7 +19,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.bin/tmuxinator.zsh
 
 # TODO
-export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$PATH
+export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
 
 # TODO
 export MYVIMRC=~/.vimrc
