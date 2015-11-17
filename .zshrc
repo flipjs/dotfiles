@@ -9,7 +9,7 @@ setopt ignoreeof
 stty -ixon
 
 # or set to 'random' to see other themes
-ZSH_THEME="sonicradish"
+ZSH_THEME="robbyrussell"
 
 export HISTSIZE=100000 SAVEHIST=100000
 
