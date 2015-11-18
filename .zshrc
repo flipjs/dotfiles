@@ -214,6 +214,10 @@ case `uname` in
     ;;
   Linux)
     export NODE_PATH=/usr/lib/node_modules
+    export PATH=$HOME/.npm-packages/bin:$PATH
+    export LANG=en_US.UTF-8
     ;;
 esac
 
+export NVM_DIR=$HOME/.nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
