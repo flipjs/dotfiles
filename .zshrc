@@ -29,6 +29,8 @@ export GIT_EDITOR='/usr/local/bin/vim'
 
 export PORT=3000
 
+export NODE_ENV=development
+
 DIRSTACKSIZE=8
 setopt autopushd pushdminus pushdsilent pushdtohome
 
@@ -215,7 +217,7 @@ case `uname` in
     ;;
   Linux)
     export NODE_PATH=/usr/lib/node_modules
-    export PATH=$HOME/.npm-packages/bin:$PATH
+    export PATH=$HOME/local/bin:$HOME/.npm-packages/bin:$PATH
     export LANG=en_US.UTF-8
     ;;
 esac
