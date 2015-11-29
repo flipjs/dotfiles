@@ -11,7 +11,7 @@
   "disallowMultipleLineBreaks": true,
   "disallowMultipleLineStrings": true,
   "disallowQuotedKeysInObjects": true,
-  "disallowSpaceAfterObjectKeys": true,
+  "disallowSpaceAfterObjectKeys": false,
   "disallowSpaceAfterPrefixUnaryOperators": true,
   "disallowSpaceBeforeBinaryOperators": [
     ","
