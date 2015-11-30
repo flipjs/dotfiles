@@ -94,10 +94,12 @@ alias zep='cd $HOME/dev/zepko'
 alias zz='cd $HOME/dev/zepko/zepkocom'
 alias zw='cd $HOME/dev/zepko/zwds'
 alias zg='cd $HOME/dev/zepko/zgtin'
-alias msh="mux start shell"
-alias mzw="mux start zwds"
-alias mzg="mux start zgtin"
-alias mzz="mux start zepko"
+alias msh='mux start shell'
+alias mzw='mux start zwds'
+alias mzg='mux start zgtin'
+alias mzz='mux start zepko'
+alias nvma4='nvm alias default 4.2.2'
+alias nvma5='nvm alias default 5.1'
 alias win2unix="find . -type f | xargs perl -pi -e 's/\r\n|\n|\r/\n/g'"
 
 function ff() { find . -iname "*$1*" ${@:2} }
