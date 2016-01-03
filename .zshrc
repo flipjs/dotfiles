@@ -106,6 +106,8 @@ alias mzz='mux start zepko'
 alias nvma4='nvm alias default 4.2.2'
 alias nvma5='nvm alias default 5.1'
 alias win2unix="find . -type f | xargs perl -pi -e 's/\r\n|\n|\r/\n/g'"
+alias gdlast2='git diff HEAD^ HEAD'
+alias npmgi='npm install -g js-beautify jshint jscs standard standard-format eslint eslint-config-standard-react eslint-plugin-standard eslint-config-standard eslint-plugin-react babel-eslint gulp grunt-cli babel-cli yo tsd bower generator-ng-poly webpack webpack-dev-server'
 
 function ff() { find . -iname "*$1*" ${@:2} }
 function ggr() { grep "$1" ${@:2} -R . }
@@ -211,8 +213,8 @@ case `uname` in
 
     export NOTES_DIR=$HOME/Dropbox/NOTES
 
-    export NODE_PATH=/usr/local/lib/node_modules
-    export NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags
+    # export NODE_PATH=/usr/local/lib/node_modules
+    # export NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags
 
     export GOPATH=$HOME/go
     export PATH=$GOPATH/bin:$PATH
