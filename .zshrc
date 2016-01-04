@@ -225,7 +225,7 @@ case `uname` in
     export DOCKER_HOST=tcp://192.168.59.103:2376
     ;;
   Linux)
-    export NODE_PATH=/usr/lib/node_modules
+    # export NODE_PATH=/usr/lib/node_modules
     export PATH=$HOME/local/bin:$HOME/.npm-packages/bin:$PATH
     export LANG=en_US.UTF-8
     ;;
