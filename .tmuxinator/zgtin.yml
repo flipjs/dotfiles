@@ -5,7 +5,7 @@ windows:
   - zgtin:
       layout: ab5a,190x49,0,0[190x39,0,0{75x39,0,0,31,114x39,76,0,38},190x9,0,40{95x9,0,40,35,94x9,96,40,37}]
       panes:
-        - npm run lint
+        - node -v | figlet
         - figlet Vim && ssh felipe@10.10.10.79
         - figlet zgtin
         - htop
