@@ -254,3 +254,10 @@ PATH="$NPM_PACKAGES/bin:$PATH"
 # Unset manpath so we can inherit from /etc/manpath via the `manpath` command
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+# search and replace text in all files - TODO: make a function
+# Non recursive, files in the current directory only:
+# sed -i -- 's/foo/bar/g' *
+# Recursive, regular files (including hidden ones) in current dir and all its subdirs:
+# find . -type f -exec sed -i 's/foo/bar/g' {} +
+
