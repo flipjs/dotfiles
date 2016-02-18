@@ -119,6 +119,7 @@ alias nrl='npm run lint'
 alias nrt='npm run test'
 alias nrs='npm run start'
 alias nrw='npm run watch'
+alias esl='eslint . ./'
 alias win2unix="find . -type f | xargs perl -pi -e 's/\r\n|\n|\r/\n/g'"
 alias nets='sudo netstat -ap'
 alias gdlast2='git diff HEAD^ HEAD'
