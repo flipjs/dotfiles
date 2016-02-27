@@ -23,6 +23,7 @@ export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/loca
 
 # TODO
 export MYVIMRC=~/.vimrc
+export MYNVIMRC=~/.config/nvim/init.vim
 export EDITOR='/usr/local/bin/vim'
 export VISUAL='/usr/local/bin/vim'
 export GIT_EDITOR='/usr/local/bin/vim'
@@ -51,6 +52,7 @@ alias vin='vim'
 alias vz='vim ~/.zshrc'
 alias vzh='vim ~/.zshrc'
 alias vrc='vim $HOME/.vimfiles/vimconfig/vimrc'
+alias vnc='nvim $HOME/.nvim/init.vim'
 alias vt='vim ~/.tmux.conf'
 alias tt='tmux'
 alias ta='tmux attach'
