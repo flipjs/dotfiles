@@ -9,11 +9,11 @@ setopt ignoreeof
 stty -ixon
 
 # or set to 'random' to see other themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="flipjsio"
 
 export HISTSIZE=100000 SAVEHIST=100000
 
-plugins=(bower brew git heroku node npm tmux tmuxinator)
+plugins=(bower brew git heroku node npm tmux tmuxinator emoji)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.bin/tmuxinator.zsh
