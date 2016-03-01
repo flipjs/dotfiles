@@ -8,6 +8,9 @@ setopt ignoreeof
 # to be able to ctrl-s in vim!
 stty -ixon
 
+# allow changing cursor shape in neovim
+export NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+
 # or set to 'random' to see other themes
 ZSH_THEME="flipjsio"
 
@@ -256,6 +259,11 @@ case `uname` in
     # export NODE_PATH=/usr/lib/node_modules
     export PATH=$HOME/local/bin:$HOME/.npm-packages/bin:$PATH
     export LANG=en_US.UTF-8
+
+    # Linuxbrew
+    export PATH="$HOME/.linuxbrew/bin:$PATH"
+    export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+    export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
     ;;
 esac
 
@@ -277,4 +285,3 @@ export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 # sed -i -- 's/foo/bar/g' *
 # Recursive, regular files (including hidden ones) in current dir and all its subdirs:
 # find . -type f -exec sed -i 's/foo/bar/g' {} +
-
