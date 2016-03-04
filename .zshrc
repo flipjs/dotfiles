@@ -258,6 +258,7 @@ case `uname` in
     # export NODE_PATH=/usr/lib/node_modules
     export PATH=$HOME/local/bin:$HOME/.npm-packages/bin:$PATH
     export LANG=en_US.UTF-8
+    export SHEll=/usr/bin/zsh
 
     # Linuxbrew
     export PATH="$HOME/.linuxbrew/bin:$PATH"
