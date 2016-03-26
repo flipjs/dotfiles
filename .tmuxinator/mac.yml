@@ -1,0 +1,10 @@
+name: zion
+root: ~/dev
+
+windows:
+  - zion:
+      layout: 4885,122x34,0,0{41x34,0,0[41x27,0,0,0,41x6,0,28,2],80x34,42,0,1}
+      panes:
+        - clear
+        - clear
+        - node -v && figlet Zion
