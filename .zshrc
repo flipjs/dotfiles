@@ -145,6 +145,13 @@ function ff() { find . -iname "*$1*" ${@:2} }
 function ggr() { grep "$1" ${@:2} -R . }
 function mcd() { mkdir -p "$1" && cd "$1";  }
 
+function t() {
+  # Defaults to 3 levels deep, do more with `t 5` or `t 1`
+  # pass additional args after
+  local levels=${1:-3}; shift
+  tree -I '.git|node_modules|bower_components|.DS_Store' --dirsfirst -L $levels -aC $@
+}
+
 # pipe to h to highlight text in terminal
 h() {
 
