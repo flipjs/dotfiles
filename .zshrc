@@ -139,7 +139,7 @@ alias esl='eslint . ./'
 alias win2unix="find . -type f | xargs perl -pi -e 's/\r\n|\n|\r/\n/g'"
 alias nets='sudo netstat -ap'
 alias gdlast2='git diff HEAD^ HEAD'
-alias gdfix='git diff --name-only | uniq | xargs nvim'
+alias gdfix='git diff --name-only | uniq | xargs vim'
 alias npmgi='npm install -g js-beautify jshint jscs standard standard-format eslint eslint-config-standard-react eslint-plugin-standard eslint-config-standard eslint-plugin-react babel-eslint gulp grunt-cli babel-cli yo tsd bower generator-ng-poly webpack webpack-dev-server'
 
 function ff() { find . -iname "*$1*" ${@:2} }
