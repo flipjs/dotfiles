@@ -1,5 +1,5 @@
 name: zepko
-root: ~/dev/zepko/zepkocom
+root: ~/dev/zepko/ZepkoCom
 
 windows:
   - zepko:

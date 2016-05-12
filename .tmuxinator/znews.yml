@@ -1,5 +1,5 @@
 name: znews
-root: ~/dev/zepko/znews-admin
+root: ~/dev/zepko/ZNewsletter
 
 windows:
   - news:
@@ -7,5 +7,5 @@ windows:
       panes:
         - figlet node.js && node -v
         - figlet Vim
-        - figlet znews-admin
+        - figlet newsletter
         - htop

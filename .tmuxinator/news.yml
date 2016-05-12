@@ -1,5 +1,5 @@
 name: news
-root: ~/dev/zepko/news
+root: ~/dev/zepko/ZNewsletter
 
 windows:
   - news:
@@ -7,5 +7,5 @@ windows:
       panes:
         - figlet node.js && node -v
         - figlet Vim
-        - figlet news
+        - figlet newsletter
         - htop
