@@ -299,3 +299,8 @@ export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 # sed -i -- 's/foo/bar/g' *
 # Recursive, regular files (including hidden ones) in current dir and all its subdirs:
 # find . -type f -exec sed -i 's/foo/bar/g' {} +
+
+# OPAM configuration
+. /Users/philip/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+#   eval `opam config env`
+
