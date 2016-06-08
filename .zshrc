@@ -20,6 +20,7 @@ plugins=(bower brew git heroku node npm tmux tmuxinator emoji)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.bin/tmuxinator.zsh
+source ~/.shfiles/z.sh
 
 # TODO
 export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
