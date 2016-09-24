@@ -134,6 +134,7 @@ alias nry='npm run deploy'
 alias nrp='npm run deploy:prod'
 alias nrd='npm run dev'
 alias nrl='npm run lint'
+alias nrld='npm run lint:dev'
 alias nrt='npm run test'
 alias nrtd='npm run test:dev'
 alias nrs='npm run start'
@@ -262,10 +263,6 @@ case `uname` in
     export GOPATH=$HOME/go
     export PATH=$GOPATH/bin:$PATH
     export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
-    export DOCKER_CERT_PATH=/Users/philip/.boot2docker/certs/boot2docker-vm
-    export DOCKER_TLS_VERIFY=1
-    export DOCKER_HOST=tcp://192.168.59.103:2376
     ;;
   Linux)
     # export NODE_PATH=/usr/lib/node_modules
