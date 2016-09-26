@@ -128,9 +128,6 @@ alias mnt84='sudo sshfs -o allow_other root@10.10.10.84:/ $HOME/mount/84'
 alias umnt84='sudo umount $HOME/mount/84'
 alias cdmnt84='cd $HOME/mount/84'
 alias cdmnt84zg='cd $HOME/mount/84/var/www/html/zgtin'
-alias nvma4='nvm alias default 4.2.2'
-alias nvma5='nvm alias default 5.6'
-alias nvma6='nvm alias default 6.1'
 alias nrb='npm run build'
 alias nrc='npm run clean'
 alias nry='npm run deploy'
@@ -267,10 +264,6 @@ case `uname` in
     export GOPATH=$HOME/go
     export PATH=$GOPATH/bin:$PATH
     export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
-    export DOCKER_CERT_PATH=/Users/philip/.boot2docker/certs/boot2docker-vm
-    export DOCKER_TLS_VERIFY=1
-    export DOCKER_HOST=tcp://192.168.59.103:2376
     ;;
   Linux)
     # export NODE_PATH=/usr/lib/node_modules
