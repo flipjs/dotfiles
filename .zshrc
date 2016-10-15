@@ -12,8 +12,9 @@ stty -ixon
 export NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 # or set to 'random' to see other themes
-# ZSH_THEME="flipjsio"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="flipjsio"
+# set to robbyrussell when using hyper
+# ZSH_THEME="robbyrussell"
 
 export HISTSIZE=100000 SAVEHIST=100000
 
@@ -56,6 +57,7 @@ alias vv='vim'
 alias vi='vim'
 alias vn='vim -u NONE'
 alias vin='vim'
+alias vh='vim ~/.hyper.js'
 alias vz='vim ~/.zshrc'
 alias vzh='vim ~/.zshrc'
 alias vrc='vim $HOME/.vimfiles/vimconfig/vimrc'
