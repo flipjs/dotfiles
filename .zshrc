@@ -137,14 +137,17 @@ alias nrl='npm run lint'
 alias nrld='npm run lint:dev'
 alias nrt='npm run test'
 alias nrtd='npm run test:dev'
-alias nrs='npm run start'
+alias nrs='npm start'
 alias nrw='npm run watch'
+alias cras='NODE_PATH=./src npm start'
+alias crab='NODE_PATH=./src npm run build'
 alias esl='eslint . ./'
 alias win2unix="find . -type f | xargs perl -pi -e 's/\r\n|\n|\r/\n/g'"
 alias nets='sudo netstat -ap'
 alias gitmergemaster='gcm && git fetch upstream && git merge upstream/master && gp'
 alias gdlast2='git diff HEAD^ HEAD'
 alias gdfix='git diff --name-only | uniq | xargs vim'
+alias nvma='nvm alias default node'
 alias npmgi='npm install -g js-beautify jshint jscs standard standard-format eslint eslint-config-standard-react eslint-plugin-standard eslint-config-standard eslint-plugin-react babel-eslint gulp grunt-cli babel-cli yo tsd bower generator-ng-poly webpack webpack-dev-server'
 
 function ff() { find . -iname "*$1*" ${@:2} }
