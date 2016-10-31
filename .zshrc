@@ -152,6 +152,14 @@ alias gdfix='git diff --name-only | uniq | xargs vim'
 alias nvma='nvm alias default node'
 alias npmgi='npm install -g js-beautify jshint jscs standard standard-format eslint eslint-config-standard-react eslint-plugin-standard eslint-config-standard eslint-plugin-react babel-eslint gulp grunt-cli babel-cli yo tsd bower generator-ng-poly webpack webpack-dev-server'
 
+# Keyboard chattering issues workaround. Remove when keyboard is fixed
+alias gsts='gst'
+alias gsst='gst'
+alias vvim='vim'
+alias vvvim='vim'
+alias crass='cras'
+alias crasss='cras'
+
 function ff() { find . -iname "*$1*" ${@:2} }
 function ggr() { grep "$1" ${@:2} -R . }
 function mcd() { mkdir -p "$1" && cd "$1";  }
