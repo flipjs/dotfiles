@@ -39,6 +39,7 @@ export NODE_ENV=development
 DIRSTACKSIZE=8
 setopt autopushd pushdminus pushdsilent pushdtohome
 
+alias xo='xdg-open'
 alias ex='exit'
 alias dh='dirs -v'
 alias ls='ls -GpFh'
@@ -163,6 +164,8 @@ alias vvim='vim'
 alias vvvim='vim'
 alias crass='cras'
 alias crasss='cras'
+alias clss='clear'
+alias clsss='clear'
 
 function ff() { find . -iname "*$1*" ${@:2} }
 function ggr() { grep "$1" ${@:2} -R . }
