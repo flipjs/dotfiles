@@ -160,12 +160,17 @@ alias npmgi='npm install -g js-beautify jshint jscs standard standard-format esl
 # Keyboard chattering issues workaround. Remove when keyboard is fixed
 alias gsts='gst'
 alias gsst='gst'
+alias gssst='gst'
 alias vvim='vim'
 alias vvvim='vim'
 alias crass='cras'
 alias crasss='cras'
 alias clss='clear'
 alias clsss='clear'
+alias gulpp='gulp'
+alias gulppp='gulp'
+alias zepp='zep'
+alias zeppp='zep'
 
 function ff() { find . -iname "*$1*" ${@:2} }
 function ggr() { grep "$1" ${@:2} -R . }
