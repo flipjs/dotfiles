@@ -31,6 +31,7 @@ export MYNVIMRC=~/.config/nvim/init.vim
 export EDITOR='/usr/local/bin/vim'
 export VISUAL='/usr/local/bin/vim'
 export GIT_EDITOR='/usr/local/bin/vim'
+export FZF_COMPLETION_TRIGGER='``'
 
 export PORT=3000
 
@@ -325,3 +326,5 @@ export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 # sed -i -- 's/foo/bar/g' *
 # Recursive, regular files (including hidden ones) in current dir and all its subdirs:
 # find . -type f -exec sed -i 's/foo/bar/g' {} +
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
