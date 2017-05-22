@@ -50,6 +50,7 @@ alias lla='ls -laGpFh'
 alias lsd='ls -d */'
 alias lss='find -P .  -maxdepth 1 -type l -exec echo -n "{} -> " \; -exec readlink {} \;'
 alias delnode='find . -name node_modules -type d -print0|xargs -0 rm -r --'
+alias rmnode="find . -name node_modules -type d -prune -exec rm -rf '{}' +"
 alias neo='nvim'
 alias nv='nvim'
 alias n='nvim'
