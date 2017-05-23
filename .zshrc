@@ -21,6 +21,7 @@ plugins=(bower brew git heroku node npm tmux tmuxinator emoji)
 source $ZSH/oh-my-zsh.sh
 source ~/.bin/tmuxinator.zsh
 source ~/.shfiles/z.sh
+source ~/.oh-my-zsh/extensions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # TODO
 export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
@@ -81,6 +82,7 @@ alias vc='cd $HOME/.vimfiles/vimconfig'
 alias vv='cd $HOME/.vimfiles/vimviews'
 alias nc='cd $HOME/.config/nvim'
 alias dev='cd $HOME/dev'
+alias csp='cd $HOME/dev/csp'
 alias oss='cd $HOME/dev/oss'
 alias blog='cd $HOME/dev/flipjs.io'
 alias ng='cd $HOME/dev/angular'
@@ -113,26 +115,10 @@ alias stp="open '$HOME/Library/Application Support/Sublime Text 3/Packages'"
 alias kar="cd '$HOME/Library/Application Support/Karabiner'"
 alias db="cd '$HOME/Dropbox'"
 alias zrel=". ~/.zshrc"
-alias zep='cd $HOME/dev/zepko;pwd'
-alias zz='cd $HOME/dev/zepko/ZepkoCom;pwd'
-alias zw='cd $HOME/dev/zepko/zwds;pwd'
-alias zg='cd $HOME/dev/zepko/ZGTINApp;pwd'
-alias zgold='cd $HOME/dev/zepko/zgtin;pwd'
-alias zn='cd $HOME/dev/zepko/ZNewsletter;pwd'
-alias vzep='cd $HOME/103/dev/zepko;pwd'
-alias vzz='cd $HOME/103/dev/zepko/ZepkoCom;pwd'
-alias vzw='cd $HOME/103/dev/zepko/zwds;pwd'
-alias vzg='cd $HOME/103/dev/zepko/ZGTINApp;pwd'
-alias vzgold='cd $HOME/103/dev/zepko/zgtin;pwd'
-alias vzn='cd $HOME/103/dev/zepko/ZNewsletter;pwd'
-alias msh='mux start shell'
-alias mzw='mux start zwds'
-alias mzg='mux start zgtinv2'
-alias mi3='mux start i3'
-alias mzgold='mux start zgtin'
-alias mzz='mux start zepko'
-alias mzn='mux start znews'
-alias mzm='mux start mac'
+alias msh='tmuxinator start shell'
+alias mfh='tmuxinator start harmony'
+alias mfc='tmuxinator start csp'
+alias mfm='tmuxinator start mac'
 alias mnt84='sudo sshfs -o allow_other root@10.10.10.84:/ $HOME/mount/84'
 alias mnt242='sudo sshfs -o allow_other root@10.10.10.242:/ $HOME/mount/242'
 alias umnt84='sudo umount $HOME/mount/84'
@@ -166,21 +152,6 @@ alias gdfix='git diff --name-only | uniq | xargs vim'
 alias gitmergemaster='gcm && git fetch upstream && git merge upstream/master && gp'
 alias nvma='nvm alias default node'
 alias npmgi='npm install -g js-beautify jshint jscs standard standard-format eslint eslint-config-standard-react eslint-plugin-standard eslint-config-standard eslint-plugin-react babel-eslint gulp grunt-cli babel-cli yo tsd bower generator-ng-poly webpack webpack-dev-server'
-
-# Keyboard chattering issues workaround. Remove when keyboard is fixed
-alias gsts='gst'
-alias gsst='gst'
-alias gssst='gst'
-alias vvim='vim'
-alias vvvim='vim'
-alias crass='cras'
-alias crasss='cras'
-alias clss='clear'
-alias clsss='clear'
-alias gulpp='gulp'
-alias gulppp='gulp'
-alias zepp='zep'
-alias zeppp='zep'
 
 function ff() { find . -iname "*$1*" ${@:2} }
 function ggr() { grep "$1" ${@:2} -R . }
