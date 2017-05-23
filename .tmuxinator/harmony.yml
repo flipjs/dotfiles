@@ -1,11 +1,11 @@
-name: i3
+name: harmony
 root: ~/
 
 windows:
-  - i3:
+  - harmony:
       layout: ab5a,190x49,0,0[190x39,0,0{75x39,0,0,31,114x39,76,0,38},190x9,0,40{95x9,0,40,35,94x9,96,40,37}]
       panes:
         - figlet node && node -v | cowsay -f dragon-and-cow | lolcat
         - figlet Vim
-        - figlet I3
+        - figlet Harmony
         - node -v | cowsay | lolcat
