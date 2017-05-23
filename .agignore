@@ -1,9 +1,9 @@
-/bower_components/
-/images/
-/img/
-/node_modules/
-/tmp/
-/vendor/
+bower_components/
+images/
+img/
+node_modules/
+tmp/
+vendor/
 *.csv
 *.gemtags*
 *.log
