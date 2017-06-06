@@ -22,6 +22,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.bin/tmuxinator.zsh
 source ~/.shfiles/z.sh
 source ~/.oh-my-zsh/extensions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.rvm/scripts/rvm
 
 # TODO
 export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
@@ -140,6 +141,8 @@ alias nrt='npm run test'
 alias nrtd='npm run test:dev'
 alias nrs='npm start'
 alias nrw='npm run watch'
+alias nrsd='npm run start::dev'
+alias nrqaw='npm run qa::watch'
 alias cras='NODE_PATH=./src npm start'
 alias crab='NODE_PATH=./src npm run build'
 alias crat='NODE_PATH=./src npm run test'
