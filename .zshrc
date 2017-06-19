@@ -23,6 +23,7 @@ source ~/.bin/tmuxinator.zsh
 source ~/.shfiles/z.sh
 source ~/.oh-my-zsh/extensions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.rvm/scripts/rvm
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # TODO
 export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
@@ -42,6 +43,7 @@ export NODE_ENV=development
 DIRSTACKSIZE=8
 setopt autopushd pushdminus pushdsilent pushdtohome
 
+alias wh='which'
 alias xo='xdg-open'
 alias ex='exit'
 alias dh='dirs -v'
@@ -313,5 +315,3 @@ export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 # sed -i -- 's/foo/bar/g' *
 # Recursive, regular files (including hidden ones) in current dir and all its subdirs:
 # find . -type f -exec sed -i 's/foo/bar/g' {} +
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
