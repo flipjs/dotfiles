@@ -34,7 +34,16 @@ export MYNVIMRC=~/.config/nvim/init.vim
 export EDITOR='/usr/local/bin/vim'
 export VISUAL='/usr/local/bin/vim'
 export GIT_EDITOR='/usr/local/bin/vim'
+# export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_COMPLETION_TRIGGER='``'
+export FZF_COMPLETION_OPTS='+c -x'
+
+# function below is required to respect .agignore for completion
+_fzf_compgen_path() {
+  ag -g "" "$1"
+}
 
 export PORT=3000
 
@@ -43,6 +52,7 @@ export NODE_ENV=development
 DIRSTACKSIZE=8
 setopt autopushd pushdminus pushdsilent pushdtohome
 
+alias jj='z'
 alias wh='which'
 alias xo='xdg-open'
 alias ex='exit'
