@@ -1,0 +1,10 @@
+name: graphql
+root: ~/dev/csp/csp__harmony-data--service
+
+windows:
+  - graphql:
+      layout: 4885,122x34,0,0{41x34,0,0[41x27,0,0,0,41x6,0,28,2],80x34,42,0,1}
+      panes:
+        - node -v | cowsay | lolcat
+        - figlet "felipe"
+        - figlet "data-service" && archey
