@@ -1,13 +1,13 @@
 {
-  "defs": [
-    "browser",
-    "ecma5",
-    "ecma6"
-  ],
-  "dontLoad": [
-    "node_modules/**"
-  ],
   "plugins": {
-    "node": true
-  }
+    "es_modules": {},
+    "node": {}
+  },
+  "libs": [
+    "ecma5",
+    "ecma6",
+    "browser",
+    "jquery"
+  ],
+  "ecmaVersion": 6
 }
