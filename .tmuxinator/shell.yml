@@ -3,9 +3,9 @@ root: ~/
 
 windows:
   - shell:
-      layout: ab5a,190x49,0,0[190x39,0,0{75x39,0,0,31,114x39,76,0,38},190x9,0,40{95x9,0,40,35,94x9,96,40,37}]
+      layout: 6fcc,140x35,0,0[140x31,0,0{30x31,0,0,0,109x31,31,0,1},140x3,0,32{70x3,0,32,2,69x3,71,32,3}]
       panes:
-        - figlet node && node -v | cowsay -f dragon-and-cow | lolcat
-        - figlet Vim
-        - figlet shell
-        - node -v | cowsay | lolcat
+        - figlet shell && cowsay Seize the day!
+        - figlet node.js && node -v | cowsay -f dragon-and-cow | lolcat
+        - lsd
+        - clear

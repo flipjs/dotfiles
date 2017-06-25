@@ -3,8 +3,9 @@ root: ~/dev/csp/csp__harmony-data--service
 
 windows:
   - graphql:
-      layout: 4885,122x34,0,0{41x34,0,0[41x27,0,0,0,41x6,0,28,2],80x34,42,0,1}
+      layout: 6fcc,140x35,0,0[140x31,0,0{30x31,0,0,0,109x31,31,0,1},140x3,0,32{70x3,0,32,2,69x3,71,32,3}]
       panes:
-        - node -v | cowsay | lolcat
-        - figlet "felipe"
-        - figlet "data-service" && archey
+        - figlet Graph && figlet QL && cowsay Seize the day!
+        - figlet node.js && node -v | cowsay -f dragon-and-cow | lolcat
+        - lsd
+        - clear
