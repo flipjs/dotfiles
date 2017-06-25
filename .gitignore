@@ -28,3 +28,7 @@ pids
 *.pid
 *.seed
 
+#CTags
+tags
+tags.lock
+tags.temp
