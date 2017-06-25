@@ -28,9 +28,9 @@ export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/loca
 # TODO
 export MYVIMRC=~/.vimrc
 export MYNVIMRC=~/.config/nvim/init.vim
-export EDITOR='/usr/local/bin/vim'
-export VISUAL='/usr/local/bin/vim'
-export GIT_EDITOR='/usr/local/bin/vim'
+export EDITOR='/usr/local/bin/nvim'
+export VISUAL='/usr/local/bin/nvim'
+export GIT_EDITOR='/usr/local/bin/nvim'
 # export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -49,6 +49,9 @@ export NODE_ENV=development
 DIRSTACKSIZE=8
 setopt autopushd pushdminus pushdsilent pushdtohome
 
+alias vim='nvim'
+
+alias pret='prettier'
 alias jj='z'
 alias wh='which'
 alias xo='xdg-open'
