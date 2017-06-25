@@ -8,9 +8,6 @@ setopt ignoreeof
 # to be able to ctrl-s in vim!
 stty -ixon
 
-# allow changing cursor shape in neovim
-export NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-
 # or set to 'random' to see other themes
 ZSH_THEME="flipjsio"
 
@@ -78,12 +75,13 @@ alias vh='vim ~/.hyper.js'
 alias vz='vim ~/.zshrc'
 alias vzh='vim ~/.zshrc'
 alias vrc='vim $HOME/.vimfiles/vimconfig/vimrc'
-alias vnc='nvim $HOME/.nvim/init.vim'
+alias vnc='nvim $HOME/.config/nvim/init.vim'
 alias vt='vim ~/.tmux.conf'
 alias tt='tmux'
 alias ta='tmux attach'
 alias td='tmux detach'
 alias tls='tmux ls'
+alias tlsw='tmux list-windows'
 alias cls='clear'
 alias arc='archey'
 alias lara='php artisan serve --port=3000'
