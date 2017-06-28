@@ -36,6 +36,7 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_COMPLETION_TRIGGER='``'
 export FZF_COMPLETION_OPTS='+c -x'
+export FZF_DEFAULT_OPTS="--extended --cycle --reverse"
 
 # function below is required to respect .agignore for completion
 _fzf_compgen_path() {
