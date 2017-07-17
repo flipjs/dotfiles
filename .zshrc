@@ -22,6 +22,9 @@ source ~/.oh-my-zsh/extensions/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 source $HOME/.rvm/scripts/rvm
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# secret
+source ~/.secret/taste.sh
+
 # TODO
 export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
 
@@ -159,6 +162,7 @@ alias nrd='npm run dev'
 alias nrl='npm run lint'
 alias nrld='npm run lint:dev'
 alias nrt='npm run test'
+alias nrtu='npm run test::unit'
 alias nrtd='npm run test:dev'
 alias nrs='npm start'
 alias nrw='npm run watch'
