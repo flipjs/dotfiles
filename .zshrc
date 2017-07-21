@@ -1,6 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 
-TERM=xterm-256color
+[[ $TMUX = "" ]] && export TERM="xterm-256color"
 
 # disable Ctrl-D so not to close terminal by accident
 setopt ignoreeof
