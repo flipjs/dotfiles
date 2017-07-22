@@ -25,21 +25,52 @@ source $HOME/.rvm/scripts/rvm
 # secret
 source ~/.secret/taste.sh
 
-# TODO
 export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
 
-# TODO
 export MYVIMRC=~/.vimrc
 export MYNVIMRC=~/.config/nvim/init.vim
 export EDITOR='/usr/local/bin/nvim'
 export VISUAL='/usr/local/bin/nvim'
 export GIT_EDITOR='/usr/local/bin/nvim'
-# export FZF_DEFAULT_COMMAND='ag -g ""'
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+# export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --follow --glob "!.git/*"'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_COMPLETION_TRIGGER='``'
 export FZF_COMPLETION_OPTS='+c -x'
-export FZF_DEFAULT_OPTS="--extended --cycle --reverse"
+# set fzf theme
+_gen_fzf_default_opts() {
+  local base03="234"
+  local base02="235"
+  local base01="240"
+  local base00="241"
+  local base0="244"
+  local base1="245"
+  local base2="254"
+  local base3="230"
+  local yellow="136"
+  local orange="166"
+  local red="160"
+  local magenta="125"
+  local violet="61"
+  local blue="33"
+  local cyan="37"
+  local green="64"
+
+  # Comment and uncomment below for the light theme.
+
+  # Solarized Dark color scheme for fzf
+  export FZF_DEFAULT_OPTS="
+    --color fg:-1,bg:-1,hl:$blue,fg+:$base2,bg+:$base02,hl+:$blue
+    --color info:$yellow,prompt:$yellow,pointer:$base3,marker:$base3,spinner:$yellow
+    --extended --cycle --reverse
+  "
+  ## Solarized Light color scheme for fzf
+  #export FZF_DEFAULT_OPTS="
+  #  --color fg:-1,bg:-1,hl:$blue,fg+:$base02,bg+:$base2,hl+:$blue
+  #  --color info:$yellow,prompt:$yellow,pointer:$base03,marker:$base03,spinner:$yellow
+  #"
+}
+_gen_fzf_default_opts
 
 # function below is required to respect .agignore for completion
 _fzf_compgen_path() {
