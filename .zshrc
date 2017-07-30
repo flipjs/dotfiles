@@ -33,6 +33,7 @@ export EDITOR='/usr/local/bin/nvim'
 export VISUAL='/usr/local/bin/nvim'
 export GIT_EDITOR='/usr/local/bin/nvim'
 # export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+export MDV_THEME=579.6579
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --follow --glob "!.git/*"'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_COMPLETION_TRIGGER='``'
@@ -86,6 +87,8 @@ setopt autopushd pushdminus pushdsilent pushdtohome
 
 alias vim='nvim'
 
+alias cheat='mdv $HOME/.dotfiles/CHEAT.md'
+alias vch='vim $HOME/.dotfiles/CHEAT.md'
 alias pret='prettier'
 alias jj='z'
 alias wh='which'
