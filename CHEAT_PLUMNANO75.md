@@ -2,7 +2,7 @@
 
 ### RGB Backlighting
 
-- Fn + ~` Customize RGB colors
+- Fn + ~` Customize RGB colors (remap to Fn+7)
 - Fn + !1 Fast 7 colors
 - Fn + @2 Meteor shower
 - Fn + #3 Ripples/Aurora
