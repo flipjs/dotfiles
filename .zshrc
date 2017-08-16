@@ -89,6 +89,8 @@ alias vim='nvim'
 
 alias cheat='mdv $HOME/.dotfiles/CHEAT.md'
 alias vch='vim $HOME/.dotfiles/CHEAT.md'
+alias cheatvim='mdv $HOME/.dotfiles/CHEAT_VIM.md'
+alias vcv='vim $HOME/.dotfiles/CHEAT_VIM.md'
 alias cheatoh='mdv $HOME/.dotfiles/CHEAT_OHMYZSH.md'
 alias cheatg='cheatoh | rg git'
 alias cheatpn='mdv $HOME/.dotfiles/CHEAT_PLUMNANO75.md'
