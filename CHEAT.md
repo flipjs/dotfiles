@@ -5,6 +5,9 @@
 - `reset` or `stty sane` - fix terminal messy output
 - `rg -li <text_to_search> | parallel -X --tty nvim` - search text and load matched files in Vim
 - `cp -r !(filename1 | dirnameX | filename2) destination/` - recursive copy excluding files and directories
+- `tar --exclude="./.git" --exclude="./node_modules" -cvzf /backup/filename.tar.gz .` - cd /to/dir/to/backup then run the command
+- `mdv README.md` - markdown viewer in terminal (preferred)
+- `markdown README.md | lynx -stdin` - alternative markdown viewer in terminal
 
 ### Tmux shortcuts
 
@@ -44,4 +47,4 @@
 
 ### Npm
 
-- `nodemon --exec npm run test` - Watch npm test
+- `nodemon --exec npm run test` - run npm test and watch
