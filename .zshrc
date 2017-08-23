@@ -87,6 +87,7 @@ setopt autopushd pushdminus pushdsilent pushdtohome
 
 alias vim='nvim'
 
+alias lol='archey && node -v | cowsay -f dragon-and-cow | lolcat'
 alias cheat='mdv $HOME/.dotfiles/CHEAT.md'
 alias vch='vim $HOME/.dotfiles/CHEAT.md'
 alias cheatvim='mdv $HOME/.dotfiles/CHEAT_VIM.md'
