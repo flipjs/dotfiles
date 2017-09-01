@@ -8,6 +8,9 @@
 - `tar --exclude="./.git" --exclude="./node_modules" -cvzf /backup/filename.tar.gz .` - cd /to/dir/to/backup then run the command
 - `mdv README.md` - markdown viewer in terminal (preferred)
 - `markdown README.md | lynx -stdin` - alternative markdown viewer in terminal
+- `open -a "Google Chrome" <path/to/file>` - open file in Google Chrome browser
+- `xmllint --format <path/to/file>` - view xml file
+- `tidy -xml <path/to/file>` - view xml file (alt)
 
 ### Tmux shortcuts
 
