@@ -87,6 +87,9 @@ setopt autopushd pushdminus pushdsilent pushdtohome
 
 alias vim='nvim'
 
+# override oh-my-zsh glog
+alias glog='git log --oneline --decorate --color --graph | less'
+
 alias lol='archey && node -v | cowsay -f dragon-and-cow | lolcat'
 alias cheat='mdv $HOME/.dotfiles/CHEAT.md'
 alias vch='vim $HOME/.dotfiles/CHEAT.md'
@@ -217,7 +220,10 @@ alias nrs='npm start'
 alias nrw='npm run watch'
 alias nrsd='npm run start::dev'
 alias nrqa='npm run qa'
+alias nrqal='npm run qa::lint'
+alias nrqalp='npm run qa::lint::print'
 alias nrqaw='npm run qa::watch'
+alias nrqalw='npm run qa::lint::watch'
 alias nrwa='npm run watch::amd'
 alias cras='NODE_PATH=./src npm start'
 alias crab='NODE_PATH=./src npm run build'
