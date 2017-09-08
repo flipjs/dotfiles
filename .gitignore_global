@@ -27,3 +27,7 @@ pids
 *.pid
 *.seed
 
+# Vim plugins' data
+tags
+tags.temp
+tags.lock
