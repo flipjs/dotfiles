@@ -11,6 +11,7 @@
 - `open -a "Google Chrome" <path/to/file>` - open file in Google Chrome browser
 - `xmllint --format <path/to/file>` - view xml file
 - `tidy -xml <path/to/file>` - view xml file (alt)
+- `vim git 'diff --name-only'` - open modified files in vim
 
 ### Tmux shortcuts
 

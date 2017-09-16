@@ -15,6 +15,10 @@
 
 - `:verbose map <shortcut>` - see mapping for shortcut
 
+### Useful commands
+
+- `:w !sudo tee %` - saving that needs root permission
+
 ### History
 
 - `q:` - pop open command history window
