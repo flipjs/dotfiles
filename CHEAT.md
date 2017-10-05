@@ -12,6 +12,7 @@
 - `xmllint --format <path/to/file>` - view xml file
 - `tidy -xml <path/to/file>` - view xml file (alt)
 - `vim git 'diff --name-only'` - open modified files in vim
+- `iTerm fullscreen no gap` - go to Preferences - Advanced - Windows - Terminal Windows resize smoothly - set to Yes
 
 ### Tmux shortcuts
 

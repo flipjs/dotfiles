@@ -5,7 +5,7 @@ windows:
   - 360:
       layout: 6fcc,140x35,0,0[140x31,0,0{30x31,0,0,0,109x31,31,0,1},140x3,0,32{70x3,0,32,2,69x3,71,32,3}]
       panes:
-        - figlet 360 && cowsay Seize the day!
+        - figlet 360v2 && cowsay Seize the day!
         - figlet node.js && node -v | cowsay -f dragon-and-cow | lolcat
         - lsd
         - clear

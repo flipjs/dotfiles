@@ -18,6 +18,7 @@
 ### Useful commands
 
 - `:w !sudo tee %` - saving that needs root permission
+- `:echo @%` - show path of current buffer
 
 ### History
 

@@ -150,6 +150,7 @@ alias vv='cd $HOME/.vimfiles/vimviews'
 alias nc='cd $HOME/.config/nvim'
 alias dev='cd $HOME/dev'
 alias csp='cd $HOME/dev/csp'
+alias exphds='export APP_DATA_SERVICE_URL=http://localhost:3000/csp__harmony-data--service'
 alias scrum='cd $HOME/dev/scrum'
 alias standup='nvim $HOME/dev/scrum/README.md'
 alias cppa='cd $HOME/dev/csp/csp__phone-panel--app'
@@ -185,7 +186,7 @@ alias aacc='cd $HOME/dev/projects/aacc'
 alias pv='cd $HOME/dev/projects/aacc && vim'
 alias dos='ssh philip@178.62.80.73'
 alias stp="open '$HOME/Library/Application Support/Sublime Text 3/Packages'"
-alias kar="cd '$HOME/Library/Application Support/Karabiner'"
+alias kar="cd '$HOME/.karabiner-config'"
 alias db="cd '$HOME/Dropbox'"
 alias zrel=". ~/.zshrc"
 alias msh='tmuxinator start shell'
