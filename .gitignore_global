@@ -31,3 +31,6 @@ pids
 tags
 tags.temp
 tags.lock
+
+# Build files
+build
