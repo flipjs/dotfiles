@@ -10,6 +10,7 @@ stty -ixon
 
 # or set to 'random' to see other themes
 ZSH_THEME="flipjsio"
+# ZSH_THEME="robbyrussell"
 
 export HISTSIZE=100000 SAVEHIST=100000
 
@@ -38,6 +39,7 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --follow --glob "!.
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_COMPLETION_TRIGGER='``'
 export FZF_COMPLETION_OPTS='+c -x'
+command -v blsd > /dev/null && export FZF_ALT_C_COMMAND='blsd'
 # set fzf theme
 _gen_fzf_default_opts() {
   local base03="234"
