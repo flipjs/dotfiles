@@ -41,7 +41,7 @@
 - `q: or :<c-f>`
 - `q/ or /<c-f>`
 
-### Quick setup (on foreign terminals)
+### Quick setup (on foreign/remote terminals)
 
 ```
 set nocompatible
