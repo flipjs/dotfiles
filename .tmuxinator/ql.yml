@@ -1,4 +1,4 @@
-name: graphql
+name: Data Service
 root: ~/dev/csp/csp__harmony-data--service
 
 windows:

@@ -1,4 +1,4 @@
-name: ppa
+name: Phone Panel
 root: ~/dev/csp/csp__phone-panel--app
 
 windows:
