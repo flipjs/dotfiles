@@ -3,9 +3,10 @@ root: ~/dev/csp/csp__phone-panel--app
 
 windows:
   - ppa:
-      layout: 6fcc,140x35,0,0[140x31,0,0{30x31,0,0,0,109x31,31,0,1},140x3,0,32{70x3,0,32,2,69x3,71,32,3}]
+      layout: 0bcb,174x38,0,0[174x32,0,0{47x32,0,0,0,126x32,48,0,1},174x5,0,33{64x5,0,33,2,63x5,65,33,3,45x5,129,33,4}]
       panes:
-        - figlet Phone && figlet Panel && cowsay Seize the day!
-        - figlet node.js && node -v | cowsay -f dragon-and-cow | lolcat
-        - lsd
-        - clear
+        - figlet node && node -v | cowsay | lolcat && nrtw
+        - figlet Phone Panel && node -v | cowsay -f dragon-and-cow | lolcat
+        - nrsd
+        - cd ~/dev/csp/zendesk-app-template && zat server
+        - nrqaw
