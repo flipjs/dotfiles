@@ -20,8 +20,11 @@ source $ZSH/oh-my-zsh.sh
 source ~/.bin/tmuxinator.zsh
 source ~/.shfiles/z.sh
 source ~/.oh-my-zsh/extensions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/.rvm/scripts/rvm
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source $HOME/.rvm/scripts/rvm
+
+export NVM_DIR=$HOME/.nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # secret
 source ~/.secret/taste.sh
@@ -35,7 +38,8 @@ export VISUAL='/usr/local/bin/nvim'
 export GIT_EDITOR='/usr/local/bin/nvim'
 # export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export MDV_THEME=579.6579
-export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --follow --glob "!.git/*"'
+# export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --follow --glob "!{.git,node_modules,coverage}/*"'
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules,coverage}/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_COMPLETION_TRIGGER='``'
 export FZF_COMPLETION_OPTS='+c -x'
@@ -92,6 +96,10 @@ alias vim='nvim'
 # override oh-my-zsh glog
 alias glog='git log --oneline --decorate --color --graph | less'
 
+alias tree4='tree -L 4 -d'
+alias tree3='tree -L 3 -d'
+alias tree2='tree -L 2 -d'
+alias tree1='tree -L 1 -d'
 alias noder='node $HOME/.dotfiles/js/repl.js'
 alias lol='archey && node -v | cowsay -f dragon-and-cow | lolcat'
 alias cheat='mdv $HOME/.dotfiles/CHEAT.md'
@@ -214,10 +222,13 @@ alias nrd='npm run dev'
 alias nrl='npm run lint'
 alias nrld='npm run lint:dev'
 alias nrt='npm run test'
+alias nrtw='npm run test::watch'
 alias wnrt='nodemon --exec "npm run test"'
 alias nrtu='npm run test::unit'
+alias nrtuw='npm run test::unit::watch'
 alias wnrtu='nodemon --exec "npm run test::unit"'
 alias nrti='npm run test::integration'
+alias nrtiw='npm run test::integration::watch'
 alias wnrti='nodemon --exec "npm run test::integration"'
 alias nrtd='npm run test:dev'
 alias wnrtd='nodemon --exec "npm run test::dev"'
@@ -381,9 +392,6 @@ case `uname` in
     ;;
 esac
 
-export NVM_DIR=$HOME/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 # npm global install without sudo
 
 NPM_PACKAGES="${HOME}/.npm-packages"
@@ -399,3 +407,5 @@ export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 # sed -i -- 's/foo/bar/g' *
 # Recursive, regular files (including hidden ones) in current dir and all its subdirs:
 # find . -type f -exec sed -i 's/foo/bar/g' {} +
+
+eval $(thefuck --alias)
