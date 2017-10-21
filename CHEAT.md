@@ -31,7 +31,8 @@
 - `tmux new -s <session_name>` - creates a new tmux session named session_name
 - `tmux attach -t <session_name>` - attaches to an existing tmux session named session_name
 - `tmux switch -t <session_name>` - switches to an existing session named session_name
-- `tmux list-sessions` - lists existing tmux sessions
+- `tmux list-sessions` - shows tmux sessions
+- `tmux list-windows` - shows current tmux windows (tip: layout can be copied and pasted to tmuxinator config as is)
 - `tmux detach (Ctrl-A D)` - detach the currently attached session
 
 ### Copying text inside Tmux
