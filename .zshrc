@@ -9,8 +9,8 @@ setopt ignoreeof
 stty -ixon
 
 # or set to 'random' to see other themes
-ZSH_THEME="flipjsio"
-# ZSH_THEME="robbyrussell"
+# ZSH_THEME="flipjsio"
+ZSH_THEME="robbyrussell"
 
 export HISTSIZE=100000 SAVEHIST=100000
 
@@ -101,7 +101,7 @@ alias tree3='tree -L 3 -d'
 alias tree2='tree -L 2 -d'
 alias tree1='tree -L 1 -d'
 alias noder='node $HOME/.dotfiles/js/repl.js'
-alias lol='archey && node -v | cowsay -f dragon-and-cow | lolcat'
+alias lol='archey -o && node -v | cowsay -f dragon-and-cow | lolcat'
 alias cheat='mdv $HOME/.dotfiles/CHEAT.md'
 alias vch='vim $HOME/.dotfiles/CHEAT.md'
 alias cheatvim='mdv $HOME/.dotfiles/CHEAT_VIM.md'
@@ -146,7 +146,7 @@ alias tls='tmux ls'
 alias tlsw='tmux list-windows'
 alias tkill='tmux kill-session'
 alias cls='clear'
-alias arc='archey'
+alias arc='archey -o'
 alias lara='php artisan serve --port=3000'
 alias live='live-server -p 3000'
 alias www='http-server -p 3000'
@@ -164,6 +164,9 @@ alias exphds='export APP_DATA_SERVICE_URL=http://localhost:3000/csp__harmony-dat
 alias scrum='cd $HOME/dev/scrum'
 alias standup='nvim $HOME/dev/scrum/README.md'
 alias cppa='cd $HOME/dev/csp/csp__phone-panel--app'
+alias chld='cd $HOME/dev/csp/harmony__local-development'
+alias cmc='cd $HOME/dev/csp/csp__manage-contacts--app'
+alias ccl='cd $HOME/dev/csp/csp__zendesk-cleanup--service'
 alias cql='cd $HOME/dev/csp/csp__harmony-data--service'
 alias c360='cd $HOME/dev/csp/fu360'
 alias czat='cd $HOME/dev/csp/zendesk-app-template'
@@ -203,6 +206,9 @@ alias msh='tmuxinator start shell'
 alias mfh='tmuxinator start harmony'
 alias mfc='tmuxinator start csp'
 alias mfppa='tmuxinator start ppa'
+alias mfhld='tmuxinator start hld'
+alias mfmc='tmuxinator start contacts'
+alias mfcl='tmuxinator start cleanup'
 alias mfql='tmuxinator start ql'
 alias mf360='tmuxinator start 360'
 alias mfm='tmuxinator start mac'

@@ -1,0 +1,11 @@
+name: Shell
+root: ~/dev/csp/csp__zendesk-cleanup--service
+
+windows:
+  - shell:
+      layout: 6fcc,140x35,0,0[140x31,0,0{30x31,0,0,0,109x31,31,0,1},140x3,0,32{70x3,0,32,2,69x3,71,32,3}]
+      panes:
+        - figlet node.js && node -v | cowsay
+        - figlet -f ~/.config/figlet/fonts/graffiti Zendesk Cleanup && node -v | cowsay -f dragon-and-cow | lolcat
+        - lsd
+        - clear

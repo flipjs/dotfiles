@@ -1,0 +1,12 @@
+name: Harmony Local Development
+root: ~/dev/csp/harmony__local-development
+
+windows:
+  - ppa:
+      layout: 0bcb,174x38,0,0[174x32,0,0{47x32,0,0,0,126x32,48,0,1},174x5,0,33{64x5,0,33,2,63x5,65,33,3,45x5,129,33,4}]
+      panes:
+        - figlet node && node -v | cowsay | lolcat
+        - figlet -f ~/.config/figlet/fonts/graffiti Harmony Local Dev && node -v | cowsay -f dragon-and-cow | lolcat
+        - lsd
+        - clear
+        - clear

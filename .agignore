@@ -1,7 +1,9 @@
 bower_components/
+coverage/
 images/
 img/
 node_modules/
+reports/
 tmp/
 vendor/
 *.csv
