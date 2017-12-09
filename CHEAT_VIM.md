@@ -15,10 +15,11 @@
 
 - `:verbose map <shortcut>` - see mapping for shortcut
 
-### Useful commands
+### Useful commands/shortcuts
 
 - `:w !sudo tee %` - saving that needs root permission
 - `:echo @%` - show path of current buffer
+- `gx` - opens link into browser when cursor is over the link
 
 ### History
 

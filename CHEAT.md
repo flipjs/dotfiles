@@ -31,6 +31,8 @@
 - `ctrl-a x` - close pane
 - `ctrl-a z` - zoom in
 - `ctrl-a d` - detach current session
+- `ctrl-a '` - to select the window index
+- `ctrl-a w` - to get an interactive index to choose from (0-9a-z)
 
 ### Tmux commands
 
