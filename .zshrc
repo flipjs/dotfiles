@@ -9,8 +9,9 @@ setopt ignoreeof
 stty -ixon
 
 # or set to 'random' to see other themes
+# or comment out to use `pure prompt` from sindre sorhus
 # ZSH_THEME="flipjsio"
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 
 export HISTSIZE=100000 SAVEHIST=100000
 
@@ -22,6 +23,12 @@ source ~/.shfiles/z.sh
 source ~/.oh-my-zsh/extensions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source $HOME/.rvm/scripts/rvm
+
+# NOTE: oh-my-zsh overrides the prompt so Pure must be activated after source $ZSH/oh-my-zsh.sh
+# ZSH Prompt by Sindre Sorhus
+autoload -U promptinit; promptinit
+# PURE_PROMPT_SYMBOL=λ
+prompt pure
 
 export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -44,41 +51,13 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_COMPLETION_TRIGGER='``'
 export FZF_COMPLETION_OPTS='+c -x'
 command -v blsd > /dev/null && export FZF_ALT_C_COMMAND='blsd'
-# set fzf theme
-_gen_fzf_default_opts() {
-  local base03="234"
-  local base02="235"
-  local base01="240"
-  local base00="241"
-  local base0="244"
-  local base1="245"
-  local base2="254"
-  local base3="230"
-  local yellow="136"
-  local orange="166"
-  local red="160"
-  local magenta="125"
-  local violet="61"
-  local blue="33"
-  local cyan="37"
-  local green="64"
-
-  # Comment and uncomment below for the light theme.
-
-  # Solarized Dark color scheme for fzf
-  export FZF_DEFAULT_OPTS="
-    --color fg:-1,bg:-1,hl:$blue,fg+:$base2,bg+:$base02,hl+:$blue
-    --color info:$yellow,prompt:$yellow,pointer:$base3,marker:$base3,spinner:$yellow
-    --extended --cycle --reverse
-  "
-  ## Solarized Light color scheme for fzf
-  #export FZF_DEFAULT_OPTS="
-  #  --color fg:-1,bg:-1,hl:$blue,fg+:$base02,bg+:$base2,hl+:$blue
-  #  --color info:$yellow,prompt:$yellow,pointer:$base03,marker:$base03,spinner:$yellow
-  #"
-}
-_gen_fzf_default_opts
-
+# set fzf color (solarized)
+export FZF_DEFAULT_OPTS='
+  --color=bg+:#073642,bg:#002b36,spinner:#719e07,hl:#586e75
+  --color=fg:#839496,header:#586e75,info:#cb4b16,pointer:#719e07
+  --color=marker:#719e07,fg+:#839496,prompt:#719e07,hl+:#719e07
+  --extended --cycle --reverse
+'
 # function below is required to respect .agignore for completion
 _fzf_compgen_path() {
   ag -g "" "$1"
@@ -115,6 +94,8 @@ alias jj='z'
 alias wh='which'
 alias xo='xdg-open'
 alias xx='exit'
+alias xxx='exit'
+alias xxxx='exit'
 alias dh='dirs -v'
 alias ls='ls -GpFh'
 alias ll='ls -lGpFh'
@@ -139,7 +120,6 @@ alias vzh='vim ~/.zshrc'
 alias vrc='vim $HOME/.vimfiles/vimconfig/vimrc'
 alias vnc='nvim $HOME/.config/nvim/init.vim'
 alias vt='vim ~/.tmux.conf'
-alias tt='tmux new -s TMUX_RULES!'
 alias ta='tmux attach'
 alias td='tmux detach'
 alias tls='tmux ls'
@@ -202,6 +182,7 @@ alias stp="open '$HOME/Library/Application Support/Sublime Text 3/Packages'"
 alias kar="cd '$HOME/.karabiner-config'"
 alias db="cd '$HOME/Dropbox'"
 alias zrel=". ~/.zshrc"
+alias tt='tmuxinator start tmux'
 alias msh='tmuxinator start shell'
 alias mfh='tmuxinator start harmony'
 alias mfc='tmuxinator start csp'
