@@ -2,6 +2,9 @@ export ZSH=$HOME/.oh-my-zsh
 
 [[ $TMUX = "" ]] && export TERM="xterm-256color"
 
+# disable tmux auto title
+export DISABLE_AUTO_TITLE=true
+
 # disable Ctrl-D so not to close terminal by accident
 setopt ignoreeof
 
@@ -183,6 +186,7 @@ alias kar="cd '$HOME/.karabiner-config'"
 alias db="cd '$HOME/Dropbox'"
 alias zrel=". ~/.zshrc"
 alias tt='tmuxinator start dev'
+alias ttkill='tmux kill-session -t matrix'
 alias msh='tmuxinator start shell'
 alias mfh='tmuxinator start harmony'
 alias mfc='tmuxinator start csp'
