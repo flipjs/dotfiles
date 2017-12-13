@@ -63,6 +63,12 @@
 - `alt-. or esc-.` - place the argument of the most recent command and can cycle through
 - `ctrl-u [...] ctrl-y` - type partial command, kill this command, check something, yank the command, resume typing
 
+### Docker
+
+- Getting `node-sass` error from a docker image? Try this:
+    1. run `docker exec -it <container_id> bash`
+    2. from inside, run `npm rebuild node-sass`
+
 ### Npm
 
 - `nodemon --exec npm run test` - run npm test and watch

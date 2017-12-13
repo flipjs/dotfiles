@@ -20,6 +20,8 @@
 - `:w !sudo tee %` - saving that needs root permission
 - `:echo @%` - show path of current buffer
 - `gx` - opens link into browser when cursor is over the link
+- `:g/hello/d` - delete all lines containing "hello"
+- `:v/hello/d` - delete all lines that do NOT contain "hello"
 
 ### History
 
