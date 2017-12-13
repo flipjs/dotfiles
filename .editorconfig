@@ -25,6 +25,10 @@ indent_size = 4
 indent_style = tab
 indent_size = 4
 
+[*.re]
+indent_style = space
+indent_size = 2
+
 [*.md]
 indent_size = 4
 indent_style = space
