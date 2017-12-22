@@ -20,4 +20,4 @@ windows:
   - cypher:
       layout: b441,178x41,0,0,6
       panes:
-        - nvm use 8.9.1 && joplin
+        - z local && figlet local && node -v | cowsay -f dragon-and-cow | lolcat

@@ -49,7 +49,7 @@ export GIT_EDITOR='/usr/local/bin/nvim'
 # export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export MDV_THEME=579.6579
 # export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --follow --glob "!{.git,node_modules,coverage}/*"'
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules,coverage}/*" 2> /dev/null'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow -g "!{.git,node_modules,coverage}/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_COMPLETION_TRIGGER='``'
 export FZF_COMPLETION_OPTS='+c -x'
@@ -240,6 +240,8 @@ alias crat='NODE_PATH=./src npm run test'
 alias esl='eslint . ./'
 alias win2unix="find . -type f | xargs perl -pi -e 's/\r\n|\n|\r/\n/g'"
 alias nets='sudo netstat -ap'
+alias dps='docker ps'
+alias dsa='docker stop $(docker ps -a -q)'
 # override gs (ghostscript) an run gst instead
 alias gs='gst'
 alias gls='git ls-files --others --exclude-standard'
