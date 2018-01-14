@@ -36,9 +36,6 @@ prompt pure
 export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# secret
-source ~/.secret/taste.sh
-
 export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
 
 export MYVIMRC=~/.vimrc
@@ -182,7 +179,7 @@ alias aacc='cd $HOME/dev/projects/aacc'
 alias pv='cd $HOME/dev/projects/aacc && vim'
 alias dos='ssh philip@178.62.80.73'
 alias stp="open '$HOME/Library/Application Support/Sublime Text 3/Packages'"
-alias kar="cd '$HOME/.karabiner-config'"
+alias kar="cd '$HOME/.config/karabiner'"
 alias db="cd '$HOME/Dropbox'"
 alias zrel=". ~/.zshrc"
 alias tt='tmuxinator start dev'
@@ -249,6 +246,7 @@ alias gdlast2='git diff HEAD^ HEAD'
 alias gdfix='git diff --name-only | uniq | xargs nvim'
 alias gitmergemaster='gcm && git fetch upstream && git merge upstream/master && gp'
 alias nvma='nvm alias default node'
+alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 alias npmgi='npm install -g js-beautify jshint jscs standard standard-format eslint eslint-config-standard-react eslint-plugin-standard eslint-config-standard eslint-plugin-react babel-eslint gulp grunt-cli babel-cli yo tsd bower generator-ng-poly webpack webpack-dev-server'
 
 function ff() { find . -iname "*$1*" ${@:2} }
