@@ -6,18 +6,24 @@ windows:
       layout: 6fcc,140x35,0,0[140x31,0,0{30x31,0,0,0,109x31,31,0,1},140x3,0,32{70x3,0,32,2,69x3,71,32,3}]
       panes:
         - figlet node && node -v | cowsay | lolcat
-        - figlet vim rocks! && node -v | cowsay -f dragon-and-cow | lolcat
+        - figlet neo && node -v | cowsay -f dragon-and-cow | lolcat
         - lsd
         - clear
   - morpheus:
-      layout: b441,178x41,0,0,4
+      layout: 6fcc,140x35,0,0[140x31,0,0{30x31,0,0,0,109x31,31,0,1},140x3,0,32{70x3,0,32,2,69x3,71,32,3}]
       panes:
-        - csp && figlet csp && node -v | cowsay -f dragon-and-cow | lolcat
+        - figlet node && node -v | cowsay | lolcat
+        - figlet morpheus && node -v | cowsay -f dragon-and-cow | lolcat
+        - lsd
+        - clear
   - trinity:
-      layout: b441,178x41,0,0,5
+      layout: 6fcc,140x35,0,0[140x31,0,0{30x31,0,0,0,109x31,31,0,1},140x3,0,32{70x3,0,32,2,69x3,71,32,3}]
       panes:
-        - z local && figlet local && node -v | cowsay -f dragon-and-cow | lolcat
+        - figlet node && node -v | cowsay | lolcat
+        - figlet trinity && node -v | cowsay -f dragon-and-cow | lolcat
+        - lsd
+        - clear
   - cypher:
       layout: b441,178x41,0,0,6
       panes:
-        - z local && figlet local && node -v | cowsay -f dragon-and-cow | lolcat
+        - figlet cypher && node -v | cowsay -f dragon-and-cow | lolcat
