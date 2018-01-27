@@ -334,6 +334,14 @@ h() {
   cat - | eval $_COMMAND
 }
 
+rgv() {
+  rg -l "$1" -g !"node_modules" | xargs nvim
+}
+
+rgvi() {
+  rg -li "$1" -g !"node_modules" | xargs nvim
+}
+
 # ctrl-z to go back to suspended Vim
 fancy-ctrl-z () {
   if [[ $#BUFFER -eq 0 ]]; then
