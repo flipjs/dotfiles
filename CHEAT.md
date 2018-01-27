@@ -31,6 +31,7 @@
 - `ctrl-a x` - close pane
 - `ctrl-a z` - zoom in
 - `ctrl-a d` - detach current session
+- `ctrl-a D` - useful when tmux/pane freezes
 - `ctrl-a '` - to select the window index
 - `ctrl-a w` - to get an interactive index to choose from (0-9a-z)
 
@@ -76,3 +77,4 @@
 ### Mac Peripherals
 
 - If a bluetooth device stops working, try turning off bluetooth on both devices and turn it back on.
+- If airpods is acting up, try putting it back inside the case (maybe it resets from there?)
