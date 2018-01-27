@@ -77,3 +77,4 @@
 ### Mac Peripherals
 
 - If a bluetooth device stops working, try turning off bluetooth on both devices and turn it back on.
+- If airpods is acting up, try putting it back inside the case (maybe it resets from there?)
