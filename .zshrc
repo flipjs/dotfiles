@@ -1,6 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 
-[[ $TMUX = "" ]] && export TERM="xterm-256color"
+[[ $TMUX = "" ]] && export TERM="screen-256color"
 
 # disable tmux auto title
 export DISABLE_AUTO_TITLE=true
@@ -51,13 +51,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_COMPLETION_TRIGGER='``'
 export FZF_COMPLETION_OPTS='+c -x'
 command -v blsd > /dev/null && export FZF_ALT_C_COMMAND='blsd'
-# set fzf color (solarized)
-export FZF_DEFAULT_OPTS='
-  --color=bg+:#073642,bg:#002b36,spinner:#719e07,hl:#586e75
-  --color=fg:#839496,header:#586e75,info:#cb4b16,pointer:#719e07
-  --color=marker:#719e07,fg+:#839496,prompt:#719e07,hl+:#719e07
-  --extended --cycle --reverse
-'
+export FZF_DEFAULT_OPTS='--extended --cycle --reverse'
 # function below is required to respect .agignore for completion
 _fzf_compgen_path() {
   ag -g "" "$1"
