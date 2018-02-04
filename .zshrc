@@ -11,11 +11,6 @@ setopt ignoreeof
 # to be able to ctrl-s in vim!
 stty -ixon
 
-# or set to 'random' to see other themes
-# or comment out to use `pure prompt` from sindre sorhus
-# ZSH_THEME="flipjsio"
-# ZSH_THEME="robbyrussell"
-
 export HISTSIZE=100000 SAVEHIST=100000
 
 plugins=(bower brew git heroku node npm tmux tmuxinator emoji)
@@ -43,9 +38,7 @@ export MYNVIMRC=~/.config/nvim/init.vim
 export EDITOR='/usr/local/bin/nvim'
 export VISUAL='/usr/local/bin/nvim'
 export GIT_EDITOR='/usr/local/bin/nvim'
-# export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export MDV_THEME=579.6579
-# export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --follow --glob "!{.git,node_modules,coverage}/*"'
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow -g "!{.git,node_modules,coverage}/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_COMPLETION_TRIGGER='``'
