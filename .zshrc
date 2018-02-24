@@ -13,7 +13,7 @@ stty -ixon
 
 export HISTSIZE=100000 SAVEHIST=100000
 
-plugins=(bower brew git heroku node npm tmux tmuxinator emoji)
+plugins=(bower brew git heroku node npm tmux tmuxinator emoji colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.bin/tmuxinator.zsh
@@ -62,6 +62,7 @@ alias vim='nvim'
 # override oh-my-zsh glog
 alias glog='git log --oneline --decorate --color --graph | less'
 
+alias cat=ccat
 alias tree4='tree -L 4 -d'
 alias tree3='tree -L 3 -d'
 alias tree2='tree -L 2 -d'
