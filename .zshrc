@@ -62,6 +62,7 @@ alias vim='nvim'
 # override oh-my-zsh glog
 alias glog='git log --oneline --decorate --color --graph | less'
 
+alias slackfu='slack-term -config ~/.slack-term-fu.json'
 alias vlsub='vl -upgo'
 alias cat=ccat
 alias tree4='tree -L 4 -d'
@@ -401,6 +402,9 @@ PATH="$NPM_PACKAGES/bin:$PATH"
 # Unset manpath so we can inherit from /etc/manpath via the `manpath` command
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+# bin for python2
+export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
 
 # search and replace text in all files - TODO: make a function
 # Non recursive, files in the current directory only:
