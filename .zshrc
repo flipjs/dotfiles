@@ -62,6 +62,7 @@ alias vim='nvim'
 # override oh-my-zsh glog
 alias glog='git log --oneline --decorate --color --graph | less'
 
+alias vlsub='vl -upgo'
 alias cat=ccat
 alias tree4='tree -L 4 -d'
 alias tree3='tree -L 3 -d'
