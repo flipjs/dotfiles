@@ -14,7 +14,7 @@ windows:
       layout: cfaa,178x40,0,0{50x40,0,0[50x32,0,0,0,50x7,0,33,1],127x40,51,0[127x34,51,0,2,127x5,51,35{63x5,51,35,3,63x5,115,35,4}]}
       panes:
         - figlet node && node -v | cowsay | lolcat
-        - tty-clock -tcD
+        - node -v
         - figlet morpheus && node -v | cowsay -f dragon-and-cow | lolcat
         - lsd
         - node -v
@@ -22,7 +22,7 @@ windows:
       layout: cfaa,178x40,0,0{50x40,0,0[50x32,0,0,0,50x7,0,33,1],127x40,51,0[127x34,51,0,2,127x5,51,35{63x5,51,35,3,63x5,115,35,4}]}
       panes:
         - figlet node && node -v | cowsay | lolcat
-        - tty-clock -tcD
+        - node -v
         - figlet trinity && node -v | cowsay -f dragon-and-cow | lolcat
         - lsd
         - node -v
