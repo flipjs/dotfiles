@@ -71,7 +71,7 @@ alias tree2='tree -L 2 -d'
 alias tree1='tree -L 1 -d'
 alias noder='node $HOME/.dotfiles/js/repl.js'
 alias lol='archey -o && node -v | cowsay -f dragon-and-cow | lolcat'
-alias cheat='mdv $HOME/.dotfiles/CHEAT.md'
+alias cheats='mdv $HOME/.dotfiles/CHEAT.md'
 alias vch='vim $HOME/.dotfiles/CHEAT.md'
 alias cheatvim='mdv $HOME/.dotfiles/CHEAT_VIM.md'
 alias vcv='vim $HOME/.dotfiles/CHEAT_VIM.md'
@@ -362,6 +362,11 @@ cdf() {
     fi
 }
 
+# curl commands
+
+weather() { curl wttr.in/"$@"; }
+cheat() { curl cheat.sh/"$@"; }
+crypto() { curl rate.sx }
 
 # ---------------------------- OSX only ----------------------------- #
 
