@@ -3,34 +3,30 @@ root: ~/dev
 
 windows:
   - neo:
-      layout: 4c4b,178x40,0,0{47x40,0,0[47x32,0,0,34,47x7,0,33,41],130x40,48,0[130x5,48,0{65x5,48,0,40,64x5,114,0,44},130x34,48,6,43]}
+      layout: cfaa,178x40,0,0{50x40,0,0[50x32,0,0,0,50x7,0,33,1],127x40,51,0[127x34,51,0,2,127x5,51,35{63x5,51,35,3,63x5,115,35,4}]}
       panes:
         - figlet node && node -v | cowsay | lolcat
         - tty-clock -tcD
+        - figlet neo && node -v | cowsay -f dragon-and-cow | lolcat
         - lsd
         - node -v
-        - figlet neo && node -v | cowsay -f dragon-and-cow | lolcat
   - morpheus:
-      layout: 4c4b,178x40,0,0{47x40,0,0[47x32,0,0,34,47x7,0,33,41],130x40,48,0[130x5,48,0{65x5,48,0,40,64x5,114,0,44},130x34,48,6,43]}
+      layout: cfaa,178x40,0,0{50x40,0,0[50x32,0,0,0,50x7,0,33,1],127x40,51,0[127x34,51,0,2,127x5,51,35{63x5,51,35,3,63x5,115,35,4}]}
       panes:
         - figlet node && node -v | cowsay | lolcat
-        - node -v
-        - lsd
         - node -v
         - figlet morpheus && node -v | cowsay -f dragon-and-cow | lolcat
+        - lsd
+        - node -v
   - trinity:
-      layout: 4c4b,178x40,0,0{47x40,0,0[47x32,0,0,34,47x7,0,33,41],130x40,48,0[130x5,48,0{65x5,48,0,40,64x5,114,0,44},130x34,48,6,43]}
+      layout: cfaa,178x40,0,0{50x40,0,0[50x32,0,0,0,50x7,0,33,1],127x40,51,0[127x34,51,0,2,127x5,51,35{63x5,51,35,3,63x5,115,35,4}]}
       panes:
         - figlet node && node -v | cowsay | lolcat
-        - node -v
-        - lsd
         - node -v
         - figlet trinity && node -v | cowsay -f dragon-and-cow | lolcat
-  - cypher:
-      layout: 4c4b,178x40,0,0{47x40,0,0[47x32,0,0,34,47x7,0,33,41],130x40,48,0[130x5,48,0{65x5,48,0,40,64x5,114,0,44},130x34,48,6,43]}
-      panes:
-        - figlet node && node -v | cowsay | lolcat
-        - node -v
         - lsd
         - node -v
+  - cypher:
+      layout: b441,178x41,0,0,6
+      panes:
         - figlet cypher && node -v | cowsay -f dragon-and-cow | lolcat
