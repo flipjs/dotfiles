@@ -1,0 +1,13 @@
+[user]
+	name = Felipe Apostol
+	email = flipjs.io@gmail.com
+[core]
+	editor = vim
+[commit]
+	verbose = true
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	d = difftool
