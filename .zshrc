@@ -59,8 +59,9 @@ setopt autopushd pushdminus pushdsilent pushdtohome
 
 alias vim='nvim'
 
-# override oh-my-zsh glog
+# override oh-my-zsh git aliases
 alias glog='git log --oneline --decorate --color --graph | less'
+alias gdtl='git difftool'
 
 alias slackfu='slack-term -config ~/.slack-term-fu.json'
 alias vlsub='vl -upgo'
@@ -110,6 +111,8 @@ alias vv='vim'
 alias vi='vim'
 alias Vim='vim'
 alias vn='vim -u NONE'
+alias vimdiff='vim -d'
+alias vd='vim -d'
 alias vin='vim'
 alias bim='vim'
 alias vh='vim ~/.hyper.js'
