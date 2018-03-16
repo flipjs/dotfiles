@@ -74,6 +74,13 @@
 
 - `nodemon --exec npm run test` - run npm test and watch
 
+### Programming Tips
+
+#### Transform logical expressions (DeMorgan's Law)
+
+- not(a or b) === (not(a) and not(b))
+- not(a and b) === (not(a) or not(b))
+
 ### Mac Peripherals
 
 - If a bluetooth device stops working, try turning off bluetooth on both devices and turn it back on.
