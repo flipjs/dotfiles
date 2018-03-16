@@ -134,6 +134,13 @@ alias www='http-server -p 3000'
 alias webs='http-server -p 3000'
 # alias mgd='~/bin/mgd.sh'
 alias mgd='mongod --dbpath $HOME/data/mongodb'
+# To have launchd start postgresql now and restart at login:
+#   brew services start postgresql
+# Or, if you don't want/need a background service you can just run:
+#   pg_ctl -D /usr/local/var/postgres start
+# OR just use Lunchy!
+alias pgstart='lunchy start postgres'
+alias pgstop='lunchy stop postgres'
 alias plugged='cd $HOME/.local/share/nvim/plugged'
 alias vb='cd $HOME/.vimfiles/vimbundle'
 alias vc='cd $HOME/.vimfiles/vimconfig'
@@ -400,6 +407,13 @@ case `uname` in
     export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
     ;;
 esac
+
+# lunchy
+
+LUNCHY_DIR=$(dirname `gem which lunchy`)/../extras
+if [ -f $LUNCHY_DIR/lunchy-completion.zsh ]; then
+  . $LUNCHY_DIR/lunchy-completion.zsh
+fi
 
 # npm global install without sudo
 
