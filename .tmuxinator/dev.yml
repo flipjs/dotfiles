@@ -7,25 +7,25 @@ windows:
       panes:
         - figlet node && node -v | cowsay | lolcat
         - figlet neo && node -v | cowsay -f dragon-and-cow | lolcat
-        - node -v
-        - node -v
-        - node -v
+        - node -v && npm -v
+        - node -v && npm -v
+        - node -v && npm -v
   - morpheus:
       layout: 71c1,178x40,0,0[178x33,0,0{51x33,0,0,0,126x33,52,0,1},178x6,0,34{51x6,0,34,2,63x6,52,34,3,62x6,116,34,4}]
       panes:
         - figlet node && node -v | cowsay | lolcat
         - figlet morpheus && node -v | cowsay -f dragon-and-cow | lolcat
-        - node -v
-        - node -v
-        - node -v
+        - node -v && npm -v
+        - node -v && npm -v
+        - node -v && npm -v
   - trinity:
       layout: 71c1,178x40,0,0[178x33,0,0{51x33,0,0,0,126x33,52,0,1},178x6,0,34{51x6,0,34,2,63x6,52,34,3,62x6,116,34,4}]
       panes:
         - figlet node && node -v | cowsay | lolcat
         - figlet trinity && node -v | cowsay -f dragon-and-cow | lolcat
-        - node -v
-        - node -v
-        - node -v
+        - node -v && npm -v
+        - node -v && npm -v
+        - node -v && npm -v
   - cypher:
       layout: b441,178x41,0,0,6
       panes:

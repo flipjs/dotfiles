@@ -7,6 +7,6 @@ windows:
       panes:
         - figlet shell && cowsay Seize the day!
         - figlet node.js && node -v | cowsay -f dragon-and-cow | lolcat
-        - node -v
-        - node -v
-        - node -v
+        - node -v && npm -v
+        - node -v && npm -v
+        - node -v && npm -v
