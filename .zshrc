@@ -60,7 +60,7 @@ setopt autopushd pushdminus pushdsilent pushdtohome
 alias vim='nvim'
 
 # override oh-my-zsh git aliases
-alias glog='git log --oneline --decorate --color --graph | less'
+alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gdtl='git difftool'
 
 alias slackfu='slack-term -config ~/.slack-term-fu.json'
