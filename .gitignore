@@ -32,3 +32,5 @@ pids
 tags
 tags.lock
 tags.temp
+
+.bin/steam
