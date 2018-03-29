@@ -63,6 +63,8 @@ alias vim='nvim'
 alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gdtl='git difftool'
 
+# https://github.com/bcicen/xiny
+alias conv=xiny
 alias slackfu='slack-term -config ~/.slack-term-fu.json'
 alias vlsub='vl -upgo'
 alias cat=ccat
