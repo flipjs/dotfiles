@@ -69,6 +69,11 @@ handle_extension() {
             transmission-show -- "${FILE_PATH}" && exit 5
             exit 1;;
 
+        # Markdown
+        md)
+            mdv "${FILE_PATH}" && exit 5
+            exit 1;;
+
         # OpenDocument
         odt|ods|odp|sxw)
             # Preview as text conversion
