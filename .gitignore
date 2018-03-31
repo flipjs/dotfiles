@@ -34,3 +34,8 @@ tags.lock
 tags.temp
 
 .bin/steam
+
+# python
+*.pyc
+*.pyo
+__init__.py
