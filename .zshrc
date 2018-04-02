@@ -63,8 +63,13 @@ alias vim='nvim'
 alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gdtl='git difftool'
 
-# https://github.com/bcicen/xiny
+alias dryrunmyfilestosati='rsync -av --delete --dry-run ~/My\ Files/ /Volumes/SATI/MY_FILES/'
+alias dryrunmyfilestoseraph='rsync -av --delete --dry-run ~/My\ Files/ /Volumes/SERAPH/MY_FILES/'
+alias rsyncmyfilestosati='rsync -av --delete ~/My\ Files/ /Volumes/SATI/MY_FILES/'
+alias rsyncmyfilestoseraph='rsync -av --delete ~/My\ Files/ /Volumes/SERAPH/MY_FILES/'
+
 alias rr=ranger
+# https://github.com/bcicen/xiny
 alias conv=xiny
 alias slackfu='slack-term -config ~/.slack-term-fu.json'
 alias vlsub='vl -upgo'
