@@ -453,3 +453,6 @@ export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
 # find . -type f -exec sed -i 's/foo/bar/g' {} +
 
 eval $(thefuck --alias)
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+unalias imgcat
