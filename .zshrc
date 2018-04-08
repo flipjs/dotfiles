@@ -25,7 +25,6 @@ source $HOME/.rvm/scripts/rvm
 # NOTE: oh-my-zsh overrides the prompt so Pure must be activated after source $ZSH/oh-my-zsh.sh
 # ZSH Prompt by Sindre Sorhus
 autoload -U promptinit; promptinit
-# PURE_PROMPT_SYMBOL=λ
 prompt pure
 
 export NVM_DIR=$HOME/.nvm
@@ -453,6 +452,3 @@ export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
 # find . -type f -exec sed -i 's/foo/bar/g' {} +
 
 eval $(thefuck --alias)
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-unalias imgcat
