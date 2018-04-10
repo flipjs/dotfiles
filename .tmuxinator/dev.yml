@@ -27,6 +27,6 @@ windows:
         - node -v && npm -v
         - node -v && npm -v
   - cypher:
-      layout: b441,178x41,0,0,6
+      layout: b03d,178x40,0,0,0
       panes:
         - figlet cypher && node -v | cowsay -f dragon-and-cow | lolcat
