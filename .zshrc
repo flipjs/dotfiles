@@ -279,6 +279,7 @@ alias gdlast2='git diff HEAD^ HEAD'
 alias gdfix='git diff --name-only | uniq | xargs nvim'
 alias gitmergemaster='gcm && git fetch upstream && git merge upstream/master && gp'
 alias nvma='nvm alias default node'
+alias nvm6='nvm alias default 6.9.1'
 alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 alias npmgi='npm install -g js-beautify jshint jscs standard standard-format eslint eslint-config-standard-react eslint-plugin-standard eslint-config-standard eslint-plugin-react babel-eslint gulp grunt-cli babel-cli yo tsd bower generator-ng-poly webpack webpack-dev-server'
 
