@@ -9,39 +9,11 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.html]
+[*.{c,py,php,elm,html,css,scss}]
 indent_style = space
 indent_size = 4
 
-[*.css]
-indent_style = space
-indent_size = 4
-
-[*.scss]
-indent_style = space
-indent_size = 4
-
-[*.elm]
-indent_style = space
-indent_size = 4
-
-[*.php]
-indent_style = space
-indent_size = 4
-
-[*.sol]
-indent_style = space
-indent_size = 2
-
-[*.py]
-indent_style = space
-indent_size = 4
-
-[*.snippets]
-indent_style = tab
-indent_size = 4
-
-[*.re]
+[*.{js,jsx,re}]
 indent_style = space
 indent_size = 2
 
@@ -49,3 +21,11 @@ indent_size = 2
 indent_size = 4
 indent_style = space
 trim_trailing_whitespace = false
+
+[*.snippets]
+indent_style = tab
+indent_size = 4
+
+[Makefile]
+indent_style = tab
+indent_size = 4
