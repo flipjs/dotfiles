@@ -58,6 +58,10 @@ setopt autopushd pushdminus pushdsilent pushdtohome
 
 alias vim='nvim'
 
+# icloud drive
+alias icl='~/Library/Mobile\ Documents/com\~apple\~CloudDocs'
+alias inbox='~/Library/Mobile\ Documents/com\~apple\~CloudDocs/INBOX'
+
 # override oh-my-zsh git aliases
 alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gdtl='git difftool'
