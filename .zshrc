@@ -264,6 +264,7 @@ alias crab='NODE_PATH=./src npm run build'
 alias crat='NODE_PATH=./src npm run test'
 alias esl='eslint . ./'
 alias win2unix="find . -type f | xargs perl -pi -e 's/\r\n|\n|\r/\n/g'"
+alias loc='find . -name "*" | xargs wc -l'
 alias nets='sudo netstat -ap'
 alias dockerc='docker container'
 alias dockeri='docker image'
