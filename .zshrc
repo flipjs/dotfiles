@@ -62,10 +62,6 @@ alias vim='nvim'
 alias icl='~/Library/Mobile\ Documents/com\~apple\~CloudDocs'
 alias inbox='~/Library/Mobile\ Documents/com\~apple\~CloudDocs/INBOX'
 
-# override oh-my-zsh git aliases
-alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gdtl='git difftool'
-
 alias dryrunmyfilestosati='rsync -av --delete --dry-run ~/My\ Files/ /Volumes/SATI/MY_FILES/'
 alias dryrunmyfilestoseraph='rsync -av --delete --dry-run ~/My\ Files/ /Volumes/SERAPH/MY_FILES/'
 alias rsyncmyfilestosati='rsync -av --delete ~/My\ Files/ /Volumes/SATI/MY_FILES/'
@@ -280,7 +276,8 @@ alias dai='docker rmi $(docker images -q)'
 # override gs (ghostscript) an run gst instead
 alias gs='gst'
 alias gls='git ls-files --others --exclude-standard'
-alias gmodvim='git ls-files --modified | xargs nvim'
+alias gdtl='git difftool'
+alias gmodvim='nvim $(git ls-files --modified)'
 alias gdlast2='git diff HEAD^ HEAD'
 alias gdfix='git diff --name-only | uniq | xargs nvim'
 alias gitmergemaster='gcm && git fetch upstream && git merge upstream/master && gp'
