@@ -365,11 +365,11 @@ h() {
 }
 
 rgv() {
-  rg -l "$1" -g !"node_modules" | xargs nvim
+  nvim $(rg -l "$1" -g !"node_modules")
 }
 
 rgvi() {
-  rg -li "$1" -g !"node_modules" | xargs nvim
+  nvim $(rg -li "$1" -g !"node_modules")
 }
 
 # ctrl-z to go back to suspended Vim
