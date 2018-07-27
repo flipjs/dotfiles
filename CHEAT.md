@@ -44,6 +44,9 @@
 - `tmux list-windows` - shows current tmux windows (tip: layout can be copied and pasted to tmuxinator config as is)
 - `tmux detach (ctrl-a d)` - detach the currently attached session
 - `ctrl-a x` - kill pane
+- `:break-pane -t :` - move pane to its own window
+- `ctrl-a !` - same as above (move pane to its own window)
+- `:join-pane -s !` - move last active pane/window to the current window
 
 ### Copying text inside Tmux
 
