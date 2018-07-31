@@ -17,9 +17,12 @@
 
 ### Useful commands/shortcuts
 
+- `gx` - opens link into browser when cursor is over the link
+- `"qp` - paste the contents of register "q"
+- `"qyy` - yank the line into register "q"
+- `:<c-r><c-r>q` - paste the contents of register "q" to the command line
 - `:w !sudo tee %` - saving that needs root permission
 - `:echo @%` - show path of current buffer
-- `gx` - opens link into browser when cursor is over the link
 - `:g/hello/d` - delete all lines containing "hello"
 - `:v/hello/d` - delete all lines that do NOT contain "hello"
 
