@@ -1,20 +1,35 @@
 # Docker Cheatsheet
 
-### Some useful commands
+### Docker
 
-- `docker container ls` - list running containers
-- `docker image ls` - list images
+- `docker login` - log in to dockerhub
+- `docker pull docker_image_name:tag_name` - pull/download image from hub
+
+### Container
+
 - `docker container --help` - list help for docker container command
+- `docker container ls` - list running containers
+- `docker container logs -f container_name` - see logs of a running container
+
+### Image
+
 - `docker image --help` - list help for docker image command
+- `docker image ls` - list images
 - `docker image build -t some_tag_name .` - build image
 - `docker image rm image_name` - delete image
 - `docker image inspect image_name` - inspect image
+
+### Volume
+
 - `docker volume create volume_name` - create named volume
 - `docker volume ls` - list volumes
+
+### Network
+
 - `docker network ls` - list network
-- `docker login` - log in to dockerhub
-- `docker container logs -f container_name` - see logs of a running container
-- `docker pull docker_image_name:tag_name` - pull/download image from hub
+
+### System
+
 - `docker system df` - print disk size info being used by docker images, containers and volumes
 - `docker system prune` - clean up
 
