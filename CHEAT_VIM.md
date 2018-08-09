@@ -25,6 +25,7 @@
 - `:echo @%` - show path of current buffer
 - `:g/hello/d` - delete all lines containing "hello"
 - `:v/hello/d` - delete all lines that do NOT contain "hello"
+- `m in NerdTree` - open options to modify a node (add, move, delete a file...)
 
 ### History
 
