@@ -63,7 +63,7 @@
 - `alt-d` - delete next word
 - `alt-delete` - delete previous word
 - `ctrl-w` - delete previous word
-- `ctrl-x e` - invoke an editor to write a long and complex command
+- `ctrl-x ctrl-e` - invoke an editor to write a long and complex command
 - `alt-. or esc-.` - place the argument of the most recent command and can cycle through
 - `ctrl-u [...] ctrl-y` - type partial command, kill this command, check something, yank the command, resume typing
 
