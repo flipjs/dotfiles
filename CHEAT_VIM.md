@@ -10,6 +10,12 @@
 - `=G` - format/hierarchically indent block of code from cursor location to EOF
 - `gg=G` - format/hierarchically indent the whole code
 - `dvip` - delete all empty lines but one
+- `fix mixed tabs to space`
+    - set tabstop=?? *visually adjust to correct spacing - this could be 2 for javascript*
+    - set noexpandtab
+    - :retab!
+    - set expandtab
+    - :retab!
 
 ### Mappings
 
