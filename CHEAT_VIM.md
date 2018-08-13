@@ -37,6 +37,8 @@
 
 - `q:` - pop open command history window
 - `q/` - pop open search history window
+- `:<c-f>` - edit command line in command history window
+- `/<c-f>` - edit search in search history window
 
 ### Neovim Status
 
