@@ -30,7 +30,7 @@ prompt pure
 export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export PATH=/usr/local/bin:$HOME/bin:$HOME/.local/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
+export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
 
 export MYVIMRC=~/.vimrc
 export MYNVIMRC=~/.config/nvim/init.vim
@@ -461,6 +461,16 @@ export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 # bin for python2
 export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
+
+# add Cabal's bin directory to the executable search PATH if it exists
+# if [ -d "$HOME/.cabal/bin" ] ; then
+#     PATH="$HOME/.cabal/bin:$PATH"
+# fi
+
+# add Stack's bin directory to the executable search PATH if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 
 # search and replace text in all files - TODO: make a function
 # Non recursive, files in the current directory only:
