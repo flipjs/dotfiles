@@ -77,6 +77,10 @@
 
 - `nodemon --exec npm run test` - run npm test and watch
 
+### Irssi
+
+- `/ignore -channels #channel * JOINS PARTS QUITS NICKS` - unclutter screen with these messages
+
 ### Programming Tips
 
 #### Transform logical expressions (DeMorgan's Law)
