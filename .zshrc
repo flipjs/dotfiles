@@ -473,6 +473,8 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
 # search and replace text in all files - TODO: make a function
 # Non recursive, files in the current directory only:
 # sed -i -- 's/foo/bar/g' *
