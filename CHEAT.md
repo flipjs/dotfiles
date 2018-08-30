@@ -14,6 +14,7 @@
 - `^foo^bar` - run previous command but replacing (foo with bar)
 - `man ascii` - show ascii table
 - `curl ifconfig.me` - get machine's external ip address
+- `du -sh /path/to/dir` - show current directory's size
 - `Vim tips`
     - `rg -li <text_to_search> | parallel -X --tty nvim` - search text and open matched files in Vim
     - `rg -li <text_to_search> | xargs nvim` - search text and open matched files in Vim
