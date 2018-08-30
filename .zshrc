@@ -202,7 +202,6 @@ alias ph='cd $HOME/dev/php'
 alias dj='cd $HOME/dev/django'
 alias aacc='cd $HOME/dev/projects/aacc'
 alias pv='cd $HOME/dev/projects/aacc && vim'
-alias dos='ssh philip@178.62.80.73'
 alias stp="open '$HOME/Library/Application Support/Sublime Text 3/Packages'"
 alias kar="cd '$HOME/.config/karabiner'"
 alias db="cd '$HOME/Dropbox'"
