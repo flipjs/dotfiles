@@ -1,0 +1,6 @@
+Helper commands that need to be installed manually.
+Add it here in case you forget to install these.
+
+brew install bat
+brew install diff-so-fancy
+brew install autojump
