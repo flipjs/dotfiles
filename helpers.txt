@@ -1,6 +1,17 @@
 Helper commands that need to be installed manually.
 Add it here in case you forget to install these.
 
+INSTALL
+
 brew install bat
 brew install diff-so-fancy
 brew install autojump
+
+SETUP
+
+diff-so-fancy
+
+- add below to .gitconfig
+[pager]
+  diff = diff-so-fancy | less --tabs=1,5 -RFX
+  show = diff-so-fancy | less --tabs=1,5 -RFX
