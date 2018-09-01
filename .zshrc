@@ -283,6 +283,7 @@ alias dspa='docker system prune -a'
 # override gs (ghostscript) an run gst instead
 alias gs='gst'
 alias gls='git ls-files --others --exclude-standard'
+alias gdn='git --no-pager diff'
 alias gdtl='git difftool'
 alias gmodvim='nvim $(git ls-files --modified)'
 alias gnewvim='nvim $(git ls-files --others --exclude-standard)'
