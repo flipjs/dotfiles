@@ -11,7 +11,18 @@ setopt ignoreeof
 # to be able to ctrl-s in vim!
 stty -ixon
 
-export HISTSIZE=100000 SAVEHIST=100000
+# export HISTSIZE=100000 SAVEHIST=100000
+
+# https://htmlhive.com/fixing-your-terminal-unix-history-command/
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+export SAVEHIST=100000
+export HISTSIZE=100000                   # many commands in ongoing session memory
+export HISTFILESIZE=100000               # many lines in .bash_history
+
+# https://gist.github.com/matthewmccullough/787142
+setopt appendhistory                     # append history to the history file (no overwriting)
+setopt sharehistory                      # share history across terminals
+setopt incappendhistory                  # immediately append to the history file, not just when a term is killed
 
 plugins=(bower brew git heroku node npm tmux tmuxinator emoji colored-man-pages)
 
