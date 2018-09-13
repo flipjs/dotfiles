@@ -293,6 +293,7 @@ alias dspf='docker system prune -f'
 alias dspa='docker system prune -a'
 # override gs (ghostscript) an run gst instead
 alias gs='gst'
+alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit | less -R"
 alias gls='git ls-files --others --exclude-standard'
 alias gdn='git --no-pager diff'
 alias gdtl='git difftool'
