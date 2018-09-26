@@ -82,6 +82,11 @@
 
 - `/ignore -channels #channel * JOINS PARTS QUITS NICKS` - unclutter screen with these messages
 
+### Crypto
+
+- `openssl genrsa -out private.pem 1024` - generate private key
+- `openssl rsa -in private.pem -out public.pem -outform PEM -pubout` - generate public key (from a given private key)
+
 ### Programming Tips
 
 #### Transform logical expressions (DeMorgan's Law)
