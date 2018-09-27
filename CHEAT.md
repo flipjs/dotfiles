@@ -94,7 +94,10 @@
 - not(a or b) === (not(a) and not(b))
 - not(a and b) === (not(a) or not(b))
 
-### Mac Peripherals
+### OSX
 
-- If a bluetooth device stops working, try turning off bluetooth on both devices and turn it back on.
-- If airpods is acting up, try putting it back inside the case (maybe it resets from there?)
+- `networksetup -setairportpower en0 off` - turn off wifi
+- `networksetup -setairportpower en0 on` - turn on wifi
+- `pmset -g ps` - see power source status
+- if a bluetooth device stops working, try turning off bluetooth on both devices and turn it back on.
+- if airpods is acting up, try putting it back inside the case (maybe it resets from there?)
