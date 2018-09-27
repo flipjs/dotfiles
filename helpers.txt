@@ -6,6 +6,9 @@ INSTALL
 brew install bat
 brew install diff-so-fancy
 brew install autojump
+brew install exa
+npm install -g vtop
+npm install -g fkill-cli
 
 SETUP
 
