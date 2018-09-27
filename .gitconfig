@@ -3,6 +3,7 @@
 	email = flipjs.io@gmail.com
 [core]
 	editor = vim
+	excludesfile = /Users/philip/.gitignore_global
 [commit]
 	verbose = true
 [diff]
