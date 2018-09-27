@@ -435,6 +435,11 @@ case `uname` in
     alias sati="diskutil mount `diskutil list | grep "SATI" | sed -n -e 's/^.* //p'`"
     alias bane="diskutil mount `diskutil list | grep "BANE" | sed -n -e 's/^.* //p'`"
 
+    # wifi/power
+    alias wof='networksetup -setairportpower en0 off'
+    alias won='networksetup -setairportpower en0 on'
+    alias pow='pmset -g ps'
+
     export NOTES_DIR=$HOME/Dropbox/NOTES
 
     # export NODE_PATH=/usr/local/lib/node_modules
