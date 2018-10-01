@@ -220,6 +220,7 @@ alias stp="open '$HOME/Library/Application Support/Sublime Text 3/Packages'"
 alias kar="cd '$HOME/.config/karabiner'"
 alias db="cd '$HOME/Dropbox'"
 alias zrel=". ~/.zshrc"
+alias top=vtop
 alias tt='tmuxinator start dev'
 alias ttkill='tmux kill-session -t matrix'
 alias msh='tmuxinator start shell'
