@@ -35,8 +35,9 @@ source $HOME/.rvm/scripts/rvm
 
 # NOTE: oh-my-zsh overrides the prompt so Pure must be activated after source $ZSH/oh-my-zsh.sh
 # ZSH Prompt by Sindre Sorhus
-autoload -U promptinit; promptinit
-prompt pure
+autoload -Uz promptinit
+promptinit
+prompt purity
 
 export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -309,6 +310,7 @@ alias gitmergemaster='gcm && git fetch upstream && git merge upstream/master && 
  alias gsd='git status -s | while read mode file; do echo $mode $(stat -f "%m" $file) $file; done|sort'
 alias nvma='nvm alias default node'
 alias nvm6='nvm alias default 6.9.1'
+alias nvm8='nvm alias default 8.12.0'
 alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 alias npmgi='npm install -g js-beautify jshint jscs standard standard-format eslint eslint-config-standard-react eslint-plugin-standard eslint-config-standard eslint-plugin-react babel-eslint gulp grunt-cli babel-cli yo tsd bower generator-ng-poly webpack webpack-dev-server'
 
