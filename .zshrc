@@ -34,10 +34,7 @@ source ~/.oh-my-zsh/extensions/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 source $HOME/.rvm/scripts/rvm
 
 # NOTE: oh-my-zsh overrides the prompt so Pure must be activated after source $ZSH/oh-my-zsh.sh
-# ZSH Prompt by Sindre Sorhus
-autoload -Uz promptinit
-promptinit
-prompt purity
+source ~/.pure_prompt.sh # see ~/.dotfiles/sh for copy
 
 export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
