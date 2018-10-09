@@ -470,9 +470,6 @@ if [ -f $LUNCHY_DIR/lunchy-completion.zsh ]; then
   . $LUNCHY_DIR/lunchy-completion.zsh
 fi
 
-# ignore ~/.nvm/versions - always install global modules in /usr/local
-export NPM_CONFIG_PREFIX="/usr/local"
-
 # npm global install without sudo
 
 NPM_PACKAGES="${HOME}/.npm-packages"
