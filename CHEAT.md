@@ -68,6 +68,12 @@
 - `alt-. or esc-.` - place the argument of the most recent command and can cycle through
 - `ctrl-u [...] ctrl-y` - type partial command, kill this command, check something, yank the command, resume typing
 
+### Zsh Z
+
+- `z -r <term>` - match by rank only
+- `z -t <term>` - match by recent access only
+- `z -x` - remove the current directory from the datafile
+
 ### Docker
 
 - Getting `node-sass` error from a docker image? Try this:
