@@ -301,6 +301,9 @@ alias gls='git ls-files --others --exclude-standard'
 alias gdn='git --no-pager diff'
 alias gdtl='git difftool'
 alias gmodvim='nvim $(git ls-files --modified)'
+# TODO: add an alias below to accept commit number
+# vim $(git diff-tree --no-commit-id --name-only -r 96b7531)
+alias gcmod='git diff-tree --no-commit-id --name-only -r'
 alias gnewvim='nvim $(git ls-files --others --exclude-standard)'
 alias gdlast2='git diff HEAD^ HEAD'
 alias gdtl2='git difftool HEAD^ HEAD'
