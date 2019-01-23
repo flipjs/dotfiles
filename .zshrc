@@ -29,17 +29,20 @@ plugins=(bower brew git heroku node npm tmux tmuxinator emoji colored-man-pages)
 source $ZSH/oh-my-zsh.sh
 source ~/.bin/tmuxinator.zsh
 source ~/.shfiles/z.sh
-source ~/.oh-my-zsh/extensions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source $HOME/.rvm/scripts/rvm
+# source $HOME/.rvm/scripts/rvm
 
 # NOTE: oh-my-zsh overrides the prompt so Pure must be activated after source $ZSH/oh-my-zsh.sh
-source ~/.pure_prompt.sh # see ~/.dotfiles/sh for copy
+# source ~/.pure_prompt.sh # see ~/.dotfiles/sh for copy
+autoload -U promptinit; promptinit
+prompt pure
 
 export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
+export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
+# export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
 
 export MYVIMRC=~/.vimrc
 export MYNVIMRC=~/.config/nvim/init.vim
@@ -174,12 +177,15 @@ alias plugged='cd $HOME/.local/share/nvim/plugged'
 alias vb='cd $HOME/.vimfiles/vimbundle'
 alias vc='cd $HOME/.vimfiles/vimconfig'
 alias vv='cd $HOME/.vimfiles/vimviews'
-alias nc='cd $HOME/.config/nvim'
+alias cdnc='cd $HOME/.config/nvim'
 alias dev='cd $HOME/dev'
-alias csp='cd $HOME/dev/csp'
+alias gogo='cd $HOME/Documents/projects'
+alias goloc='cd $HOME/Documents/projects/local-server'
+alias goifc='cd $HOME/Documents/projects/local-server/ifc'
+alias goamx='cd $HOME/Documents/projects/local-server/ifc/amx'
 alias exphds='export APP_DATA_SERVICE_URL=http://localhost:3000/csp__harmony-data--service'
-alias scrum='cd $HOME/dev/scrum'
-alias standup='nvim $HOME/dev/scrum/README.md'
+alias scrum='cd $HOME/Documents/gogo/wolverines'
+alias standup='nvim $HOME/Documents/gogo/wolverines/README.md'
 alias cppa='cd $HOME/dev/csp/csp__phone-panel--app'
 alias chld='cd $HOME/dev/csp/harmony__local-development'
 alias cmc='cd $HOME/dev/csp/csp__manage-contacts--app'
@@ -311,12 +317,14 @@ alias gdfix='git diff --name-only | uniq | xargs nvim'
 alias gitmergemaster='gcm && git fetch upstream && git merge upstream/master && gp'
  alias gsd='git status -s | while read mode file; do echo $mode $(stat -f "%m" $file) $file; done|sort'
 alias nvma='nvm alias default node'
-alias nvm6='nvm alias default 6.9.1'
+alias nvm6='nvm alias default 6.14.4'
 alias nvm8='nvm alias default 8.12.0'
+alias nvm10='nvm alias default 10.14.2'
 alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 alias npmgi='npm install -g js-beautify jshint jscs standard standard-format eslint eslint-config-standard-react eslint-plugin-standard eslint-config-standard eslint-plugin-react babel-eslint gulp grunt-cli babel-cli yo tsd bower generator-ng-poly webpack webpack-dev-server'
 
-function ff() { find . -iname "*$1*" ${@:2} }
+alias ff='fd'
+# function ff() { find . -iname "*$1*" ${@:2} }
 function ggr() { grep "$1" ${@:2} -R . }
 function mcd() { mkdir -p "$1" && cd "$1";  }
 
@@ -488,6 +496,11 @@ export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 # bin for python2
 export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
 
+# ruby - bin path and settings
+export PATH="/usr/local/lib/ruby/gems/2.5.0/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include"
+
 # add Cabal's bin directory to the executable search PATH if it exists
 # if [ -d "$HOME/.cabal/bin" ] ; then
 #     PATH="$HOME/.cabal/bin:$PATH"
@@ -505,5 +518,3 @@ fi
 # sed -i -- 's/foo/bar/g' *
 # Recursive, regular files (including hidden ones) in current dir and all its subdirs:
 # find . -type f -exec sed -i 's/foo/bar/g' {} +
-
-eval $(thefuck --alias)
