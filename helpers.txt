@@ -3,6 +3,12 @@ Add it here in case you forget to install these.
 
 INSTALL
 
+homebrew
+sudo chown -R $(whoami) $(brew --prefix)/* (this works for high sierra)
+brew install tmux
+brew install zsh-completions
+brew install zsh-syntax-highlighting
+brew install reattach-to-user-namespace (will fix tmux no sessions exited issue)
 brew install bat
 brew install diff-so-fancy
 brew install autojump
@@ -11,6 +17,8 @@ npm install -g vtop
 npm install -g fkill-cli
 
 SETUP
+
+git config --global core.excludesfile ~/.gitignore_global
 
 diff-so-fancy
 
