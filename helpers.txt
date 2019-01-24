@@ -15,6 +15,7 @@ brew install autojump
 brew install exa
 npm install -g vtop
 npm install -g fkill-cli
+npm install --global pure-prompt
 
 SETUP
 
