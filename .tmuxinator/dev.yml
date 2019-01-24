@@ -3,27 +3,27 @@ root: ~/dev
 
 windows:
   - neo:
-      layout: 0ec4,178x40,0,0{51x40,0,0[51x33,0,0,0,51x6,0,34,16],126x40,52,0[126x33,52,0,4,126x6,52,34{63x6,52,34,17,62x6,116,34,18}]}
+      layout: f7c3,191x50,0,0[191x41,0,0{58x41,0,0,0,132x41,59,0,4},191x8,0,42{58x8,0,42,5,70x8,59,42,6,61x8,130,42,7}]
       panes:
         - figlet node && node -v | cowsay | lolcat
-        - node -v && npm -v
         - figlet neo && node -v | cowsay -f dragon-and-cow | lolcat
         - node -v && npm -v
         - node -v && npm -v
+        - node -v && npm -v
   - morpheus:
-      layout: 0ec4,178x40,0,0{51x40,0,0[51x33,0,0,0,51x6,0,34,16],126x40,52,0[126x33,52,0,4,126x6,52,34{63x6,52,34,17,62x6,116,34,18}]}
+      layout: f7c3,191x50,0,0[191x41,0,0{58x41,0,0,0,132x41,59,0,4},191x8,0,42{58x8,0,42,5,70x8,59,42,6,61x8,130,42,7}]
       panes:
         - figlet node && node -v | cowsay | lolcat
-        - node -v && npm -v
         - figlet morpheus && node -v | cowsay -f dragon-and-cow | lolcat
         - node -v && npm -v
         - node -v && npm -v
+        - node -v && npm -v
   - trinity:
-      layout: 0ec4,178x40,0,0{51x40,0,0[51x33,0,0,0,51x6,0,34,16],126x40,52,0[126x33,52,0,4,126x6,52,34{63x6,52,34,17,62x6,116,34,18}]}
+      layout: f7c3,191x50,0,0[191x41,0,0{58x41,0,0,0,132x41,59,0,4},191x8,0,42{58x8,0,42,5,70x8,59,42,6,61x8,130,42,7}]
       panes:
         - figlet node && node -v | cowsay | lolcat
-        - node -v && npm -v
         - figlet trinity && node -v | cowsay -f dragon-and-cow | lolcat
+        - node -v && npm -v
         - node -v && npm -v
         - node -v && npm -v
   - cypher:
