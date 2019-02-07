@@ -1,9 +1,9 @@
 name: matrix
-root: ~/dev
+root: ~/Documents/projects/local-server
 
 windows:
   - neo:
-      layout: f7c3,191x50,0,0[191x41,0,0{58x41,0,0,0,132x41,59,0,4},191x8,0,42{58x8,0,42,5,70x8,59,42,6,61x8,130,42,7}]
+      layout: d343,167x49,0,0[167x39,0,0{46x39,0,0,0,120x39,47,0,4},167x9,0,40{50x9,0,40,5,62x9,51,40,6,53x9,114,40,7}]
       panes:
         - figlet node && node -v | cowsay | lolcat
         - figlet neo && node -v | cowsay -f dragon-and-cow | lolcat
