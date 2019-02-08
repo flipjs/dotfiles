@@ -56,6 +56,7 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --follow -g "!{.git,node_modules
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_COMPLETION_TRIGGER='``'
 export FZF_COMPLETION_OPTS='+c -x'
+# Note: If you use iTerm and alt-c is not working, set alt key's behavior to Esc+
 command -v blsd > /dev/null && export FZF_ALT_C_COMMAND='blsd'
 export FZF_DEFAULT_OPTS='--extended --cycle --reverse'
 # function below is required to respect .agignore for completion
