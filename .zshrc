@@ -77,6 +77,7 @@ alias vim='nvim'
 alias icl='~/Library/Mobile\ Documents/com\~apple\~CloudDocs'
 alias inbox='~/Library/Mobile\ Documents/com\~apple\~CloudDocs/INBOX'
 alias pers='~/Library/Mobile\ Documents/com\~apple\~CloudDocs/PERSONAL'
+alias notes='~/Library/Mobile\ Documents/com\~apple\~CloudDocs/PERSONAL/my-notes'
 
 alias dryrunmyfilestosati='rsync -av --delete --dry-run ~/My\ Files/ /Volumes/SATI/MY_FILES/'
 alias dryrunmyfilestoseraph='rsync -av --delete --dry-run ~/My\ Files/ /Volumes/SERAPH/MY_FILES/'
