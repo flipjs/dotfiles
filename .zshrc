@@ -30,6 +30,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.bin/tmuxinator.zsh
 source ~/.shfiles/z.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # source $HOME/.rvm/scripts/rvm
 
@@ -37,6 +38,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source ~/.pure_prompt.sh # see ~/.dotfiles/sh for copy
 autoload -U promptinit; promptinit
 prompt pure
+PROMPT='%F{white}%* '$PROMPT
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
