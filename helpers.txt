@@ -8,7 +8,6 @@ sudo chown -R $(whoami) $(brew --prefix)/* (this works for high sierra)
 brew install tmux
 brew install zsh-completions
 brew install zsh-syntax-highlighting
-brew install zsh-autosuggestions
 brew install reattach-to-user-namespace (will fix tmux no sessions exited issue)
 brew install bat
 brew install diff-so-fancy

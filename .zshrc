@@ -30,7 +30,6 @@ source $ZSH/oh-my-zsh.sh
 source ~/.bin/tmuxinator.zsh
 source ~/.shfiles/z.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # source $HOME/.rvm/scripts/rvm
 
@@ -162,6 +161,7 @@ alias td='tmux detach'
 alias tls='tmux ls'
 alias tlsw='tmux list-windows'
 alias tkill='tmux kill-session'
+alias tnew='tmux new -s'
 alias cls='clear'
 alias arc='archey -o'
 alias lara='php artisan serve --port=3000'
