@@ -80,6 +80,11 @@
     1. run `docker exec -it <container_id> bash`
     2. from inside, run `npm rebuild node-sass`
 
+### Git
+
+- How to abort `git commit --amend`
+    - if inside vim, just do `:cq!`
+
 ### Npm
 
 - `nodemon --exec npm run test` - run npm test and watch

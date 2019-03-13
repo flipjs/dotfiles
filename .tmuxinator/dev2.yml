@@ -5,24 +5,24 @@ windows:
   - neo:
       layout: main-vertical
       panes:
-        - figlet neo && node -v | cowsay -f dragon-and-cow | lolcat
-        - figlet node && node -v | cowsay | lolcat
+        - figlet neo | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
+        - figlet node | lolcat && node -v | cowsay | lolcat
         - fortune | cowsay | lolcat
   - morpheus:
       layout: main-vertical
       panes:
-        - figlet morpheus && node -v | cowsay -f dragon-and-cow | lolcat
-        - figlet node && node -v | cowsay | lolcat
+        - figlet morpheus | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
+        - figlet node | lolcat && node -v | cowsay | lolcat
         - fortune | cowsay | lolcat
   - trinity:
       layout: main-vertical
       panes:
-        - figlet trinity && node -v | cowsay -f dragon-and-cow | lolcat
-        - figlet node && node -v | cowsay | lolcat
+        - figlet trinity | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
+        - figlet node | lolcat && node -v | cowsay | lolcat
         - fortune | cowsay | lolcat
   - cypher:
       layout: main-vertical
       panes:
-        - figlet cypher && node -v | cowsay -f dragon-and-cow | lolcat
-        - figlet node && node -v | cowsay | lolcat
+        - figlet cypher | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
+        - figlet node | lolcat && node -v | cowsay | lolcat
         - fortune | cowsay | lolcat
