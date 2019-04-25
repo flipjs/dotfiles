@@ -13,6 +13,7 @@ brew install bat
 brew install diff-so-fancy
 brew install autojump
 brew install exa
+brew install yarn
 npm install -g vtop
 npm install -g fkill-cli
 npm install --global pure-prompt
