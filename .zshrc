@@ -333,6 +333,8 @@ alias nvm6='nvm alias default 6.14.4'
 alias nvm8='nvm alias default 8.12.0'
 alias nvm10='nvm alias default 10.14.2'
 alias nvm11='nvm alias default 11.14.0'
+alias nvmfix6='npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/v6.14.4'
+alias nvmfix11='npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/v11.14.0'
 alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 alias npmgi='npm install -g js-beautify jshint jscs standard standard-format eslint eslint-config-standard-react eslint-plugin-standard eslint-config-standard eslint-plugin-react babel-eslint gulp grunt-cli babel-cli yo tsd bower generator-ng-poly webpack webpack-dev-server'
 

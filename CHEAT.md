@@ -88,6 +88,9 @@
 ### Npm
 
 - `nodemon --exec npm run test` - run npm test and watch
+- `npm config prefix issue` - try this
+    - `npm config delete prefix`
+    - `npm config set prefix $NVM_DIR/versions/node/vX.XX.X`
 
 ### Irssi
 
