@@ -27,14 +27,14 @@ setopt incappendhistory                  # immediately append to the history fil
 plugins=(bower brew git heroku node npm tmux tmuxinator emoji colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.bin/tmuxinator.zsh
-source ~/.shfiles/z.sh
+source $HOME/.bin/tmuxinator.zsh
+source $HOME/.shfiles/z.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 # source $HOME/.rvm/scripts/rvm
 
 # NOTE: oh-my-zsh overrides the prompt so Pure must be activated after source $ZSH/oh-my-zsh.sh
-# source ~/.pure_prompt.sh # see ~/.dotfiles/sh for copy
+# source $HOME/.pure_prompt.sh # see $HOME/.dotfiles/sh for copy
 autoload -U promptinit; promptinit
 prompt pure
 PROMPT='%F{white}%* '$PROMPT
@@ -47,8 +47,8 @@ export NVM_DIR=$HOME/.nvm
 export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
 # export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
 
-export MYVIMRC=~/.vimrc
-export MYNVIMRC=~/.config/nvim/init.vim
+export MYVIMRC=$HOME/.vimrc
+export MYNVIMRC=$HOME/.config/nvim/init.vim
 export EDITOR='/usr/local/bin/nvim'
 export VISUAL='/usr/local/bin/nvim'
 export GIT_EDITOR='/usr/local/bin/nvim'
@@ -75,20 +75,20 @@ setopt autopushd pushdminus pushdsilent pushdtohome
 alias vim='nvim'
 
 # icloud drive
-alias icl='~/Library/Mobile\ Documents/com\~apple\~CloudDocs'
-alias inbox='~/Library/Mobile\ Documents/com\~apple\~CloudDocs/INBOX'
-alias pers='~/Library/Mobile\ Documents/com\~apple\~CloudDocs/PERSONAL'
-alias notes='~/Library/Mobile\ Documents/com\~apple\~CloudDocs/PERSONAL/my-notes'
+alias icl='$HOME/Library/Mobile\ Documents/com\~apple\~CloudDocs'
+alias inbox='$HOME/Library/Mobile\ Documents/com\~apple\~CloudDocs/INBOX'
+alias pers='$HOME/Library/Mobile\ Documents/com\~apple\~CloudDocs/PERSONAL'
+alias notes='$HOME/Library/Mobile\ Documents/com\~apple\~CloudDocs/PERSONAL/my-notes'
 
-alias dryrunmyfilestosati='rsync -av --delete --dry-run ~/My\ Files/ /Volumes/SATI/MY_FILES/'
-alias dryrunmyfilestoseraph='rsync -av --delete --dry-run ~/My\ Files/ /Volumes/SERAPH/MY_FILES/'
-alias rsyncmyfilestosati='rsync -av --delete ~/My\ Files/ /Volumes/SATI/MY_FILES/'
-alias rsyncmyfilestoseraph='rsync -av --delete ~/My\ Files/ /Volumes/SERAPH/MY_FILES/'
+alias dryrunmyfilestosati='rsync -av --delete --dry-run $HOME/My\ Files/ /Volumes/SATI/MY_FILES/'
+alias dryrunmyfilestoseraph='rsync -av --delete --dry-run $HOME/My\ Files/ /Volumes/SERAPH/MY_FILES/'
+alias rsyncmyfilestosati='rsync -av --delete $HOME/My\ Files/ /Volumes/SATI/MY_FILES/'
+alias rsyncmyfilestoseraph='rsync -av --delete $HOME/My\ Files/ /Volumes/SERAPH/MY_FILES/'
 
 alias rr=ranger
 # https://github.com/bcicen/xiny
 alias conv=xiny
-alias slackfu='slack-term -config ~/.slack-term-fu.json'
+alias slackfu='slack-term -config $HOME/.slack-term-fu.json'
 alias vlsub='vl -upgo'
 alias cat=bat
 alias ping=prettyping
@@ -155,14 +155,14 @@ alias vd='vim -d'
 alias vims='vim -S'
 alias vin='vim'
 alias bim='vim'
-alias vh='vim ~/.hyper.js'
-alias vz='vim ~/.zshrc'
-alias vzh='vim ~/.zshrc'
+alias vh='vim $HOME/.hyper.js'
+alias vz='vim $HOME/.dotfiles/.zshrc'
+alias vzh='vim $HOME/.dotfiles/.zshrc'
 alias vrc='vim $HOME/.vimfiles/vimconfig/vimrc'
 alias vnc='nvim $HOME/.config/nvim/init.vim'
 alias vrg='nvim $HOME/.config/ranger/rc.conf'
 alias vrgc='nvim $HOME/.config/ranger/commands.py'
-alias vt='vim ~/.tmux.conf'
+alias vt='vim $HOME/.tmux.conf'
 alias ta='tmux attach'
 alias td='tmux detach'
 alias tls='tmux ls'
@@ -175,7 +175,7 @@ alias lara='php artisan serve --port=3000'
 alias live='live-server -p 3000'
 alias www='http-server -p 3000'
 alias webs='http-server -p 3000'
-# alias mgd='~/bin/mgd.sh'
+# alias mgd='$HOME/bin/mgd.sh'
 alias mgd='mongod --dbpath $HOME/data/mongodb'
 # To have launchd start postgresql now and restart at login:
 #   brew services start postgresql
@@ -236,7 +236,7 @@ alias pv='cd $HOME/dev/projects/aacc && vim'
 alias stp="open '$HOME/Library/Application Support/Sublime Text 3/Packages'"
 alias kar="cd '$HOME/.config/karabiner'"
 alias db="cd '$HOME/Dropbox'"
-alias zrel=". ~/.zshrc"
+alias zrel=". $HOME/.zshrc"
 alias top=vtop
 alias tt='tmuxinator start dev2'
 alias ttkill='tmux kill-session -t matrix'
@@ -337,7 +337,7 @@ alias nvm10='nvm alias default 10.14.2'
 alias nvm11='nvm alias default 11.14.0'
 alias nvmfix6='npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/v6.14.4'
 alias nvmfix11='npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/v11.14.0'
-alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
+alias ic='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs'
 alias npmgi='npm install -g js-beautify jshint jscs standard standard-format eslint eslint-config-standard-react eslint-plugin-standard eslint-config-standard eslint-plugin-react babel-eslint gulp grunt-cli babel-cli yo tsd bower generator-ng-poly webpack webpack-dev-server'
 
 alias ff='fd'
