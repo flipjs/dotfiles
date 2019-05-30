@@ -115,3 +115,8 @@
 - `pmset -g ps` - see power source status
 - if a bluetooth device stops working, try turning off bluetooth on both devices and turn it back on.
 - if airpods is acting up, try putting it back inside the case (maybe it resets from there?)
+
+### Links
+
+[The Art of Command Line](https://github.com/jlevy/the-art-of-command-line)
+[Bash Hackers](https://wiki.bash-hackers.org/)

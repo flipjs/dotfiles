@@ -68,6 +68,8 @@ _fzf_compgen_path() {
 export PORT=3000
 
 export NODE_ENV=development
+export NODE_DEFAULT_VERSION=6.14.4
+export NODE_PORTAL_VERSION=11.14.0
 
 DIRSTACKSIZE=8
 setopt autopushd pushdminus pushdsilent pushdtohome
@@ -104,7 +106,9 @@ alias vch='vim $HOME/.dotfiles/CHEAT.md'
 alias cheatvim='mdv $HOME/.dotfiles/CHEAT_VIM.md'
 alias cheatregex='mdv $HOME/.dotfiles/CHEAT_REGEX.md'
 alias cheatdocker='mdv $HOME/.dotfiles/CHEAT_DOCKER.md'
+alias cheatgogo='mdv $HOME/.gogofiles/CHEAT_GOGO.md'
 alias vcv='vim $HOME/.dotfiles/CHEAT_VIM.md'
+alias vcgo='vim $HOME/.gogofiles/CHEAT_GOGO.md'
 alias vcre='vim $HOME/.dotfiles/CHEAT_REGEX.md'
 alias cheatoh='mdv $HOME/.dotfiles/CHEAT_OHMYZSH.md'
 alias cheatg='cheatoh | rg git'
@@ -115,7 +119,7 @@ alias cheatfu='mdv $HOME/dev/csp/fu-cheats/README.md'
 alias vcfu='vim $HOME/dev/csp/fu-cheats/README.md'
 alias vpac='vim package.json'
 alias vcl='vim CHANGELOG.*'
-alias vpacc='vim package.json CHANGELOG.*'
+alias vpacc='vim package.json CHANGELOG.* package-lock.json'
 alias figdata='figlet harmony data service && node -v | cowsay -f dragon-and-cow | lolcat'
 alias figphone='figlet phone panel && node -v | cowsay -f dragon-and-cow | lolcat'
 alias figlocal='figlet local dev && node -v | cowsay -f dragon-and-cow | lolcat'
@@ -169,6 +173,7 @@ alias tls='tmux ls'
 alias tlsw='tmux list-windows'
 alias tkill='tmux kill-session'
 alias tnew='tmux new -s'
+alias whatsmyip='ipconfig getifaddr en0'
 alias cls='clear'
 alias arc='archey -o'
 alias lara='php artisan serve --port=3000'
@@ -194,11 +199,13 @@ alias cdnc='cd $HOME/.config/nvim'
 alias dev='cd $HOME/dev'
 alias gogo='cd $HOME/Documents/projects'
 alias goloc='cd $HOME/Documents/projects/local-server'
+alias vloc='goloc && vim webapps.json proxyservers.json'
 alias goifc='cd $HOME/Documents/projects/local-server/ifc'
 alias goamx='cd $HOME/Documents/projects/local-server/ifc/amx'
 alias exphds='export APP_DATA_SERVICE_URL=http://localhost:3000/csp__harmony-data--service'
 alias scrum='cd $HOME/Documents/gogo/wolverines'
 alias standup='nvim $HOME/Documents/gogo/wolverines/README.md'
+alias stup='cd $HOME/Documents/gogo/wolverines && vim README.md TODO.txt NOTES.md LOGS.txt'
 alias cppa='cd $HOME/dev/csp/csp__phone-panel--app'
 alias chld='cd $HOME/dev/csp/harmony__local-development'
 alias cmc='cd $HOME/dev/csp/csp__manage-contacts--app'
@@ -215,6 +222,7 @@ alias typ='cd $HOME/dev/typescript'
 alias cof='cd $HOME/dev/coffee'
 alias me='cd $HOME/dev/mean'
 alias dot='cd $HOME/.dotfiles'
+alias gog='cd $HOME/.gogofiles'
 alias proj='cd $HOME/dev/projects'
 alias tmp='cd $HOME/dev/temp'
 alias temp='cd $HOME/dev/temp'
@@ -238,7 +246,8 @@ alias kar="cd '$HOME/.config/karabiner'"
 alias db="cd '$HOME/Dropbox'"
 alias zrel=". $HOME/.zshrc"
 alias top=vtop
-alias tt='tmuxinator start dev2'
+alias tt6='tmuxinator start devnode6'
+alias tt11='tmuxinator start devnode11'
 alias ttkill='tmux kill-session -t matrix'
 alias msh='tmuxinator start shell'
 alias mfh='tmuxinator start harmony'
@@ -535,3 +544,5 @@ fi
 # sed -i -- 's/foo/bar/g' *
 # Recursive, regular files (including hidden ones) in current dir and all its subdirs:
 # find . -type f -exec sed -i 's/foo/bar/g' {} +
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

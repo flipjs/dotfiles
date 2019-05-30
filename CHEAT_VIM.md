@@ -33,6 +33,7 @@
 - `:v/hello/d` - delete all lines that do NOT contain "hello"
 - `:sort u` - sort and remove duplicate lines
 - `m in NerdTree` - open options to modify a node (add, move, delete a file...)
+- `\C` - append \C to force matching case for the whole pattern
 
 ### History
 
