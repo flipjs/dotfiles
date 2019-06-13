@@ -3,21 +3,26 @@
 ### Terminal
 
 - `reset` or `stty sane` - fix terminal messy output
-- `cp -r !(filename1 | dirnameX | filename2) destination/` - recursive copy excluding files and directories
-- `tar --exclude="./.git" --exclude="./node_modules" -cvzf /backup/filename.tar.gz .` - cd /to/dir/to/backup then run the command
+- `cp -r !(filename1 | dirnameX | filename2) destination/` - recursive copy
+  excluding files and directories
+- `tar --exclude="./.git" --exclude="./node_modules" -cvzf
+  /backup/filename.tar.gz .` - cd /to/dir/to/backup then run the command
 - `mdv README.md` - markdown viewer in terminal (preferred)
 - `markdown README.md | lynx -stdin` - alternative markdown viewer in terminal
 - `open -a "Google Chrome" <path/to/file>` - open file in Google Chrome browser
 - `xmllint --format <path/to/file>` - view xml file
 - `tidy -xml <path/to/file>` - view xml file (alt)
-- `iTerm fullscreen no gap` - go to Preferences - Advanced - Windows - Terminal Windows resize smoothly - set to Yes
+- `iTerm fullscreen no gap` - go to Preferences - Advanced - Windows - Terminal
+  Windows resize smoothly - set to Yes
 - `^foo^bar` - run previous command but replacing (foo with bar)
 - `man ascii` - show ascii table
 - `curl ifconfig.me` - get machine's external ip address
 - `du -sh /path/to/dir` - show current directory's size
 - `Vim tips`
-    - `rg -li <text_to_search> | parallel -X --tty nvim` - search text and open matched files in Vim
-    - `rg -li <text_to_search> | xargs nvim` - search text and open matched files in Vim
+    - `rg -li <text_to_search> | parallel -X --tty nvim` - search text and open
+      matched files in Vim
+    - `rg -li <text_to_search> | xargs nvim` - search text and open matched
+      files in Vim
     - `vim git 'diff --name-only'` - open modified files in vim
     - `cat file.txt | vim -` - pipe stdout to vim
 
@@ -39,10 +44,13 @@
 ### Tmux commands
 
 - `tmux new -s <session_name>` - creates a new tmux session named session_name
-- `tmux attach -t <session_name>` - attaches to an existing tmux session named session_name
-- `tmux switch -t <session_name>` - switches to an existing session named session_name
+- `tmux attach -t <session_name>` - attaches to an existing tmux session named
+  session_name
+- `tmux switch -t <session_name>` - switches to an existing session named
+  session_name
 - `tmux list-sessions` - shows tmux sessions
-- `tmux list-windows` - shows current tmux windows (tip: layout can be copied and pasted to tmuxinator config as is)
+- `tmux list-windows` - shows current tmux windows (tip: layout can be copied
+  and pasted to tmuxinator config as is)
 - `tmux detach (ctrl-a d)` - detach the currently attached session
 - `ctrl-a x` - kill pane
 - `:break-pane -t :` - move pane to its own window
@@ -65,8 +73,10 @@
 - `alt-delete` - delete previous word
 - `ctrl-w` - delete previous word
 - `ctrl-x ctrl-e` - invoke an editor to write a long and complex command
-- `alt-. or esc-.` - place the argument of the most recent command and can cycle through
-- `ctrl-u [...] ctrl-y` - type partial command, kill this command, check something, yank the command, resume typing
+- `alt-. or esc-.` - place the argument of the most recent command and can
+  cycle through
+- `ctrl-u [...] ctrl-y` - type partial command, kill this command, check
+  something, yank the command, resume typing
 
 ### Zsh Z
 
@@ -94,12 +104,14 @@
 
 ### Irssi
 
-- `/ignore -channels #channel * JOINS PARTS QUITS NICKS` - unclutter screen with these messages
+- `/ignore -channels #channel * JOINS PARTS QUITS NICKS` - unclutter screen
+  with these messages
 
 ### Crypto
 
 - `openssl genrsa -out private.pem 1024` - generate private key
-- `openssl rsa -in private.pem -out public.pem -outform PEM -pubout` - generate public key (from a given private key)
+- `openssl rsa -in private.pem -out public.pem -outform PEM -pubout` - generate
+  public key (from a given private key)
 
 ### Programming Tips
 
@@ -113,10 +125,14 @@
 - `networksetup -setairportpower en0 off` - turn off wifi
 - `networksetup -setairportpower en0 on` - turn on wifi
 - `pmset -g ps` - see power source status
-- if a bluetooth device stops working, try turning off bluetooth on both devices and turn it back on.
-- if airpods is acting up, try putting it back inside the case (maybe it resets from there?)
+- if a bluetooth device stops working, try turning off bluetooth on both
+  devices and turn it back on.
+- if airpods is acting up, try putting it back inside the case (maybe it resets
+  from there?)
 
 ### Links
 
-[The Art of Command Line](https://github.com/jlevy/the-art-of-command-line)
-[Bash Hackers](https://wiki.bash-hackers.org/)
+- [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line)
+- [Bash Hackers](https://wiki.bash-hackers.org/)
+- [Git Bisect](https://increment.com/open-source/more-productive-git/#i-am-bisect-and-so-can-you)
+- [Oh Shit Git!](https://ohshitgit.com/)
