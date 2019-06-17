@@ -94,6 +94,10 @@
 
 - How to abort `git commit --amend`
     - if inside vim, just do `:cq!`
+- Rename a local and remote branch
+    1. git branch -m new-name
+    2. git push origin :old-name new-name
+    3. git push origin -u new-name
 
 ### Npm
 
@@ -129,6 +133,11 @@
   devices and turn it back on.
 - if airpods is acting up, try putting it back inside the case (maybe it resets
   from there?)
+
+
+### Working with Media Files
+
+- `ffmpef -i input.mov -crf 23 output.mp4` - convert mov to mp4 (crf = 0, 18, 23, 28, 51 - lower value = better quality)
 
 ### Links
 
