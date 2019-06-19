@@ -98,6 +98,8 @@
     1. git branch -m new-name
     2. git push origin :old-name new-name
     3. git push origin -u new-name
+- Delete a remote branch
+    - git push origin --delete branch-name
 
 ### Npm
 
