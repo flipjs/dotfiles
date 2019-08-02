@@ -100,6 +100,8 @@
     3. git push origin -u new-name
 - Delete a remote branch
     - git push origin --delete branch-name
+- Search git commit messages
+    - git log --oneline | grep PATTERN
 
 ### Npm
 
