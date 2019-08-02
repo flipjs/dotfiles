@@ -93,6 +93,7 @@ alias conv=xiny
 alias slackfu='slack-term -config $HOME/.slack-term-fu.json'
 alias vlsub='vl -upgo'
 alias cat=bat
+alias kill=fkill
 alias ping=prettyping
 alias tree4='tree -L 4 -d'
 alias tree3='tree -L 3 -d'
@@ -125,6 +126,7 @@ alias figphone='figlet phone panel && node -v | cowsay -f dragon-and-cow | lolca
 alias figlocal='figlet local dev && node -v | cowsay -f dragon-and-cow | lolcat'
 alias figcontact='figlet manage contacts && node -v | cowsay -f dragon-and-cow | lolcat'
 alias nodever='figlet node | lolcat && node -v | cowsay | lolcat'
+alias nodeloc='which node && which npm && which npx'
 alias pret='prettier'
 alias jj='z'
 alias wh='which'
@@ -493,7 +495,8 @@ case `uname` in
     ;;
   Linux)
     # export NODE_PATH=/usr/lib/node_modules
-    export PATH=$HOME/local/bin:$HOME/.npm-packages/bin:$PATH
+    # export PATH=$HOME/local/bin:$HOME/.npm-packages/bin:$PATH
+    export PATH=$HOME/local/bin:$PATH
     export LANG=en_US.UTF-8
     export SHEll=/usr/bin/zsh
 
@@ -513,13 +516,13 @@ fi
 
 # npm global install without sudo
 
-NPM_PACKAGES="${HOME}/.npm-packages"
+# NPM_PACKAGES="${HOME}/.npm-packages"
 
-PATH="$NPM_PACKAGES/bin:$PATH"
+# PATH="$NPM_PACKAGES/bin:$PATH"
 
 # Unset manpath so we can inherit from /etc/manpath via the `manpath` command
-unset MANPATH # delete if you already modified MANPATH elsewhere in your config
-export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+# unset MANPATH # delete if you already modified MANPATH elsewhere in your config
+# export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 # bin for python2
 export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
