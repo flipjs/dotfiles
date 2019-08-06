@@ -1,0 +1,16 @@
+August 6, 2019
+--------------
+
+Errors:
+- NVM is not compatible with the npm config "prefix" option warning (OS X)
+- happens inside tmux after setting/running nvm use in tmuxinator
+
+Google results/suggestions:
+- https://github.com/nvm-sh/nvm/issues/1245#
+- update tmux conf
+    # set default shell to zsh
+    set -g default-command /bin/zsh
+    set -g default-shell /bin/zsh
+
+Result:
+- setting tmux conf with the suggested above doesn't work
