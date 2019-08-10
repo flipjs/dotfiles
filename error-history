@@ -1,6 +1,9 @@
 August 6, 2019
 --------------
 
+Environment:
+- Macbook Pro 15 Touchbar (Gogo)
+
 Errors:
 - NVM is not compatible with the npm config "prefix" option warning (OS X)
 - happens inside tmux after setting/running nvm use in tmuxinator
@@ -14,3 +17,26 @@ Google results/suggestions:
 
 Result:
 - setting tmux conf with the suggested above doesn't work
+
+August 6, 2019
+--------------
+
+Environment:
+- Mac Mini 2012
+
+Errors:
+  $ tmux
+  dyld: Library not loaded: /usr/local/lib/libevent-2.0.5.dylib
+    Referenced from: /usr/local/bin/tmux
+    Reason: image not found
+
+Cause:
+- Latest update from OS X
+  - unsure what updates were installed
+  - checking current version of OS X, it show `10.14.6`
+
+Solution:
+- https://apple.stackexchange.com/questions/127186/installing-tmux-but-getting-dyld-library-not-loaded-referenced-from-usr
+  - accepted answers didn't work for me
+  - What worked is this:
+    - ln -s libevent-2.1.7.dylib libevent-2.1.6.dylib
