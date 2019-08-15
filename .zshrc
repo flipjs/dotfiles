@@ -38,6 +38,8 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 autoload -U promptinit; promptinit
 prompt pure
 PROMPT='%F{white}%* '$PROMPT
+# temporary fix for branch name not updating on prompt
+alias newsh='exec zsh'
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
@@ -205,9 +207,9 @@ alias vloc='goloc && vim webapps.json proxyservers.json'
 alias goifc='cd $HOME/Documents/projects/local-server/ifc'
 alias goamx='cd $HOME/Documents/projects/local-server/ifc/amx'
 alias exphds='export APP_DATA_SERVICE_URL=http://localhost:3000/csp__harmony-data--service'
-alias scrum='cd $HOME/Documents/gogo/wolverines'
-alias standup='nvim $HOME/Documents/gogo/wolverines/README.md'
-alias stup='cd $HOME/Documents/gogo/wolverines && vim README.md TODO.txt NOTES.md LOGS.txt'
+alias scrum='cd $HOME/Documents/gogo/gogo-art'
+alias standup='nvim $HOME/Documents/gogo/gogo-art/README.md'
+alias stup='cd $HOME/Documents/gogo/gogo-art && vim README.md TODO.txt NOTES.md LOGS.txt'
 alias cppa='cd $HOME/dev/csp/csp__phone-panel--app'
 alias chld='cd $HOME/dev/csp/harmony__local-development'
 alias cmc='cd $HOME/dev/csp/csp__manage-contacts--app'
