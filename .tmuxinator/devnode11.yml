@@ -1,4 +1,4 @@
-name: portal
+name: monorepo
 root: ~/Documents/projects/portalui/portal
 
 windows:
