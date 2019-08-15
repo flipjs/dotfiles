@@ -1,3 +1,17 @@
+August 15, 2019
+--------------
+
+Environment:
+- Macbook Pro 15 Touchbar (Gogo)
+
+Errors:
+- Pure-prompt not updating branch name
+- happens every once in a while
+
+Google results/suggestions:
+- https://github.com/sindresorhus/pure/issues/455#issuecomment-464311788
+- temp solution: run `exec zsh`
+
 August 6, 2019
 --------------
 
