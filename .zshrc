@@ -177,7 +177,7 @@ alias tkill='tmux kill-session'
 alias tnew='tmux new -s'
 alias whatsmyip='ipconfig getifaddr en0'
 alias cls='clear'
-alias arc='archey -o'
+alias arc='archey -o && ipconfig getifaddr en0'
 alias lara='php artisan serve --port=3000'
 alias live='live-server -p 3000'
 alias www='http-server -p 3000'
@@ -326,6 +326,8 @@ alias dspf='docker system prune -f'
 alias dspa='docker system prune -a'
 # override gs (ghostscript) an run gst instead
 alias gs='gst'
+alias gstau='git stash push -u'
+alias gstall='echo "Dont use git stash --all - will stash node_modules!"'
 # due to muscle memory, show reminder to use different command
 alias gl='echo "Dont use git pull, use git fetch and then git merge."'
 alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
