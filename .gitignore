@@ -28,10 +28,11 @@ pids
 *.pid
 *.seed
 
-#CTags
+# cli
 tags
 tags.lock
 tags.temp
+.tern-project
 
 .bin/steam
 

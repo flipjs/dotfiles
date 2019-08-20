@@ -31,6 +31,7 @@ pids
 tags
 tags.temp
 tags.lock
+.tern-project
 
 # Build files
 build
