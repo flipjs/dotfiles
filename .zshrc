@@ -19,10 +19,8 @@ export SAVEHIST=100000
 export HISTSIZE=100000                   # many commands in ongoing session memory
 export HISTFILESIZE=100000               # many lines in .bash_history
 
-# https://gist.github.com/matthewmccullough/787142
-setopt appendhistory                     # append history to the history file (no overwriting)
-setopt sharehistory                      # share history across terminals
-setopt incappendhistory                  # immediately append to the history file, not just when a term is killed
+# https://stackoverflow.com/questions/12247777/share-history-between-panes-windows
+setopt inc_append_history # share history betweent tmux panes/windows
 
 plugins=(bower brew git heroku node npm tmux tmuxinator emoji colored-man-pages)
 
