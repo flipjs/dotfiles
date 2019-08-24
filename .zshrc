@@ -68,8 +68,8 @@ _fzf_compgen_path() {
 export PORT=3000
 
 export NODE_ENV=development
-export NODE_DEFAULT_VERSION=6.14.4
-export NODE_PORTAL_VERSION=11.14.0
+export NODE_DEFAULT_VERSION=v6.14.4
+export NODE_PORTAL_VERSION=v11.14.0
 
 DIRSTACKSIZE=8
 setopt autopushd pushdminus pushdsilent pushdtohome
@@ -107,9 +107,9 @@ alias vch='vim $HOME/.dotfiles/CHEAT.md'
 alias cheatvim='mdv $HOME/.dotfiles/CHEAT_VIM.md'
 alias cheatregex='mdv $HOME/.dotfiles/CHEAT_REGEX.md'
 alias cheatdocker='mdv $HOME/.dotfiles/CHEAT_DOCKER.md'
-alias cheatgogo='mdv $HOME/.gogofiles/CHEAT_GOGO.md'
+alias cheatgogo='mdv $HOME/.gogodot/CHEAT_GOGO.md'
 alias vcv='vim $HOME/.dotfiles/CHEAT_VIM.md'
-alias vcgo='vim $HOME/.gogofiles/CHEAT_GOGO.md'
+alias vcgo='vim $HOME/.gogodot/CHEAT_GOGO.md'
 alias vcre='vim $HOME/.dotfiles/CHEAT_REGEX.md'
 alias cheatoh='mdv $HOME/.dotfiles/CHEAT_OHMYZSH.md'
 alias cheatg='cheatoh | rg git'
@@ -126,7 +126,7 @@ alias figphone='figlet phone panel && node -v | cowsay -f dragon-and-cow | lolca
 alias figlocal='figlet local dev && node -v | cowsay -f dragon-and-cow | lolcat'
 alias figcontact='figlet manage contacts && node -v | cowsay -f dragon-and-cow | lolcat'
 alias nodever='figlet node | lolcat && node -v | cowsay | lolcat'
-alias nodeloc='which node && which npm && which npx'
+alias nodeloc='which node && which npm && which npx && cat ~/.npmrc'
 alias pret='prettier'
 alias jj='z'
 alias wh='which'
@@ -225,7 +225,7 @@ alias typ='cd $HOME/dev/typescript'
 alias cof='cd $HOME/dev/coffee'
 alias me='cd $HOME/dev/mean'
 alias dot='cd $HOME/.dotfiles'
-alias gog='cd $HOME/.gogofiles'
+alias gog='cd $HOME/.gogodot'
 alias proj='cd $HOME/dev/projects'
 alias tmp='cd $HOME/dev/temp'
 alias temp='cd $HOME/dev/temp'
@@ -348,13 +348,10 @@ alias gitmergemaster='gcm && git fetch upstream && git merge upstream/master && 
  alias gsd='git status -s | while read mode file; do echo $mode $(stat -f "%m" $file) $file; done|sort'
 alias nvma='nvm alias default node'
 alias nvm6='nvm alias default 6.14.4'
-alias nvm8='nvm alias default 8.12.0'
-alias nvm10='nvm alias default 10.14.2'
 alias nvm11='nvm alias default 11.14.0'
 alias nvmfix6='npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/v6.14.4'
 alias nvmfix11='npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/v11.14.0'
 alias ic='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs'
-alias npmgi='npm install -g js-beautify jshint jscs standard standard-format eslint eslint-config-standard-react eslint-plugin-standard eslint-config-standard eslint-plugin-react babel-eslint gulp grunt-cli babel-cli yo tsd bower generator-ng-poly webpack webpack-dev-server'
 
 alias ff='fd'
 # function ff() { find . -iname "*$1*" ${@:2} }
