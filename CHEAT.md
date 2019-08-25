@@ -110,6 +110,10 @@
     - `npm config delete prefix`
     - `npm config set prefix $NVM_DIR/versions/node/vX.XX.X`
 
+### Brew
+
+- `/usr/bin/find "$(brew --prefix)/Caskroom/"*'/.metadata' -type f -name '*.rb' -print0 | /usr/bin/xargs -0 /usr/bin/perl -i -pe 's/depends_on macos: \[.*?\]//gsm;s/depends_on macos: .*//g'` - fix for brew cask depends on macos value error
+
 ### Irssi
 
 - `/ignore -channels #channel * JOINS PARTS QUITS NICKS` - unclutter screen
