@@ -22,7 +22,7 @@ export HISTFILESIZE=100000               # many lines in .bash_history
 # https://stackoverflow.com/questions/12247777/share-history-between-panes-windows
 setopt inc_append_history # share history betweent tmux panes/windows
 
-plugins=(bower brew git heroku node npm tmux tmuxinator emoji colored-man-pages)
+plugins=(bower brew git heroku node npm tmux tmuxinator emoji colored-man-pages docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.bin/tmuxinator.zsh
@@ -40,6 +40,10 @@ PROMPT='%F{white}%* '$PROMPT
 alias newsh='exec zsh'
 
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+# zsh docker plugin seems to run only with this command
+# if insecure dirs warning comes up - run this -> compaudit | xargs chmod g-w
+autoload -U compinit && compinit
 
 export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
