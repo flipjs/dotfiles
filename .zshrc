@@ -95,6 +95,7 @@ alias rr=ranger
 # https://github.com/bcicen/xiny
 alias conv=xiny
 alias slackfu='slack-term -config $HOME/.slack-term-fu.json'
+alias slackdark='npx install-dark-theme'
 alias vlsub='vl -upgo'
 alias cat=bat
 alias kill=fkill
@@ -181,7 +182,7 @@ alias tkill='tmux kill-session'
 alias tnew='tmux new -s'
 alias whatsmyip='ipconfig getifaddr en0'
 alias cls='clear'
-alias arc='archey -o && ipconfig getifaddr en0'
+alias arc='archey -o && ipconfig getifaddr en0 && cat ~/.npmrc'
 alias lara='php artisan serve --port=3000'
 alias live='live-server -p 3000'
 alias www='http-server -p 3000'
