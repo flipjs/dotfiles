@@ -79,6 +79,7 @@ DIRSTACKSIZE=8
 setopt autopushd pushdminus pushdsilent pushdtohome
 
 alias vim='nvim'
+alias vimdiff='nvim -d'
 
 # icloud drive
 alias icl='$HOME/Library/Mobile\ Documents/com\~apple\~CloudDocs'
@@ -161,7 +162,6 @@ alias vv='vim'
 alias vi='vim'
 alias Vim='vim'
 alias vn='vim -u NONE'
-alias vimdiff='vim -d'
 alias vd='vim -d'
 alias vims='vim -S'
 alias vin='vim'
