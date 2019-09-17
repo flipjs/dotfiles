@@ -71,5 +71,6 @@ set backspace=indent,eol,start
 ### Vim Tips and Links
 
 [Vim Wikia](https://vim.fandom.com/wiki/Vim_Tips_Wiki)
+[Arabesque](https://sanctum.geek.nz/arabesque/)
 [Vim Tips and Tricks](https://www.cs.swarthmore.edu/help/vim/home.html)
 [Your problem with Vim is that you don't grok vi](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118)
