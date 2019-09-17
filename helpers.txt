@@ -16,7 +16,7 @@ brew install exa
 brew install yarn
 npm install -g vtop
 npm install -g fkill-cli
-npm install --global pure-prompt
+npm install -g spaceship-prompt
 
 SETUP
 

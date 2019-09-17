@@ -31,12 +31,6 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 # source $HOME/.rvm/scripts/rvm
 
-# NOTE: oh-my-zsh overrides the prompt so Pure must be activated after source $ZSH/oh-my-zsh.sh
-# source $HOME/.pure_prompt.sh # see $HOME/.dotfiles/sh for copy
-autoload -U promptinit; promptinit
-prompt pure
-PROMPT='%F{white}%* '$PROMPT
-
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # zsh docker plugin seems to run only with this command
@@ -268,3 +262,8 @@ fi
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
+
+# Set Spaceship ZSH as a prompt
+ZSH_THEME='spaceship'
+autoload -U promptinit; promptinit
+prompt spaceship

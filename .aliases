@@ -34,6 +34,7 @@ alias fort='figlet node | lolcat && node -v | cowsay | lolcat && fortune | cowsa
 alias cheats='mdv $HOME/.dotfiles/CHEAT.md'
 alias vch='vim $HOME/.dotfiles/CHEAT.md'
 alias cheatvim='mdv $HOME/.dotfiles/CHEAT_VIM.md'
+alias cheatgit='mdv $HOME/.dotfiles/CHEAT_GIT.md'
 alias cheatregex='mdv $HOME/.dotfiles/CHEAT_REGEX.md'
 alias cheatdocker='mdv $HOME/.dotfiles/CHEAT_DOCKER.md'
 alias cheatgogo='mdv $HOME/.gogodot/CHEAT_GOGO.md'
