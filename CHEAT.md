@@ -36,6 +36,7 @@
 - `ctrl-a ]` - paste
 - `ctrl-a x` - close pane
 - `ctrl-a z` - zoom in
+- `ctrl-a space` - cycle between predefined layouts
 - `ctrl-a d` - detach current session
 - `ctrl-a D` - useful when tmux/pane freezes
 - `ctrl-a '` - to select the window index
