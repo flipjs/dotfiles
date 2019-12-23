@@ -1,4 +1,6 @@
-# temporary fix for branch name not updating on prompt
+alias valias='vim $HOME/.dotfiles/.aliases'
+
+# temporary fix for branch name not updating on prompt - for pure prompt
 alias newsh='exec zsh'
 
 alias vim='nvim'
@@ -131,6 +133,9 @@ alias cdnc='cd $HOME/.config/nvim'
 alias dev='cd $HOME/dev'
 alias gogo='cd $HOME/Documents/projects'
 alias goloc='cd $HOME/Documents/projects/local-server'
+alias goport='cd $HOME/Documents/projects/portalui/portal'
+alias katar='cd $HOME/Documents/projects/portalui/portal/apps/multi_tenant'
+alias ual='cd $HOME/Documents/projects/portalui/portal/apps/ual'
 alias vloc='goloc && vim webapps.json proxyservers.json'
 alias goifc='cd $HOME/Documents/projects/local-server/ifc'
 alias goamx='cd $HOME/Documents/projects/local-server/ifc/amx'
@@ -256,6 +261,7 @@ alias dspf='docker system prune -f'
 alias dspa='docker system prune -a'
 # override gs (ghostscript) an run gst instead
 alias gs='gst'
+alias gcdd='git checkout dev'
 alias gstau='git stash push -u'
 alias gstall='echo "Dont use git stash --all - will stash node_modules!"'
 # due to muscle memory, show reminder to use different command
@@ -266,6 +272,7 @@ alias gls='git ls-files --others --exclude-standard'
 alias gdn='git --no-pager diff'
 alias gdtl='git difftool'
 alias gmodvim='nvim $(git ls-files --modified)'
+alias gnewvim='nvim $(git ls-files -o  --exclude-standard)'
 # TODO: add an alias below to accept commit number
 # vim $(git diff-tree --no-commit-id --name-only -r 96b7531)
 alias gcmod='git diff-tree --no-commit-id --name-only -r'
@@ -275,9 +282,8 @@ alias gdtl2='git difftool HEAD^ HEAD'
 alias gdfix='git diff --name-only | uniq | xargs nvim'
 alias gitmergemaster='gcm && git fetch upstream && git merge upstream/master && gp'
 alias gsd='git status -s | while read mode file; do echo $mode $(stat -f "%m" $file) $file; done|sort'
-alias nvma='nvm alias default node'
-alias nvm6='nvm alias default 6.14.4'
-alias nvm11='nvm alias default 11.14.0'
+alias nvm6='nvm use 6.14.4'
+alias nvm11='nvm use 11.14.0'
 alias nvmfix6='npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/v6.14.4'
 alias nvmfix11='npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/v11.14.0'
 alias ic='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs'

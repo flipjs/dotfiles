@@ -35,3 +35,6 @@ tags.lock
 
 # Build files
 build
+
+# Git
+submodules
