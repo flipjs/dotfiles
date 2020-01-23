@@ -72,6 +72,7 @@ setopt autopushd pushdminus pushdsilent pushdtohome
 
 function ggr() { grep "$1" ${@:2} -R . }
 function mcd() { mkdir -p "$1" && cd "$1";  }
+function cht() { curl cht.sh/$1 }
 
 function t() {
   # Defaults to 3 levels deep, do more with `t 5` or `t 1`
