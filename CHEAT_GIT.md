@@ -31,6 +31,3 @@
   - `⇡` — ahead of remote branch;
   - `⇣` — behind of remote branch;
   - `⇕` — diverged changes.
-
-
-
