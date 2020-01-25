@@ -78,11 +78,11 @@ function gdd() {
   if [ "$3" = "vim" ]; then
     vim $(git diff HEAD~$1 HEAD~$2 --name-only)
   elif [ "$3" = "tool" ]; then
-    git difftool HEAD~$1 HEAD~$2
+    git difftool HEAD~$1 HEAD~$2 ${@:4}
   elif [ "$3" = "name" ]; then
     git diff HEAD~$1 HEAD~$2 --name-only
   else
-    git diff HEAD~$1 HEAD~$2 $3
+    git diff HEAD~$1 HEAD~$2 ${@:3}
   fi
 }
 
