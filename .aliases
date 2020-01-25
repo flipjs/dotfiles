@@ -277,8 +277,6 @@ alias gnewvim='nvim $(git ls-files -o  --exclude-standard)'
 # vim $(git diff-tree --no-commit-id --name-only -r 96b7531)
 alias gcmod='git diff-tree --no-commit-id --name-only -r'
 alias gnewvim='nvim $(git ls-files --others --exclude-standard)'
-alias gdlast2='git diff HEAD^ HEAD'
-alias gdtl2='git difftool HEAD^ HEAD'
 alias gdfix='git diff --name-only | uniq | xargs nvim'
 alias gitmergemaster='gcm && git fetch upstream && git merge upstream/master && gp'
 alias gsd='git status -s | while read mode file; do echo $mode $(stat -f "%m" $file) $file; done|sort'

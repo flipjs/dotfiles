@@ -74,6 +74,18 @@ function ggr() { grep "$1" ${@:2} -R . }
 function mcd() { mkdir -p "$1" && cd "$1";  }
 function cht() { curl cht.sh/$1 }
 
+function gdd() {
+  if [ "$3" = "vim" ]; then
+    vim $(git diff HEAD~$1 HEAD~$2 --name-only)
+  elif [ "$3" = "tool" ]; then
+    git difftool HEAD~$1 HEAD~$2
+  elif [ "$3" = "name" ]; then
+    git diff HEAD~$1 HEAD~$2 --name-only
+  else
+    git diff HEAD~$1 HEAD~$2 $3
+  fi
+}
+
 function t() {
   # Defaults to 3 levels deep, do more with `t 5` or `t 1`
   # pass additional args after
