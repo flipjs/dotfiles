@@ -6,6 +6,10 @@ alias newsh='exec zsh'
 alias vim='nvim'
 alias vimdiff='nvim -d'
 
+# https://github.com/mhinz/neovim-remote
+alias vimstart='NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim'
+alias vimr='nvr --remote'
+
 # icloud drive
 alias icl='$HOME/Library/Mobile\ Documents/com\~apple\~CloudDocs'
 alias inbox='$HOME/Library/Mobile\ Documents/com\~apple\~CloudDocs/INBOX'
