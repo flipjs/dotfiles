@@ -28,6 +28,8 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.bin/tmuxinator.zsh
 source $HOME/.shfiles/z.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# set vi-mode right before sourcing fzf or fzf will not work!
+set -o vi
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 # source $HOME/.rvm/scripts/rvm
 
