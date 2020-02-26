@@ -266,7 +266,7 @@ alias dilss='docker image ls | less -S'
 alias dspf='docker system prune -f'
 alias dspa='docker system prune -a'
 # override gs (ghostscript) an run gst instead
-alias gs='gst'
+alias gs='git show'
 alias gcdd='git checkout dev'
 alias gstau='git stash push -u'
 alias gstall='echo "Dont use git stash --all - will stash node_modules!"'
