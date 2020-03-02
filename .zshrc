@@ -66,8 +66,8 @@ _fzf_compgen_path() {
 export PORT=3000
 
 export NODE_ENV=development
-export NODE_DEFAULT_VERSION=v6.14.4
-export NODE_PORTAL_VERSION=v11.14.0
+export NODE_BACKBONE_VERSION=v6.14.4
+export NODE_PORTAL_VERSION=v12.16.1
 
 DIRSTACKSIZE=8
 setopt autopushd pushdminus pushdsilent pushdtohome
