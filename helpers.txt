@@ -29,3 +29,6 @@ diff-so-fancy
 [pager]
   diff = diff-so-fancy | less --tabs=1,5 -RFX
   show = diff-so-fancy | less --tabs=1,5 -RFX
+
+create .npmrc with line below with your node version
+  prefix=/Users/philip/.nvm/versions/node/v12.16.1
