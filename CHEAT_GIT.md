@@ -19,6 +19,8 @@
     - git update-index --assume-unchanged path/to/file
 - Keep tracking files again
     - git update-index --no-assume-unchanged path/to/file
+- Find commit that introduced a string
+    - git log --source --all -S PATTERN
 
 ### Git branch prompt status
   - `?` — untracked changes;
