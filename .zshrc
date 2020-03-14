@@ -78,6 +78,8 @@ function cht() { curl cht.sh/$1 }
 function gdd() {
   if [ "$3" = "vim" ]; then
     nvim $(git diff HEAD~$1 HEAD~$2 --name-only)
+  elif [ "$3" = "vimr" ]; then
+    vimr $(git diff HEAD~$1 HEAD~$2 --name-only)
   elif [ "$3" = "tool" ]; then
     git difftool HEAD~$1 HEAD~$2 ${@:4}
   elif [ "$3" = "name" ]; then
