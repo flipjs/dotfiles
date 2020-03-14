@@ -18,10 +18,11 @@
 - `man ascii` - show ascii table
 - `curl ifconfig.me` - get machine's external ip address
 - `du -sh /path/to/dir` - show current directory's size
+- `pkill -f <pattern>` - search running process and kill it
 - `Vim tips`
-    - `rg -li <text_to_search> | parallel -X --tty nvim` - search text and open
+    - `rg -li <pattern> | parallel -X --tty nvim` - search text and open
       matched files in Vim
-    - `rg -li <text_to_search> | xargs nvim` - search text and open matched
+    - `rg -li <pattern> | xargs nvim` - search text and open matched
       files in Vim
     - `vim git 'diff --name-only'` - open modified files in vim
     - `cat file.txt | vim -` - pipe stdout to vim
