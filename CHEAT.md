@@ -19,6 +19,7 @@
 - `curl ifconfig.me` - get machine's external ip address
 - `du -sh /path/to/dir` - show current directory's size
 - `pkill -f <pattern>` - search running process and kill it
+- `echo $?` - display return status of last executed command
 - `Vim tips`
     - `rg -li <pattern> | parallel -X --tty nvim` - search text and open
       matched files in Vim
