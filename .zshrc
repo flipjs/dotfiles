@@ -76,17 +76,13 @@ function mcd() { mkdir -p "$1" && cd "$1";  }
 function cht() { curl cht.sh/$1 }
 
 function gdd() {
-  if [ "$3" = "vim" ]; then
-    nvim $(git diff HEAD~$1 HEAD~$2 --name-only)
-  elif [ "$3" = "vimr" ]; then
-    vimr $(git diff HEAD~$1 HEAD~$2 --name-only)
-  elif [ "$3" = "tool" ]; then
-    git difftool HEAD~$1 HEAD~$2 ${@:4}
-  elif [ "$3" = "name" ]; then
-    git diff HEAD~$1 HEAD~$2 --name-only
-  else
-    git diff HEAD~$1 HEAD~$2 ${@:3}
-  fi
+  case "$3" in
+    vim) nvim $(git diff HEAD~$1 HEAD~$2 --name-only) ;;
+    vimr) vimr $(git diff HEAD~$1 HEAD~$2 --name-only) ;;
+    tool) git difftool HEAD~$1 HEAD~$2 ${@:4} ;;
+    name) git diff HEAD~$1 HEAD~$2 --name-only ;;
+    *) git diff HEAD~$1 HEAD~$2 ${@:3} ;;
+  esac
 }
 
 function t() {
