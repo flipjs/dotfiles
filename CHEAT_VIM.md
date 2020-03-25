@@ -36,6 +36,7 @@
 - `\C` - append \C to force matching case for the whole pattern
 - `:cq!` - abort git commit
 - `:s/\v<./\u&/g` - capitalize each word
+- `gqq or gqip or gqap` - wrap long paragraph (see gq and textwidth)
 
 ### History
 
