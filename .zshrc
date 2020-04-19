@@ -281,5 +281,6 @@ fi
 
 # Set Spaceship ZSH as a prompt
 ZSH_THEME='spaceship'
+SPACESHIP_TIME_SHOW=true
 autoload -U promptinit; promptinit
 prompt spaceship
