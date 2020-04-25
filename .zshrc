@@ -11,13 +11,11 @@ setopt ignoreeof
 # to be able to ctrl-s in vim!
 stty -ixon
 
-# export HISTSIZE=100000 SAVEHIST=100000
-
 # https://htmlhive.com/fixing-your-terminal-unix-history-command/
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
-export SAVEHIST=100000
-export HISTSIZE=100000                   # many commands in ongoing session memory
-export HISTFILESIZE=100000               # many lines in .bash_history
+export HISTFILESIZE=1000000
+export HISTSIZE=$HISTFILESIZE
+export SAVEHIST=$HISTFILESIZE
 
 # https://stackoverflow.com/questions/12247777/share-history-between-panes-windows
 setopt inc_append_history # share history betweent tmux panes/windows
@@ -253,6 +251,9 @@ export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
 export PATH="/usr/local/lib/ruby/gems/2.5.0/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
+
+# /usr/local/sbin
+export PATH="/usr/local/sbin:$PATH"
 
 # add Cabal's bin directory to the executable search PATH if it exists
 # if [ -d "$HOME/.cabal/bin" ] ; then
