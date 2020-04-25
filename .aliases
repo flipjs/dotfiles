@@ -272,6 +272,8 @@ alias gstau='git stash push -u'
 alias gstall='echo "Dont use git stash --all - will stash node_modules!"'
 # due to muscle memory, show reminder to use different command
 alias gl='echo "Dont use git pull, use git fetch and then git merge."'
+alias gco='echo "Use git checkout command for safety."'
+alias gout='git checkout'
 alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias glogb="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
 alias gls='git ls-files --others --exclude-standard'
