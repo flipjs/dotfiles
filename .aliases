@@ -301,3 +301,6 @@ alias bane="diskutil mount `diskutil list | grep "BANE" | sed -n -e 's/^.* //p'`
 alias wof='networksetup -setairportpower en0 off'
 alias won='networksetup -setairportpower en0 on'
 alias pow='pmset -g ps'
+
+# sonos
+alias son='sonos --zone=RINCON_48A6B88CEB8601400:610013138'

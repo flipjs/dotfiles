@@ -255,6 +255,9 @@ export CPPFLAGS="-I/usr/local/opt/ruby/include"
 # /usr/local/sbin
 export PATH="/usr/local/sbin:$PATH"
 
+# cargo/rust
+export PATH=$HOME/.cargo/bin:$PATH
+
 # add Cabal's bin directory to the executable search PATH if it exists
 # if [ -d "$HOME/.cabal/bin" ] ; then
 #     PATH="$HOME/.cabal/bin:$PATH"
