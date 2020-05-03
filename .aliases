@@ -302,4 +302,4 @@ alias won='networksetup -setairportpower en0 on'
 alias pow='pmset -g ps'
 
 # sonos
-alias son='sonos --zone=RINCON_48A6B88CEB8601400:610013138'
+alias son='sonos --zone=RINCON_48A6B88CEB8601400:20430176'
