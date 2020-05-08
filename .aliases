@@ -64,6 +64,7 @@ alias figlocal='figlet local dev && node -v | cowsay -f dragon-and-cow | lolcat'
 alias figcontact='figlet manage contacts && node -v | cowsay -f dragon-and-cow | lolcat'
 alias nodever='figlet node | lolcat && node -v | cowsay | lolcat'
 alias nodeloc='which node && which npm && which npx && cat ~/.npmrc'
+alias parcelnode='parcel --target=node'
 alias pret='prettier'
 alias jj='z'
 alias wh='which'
@@ -302,4 +303,4 @@ alias won='networksetup -setairportpower en0 on'
 alias pow='pmset -g ps'
 
 # sonos
-alias son='sonos --zone=RINCON_48A6B88CEB8601400:20430176'
+alias son='sonos --zone=RINCON_48A6B88CEB8601400:3114580280'
