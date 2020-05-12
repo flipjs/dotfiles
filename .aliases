@@ -1,4 +1,5 @@
 alias valias='vim $HOME/.dotfiles/.aliases'
+alias vabbr='vim $HOME/.dotfiles/.abbrevs'
 
 # temporary fix for branch name not updating on prompt - for pure prompt
 alias newsh='exec zsh'
@@ -29,7 +30,6 @@ alias slackdark='npx install-dark-theme'
 alias vlsub='vl -upgo'
 alias cat=bat
 alias kill=fkill
-alias ping=prettyping
 alias tree4='tree -L 4 -d'
 alias tree3='tree -L 3 -d'
 alias tree2='tree -L 2 -d'
@@ -272,8 +272,6 @@ alias gstau='git stash push -u'
 alias gstall='echo "Dont use git stash --all - will stash node_modules!"'
 # due to muscle memory, show reminder to use different command
 alias gl='echo "Dont use git pull, use git fetch and then git merge."'
-alias gco='echo "Use git checkout command for safety."'
-alias gout='git checkout'
 alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias glogb="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
 alias gls='git ls-files --others --exclude-standard'
@@ -301,6 +299,3 @@ alias bane="diskutil mount `diskutil list | grep "BANE" | sed -n -e 's/^.* //p'`
 alias wof='networksetup -setairportpower en0 off'
 alias won='networksetup -setairportpower en0 on'
 alias pow='pmset -g ps'
-
-# sonos
-alias son='sonos --zone=RINCON_48A6B88CEB8601400:3114580280'

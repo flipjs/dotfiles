@@ -17,6 +17,8 @@ export HISTFILESIZE=1000000
 export HISTSIZE=$HISTFILESIZE
 export SAVEHIST=$HISTFILESIZE
 
+export KEYTIMEOUT=1
+
 # https://stackoverflow.com/questions/12247777/share-history-between-panes-windows
 setopt inc_append_history # share history betweent tmux panes/windows
 
@@ -25,7 +27,6 @@ plugins=(bower brew git heroku node npm tmux tmuxinator emoji colored-man-pages 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.bin/tmuxinator.zsh
 source $HOME/.shfiles/z.sh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 # source $HOME/.rvm/scripts/rvm
@@ -282,6 +283,11 @@ fi
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
+
+# https://github.com/zsh-users/zsh-syntax-highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# https://github.com/olets/zsh-abbr
+source /usr/local/share/zsh-abbr/zsh-abbr.zsh
 
 # Set Spaceship ZSH as a prompt
 ZSH_THEME='spaceship'

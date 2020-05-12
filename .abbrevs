@@ -1,0 +1,11 @@
+# zsh-abbr
+
+abbr gst="git status"
+abbr gco="git checkout"
+abbr gcm="git checkout master"
+abbr gcd="git checkout develop"
+abbr pingg=prettyping
+abbr son='sonos --zone=RINCON_48A6B88CEB8601400:3114580280'
+
+# Update and re-source this file
+# source ./.dotfiles/.abbrevs
