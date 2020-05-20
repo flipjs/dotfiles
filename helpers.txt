@@ -15,6 +15,10 @@ brew install autojump
 brew install exa
 brew install yarn
 brew install ack
+brew install zsh-abbr
+brew install optipng
+brew install jpegoptim
+brew install gifsicle
 npm install -g vtop
 npm install -g fkill-cli
 npm install -g spaceship-prompt
