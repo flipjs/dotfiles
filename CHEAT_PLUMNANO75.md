@@ -12,7 +12,7 @@
 - `Fn+/` - Brightness up
 - `Fn+.` - Brightness down
 - `Fn+M` - Frequency up
-- `Fn+,` - requency down
+- `Fn+,` - Frequency down
 
 ### Quick function
 
