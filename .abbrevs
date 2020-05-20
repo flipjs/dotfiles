@@ -1,11 +1,19 @@
 # zsh-abbr
 
-abbr gst="git status"
-abbr gco="git checkout"
-abbr gcm="git checkout master"
+abbr gc="git commit -v"
 abbr gcd="git checkout develop"
+abbr gcm="git checkout master"
+abbr gco="git checkout"
+abbr gmodvim='nvim $(git ls-files --modified)'
+abbr gnewvim='nvim $(git ls-files -o  --exclude-standard)'
+abbr gp="git push"
+abbr gst="git status"
+abbr ls=exa
 abbr pingg=prettyping
 abbr son='sonos --zone=RINCON_48A6B88CEB8601400:3114580280'
+abbr sonv='sonos --zone=RINCON_48A6B88CEB8601400:3114580280 volume'
+abbr vabbr='vim $HOME/.dotfiles/.abbrevs'
+abbr valias='vim $HOME/.dotfiles/.aliases'
 
 # Update and re-source this file
-# source ./.dotfiles/.abbrevs
+# source ~/.dotfiles/.abbrevs

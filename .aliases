@@ -1,6 +1,3 @@
-alias valias='vim $HOME/.dotfiles/.aliases'
-alias vabbr='vim $HOME/.dotfiles/.abbrevs'
-
 # temporary fix for branch name not updating on prompt - for pure prompt
 alias newsh='exec zsh'
 
@@ -76,7 +73,6 @@ alias xxx='exit'
 alias xxxx='exit'
 alias dh='dirs -v'
 # alias ls='ls -GpFh'
-alias ls=exa
 alias ll='ls -lGFh'
 alias la='ls -aGFh'
 alias lc='ls | wc -l'
@@ -277,8 +273,6 @@ alias glogb="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)
 alias gls='git ls-files --others --exclude-standard'
 alias gdn='git --no-pager diff'
 alias gdtl='git difftool'
-alias gmodvim='nvim $(git ls-files --modified)'
-alias gnewvim='nvim $(git ls-files -o  --exclude-standard)'
 # TODO: add an alias below to accept commit number
 # vim $(git diff-tree --no-commit-id --name-only -r 96b7531)
 alias gcmod='git diff-tree --no-commit-id --name-only -r'
