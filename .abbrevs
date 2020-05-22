@@ -1,5 +1,9 @@
 # zsh-abbr
 
+abbr compgif='gifsicle --batch -V -O2'
+abbr compjpg='jpegoptim -m80'
+abbr comppng='optipng -o7'
+abbr ga="git add"
 abbr gc="git commit -v"
 abbr gcd="git checkout develop"
 abbr gcm="git checkout master"
@@ -14,9 +18,6 @@ abbr son='sonos --zone=RINCON_48A6B88CEB8601400:3114580280'
 abbr sonv='sonos --zone=RINCON_48A6B88CEB8601400:3114580280 volume'
 abbr vabbr='vim $HOME/.dotfiles/.abbrevs'
 abbr valias='vim $HOME/.dotfiles/.aliases'
-abbr comppng='optipng -o7'
-abbr compjpg='jpegoptim -m80'
-abbr compgif='gifsicle --batch -V -O2'
 
 # Update and re-source this file
 # source ~/.dotfiles/.abbrevs
