@@ -24,6 +24,7 @@ abbr son='sonos --zone=RINCON_48A6B88CEB8601400:3114580280'
 abbr sonv='sonos --zone=RINCON_48A6B88CEB8601400:3114580280 volume'
 abbr vabbr='vim $HOME/.dotfiles/.abbrevs'
 abbr valias='vim $HOME/.dotfiles/.aliases'
+abbr plugged='cd $HOME/.local/share/nvim/plugged'
 
 # Update and re-source this file
 # source ~/.dotfiles/.abbrevs
