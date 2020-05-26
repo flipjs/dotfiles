@@ -3,6 +3,8 @@
 abbr compgif='gifsicle --batch -V -O2'
 abbr compjpg='jpegoptim -m80'
 abbr comppng='optipng -o7'
+abbr en0='ipconfig getifaddr en0'
+abbr en1='ipconfig getifaddr en1'
 abbr ga="git add"
 abbr gc="git commit -v"
 abbr gcd="git checkout develop"
@@ -19,6 +21,7 @@ abbr gnewvim='nvim $(git ls-files -o  --exclude-standard)'
 abbr gp="git push"
 abbr gst="git status"
 abbr ls=exa
+abbr opin='eval $(op signin my)'
 abbr pingg=prettyping
 abbr plugged='cd $HOME/.local/share/nvim/plugged'
 abbr sabbr='source $HOME/.dotfiles/.abbrevs'

@@ -19,6 +19,7 @@ brew install zsh-abbr
 brew install optipng
 brew install jpegoptim
 brew install gifsicle
+brew install gotop
 npm install -g vtop
 npm install -g fkill-cli
 npm install -g spaceship-prompt
