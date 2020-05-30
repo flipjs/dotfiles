@@ -219,7 +219,7 @@ case `uname` in
     # export PATH=$HOME/local/bin:$HOME/.npm-packages/bin:$PATH
     export PATH=$HOME/local/bin:$PATH
     export LANG=en_US.UTF-8
-    export SHEll=/usr/bin/zsh
+    export SHELL=/usr/bin/zsh
 
     # Linuxbrew
     export PATH="$HOME/.linuxbrew/bin:$PATH"
