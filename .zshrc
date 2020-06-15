@@ -64,7 +64,7 @@ _fzf_compgen_path() {
 export PORT=3000
 
 export NODE_ENV=development
-export NODE_BACKBONE_VERSION=v6.14.4
+export NODE_LEGACY_VERSION=v6.14.4
 export NODE_PORTAL_VERSION=v12.16.1
 
 DIRSTACKSIZE=8
