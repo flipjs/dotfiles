@@ -65,7 +65,7 @@ export PORT=3000
 
 export NODE_ENV=development
 export NODE_LEGACY_VERSION=v6.14.4
-export NODE_PORTAL_VERSION=v12.16.1
+export NODE_PORTAL_VERSION=v14.5.0
 
 DIRSTACKSIZE=8
 setopt autopushd pushdminus pushdsilent pushdtohome
@@ -287,7 +287,7 @@ fi
 # https://github.com/zsh-users/zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # https://github.com/olets/zsh-abbr
-source /usr/local/share/zsh-abbr/zsh-abbr.zsh
+# source /usr/local/share/zsh-abbr/zsh-abbr.zsh
 
 # Set Spaceship ZSH as a prompt
 ZSH_THEME='spaceship'

@@ -188,6 +188,7 @@ alias zrel=". $HOME/.zshrc"
 alias top=gotop
 alias legacy='tmuxinator start devlegacy'
 alias legacyfix='nvm use --delete-prefix $NODE_LEGACY_VERSION'
+alias nodedev='tmuxinator start dev'
 alias portal='tmuxinator start devportal'
 alias portalfix='nvm use --delete-prefix $NODE_PORTAL_VERSION'
 alias ttkill='tmux kill-session -t matrix'
@@ -289,3 +290,35 @@ alias pow='pmset -g ps'
 
 # list usb devices
 alias usbdev="ioreg -p IOUSB -w0 | sed 's/[^o]*o //; s/@.*$//' | grep -v '^Root.*'"
+
+# TODO: put aliases below in relevant locations
+alias compgif='gifsicle --batch -V -O2'
+alias compjpg='jpegoptim -m80'
+alias comppng='optipng -o7'
+alias en0='ipconfig getifaddr en0'
+alias en1='ipconfig getifaddr en1'
+alias ga='git add'
+alias gc='git commit -v'
+alias gcd='git checkout develop'
+alias gcm='git checkout master'
+alias gcmod='git diff-tree --no-commit-id --name-only -r'
+alias gco='git checkout'
+alias gd='git diff'
+alias gdfix='git diff --name-only | uniq | xargs nvim'
+alias gdn='git --no-pager diff'
+alias gdtl='git difftool'
+alias gls='git ls-files --others --exclude-standard'
+alias gmodvim='nvim $(git ls-files --modified)'
+alias gnewvim='nvim $(git ls-files -o  --exclude-standard)'
+alias gp='git push'
+alias gst='git status'
+alias ls=exa
+alias opin='eval $(op signin my)'
+alias pingg=prettyping
+alias plugged='cd $HOME/.local/share/nvim/plugged'
+alias sabbr='source $HOME/.dotfiles/.abbrevs'
+alias salias='source $HOME/.dotfiles/.aliases'
+alias son='sonos --zone=RINCON_48A6B88CEB8601400:858641578'
+alias sonv='sonos --zone=RINCON_48A6B88CEB8601400:858641578 volume'
+alias vabbr='vim $HOME/.dotfiles/.abbrevs'
+alias valias='vim $HOME/.dotfiles/.aliases'

@@ -1,33 +1,28 @@
-name: matrix
-root: ~/Documents/projects/local-server
+name: Node 14
+root: ~/Documents/projects
 
 windows:
   - neo:
-      layout: d343,167x49,0,0[167x39,0,0{46x39,0,0,0,120x39,47,0,4},167x9,0,40{50x9,0,40,5,62x9,51,40,6,53x9,114,40,7}]
+      layout: main-vertical
       panes:
-        - figlet node | lolcat && node -v | cowsay | lolcat
-        - figlet neo && node -v | cowsay -f dragon-and-cow | lolcat
-        - node -v && npm -v
-        - node -v && npm -v
-        - node -v && npm -v
+        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet neo | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
+        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet node | lolcat && node -v | cowsay | lolcat
+        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && fortune | cowsay | lolcat
   - morpheus:
-      layout: f7c3,191x50,0,0[191x41,0,0{58x41,0,0,0,132x41,59,0,4},191x8,0,42{58x8,0,42,5,70x8,59,42,6,61x8,130,42,7}]
+      layout: main-vertical
       panes:
-        - figlet node | lolcat && node -v | cowsay | lolcat
-        - figlet morpheus && node -v | cowsay -f dragon-and-cow | lolcat
-        - node -v && npm -v
-        - node -v && npm -v
-        - node -v && npm -v
+        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet morpheus | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
+        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet node | lolcat && node -v | cowsay | lolcat
+        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && fortune | cowsay | lolcat
   - trinity:
-      layout: f7c3,191x50,0,0[191x41,0,0{58x41,0,0,0,132x41,59,0,4},191x8,0,42{58x8,0,42,5,70x8,59,42,6,61x8,130,42,7}]
+      layout: main-vertical
       panes:
-        - figlet node | lolcat && node -v | cowsay | lolcat
-        - figlet trinity && node -v | cowsay -f dragon-and-cow | lolcat
-        - node -v && npm -v
-        - node -v && npm -v
-        - node -v && npm -v
+        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet trinity | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
+        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet node | lolcat && node -v | cowsay | lolcat
+        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && fortune | cowsay | lolcat
   - cypher:
-      layout: 579d,178x40,0,0{51x40,0,0,1,126x40,52,0,8}
+      layout: main-vertical
       panes:
-        - figlet node | lolcat && node -v | cowsay | lolcat
-        - figlet cypher && node -v | cowsay -f dragon-and-cow | lolcat
+        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet cypher | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
+        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet node | lolcat && node -v | cowsay | lolcat
+        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && fortune | cowsay | lolcat
