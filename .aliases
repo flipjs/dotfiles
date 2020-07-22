@@ -182,6 +182,7 @@ alias aacc='cd $HOME/dev/projects/aacc'
 alias pv='cd $HOME/dev/projects/aacc && vim'
 alias stp="open '$HOME/Library/Application Support/Sublime Text 3/Packages'"
 alias kar="cd '$HOME/.config/karabiner'"
+alias mir='cd $HOME/dev/mechanicalkeyboards/qmk_firmware_miryoku'
 alias spec="cd '$HOME/Library/Application Support/Spectacle'"
 alias db="cd '$HOME/Dropbox'"
 alias zrel=". $HOME/.zshrc"
