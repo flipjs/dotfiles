@@ -180,8 +180,8 @@ zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
 # edit line in vim with ctrl-e
-autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line
+# autoload edit-command-line; zle -N edit-command-line
+# bindkey '^e' edit-command-line
 
 # work-around to fix bug in npm install, where it reports EMFILE or glob error
 ulimit -n 2560
