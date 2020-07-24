@@ -317,9 +317,7 @@ alias ls=exa
 alias opin='eval $(op signin my)'
 alias pingg=prettyping
 alias plugged='cd $HOME/.local/share/nvim/plugged'
-alias sabbr='source $HOME/.dotfiles/.abbrevs'
 alias salias='source $HOME/.dotfiles/.aliases'
 alias son='sonos --zone=RINCON_48A6B88CEB8601400:858641578'
 alias sonv='sonos --zone=RINCON_48A6B88CEB8601400:858641578 volume'
-alias vabbr='vim $HOME/.dotfiles/.abbrevs'
 alias valias='vim $HOME/.dotfiles/.aliases'

@@ -286,8 +286,6 @@ fi
 
 # https://github.com/zsh-users/zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# https://github.com/olets/zsh-abbr
-# source /usr/local/share/zsh-abbr/zsh-abbr.zsh
 
 # Set Spaceship ZSH as a prompt
 ZSH_THEME='spaceship'
