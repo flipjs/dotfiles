@@ -6,23 +6,23 @@ windows:
       layout: main-vertical
       panes:
         - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet neo | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
-        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet node | lolcat && node -v | cowsay | lolcat
+        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet neo | lolcat && node -v | cowsay | lolcat
         - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && fortune | cowsay | lolcat
   - morpheus:
       layout: main-vertical
       panes:
         - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet morpheus | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
-        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet node | lolcat && node -v | cowsay | lolcat
+        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet morpheu | lolcat && node -v | cowsay | lolcat
         - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && fortune | cowsay | lolcat
   - trinity:
       layout: main-vertical
       panes:
         - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet trinity | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
-        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet node | lolcat && node -v | cowsay | lolcat
+        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet trinity | lolcat && node -v | cowsay | lolcat
         - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && fortune | cowsay | lolcat
   - cypher:
       layout: main-vertical
       panes:
         - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet cypher | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
-        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet node | lolcat && node -v | cowsay | lolcat
+        - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && figlet cypher | lolcat && node -v | cowsay | lolcat
         - nvm use --delete-prefix $NODE_PORTAL_VERSION && npm config delete prefix && npm config set prefix $NVM_DIR/versions/node/$NODE_PORTAL_VERSION && fortune | cowsay | lolcat
