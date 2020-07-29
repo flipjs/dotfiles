@@ -37,8 +37,9 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # if insecure dirs warning comes up - run this -> compaudit | xargs chmod g-w
 autoload -U compinit && compinit
 
-export NVM_DIR=$HOME/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
 # export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
@@ -64,8 +65,8 @@ _fzf_compgen_path() {
 export PORT=3000
 
 export NODE_ENV=development
-export NODE_LEGACY_VERSION=v6.14.4
-export NODE_PORTAL_VERSION=v14.5.0
+export NODE_OLD_VERSION=v6.14.4
+export NODE_LATEST_VERSION=v14.5.0
 
 DIRSTACKSIZE=8
 setopt autopushd pushdminus pushdsilent pushdtohome
