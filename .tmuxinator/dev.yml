@@ -5,24 +5,24 @@ windows:
   - neo:
       layout: main-vertical
       panes:
-        - nvm use $NODE_LATEST_VERSION && figlet neo | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
+        - nvm use $NODE_LATEST_VERSION && figlet node latest | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
         - nvm use $NODE_LATEST_VERSION && figlet neo | lolcat && node -v | cowsay | lolcat
         - nvm use $NODE_LATEST_VERSION && fortune | cowsay | lolcat
   - morpheus:
       layout: main-vertical
       panes:
-        - nvm use $NODE_LATEST_VERSION && figlet morpheus | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
+        - nvm use $NODE_LATEST_VERSION && figlet node latest | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
         - nvm use $NODE_LATEST_VERSION && figlet morpheu | lolcat && node -v | cowsay | lolcat
         - nvm use $NODE_LATEST_VERSION && fortune | cowsay | lolcat
   - trinity:
       layout: main-vertical
       panes:
-        - nvm use $NODE_LATEST_VERSION && figlet trinity | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
+        - nvm use $NODE_LATEST_VERSION && figlet node latest | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
         - nvm use $NODE_LATEST_VERSION && figlet trinity | lolcat && node -v | cowsay | lolcat
         - nvm use $NODE_LATEST_VERSION && fortune | cowsay | lolcat
   - cypher:
       layout: main-vertical
       panes:
-        - nvm use $NODE_LATEST_VERSION && figlet cypher | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
+        - nvm use $NODE_LATEST_VERSION && figlet node latest | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
         - nvm use $NODE_LATEST_VERSION && figlet cypher | lolcat && node -v | cowsay | lolcat
         - nvm use $NODE_LATEST_VERSION && fortune | cowsay | lolcat
