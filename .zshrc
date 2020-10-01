@@ -293,3 +293,6 @@ ZSH_THEME='spaceship'
 SPACESHIP_TIME_SHOW=true
 autoload -U promptinit; promptinit
 prompt spaceship
+
+# Set bat/cat theme
+export BAT_THEME=ansi-dark
