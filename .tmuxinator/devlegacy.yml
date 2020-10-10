@@ -5,15 +5,18 @@ windows:
   - code:
       layout: main-vertical
       panes:
-        - nvm use $NODE_OLD_VERSION && archey -o
+        - nvm use $NODE_OLD_VERSION && archey -o && fortune -s | cowsay | lolcat
         - nvm use $NODE_OLD_VERSION && figlet code | lolcat
+        - nvm use $NODE_OLD_VERSION && figlet node | lolcat && node -v | cowsay | lolcat
   - eat:
       layout: main-vertical
       panes:
-        - nvm use $NODE_OLD_VERSION && archey -o
+        - nvm use $NODE_OLD_VERSION && archey -o && fortune -s | cowsay | lolcat
         - nvm use $NODE_OLD_VERSION && figlet eat | lolcat
+        - nvm use $NODE_OLD_VERSION && figlet node | lolcat && node -v | cowsay | lolcat
   - sleep:
       layout: main-vertical
       panes:
-        - nvm use $NODE_OLD_VERSION && archey -o
+        - nvm use $NODE_OLD_VERSION && archey -o && fortune -s | cowsay | lolcat
         - nvm use $NODE_OLD_VERSION && figlet sleep | lolcat
+        - nvm use $NODE_OLD_VERSION && figlet node | lolcat && node -v | cowsay | lolcat

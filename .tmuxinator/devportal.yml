@@ -5,15 +5,18 @@ windows:
   - code:
       layout: main-vertical
       panes:
-        - archey -o
+        - archey -o && fortune -s | cowsay | lolcat
         - figlet code | lolcat
+        - figlet node | lolcat && node -v | cowsay | lolcat
   - eat:
       layout: main-vertical
       panes:
-        - archey -o
+        - archey -o && fortune -s | cowsay | lolcat
         - figlet eat | lolcat
+        - figlet node | lolcat && node -v | cowsay | lolcat
   - sleep:
       layout: main-vertical
       panes:
-        - archey -o
+        - archey -o && fortune -s | cowsay | lolcat
         - figlet sleep | lolcat
+        - figlet node | lolcat && node -v | cowsay | lolcat
