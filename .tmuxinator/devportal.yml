@@ -1,28 +1,19 @@
-name: portal
+name: configurable portal
 root: ~/Documents/projects/portalui/portal
 
 windows:
-  - cypher:
+  - code:
       layout: main-vertical
       panes:
-        - nvm use $NODE_LATEST_VERSION && figlet configurable portal | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
-        - nvm use $NODE_LATEST_VERSION && figlet cypher | lolcat && node -v | cowsay | lolcat
-        - nvm use $NODE_LATEST_VERSION && fortune | cowsay | lolcat
-  - tank:
+        - archey -o
+        - figlet code | lolcat
+  - eat:
       layout: main-vertical
       panes:
-        - nvm use $NODE_LATEST_VERSION && figlet configurable portal | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
-        - nvm use $NODE_LATEST_VERSION && figlet tank | lolcat && node -v | cowsay | lolcat
-        - nvm use $NODE_LATEST_VERSION && fortune | cowsay | lolcat
-  - niobe:
+        - archey -o
+        - figlet eat | lolcat
+  - sleep:
       layout: main-vertical
       panes:
-        - nvm use $NODE_LATEST_VERSION && figlet configurable portal | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
-        - nvm use $NODE_LATEST_VERSION && figlet niobe | lolcat && node -v | cowsay | lolcat
-        - nvm use $NODE_LATEST_VERSION && fortune | cowsay | lolcat
-  - link:
-      layout: main-vertical
-      panes:
-        - nvm use $NODE_LATEST_VERSION && figlet configurable portal | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
-        - nvm use $NODE_LATEST_VERSION && figlet link | lolcat && node -v | cowsay | lolcat
-        - nvm use $NODE_LATEST_VERSION && fortune | cowsay | lolcat
+        - archey -o
+        - figlet sleep | lolcat

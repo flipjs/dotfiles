@@ -1,28 +1,19 @@
-name: legacy
+name: backbourne legacy
 root: ~/Documents/projects/local-server
 
 windows:
-  - cypher:
+  - code:
       layout: main-vertical
       panes:
-        - nvm use $NODE_OLD_VERSION && figlet backbourne legacy | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
-        - nvm use $NODE_OLD_VERSION && figlet cypher | lolcat && node -v | cowsay | lolcat
-        - nvm use $NODE_OLD_VERSION && fortune | cowsay | lolcat
-  - tank:
+        - nvm use $NODE_OLD_VERSION && archey -o
+        - nvm use $NODE_OLD_VERSION && figlet code | lolcat
+  - eat:
       layout: main-vertical
       panes:
-        - nvm use $NODE_OLD_VERSION && figlet backbourne legacy | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
-        - nvm use $NODE_OLD_VERSION && figlet tank | lolcat && node -v | cowsay | lolcat
-        - nvm use $NODE_OLD_VERSION && fortune | cowsay | lolcat
-  - niobe:
+        - nvm use $NODE_OLD_VERSION && archey -o
+        - nvm use $NODE_OLD_VERSION && figlet eat | lolcat
+  - sleep:
       layout: main-vertical
       panes:
-        - nvm use $NODE_OLD_VERSION && figlet backbourne legacy | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
-        - nvm use $NODE_OLD_VERSION && figlet niobe | lolcat && node -v | cowsay | lolcat
-        - nvm use $NODE_OLD_VERSION && fortune | cowsay | lolcat
-  - link:
-      layout: main-vertical
-      panes:
-        - nvm use $NODE_OLD_VERSION && figlet backbourne legacy | lolcat && node -v | cowsay -f dragon-and-cow | lolcat
-        - nvm use $NODE_OLD_VERSION && figlet link | lolcat && node -v | cowsay | lolcat
-        - nvm use $NODE_OLD_VERSION && fortune | cowsay | lolcat
+        - nvm use $NODE_OLD_VERSION && archey -o
+        - nvm use $NODE_OLD_VERSION && figlet sleep | lolcat
