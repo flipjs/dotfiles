@@ -292,6 +292,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_THEME='spaceship'
 SPACESHIP_TIME_SHOW=true
 SPACESHIP_CHAR_SYMBOL="♛♖♝♘ "
+SPACESHIP_GIT_STATUS_DIVERGED=↕
 autoload -U promptinit; promptinit
 prompt spaceship
 

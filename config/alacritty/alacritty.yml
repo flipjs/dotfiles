@@ -1,45 +1,28 @@
-# Font configuration (changes require restart)
-font:
-  # The size to use.
-  size: 16
-  # The normal (roman) font face to use.
+window:
+  padding:
+    x: 6
+    y: 0
 
-  # Offset is the extra space around each character. `offset.y` can be thought of
-  # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
+font:
+  size: 16
   offset:
     x: 1
     y: 6
-
   normal:
     family: FiraCode Nerd Font
-    # Style can be specified to pick a specific face.
     style: Retina
-
-  # The bold font face
   bold:
     family: FiraCode Nerd Font
-    # Style can be specified to pick a specific face.
     # style: Bold
-
-  # The italic font face
   italic:
     family: FiraCode Nerd Font
-    # Style can be specified to pick a specific face.
     # style: Italic
-
-  # OS X only: use thin stroke font rendering. Thin strokes are suitable
-  # for retina displays, but for non-retina you probably want this set to
-  # false.
   use_thin_strokes: true
 
-# Colors (Iceberg Dark)
 colors:
-  # Default colors
   primary:
     background: '#161821'
     foreground: '#d2d4de'
-
-  # Normal colors
   normal:
     black:   '#161821'
     red:     '#e27878'
@@ -49,8 +32,6 @@ colors:
     magenta: '#a093c7'
     cyan:    '#89b8c2'
     white:   '#c6c8d1'
-
-  # Bright colors
   bright:
     black:   '#6b7089'
     red:     '#e98989'
@@ -60,3 +41,12 @@ colors:
     magenta: '#ada0d3'
     cyan:    '#95c4ce'
     white:   '#d2d4de'
+
+scrolling:
+  history: 100000
+  multiplier: 3
+
+key_bindings:
+   - { key: M, mods: Command, action: None }
+   - { key: Q, mods: Command, action: None }
+   - { key: W, mods: Command, action: None }
