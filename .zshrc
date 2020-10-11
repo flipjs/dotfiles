@@ -291,6 +291,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Set Spaceship ZSH as a prompt
 ZSH_THEME='spaceship'
 SPACESHIP_TIME_SHOW=true
+SPACESHIP_CHAR_SYMBOL="♛♖♝♘ "
 autoload -U promptinit; promptinit
 prompt spaceship
 
