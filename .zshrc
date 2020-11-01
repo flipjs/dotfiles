@@ -1,5 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
 [[ $TMUX = "" ]] && export TERM="screen-256color"
 
 # disable tmux auto title
@@ -41,7 +43,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
+# export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
 # export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
 
 export MYVIMRC=$HOME/.vimrc
@@ -211,14 +213,14 @@ case `uname` in
     # export NODE_PATH=/usr/local/lib/node_modules
     # export NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags
 
-    export GOPATH=$HOME/go
-    export PATH=$GOPATH/bin:$PATH
-    export PATH=$PATH:/usr/local/opt/go/libexec/bin
+    # export GOPATH=$HOME/go
+    # export PATH=$GOPATH/bin:$PATH
+    # export PATH=$PATH:/usr/local/opt/go/libexec/bin
     ;;
   Linux)
     # export NODE_PATH=/usr/lib/node_modules
     # export PATH=$HOME/local/bin:$HOME/.npm-packages/bin:$PATH
-    export PATH=$HOME/local/bin:$PATH
+    # export PATH=$HOME/local/bin:$PATH
     export LANG=en_US.UTF-8
     export SHELL=/usr/bin/zsh
 
@@ -247,18 +249,18 @@ fi
 # export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 # bin for python2
-export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
+# export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
 
 # ruby - bin path and settings
-export PATH="/usr/local/lib/ruby/gems/2.5.0/bin:$PATH"
+# export PATH="/usr/local/lib/ruby/gems/2.5.0/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 
 # /usr/local/sbin
-export PATH="/usr/local/sbin:$PATH"
+# export PATH="/usr/local/sbin:$PATH"
 
 # cargo/rust
-export PATH=$HOME/.cargo/bin:$PATH
+# export PATH=$HOME/.cargo/bin:$PATH
 
 # add Cabal's bin directory to the executable search PATH if it exists
 # if [ -d "$HOME/.cabal/bin" ] ; then
@@ -266,9 +268,9 @@ export PATH=$HOME/.cargo/bin:$PATH
 # fi
 
 # add Stack's bin directory to the executable search PATH if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
+# if [ -d "$HOME/.local/bin" ] ; then
+#     PATH="$HOME/.local/bin:$PATH"
+# fi
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
