@@ -287,6 +287,11 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
+# load gogoenv
+if [ -f ~/.gogoenv.sh ]; then
+    . ~/.gogoenv.sh
+fi
+
 # https://github.com/zsh-users/zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
