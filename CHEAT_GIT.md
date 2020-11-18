@@ -3,7 +3,7 @@
 
 ### Cheatsheet
 
-- How to abort `git commit --amend`
+- How to abort `git commit`
     - if inside vim, just do `:cq!`
 - Rename a local and remote branch
     1. git branch -m new-name
