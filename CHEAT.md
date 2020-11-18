@@ -43,6 +43,9 @@
 - `ctrl-a D` - useful when tmux/pane freezes
 - `ctrl-a '` - to select the window index
 - `ctrl-a w` - to get an interactive index to choose from (0-9a-z)
+- `ctrl-a {` - swap current pane to opposite position counter-clockwise
+- `ctrl-a }` - swap current pane to opposite position clockwise
+- `ctrl-a ctrl-o` - cycle panes around counter-clockwise
 
 ### Tmux commands
 
