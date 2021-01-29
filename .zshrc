@@ -171,6 +171,10 @@ rgvi() {
   nvim $(rg -li "$1" -g !"node_modules")
 }
 
+topc() {
+  history | awk 'BEGIN {FS="[ \t]+|\\|"} {print $3}' | sort | uniq -c | sort -nr | less
+}
+
 # ctrl-z to go back to suspended Vim
 fancy-ctrl-z () {
   if [[ $#BUFFER -eq 0 ]]; then
@@ -307,3 +311,4 @@ prompt spaceship
 
 # Set bat/cat theme
 export BAT_THEME=ansi-dark
+export QMK_HOME=$HOME/dev/mechanicalkeyboards/qmk_firmware
