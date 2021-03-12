@@ -1,6 +1,8 @@
 # temporary fix for branch name not updating on prompt - for pure prompt
 alias newsh='exec zsh'
 
+alias svim='sudo vim -u NONE'
+
 alias vim='nvim'
 alias vimdiff='nvim -d'
 
