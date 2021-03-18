@@ -183,7 +183,6 @@ alias py='cd $HOME/dev/python'
 alias ph='cd $HOME/dev/php'
 alias dj='cd $HOME/dev/django'
 alias aacc='cd $HOME/dev/projects/aacc'
-alias pv='cd $HOME/dev/projects/aacc && vim'
 alias stp="open '$HOME/Library/Application Support/Sublime Text 3/Packages'"
 alias kar="cd '$HOME/.config/karabiner'"
 alias mir='cd $HOME/dev/mechanicalkeyboards/qmk_firmware_miryoku'
