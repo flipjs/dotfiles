@@ -23,6 +23,7 @@ alias rsyncmyfilestoseraph='rsync -av --delete $HOME/My\ Files/ /Volumes/SERAPH/
 
 alias rr=ranger
 # https://github.com/bcicen/xiny
+alias mdv=glow
 alias conv=xiny
 alias slackfu='slack-term -config $HOME/.slack-term-fu.json'
 alias slackdark='npx install-dark-theme'
