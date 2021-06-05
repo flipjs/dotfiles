@@ -237,13 +237,6 @@ case `uname` in
     ;;
 esac
 
-# lunchy
-
-LUNCHY_DIR=$(dirname `gem which lunchy`)/../extras
-if [ -f $LUNCHY_DIR/lunchy-completion.zsh ]; then
-  . $LUNCHY_DIR/lunchy-completion.zsh
-fi
-
 # npm global install without sudo
 
 # NPM_PACKAGES="${HOME}/.npm-packages"
