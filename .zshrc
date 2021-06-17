@@ -305,3 +305,6 @@ prompt spaceship
 # Set bat/cat theme
 export BAT_THEME=ansi-dark
 export QMK_HOME=$HOME/dev/mechanicalkeyboards/qmk_firmware
+
+# Set less to search case-insensitive
+export LESS=-iR
