@@ -85,7 +85,7 @@ function gdd() {
     vimr) vimr $(git diff HEAD~$1 HEAD~$2 --name-only) ;;
     tool) git difftool HEAD~$1 HEAD~$2 ${@:4} ;;
     name) git diff HEAD~$1 HEAD~$2 --name-only ;;
-    *) git diff HEAD~$1 HEAD~$2 ${@:3} ;;
+    *) git diff HEAD~$1 HEAD~$2 | delta -s ${@:3} ;;
   esac
 }
 
