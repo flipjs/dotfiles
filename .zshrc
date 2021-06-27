@@ -251,7 +251,7 @@ esac
 # export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
 
 # ruby - bin path and settings
-# export PATH="/usr/local/lib/ruby/gems/2.5.0/bin:$PATH"
+export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 
