@@ -69,7 +69,7 @@ export PORT=3000
 # Below is causing issue with Gogo Portal unit tests due to different code path in development - not good!
 # Commenting the line below for now
 # export NODE_ENV=development
-export NODE_OLD_VERSION=v6.14.4
+export NODE_OLD_VERSION=v6.17.1
 export NODE_LATEST_VERSION=v14.5.0
 
 DIRSTACKSIZE=8
