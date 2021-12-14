@@ -255,6 +255,9 @@ export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 
+# python pip packages
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+
 # /usr/local/sbin
 # export PATH="/usr/local/sbin:$PATH"
 
