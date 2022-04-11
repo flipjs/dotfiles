@@ -74,6 +74,24 @@ to fix zsh compinit: insecure directories, run:
 
 compaudit | xargs chmod g-w
 
+# NEW MAC?
+
+- disable press and hold (do this first before repeat rate)
+
+defaults write -g ApplePressAndHoldEnabled -bool false
+
+- to increase key repeat rate, run these 2 commands in the command line
+
+# i set InitialKeyRepeat to 15 and KeyRepeat to 2 personally
+# setting 10 and 1 is extreme for me, getting a random key repeat 2x or more
+defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+
+- optional: enable or disable
+
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool false
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+
 NOTE: below might not be needed anymore (.npmrc setup)
 create .npmrc with line below with your node version
   prefix=/Users/philip/.nvm/versions/node/v12.16.1
