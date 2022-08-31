@@ -68,8 +68,9 @@ _fzf_compgen_path() {
 # Commenting the line below for now
 # export NODE_ENV=development
 
-export NODE_OLD_VERSION=v6.17.1
-export NODE_LATEST_VERSION=v14.5.0
+export NODE_OLD_VERSION=6
+export NODE_LATEST_VERSION=16
+export NODE_GGS_VERSION=10
 
 DIRSTACKSIZE=8
 setopt autopushd pushdminus pushdsilent pushdtohome
