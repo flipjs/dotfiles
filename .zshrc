@@ -67,6 +67,7 @@ _fzf_compgen_path() {
 # Below is causing issue with Gogo Portal unit tests due to different code path in development - not good!
 # Commenting the line below for now
 # export NODE_ENV=development
+
 export NODE_OLD_VERSION=v6.17.1
 export NODE_LATEST_VERSION=v14.5.0
 
@@ -186,10 +187,6 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
-# edit line in vim with ctrl-e
-# autoload edit-command-line; zle -N edit-command-line
-# bindkey '^e' edit-command-line
-
 # work-around to fix bug in npm install, where it reports EMFILE or glob error
 ulimit -n 2560
 
@@ -213,18 +210,8 @@ crypto() { curl rate.sx }
 case `uname` in
   Darwin)
     export NOTES_DIR=$HOME/Dropbox/NOTES
-
-    # export NODE_PATH=/usr/local/lib/node_modules
-    # export NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags
-
-    # export GOPATH=$HOME/go
-    # export PATH=$GOPATH/bin:$PATH
-    # export PATH=$PATH:/usr/local/opt/go/libexec/bin
     ;;
   Linux)
-    # export NODE_PATH=/usr/lib/node_modules
-    # export PATH=$HOME/local/bin:$HOME/.npm-packages/bin:$PATH
-    # export PATH=$HOME/local/bin:$PATH
     export LANG=en_US.UTF-8
     export SHELL=/usr/bin/zsh
 
@@ -235,50 +222,15 @@ case `uname` in
     ;;
 esac
 
-# npm global install without sudo
-
-# NPM_PACKAGES="${HOME}/.npm-packages"
-
-# PATH="$NPM_PACKAGES/bin:$PATH"
-
-# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
-# unset MANPATH # delete if you already modified MANPATH elsewhere in your config
-# export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
-
 # bin for python2
-# export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
+export PATH="${HOME}/.pyenv/shims:${PATH}"
 
 # ruby - bin path and settings
 export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 
-# python pip packages
-export PATH="$HOME/Library/Python/3.9/bin:$PATH"
-
-# /usr/local/sbin
-# export PATH="/usr/local/sbin:$PATH"
-
-# cargo/rust
-# export PATH=$HOME/.cargo/bin:$PATH
-
-# add Cabal's bin directory to the executable search PATH if it exists
-# if [ -d "$HOME/.cabal/bin" ] ; then
-#     PATH="$HOME/.cabal/bin:$PATH"
-# fi
-
-# add Stack's bin directory to the executable search PATH if it exists
-# if [ -d "$HOME/.local/bin" ] ; then
-#     PATH="$HOME/.local/bin:$PATH"
-# fi
-
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
-# search and replace text in all files - TODO: make a function
-# Non recursive, files in the current directory only:
-# sed -i -- 's/foo/bar/g' *
-# Recursive, regular files (including hidden ones) in current dir and all its subdirs:
-# find . -type f -exec sed -i 's/foo/bar/g' {} +
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -293,18 +245,19 @@ if [ -f ~/.gogoenv.sh ]; then
 fi
 
 # https://github.com/zsh-users/zsh-syntax-highlighting
-source /opt/homebrew/opt/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Set bat/cat theme
-export BAT_THEME=ansi-dark
+export BAT_THEME=ansi
 export QMK_HOME=$HOME/dev/mechanicalkeyboards/qmk_firmware
 
 # Set less to search case-insensitive
 export LESS=-iR
 
-# Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
+# ZSH Prompt
+autoload -Uz promptinit
+promptinit
+prompt fire
 
 fpath=($fpath "/Users/felipe/.zfunctions")
 fpath=($fpath "/Users/felipe/.zfunctions")
