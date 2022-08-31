@@ -254,10 +254,13 @@ export QMK_HOME=$HOME/dev/mechanicalkeyboards/qmk_firmware
 # Set less to search case-insensitive
 export LESS=-iR
 
-# ZSH Prompt
-autoload -Uz promptinit
-promptinit
-prompt fire
+fpath=($fpath "/Users/felipe/.zfunctions")
+fpath=($fpath "/Users/felipe/.zfunctions")
 
-fpath=($fpath "/Users/felipe/.zfunctions")
-fpath=($fpath "/Users/felipe/.zfunctions")
+# Set zsh prompt
+ZSH_THEME='spaceship'
+SPACESHIP_TIME_SHOW=true
+SPACESHIP_CHAR_SYMBOL="♛♖♝♘ "
+SPACESHIP_GIT_STATUS_DIVERGED=↕
+autoload -U promptinit; promptinit
+prompt spaceship
