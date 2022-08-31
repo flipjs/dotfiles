@@ -1,6 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
+export HOMEBREW_BIN="/opt/homebrew/bin"
 
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$HOMEBREW_BIN:$PATH
 
 [[ $TMUX = "" ]] && export TERM="screen-256color"
 
@@ -40,17 +41,14 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U compinit && compinit
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
-# export PATH=/usr/local/bin:$HOME/bin:/usr/local/git/bin:$HOME/.rvm/bin:/usr/local/heroku/bin:$HOME/.composer/vendor/bin:$PATH
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 export MYVIMRC=$HOME/.vimrc
 export MYNVIMRC=$HOME/.config/nvim/init.vim
-export EDITOR='/usr/local/bin/nvim'
-export VISUAL='/usr/local/bin/nvim'
-export GIT_EDITOR='/usr/local/bin/nvim'
+export EDITOR='$HOMEBREW_BIN/nvim'
+export VISUAL='$HOMEBREW_BIN/nvim'
+export GIT_EDITOR='$HOMEBREW_BIN/nvim'
 export MDV_THEME=579.6579
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow -g "!{.git,node_modules,coverage}/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -64,7 +62,7 @@ _fzf_compgen_path() {
   ag -g "" "$1"
 }
 
-export PORT=3000
+# export PORT=3000
 
 # Below is causing issue with Gogo Portal unit tests due to different code path in development - not good!
 # Commenting the line below for now
@@ -295,15 +293,7 @@ if [ -f ~/.gogoenv.sh ]; then
 fi
 
 # https://github.com/zsh-users/zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Set Spaceship ZSH as a prompt
-ZSH_THEME='spaceship'
-SPACESHIP_TIME_SHOW=true
-SPACESHIP_CHAR_SYMBOL="♛♖♝♘ "
-SPACESHIP_GIT_STATUS_DIVERGED=↕
-autoload -U promptinit; promptinit
-prompt spaceship
+source /opt/homebrew/opt/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Set bat/cat theme
 export BAT_THEME=ansi-dark
@@ -311,3 +301,10 @@ export QMK_HOME=$HOME/dev/mechanicalkeyboards/qmk_firmware
 
 # Set less to search case-insensitive
 export LESS=-iR
+
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
+
+fpath=($fpath "/Users/felipe/.zfunctions")
+fpath=($fpath "/Users/felipe/.zfunctions")
