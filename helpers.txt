@@ -30,7 +30,7 @@ brew install jpegoptim
 brew install gifsicle
 brew install gotop
 brew install git-delta
-brew install archey
+brew install archey4
 brew install figlet
 brew install lolcat
 brew install cowsay
@@ -83,10 +83,11 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 
 - to increase key repeat rate, run these 2 commands in the command line
 
-# i set InitialKeyRepeat to 15 and KeyRepeat to 2 personally
+# i set InitialKeyRepeat to 20 and KeyRepeat to 2 personally
 # setting 10 and 1 is extreme for me, getting a random key repeat 2x or more
-defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
-defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+
+defaults write -g InitialKeyRepeat -int 20 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 2 # normal minimum is 2 (30 ms)
 
 - optional: enable or disable
 

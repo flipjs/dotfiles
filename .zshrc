@@ -50,12 +50,11 @@ export EDITOR='$HOMEBREW_BIN/nvim'
 export VISUAL='$HOMEBREW_BIN/nvim'
 export GIT_EDITOR='$HOMEBREW_BIN/nvim'
 export MDV_THEME=579.6579
-export FZF_DEFAULT_COMMAND='rg --files --hidden --follow -g "!{.git,node_modules,coverage}/*" 2> /dev/null'
+export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude '.git' --exclude 'node_modules'"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type d --hidden --follow --exclude '.git' --exclude 'node_modules'"
 export FZF_COMPLETION_TRIGGER='``'
 export FZF_COMPLETION_OPTS='+c -x'
-# Note: If you use iTerm and alt-c is not working, set alt key's behavior to Esc+
-command -v blsd > /dev/null && export FZF_ALT_C_COMMAND='blsd'
 export FZF_DEFAULT_OPTS='--extended --cycle --reverse'
 # function below is required to respect .agignore for completion
 _fzf_compgen_path() {
@@ -232,8 +231,6 @@ export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # load aliases
 if [ -f ~/.aliases ]; then
