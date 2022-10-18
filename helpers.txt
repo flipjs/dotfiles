@@ -21,7 +21,6 @@ brew install fzf
 brew install bat
 brew install diff-so-fancy
 brew install autojump
-brew install exa
 brew install yarn
 brew install ack
 brew install zsh-abbr
@@ -35,6 +34,9 @@ brew install figlet
 brew install lolcat
 brew install cowsay
 brew install fortune
+brew install fd
+brew install ffmpeg
+brew install glow
 npm install -g vtop
 npm install -g fkill-cli
 
