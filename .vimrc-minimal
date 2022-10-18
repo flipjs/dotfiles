@@ -1,0 +1,12 @@
+set nocompatible
+set ts=2 sw=2 sts=2 et
+set backspace=indent,eol,start
+
+syntax on
+filetype plugin indent on
+set number
+set hidden
+set expandtab
+
+inoremap jj <esc>
+cnoreabbrev QQ cq!
