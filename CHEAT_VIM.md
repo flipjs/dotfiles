@@ -16,6 +16,8 @@
     - :retab!
     - set expandtab
     - :retab!
+- `:%!tail -r` - reverse all lines in the file
+- `:'<,'>!tail -r` - reverse selected lines
 
 ### Mappings
 
