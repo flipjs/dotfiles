@@ -20,7 +20,9 @@
 - Keep tracking files again
     - git update-index --no-assume-unchanged path/to/file
 - Find commit that introduced a string
-    - git log --source --all -S PATTERN
+    - git log --all -p --reverse --source -S PATTERN
+- How to exclude files only on your computer
+    - add patterns in `.git/info/exclude` - same way in .gitignore
 
 ### Git branch prompt status
   - `?` — untracked changes;
