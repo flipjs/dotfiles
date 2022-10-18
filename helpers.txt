@@ -77,6 +77,10 @@ compaudit | xargs chmod g-w
 
 # NEW MAC?
 
+- always show hidden files in Finder
+
+defaults write com.apple.finder AppleShowAllFiles -boolean true; killall Finder;
+
 - disable press and hold (do this first before repeat rate)
 
 defaults write -g ApplePressAndHoldEnabled -bool false
