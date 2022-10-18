@@ -37,6 +37,7 @@
 - `:cq!` - abort git commit
 - `:s/\v<./\u&/g` - capitalize each word
 - `gqq or gqip or gqap` - wrap long paragraph (see gq and textwidth)
+- `g c-g` - count number of lines highlighted
 
 ### History
 
