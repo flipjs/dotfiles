@@ -1,7 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
-export HOMEBREW_BIN="/opt/homebrew/bin"
 
-export PATH=/usr/local/bin:/usr/local/sbin:$HOMEBREW_BIN:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 [[ $TMUX = "" ]] && export TERM="screen-256color"
 
@@ -40,9 +39,22 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # if insecure dirs warning comes up - run this -> compaudit | xargs chmod g-w
 autoload -U compinit && compinit
 
+# Set HOMEBREW dir for Apple Silicon vs Intel
 export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+if [[ $(uname -m) == 'arm64' ]]; then
+  export HOMEBREW_BIN="/opt/homebrew/bin"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+  # https://github.com/zsh-users/zsh-syntax-highlighting
+  source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  export PATH=$HOMEBREW_BIN:$PATH # not needed to set in else path as usr/local/bin is part of $PATH already
+else
+  export HOMEBREW_BIN="/usr/local/bin"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  # https://github.com/zsh-users/zsh-syntax-highlighting
+  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
 export MYVIMRC=$HOME/.vimrc
 export MYNVIMRC=$HOME/.config/nvim/init.vim
@@ -241,9 +253,6 @@ fi
 if [ -f ~/.gogoenv.sh ]; then
     . ~/.gogoenv.sh
 fi
-
-# https://github.com/zsh-users/zsh-syntax-highlighting
-source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Set bat/cat theme
 export BAT_THEME=ansi
