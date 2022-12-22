@@ -11,7 +11,7 @@ brew install curl
 brew install git
 brew install nvm (see brew after-install message - to copy to bash profile)
 nvm install 16 (or whatever is latest)
-npm install -g spaceship-prompt
+npm install -g spaceship-zsh-theme
 brew tap homebrew/cask-fonts && brew install font-Fira-Code-nerd-font
 brew install zsh-completions
 brew install zsh-syntax-highlighting

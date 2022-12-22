@@ -1,5 +1,8 @@
 export ZSH=$HOME/.oh-my-zsh
 
+ZSH_THEME="spaceship"
+source $HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme
+
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 [[ $TMUX = "" ]] && export TERM="screen-256color"
@@ -225,7 +228,7 @@ case `uname` in
     ;;
   Linux)
     export LANG=en_US.UTF-8
-    export SHELL=/usr/bin/zsh
+    export SHELL=/opt/homebrew/bin/zsh
 
     # Linuxbrew
     export PATH="$HOME/.linuxbrew/bin:$PATH"
@@ -264,10 +267,3 @@ export LESS=-iR
 fpath=($fpath "/Users/felipe/.zfunctions")
 fpath=($fpath "/Users/felipe/.zfunctions")
 
-# Set zsh prompt
-ZSH_THEME='spaceship'
-SPACESHIP_TIME_SHOW=true
-SPACESHIP_CHAR_SYMBOL="♛♖♝♘ "
-SPACESHIP_GIT_STATUS_DIVERGED=↕
-autoload -U promptinit; promptinit
-prompt spaceship
