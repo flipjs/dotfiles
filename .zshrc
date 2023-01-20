@@ -103,6 +103,18 @@ function gdd() {
   esac
 }
 
+function cdnode() {
+  case "$1" in
+    6) cd ~/.nvm/versions/node/v6.17.1/lib/node_modules ;;
+    10) cd ~/.nvm/versions/node/v10.24.1/lib/node_modules ;;
+    12) cd ~/.nvm/versions/node/v12.22.12/lib/node_modules ;;
+    16) cd ~/.nvm/versions/node/v16.19.0/lib/node_modules ;;
+    *) cd ~/.nvm/versions/node/v16.19.0/lib/node_modules ;;
+  esac
+}
+
+cd ~/.nvm/versions/node/v10.24.1/lib/node_modules
+
 function t() {
   # Defaults to 3 levels deep, do more with `t 5` or `t 1`
   # pass additional args after
@@ -267,3 +279,4 @@ export LESS=-iR
 fpath=($fpath "/Users/felipe/.zfunctions")
 fpath=($fpath "/Users/felipe/.zfunctions")
 
+cd ~/Documents/projects/portalui/portal
