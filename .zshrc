@@ -113,8 +113,6 @@ function cdnode() {
   esac
 }
 
-cd ~/.nvm/versions/node/v10.24.1/lib/node_modules
-
 function t() {
   # Defaults to 3 levels deep, do more with `t 5` or `t 1`
   # pass additional args after
