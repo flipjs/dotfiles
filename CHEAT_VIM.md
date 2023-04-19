@@ -40,6 +40,7 @@
 - `:s/\v<./\u&/g` - capitalize each word
 - `gqq or gqip or gqap` - wrap long paragraph (see gq and textwidth)
 - `g c-g` - count number of lines highlighted
+- `%!awk '{print; total+=$1}END{print total}'` - sum up list of numbers
 
 ### History
 
@@ -47,6 +48,7 @@
 - `q/` - pop open search history window
 - `:<c-f>` - edit command line in command history window
 - `/<c-f>` - edit search in search history window
+- `/<c-o> / <c-i>` - ctrl-o goes to the older position, and ctrl-i goes to the newer one
 
 ### Neovim Status
 
