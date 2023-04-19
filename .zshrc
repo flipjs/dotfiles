@@ -113,6 +113,10 @@ function cdnode() {
   esac
 }
 
+function cdd() {
+  cd $(fd -t d "$1" | fzf)
+}
+
 function t() {
   # Defaults to 3 levels deep, do more with `t 5` or `t 1`
   # pass additional args after
