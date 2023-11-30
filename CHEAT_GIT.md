@@ -23,6 +23,13 @@
     - git log --all -p --reverse --source -S PATTERN
 - How to exclude files only on your computer
     - add patterns in `.git/info/exclude` - same way in .gitignore
+- Delete untracked files
+    - git clean -f
+- Reverting part of a commit
+    - git revert -n $bad_commit    # Revert the commit, but don't commit the changes
+    - git reset HEAD .             # Unstage the changes
+    - git add --patch .            # Add whatever changes you want
+    - git commit                   # Commit those changes
 
 ### Git branch prompt status
   - `?` — untracked changes;

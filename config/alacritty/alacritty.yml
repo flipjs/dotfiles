@@ -1,3 +1,6 @@
+shell:
+  program: /opt/homebrew/bin/zsh
+
 window:
   padding:
     x: 6

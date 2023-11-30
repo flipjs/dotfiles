@@ -36,12 +36,14 @@
 - `ctrl-a b` - split below
 - `ctrl-a [` - copy
 - `ctrl-a ]` - paste
-- `ctrl-a x` - close pane
+- `ctrl-a x` - kill pane
+- `ctrl-a !` - move pane to its own window
 - `ctrl-a z` - zoom in
 - `ctrl-a space` - cycle between predefined layouts
 - `ctrl-a d` - detach current session
 - `ctrl-a D` - useful when tmux/pane freezes
 - `ctrl-a '` - to select the window index
+- `ctrl-a ,` - rename window
 - `ctrl-a w` - to get an interactive index to choose from (0-9a-z)
 - `ctrl-a {` - swap current pane to opposite position counter-clockwise
 - `ctrl-a }` - swap current pane to opposite position clockwise
@@ -58,9 +60,7 @@
 - `tmux list-windows` - shows current tmux windows (tip: layout can be copied
   and pasted to tmuxinator config as is)
 - `tmux detach (ctrl-a d)` - detach the currently attached session
-- `ctrl-a x` - kill pane
 - `:break-pane -t :` - move pane to its own window
-- `ctrl-a !` - same as above (move pane to its own window)
 - `:join-pane -s !` - move last active pane/window to the current window
 
 ### Copying text inside Tmux

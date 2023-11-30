@@ -39,6 +39,7 @@ brew install ffmpeg
 brew install glow
 npm install -g vtop
 npm install -g fkill-cli
+npm install -g replace
 
 SETUP
 
