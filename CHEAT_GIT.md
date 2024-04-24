@@ -30,6 +30,8 @@
     - git reset HEAD .             # Unstage the changes
     - git add --patch .            # Add whatever changes you want
     - git commit                   # Commit those changes
+- List active remote branches
+    - git fetch -p && git for-each-ref --format='%(align:25,left)%(color:yellow)%(authorname)%(end) %(color:reset)%(refname:strip=3)' --sort=authorname refs/remotes
 
 ### Git branch prompt status
   - `?` — untracked changes;
