@@ -1,1 +1,1 @@
-{"Name":"desktop-linux","Metadata":{},"Endpoints":{"docker":{"Host":"unix:///Users/FelipeJrGomez.Apostol/.docker/run/docker.sock","SkipTLSVerify":false}}}
+{"Name":"desktop-linux","Metadata":{"Description":"Docker Desktop","otel":{"OTEL_EXPORTER_OTLP_ENDPOINT":"unix:///Users/FelipeJrGomez.Apostol/.docker/run/user-analytics.otlp.grpc.sock"}},"Endpoints":{"docker":{"Host":"unix:///Users/FelipeJrGomez.Apostol/.docker/run/docker.sock","SkipTLSVerify":false}}}

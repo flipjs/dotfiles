@@ -11,7 +11,7 @@ ehthumbs.db
 #yeoman
 # node_modules
 node_modules
-dist
+# dist
 tmp
 
 #bower_components
@@ -38,3 +38,6 @@ build
 
 # Git
 submodules
+
+# OBP Portal
+browserslist.yarnlock

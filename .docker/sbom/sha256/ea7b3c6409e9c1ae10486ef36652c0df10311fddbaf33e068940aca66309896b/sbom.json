@@ -1,0 +1,135 @@
+{
+  "source": {
+    "type": "image",
+    "image": {
+      "name": "hypriot/qemu-register",
+      "digest": "sha256:4fea65076a099128763969a83f0b629b172002f6fb95245c0e272471e819f987",
+      "tags": [
+        "latest"
+      ],
+      "manifest": {
+        "schemaVersion": 2,
+        "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+        "config": {
+          "mediaType": "application/vnd.docker.container.image.v1+json",
+          "size": 2885,
+          "digest": "sha256:ea7b3c6409e9c1ae10486ef36652c0df10311fddbaf33e068940aca66309896b"
+        },
+        "layers": [
+          {
+            "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+            "size": 1437184,
+            "digest": "sha256:195be5f8be1df6709dafbba7ce48f2eee785ab7775b88e0c115d8205407265c5"
+          },
+          {
+            "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+            "size": 5704704,
+            "digest": "sha256:64879a8a263caef69232440d9d2f62d86816b51ce2962c0dff4b6f353b6f7a04"
+          },
+          {
+            "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+            "size": 6294016,
+            "digest": "sha256:f1c73754a345bd4a110800e7595f3d42a22d9ae5174bdbd5b9e7b1d542f8b7fa"
+          },
+          {
+            "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+            "size": 5986816,
+            "digest": "sha256:b34c3b202c12fe10608ca2fd38ac8667d9aa6fa44e9c49aa3b2ea6a290ddee34"
+          },
+          {
+            "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+            "size": 5117440,
+            "digest": "sha256:f9aa69692caec0b42dfd438ee586893632a8737b771b10908d6cb5e357b3c46f"
+          },
+          {
+            "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+            "size": 3584,
+            "digest": "sha256:c57cd0ea5ea67b06e54dc3fe334a6517eb9cb8ab6fbc2b2bcfb5067860a2ba82"
+          }
+        ]
+      },
+      "config": {
+        "architecture": "amd64",
+        "container": "c1681dffcf286f445d0fe7119b5fdc5b683482229e670696a0c7293c3c8b49c7",
+        "created": "2020-02-06T23:33:08.696571315Z",
+        "docker_version": "17.09.0-ce",
+        "history": [
+          {
+            "created": "2019-12-26T21:20:11.445765847Z",
+            "created_by": "/bin/sh -c #(nop) ADD file:45da761e1c56c548be5591e1ec31985006a12a7bff05668c060238638c86adca in / "
+          },
+          {
+            "created": "2019-12-26T21:20:11.581830492Z",
+            "created_by": "/bin/sh -c #(nop)  CMD [\"sh\"]",
+            "empty_layer": true
+          },
+          {
+            "created": "2020-02-06T23:33:07.911045459Z",
+            "created_by": "/bin/sh -c #(nop) COPY file:bcdcf365d6023a24edc78e1c075b8b0c5c0d34a428cc67305e7c344e72c54818 in /qemu-arm "
+          },
+          {
+            "created": "2020-02-06T23:33:08.0991554Z",
+            "created_by": "/bin/sh -c #(nop) COPY file:84639204196e238308c7d300db956d196cbe9c7c1318d7849fe3948d650a9b21 in /qemu-aarch64 "
+          },
+          {
+            "created": "2020-02-06T23:33:08.299729358Z",
+            "created_by": "/bin/sh -c #(nop) COPY file:6fce7978311f0285af4cf75696ff2ccc031b3c607939c8fd29d5a76feae8d649 in /qemu-ppc64le "
+          },
+          {
+            "created": "2020-02-06T23:33:08.479344016Z",
+            "created_by": "/bin/sh -c #(nop) COPY file:f73727ecefc28d9b04be807b26aab2810d3b9f168a83c0034ddb709ae8d6291d in /qemu-riscv64 "
+          },
+          {
+            "created": "2020-02-06T23:33:08.591010668Z",
+            "created_by": "/bin/sh -c #(nop) ADD file:1152ff5967e0a037d920d92056a0bbab0f218a9d36ccb557241513fc38e46ae9 in /register.sh "
+          },
+          {
+            "created": "2020-02-06T23:33:08.696571315Z",
+            "created_by": "/bin/sh -c #(nop)  CMD [\"/register.sh\" \"--reset\"]",
+            "empty_layer": true
+          }
+        ],
+        "os": "linux",
+        "rootfs": {
+          "type": "layers",
+          "diff_ids": [
+            "sha256:195be5f8be1df6709dafbba7ce48f2eee785ab7775b88e0c115d8205407265c5",
+            "sha256:64879a8a263caef69232440d9d2f62d86816b51ce2962c0dff4b6f353b6f7a04",
+            "sha256:f1c73754a345bd4a110800e7595f3d42a22d9ae5174bdbd5b9e7b1d542f8b7fa",
+            "sha256:b34c3b202c12fe10608ca2fd38ac8667d9aa6fa44e9c49aa3b2ea6a290ddee34",
+            "sha256:f9aa69692caec0b42dfd438ee586893632a8737b771b10908d6cb5e357b3c46f",
+            "sha256:c57cd0ea5ea67b06e54dc3fe334a6517eb9cb8ab6fbc2b2bcfb5067860a2ba82"
+          ]
+        },
+        "config": {
+          "Cmd": [
+            "/register.sh",
+            "--reset"
+          ],
+          "Env": [
+            "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+          ],
+          "Image": "sha256:463c84a7e6820a90ff1e5cd13ce19d3146a476e4978334068e8e2ea8c7268888",
+          "ArgsEscaped": true
+        }
+      },
+      "raw_manifest": "eyJzY2hlbWFWZXJzaW9uIjoyLCJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmRpc3RyaWJ1dGlvbi5tYW5pZmVzdC52Mitqc29uIiwiY29uZmlnIjp7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLCJzaXplIjoyODg1LCJkaWdlc3QiOiJzaGEyNTY6ZWE3YjNjNjQwOWU5YzFhZTEwNDg2ZWYzNjY1MmMwZGYxMDMxMWZkZGJhZjMzZTA2ODk0MGFjYTY2MzA5ODk2YiJ9LCJsYXllcnMiOlt7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjoxNDM3MTg0LCJkaWdlc3QiOiJzaGEyNTY6MTk1YmU1ZjhiZTFkZjY3MDlkYWZiYmE3Y2U0OGYyZWVlNzg1YWI3Nzc1Yjg4ZTBjMTE1ZDgyMDU0MDcyNjVjNSJ9LHsibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsInNpemUiOjU3MDQ3MDQsImRpZ2VzdCI6InNoYTI1Njo2NDg3OWE4YTI2M2NhZWY2OTIzMjQ0MGQ5ZDJmNjJkODY4MTZiNTFjZTI5NjJjMGRmZjRiNmYzNTNiNmY3YTA0In0seyJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmltYWdlLnJvb3Rmcy5kaWZmLnRhci5nemlwIiwic2l6ZSI6NjI5NDAxNiwiZGlnZXN0Ijoic2hhMjU2OmYxYzczNzU0YTM0NWJkNGExMTA4MDBlNzU5NWYzZDQyYTIyZDlhZTUxNzRiZGJkNWI5ZTdiMWQ1NDJmOGI3ZmEifSx7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjo1OTg2ODE2LCJkaWdlc3QiOiJzaGEyNTY6YjM0YzNiMjAyYzEyZmUxMDYwOGNhMmZkMzhhYzg2NjdkOWFhNmZhNDRlOWM0OWFhM2IyZWE2YTI5MGRkZWUzNCJ9LHsibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsInNpemUiOjUxMTc0NDAsImRpZ2VzdCI6InNoYTI1NjpmOWFhNjk2OTJjYWVjMGI0MmRmZDQzOGVlNTg2ODkzNjMyYTg3MzdiNzcxYjEwOTA4ZDZjYjVlMzU3YjNjNDZmIn0seyJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmltYWdlLnJvb3Rmcy5kaWZmLnRhci5nemlwIiwic2l6ZSI6MzU4NCwiZGlnZXN0Ijoic2hhMjU2OmM1N2NkMGVhNWVhNjdiMDZlNTRkYzNmZTMzNGE2NTE3ZWI5Y2I4YWI2ZmJjMmIyYmNmYjUwNjc4NjBhMmJhODIifV19",
+      "raw_config": "eyJhcmNoaXRlY3R1cmUiOiJhbWQ2NCIsImNvbmZpZyI6eyJIb3N0bmFtZSI6IiIsIkRvbWFpbm5hbWUiOiIiLCJVc2VyIjoiIiwiQXR0YWNoU3RkaW4iOmZhbHNlLCJBdHRhY2hTdGRvdXQiOmZhbHNlLCJBdHRhY2hTdGRlcnIiOmZhbHNlLCJUdHkiOmZhbHNlLCJPcGVuU3RkaW4iOmZhbHNlLCJTdGRpbk9uY2UiOmZhbHNlLCJFbnYiOlsiUEFUSD0vdXNyL2xvY2FsL3NiaW46L3Vzci9sb2NhbC9iaW46L3Vzci9zYmluOi91c3IvYmluOi9zYmluOi9iaW4iXSwiQ21kIjpbIi9yZWdpc3Rlci5zaCIsIi0tcmVzZXQiXSwiQXJnc0VzY2FwZWQiOnRydWUsIkltYWdlIjoic2hhMjU2OjQ2M2M4NGE3ZTY4MjBhOTBmZjFlNWNkMTNjZTE5ZDMxNDZhNDc2ZTQ5NzgzMzQwNjhlOGUyZWE4YzcyNjg4ODgiLCJWb2x1bWVzIjpudWxsLCJXb3JraW5nRGlyIjoiIiwiRW50cnlwb2ludCI6bnVsbCwiT25CdWlsZCI6W10sIkxhYmVscyI6bnVsbH0sImNvbnRhaW5lciI6ImMxNjgxZGZmY2YyODZmNDQ1ZDBmZTcxMTliNWZkYzViNjgzNDgyMjI5ZTY3MDY5NmEwYzcyOTNjM2M4YjQ5YzciLCJjb250YWluZXJfY29uZmlnIjp7Ikhvc3RuYW1lIjoiYzE2ODFkZmZjZjI4IiwiRG9tYWlubmFtZSI6IiIsIlVzZXIiOiIiLCJBdHRhY2hTdGRpbiI6ZmFsc2UsIkF0dGFjaFN0ZG91dCI6ZmFsc2UsIkF0dGFjaFN0ZGVyciI6ZmFsc2UsIlR0eSI6ZmFsc2UsIk9wZW5TdGRpbiI6ZmFsc2UsIlN0ZGluT25jZSI6ZmFsc2UsIkVudiI6WyJQQVRIPS91c3IvbG9jYWwvc2JpbjovdXNyL2xvY2FsL2JpbjovdXNyL3NiaW46L3Vzci9iaW46L3NiaW46L2JpbiJdLCJDbWQiOlsiL2Jpbi9zaCIsIi1jIiwiIyhub3ApICIsIkNNRCBbXCIvcmVnaXN0ZXIuc2hcIiBcIi0tcmVzZXRcIl0iXSwiQXJnc0VzY2FwZWQiOnRydWUsIkltYWdlIjoic2hhMjU2OjQ2M2M4NGE3ZTY4MjBhOTBmZjFlNWNkMTNjZTE5ZDMxNDZhNDc2ZTQ5NzgzMzQwNjhlOGUyZWE4YzcyNjg4ODgiLCJWb2x1bWVzIjpudWxsLCJXb3JraW5nRGlyIjoiIiwiRW50cnlwb2ludCI6bnVsbCwiT25CdWlsZCI6W10sIkxhYmVscyI6e319LCJjcmVhdGVkIjoiMjAyMC0wMi0wNlQyMzozMzowOC42OTY1NzEzMTVaIiwiZG9ja2VyX3ZlcnNpb24iOiIxNy4wOS4wLWNlIiwiaGlzdG9yeSI6W3siY3JlYXRlZCI6IjIwMTktMTItMjZUMjE6MjA6MTEuNDQ1NzY1ODQ3WiIsImNyZWF0ZWRfYnkiOiIvYmluL3NoIC1jICMobm9wKSBBREQgZmlsZTo0NWRhNzYxZTFjNTZjNTQ4YmU1NTkxZTFlYzMxOTg1MDA2YTEyYTdiZmYwNTY2OGMwNjAyMzg2MzhjODZhZGNhIGluIC8gIn0seyJjcmVhdGVkIjoiMjAxOS0xMi0yNlQyMToyMDoxMS41ODE4MzA0OTJaIiwiY3JlYXRlZF9ieSI6Ii9iaW4vc2ggLWMgIyhub3ApICBDTUQgW1wic2hcIl0iLCJlbXB0eV9sYXllciI6dHJ1ZX0seyJjcmVhdGVkIjoiMjAyMC0wMi0wNlQyMzozMzowNy45MTEwNDU0NTlaIiwiY3JlYXRlZF9ieSI6Ii9iaW4vc2ggLWMgIyhub3ApIENPUFkgZmlsZTpiY2RjZjM2NWQ2MDIzYTI0ZWRjNzhlMWMwNzViOGIwYzVjMGQzNGE0MjhjYzY3MzA1ZTdjMzQ0ZTcyYzU0ODE4IGluIC9xZW11LWFybSAifSx7ImNyZWF0ZWQiOiIyMDIwLTAyLTA2VDIzOjMzOjA4LjA5OTE1NTRaIiwiY3JlYXRlZF9ieSI6Ii9iaW4vc2ggLWMgIyhub3ApIENPUFkgZmlsZTo4NDYzOTIwNDE5NmUyMzgzMDhjN2QzMDBkYjk1NmQxOTZjYmU5YzdjMTMxOGQ3ODQ5ZmUzOTQ4ZDY1MGE5YjIxIGluIC9xZW11LWFhcmNoNjQgIn0seyJjcmVhdGVkIjoiMjAyMC0wMi0wNlQyMzozMzowOC4yOTk3MjkzNThaIiwiY3JlYXRlZF9ieSI6Ii9iaW4vc2ggLWMgIyhub3ApIENPUFkgZmlsZTo2ZmNlNzk3ODMxMWYwMjg1YWY0Y2Y3NTY5NmZmMmNjYzAzMWIzYzYwNzkzOWM4ZmQyOWQ1YTc2ZmVhZThkNjQ5IGluIC9xZW11LXBwYzY0bGUgIn0seyJjcmVhdGVkIjoiMjAyMC0wMi0wNlQyMzozMzowOC40NzkzNDQwMTZaIiwiY3JlYXRlZF9ieSI6Ii9iaW4vc2ggLWMgIyhub3ApIENPUFkgZmlsZTpmNzM3MjdlY2VmYzI4ZDliMDRiZTgwN2IyNmFhYjI4MTBkM2I5ZjE2OGE4M2MwMDM0ZGRiNzA5YWU4ZDYyOTFkIGluIC9xZW11LXJpc2N2NjQgIn0seyJjcmVhdGVkIjoiMjAyMC0wMi0wNlQyMzozMzowOC41OTEwMTA2NjhaIiwiY3JlYXRlZF9ieSI6Ii9iaW4vc2ggLWMgIyhub3ApIEFERCBmaWxlOjExNTJmZjU5NjdlMGEwMzdkOTIwZDkyMDU2YTBiYmFiMGYyMThhOWQzNmNjYjU1NzI0MTUxM2ZjMzhlNDZhZTkgaW4gL3JlZ2lzdGVyLnNoICJ9LHsiY3JlYXRlZCI6IjIwMjAtMDItMDZUMjM6MzM6MDguNjk2NTcxMzE1WiIsImNyZWF0ZWRfYnkiOiIvYmluL3NoIC1jICMobm9wKSAgQ01EIFtcIi9yZWdpc3Rlci5zaFwiIFwiLS1yZXNldFwiXSIsImVtcHR5X2xheWVyIjp0cnVlfV0sIm9zIjoibGludXgiLCJyb290ZnMiOnsidHlwZSI6ImxheWVycyIsImRpZmZfaWRzIjpbInNoYTI1NjoxOTViZTVmOGJlMWRmNjcwOWRhZmJiYTdjZTQ4ZjJlZWU3ODVhYjc3NzViODhlMGMxMTVkODIwNTQwNzI2NWM1Iiwic2hhMjU2OjY0ODc5YThhMjYzY2FlZjY5MjMyNDQwZDlkMmY2MmQ4NjgxNmI1MWNlMjk2MmMwZGZmNGI2ZjM1M2I2ZjdhMDQiLCJzaGEyNTY6ZjFjNzM3NTRhMzQ1YmQ0YTExMDgwMGU3NTk1ZjNkNDJhMjJkOWFlNTE3NGJkYmQ1YjllN2IxZDU0MmY4YjdmYSIsInNoYTI1NjpiMzRjM2IyMDJjMTJmZTEwNjA4Y2EyZmQzOGFjODY2N2Q5YWE2ZmE0NGU5YzQ5YWEzYjJlYTZhMjkwZGRlZTM0Iiwic2hhMjU2OmY5YWE2OTY5MmNhZWMwYjQyZGZkNDM4ZWU1ODY4OTM2MzJhODczN2I3NzFiMTA5MDhkNmNiNWUzNTdiM2M0NmYiLCJzaGEyNTY6YzU3Y2QwZWE1ZWE2N2IwNmU1NGRjM2ZlMzM0YTY1MTdlYjljYjhhYjZmYmMyYjJiY2ZiNTA2Nzg2MGEyYmE4MiJdfX0=",
+      "distro": {
+        "os_name": "busybox",
+        "os_version": "1"
+      },
+      "platform": {
+        "os": "linux",
+        "architecture": "amd64"
+      },
+      "size": 24317274
+    }
+  },
+  "artifacts": [],
+  "descriptor": {
+    "name": "docker-index",
+    "version": "v0.0.24",
+    "sbom_version": "6"
+  }
+}

@@ -83,7 +83,7 @@ _fzf_compgen_path() {
 # export NODE_ENV=development
 
 export NODE_OLD_VERSION=6
-export NODE_LATEST_VERSION=16
+export NODE_LATEST_VERSION=20
 export NODE_GGS_VERSION=10
 
 DIRSTACKSIZE=8
@@ -259,6 +259,12 @@ export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 
+# PHP 8.1
+export PATH=/opt/homebrew/opt/php@8.1/bin:$PATH
+export PATH=/opt/homebrew/opt/php@8.1/sbin:$PATH
+export LDFLAGS="/opt/homebrew/opt/php@8.1/lib $LDFLAGS"
+export CPPFLAGS="/opt/homebrew/opt/php@8.1/include $CPPFLAGS"
+
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # load aliases
@@ -282,3 +288,5 @@ fpath=($fpath "/Users/felipe/.zfunctions")
 fpath=($fpath "/Users/felipe/.zfunctions")
 
 cd ~/Documents/projects/portalui/portal
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
