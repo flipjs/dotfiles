@@ -234,6 +234,117 @@ weather() { curl wttr.in/"$@"; }
 cheat() { curl cheat.sh/"$@"; }
 crypto() { curl rate.sx }
 
+# ------------------------------ Git -------------------------------- #
+
+# Git Fetch Rebase
+# Update master and rebase current branch safely
+gfr() (
+  set -e  # stop on error
+
+  # Disable Git pager only inside this subshell
+  export GIT_PAGER=cat
+
+  # Make sure we're inside a git repo
+  if ! git rev-parse --git-dir > /dev/null 2>&1; then
+    echo "❌ Not inside a git repository."
+    return 1
+  fi
+
+  # Save the current branch
+  local current_branch
+  current_branch=$(git rev-parse --abbrev-ref HEAD)
+
+  # Default options
+  local dry_run=false
+  local autostash=true
+
+  # Parse options
+  for arg in "$@"; do
+    case $arg in
+      --dry-run)
+        dry_run=true
+        ;;
+      --no-autostash)
+        autostash=false
+        ;;
+      -h|--help)
+        echo "git-update-rebase: safely update master and rebase current branch"
+        echo ""
+        echo "Usage: git-update-rebase [OPTIONS]"
+        echo ""
+        echo "Options:"
+        echo "  --dry-run       Show what would be done without making any changes"
+        echo "  --no-autostash  Do not automatically stash changes before rebase"
+        echo "  -h, --help      Show this help message"
+        return 0
+        ;;
+      *)
+        echo "❌ Unknown option: $arg"
+        echo "Use -h or --help to see valid options."
+        return 1
+        ;;
+    esac
+  done
+
+  # Dry-run mode
+  if [ "$dry_run" = true ]; then
+    echo "🔍 Dry run mode — no changes will be made."
+    echo "
+Would run:
+  git fetch -p origin
+  git checkout master
+  git merge --ff-only origin/master
+  [if not on master]
+    git checkout $current_branch
+    git rebase $( [ "$autostash" = true ] && echo "--autostash" ) master
+"
+    return 0
+  fi
+
+  echo "🔄 Fetching origin (with prune)..."
+  git fetch -p origin
+
+  echo "⬆️ Updating local master..."
+  git checkout master
+  git merge --ff-only origin/master
+
+  # If already on master, stop here
+  if [ "$current_branch" = "master" ]; then
+    echo "✅ Master updated. No rebase needed since you are on master."
+    echo "📋 Current status:"
+    git --no-pager status --short --branch
+    return 0
+  fi
+
+  echo "↩️ Switching back to $current_branch..."
+  git checkout "$current_branch"
+
+  # Only wrap rebase with trap for recovery instructions
+  {
+    trap 'echo "
+⚠️ Rebase failed. If you are in the middle of a rebase, run:
+
+  git --no-pager status --short --branch
+  git rebase --continue
+  git rebase --abort
+"' ERR
+
+    echo "📌 Rebasing $current_branch onto master $( [ "$autostash" = true ] && echo "(with auto-stash)" )..."
+    if [ "$autostash" = true ]; then
+      git rebase --autostash master
+    else
+      git rebase master
+    fi
+
+    # Remove trap after successful rebase
+    trap - ERR
+  }
+
+  echo "✅ Done! $current_branch is rebased on latest master."
+  echo "📋 Current status:"
+  git --no-pager status --short --branch
+)
+
 # ---------------------------- OSX only ----------------------------- #
 
 case `uname` in
@@ -282,3 +393,5 @@ fpath=($fpath "/Users/felipe/.zfunctions")
 fpath=($fpath "/Users/felipe/.zfunctions")
 
 cd ~/Documents/projects/portalui/portal
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
